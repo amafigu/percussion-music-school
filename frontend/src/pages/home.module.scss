@@ -1,0 +1,12 @@
+@use "#styles/theme" as theme;
+@import "#styles/helpers/mixins";
+
+.homePageWrapper {
+  @include flex-justify-center;
+
+  .homePage {
+    @include flex-justify-center;
+
+    width: theme.$default-page-width;
+  }
+}
