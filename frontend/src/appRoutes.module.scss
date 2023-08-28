@@ -1,0 +1,12 @@
+@use "#styles/theme" as theme;
+
+.appRoutesWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .content {
+    flex-grow: 1;
+    min-height: theme.$min-vh-page-wrapper;
+  }
+}
