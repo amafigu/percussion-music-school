@@ -1,7 +1,12 @@
-import Home from "./pages/Home"
+import { BrowserRouter } from "react-router-dom"
+import AppRoutes from "./AppRoutes"
 
-function App() {
-  return <Home></Home>
+const App = () => {
+  return (
+    <BrowserRouter>
+      <AppRoutes></AppRoutes>
+    </BrowserRouter>
+  )
 }
 
 export default App
