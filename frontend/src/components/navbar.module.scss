@@ -3,4 +3,30 @@
 
 .navbarWrapper {
   @include flex-justify-center;
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    background-color: theme.$primary-background-color;
+  }
+
+  .column {
+    display: flex;
+    gap: 40px;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+
+  .linkContent {
+    font-family: theme.$main-font-family;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
 }
