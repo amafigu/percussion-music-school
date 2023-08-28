@@ -1,0 +1,6 @@
+@use "../theme" as theme;
+
+@mixin flex-justify-center {
+  display: flex;
+  justify-content: center;
+}

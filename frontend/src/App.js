@@ -1,5 +1,7 @@
+import Home from "./pages/Home"
+
 function App() {
-  return <div className=''>1</div>
+  return <Home></Home>
 }
 
 export default App
