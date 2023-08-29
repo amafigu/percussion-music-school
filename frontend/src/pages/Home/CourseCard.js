@@ -11,11 +11,13 @@ const CourseCard = ({ name, description, path, image }) => {
           alt={name}
         ></img>
         <div className={styles.infoColumn}>
-          <div className={styles.category}>{name}</div>
-          <div className={styles.description}>{description}</div>
-          <Link className={styles.link} to={path}>
-            See more
-          </Link>
+          <div className={styles.descriptionAndLink}>
+            <div className={styles.category}>{name}</div>
+            <div className={styles.text}> {description}</div>
+            <Link className={styles.link} to={path}>
+              See more
+            </Link>
+          </div>
         </div>
       </div>
     </div>
