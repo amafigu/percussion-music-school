@@ -4,6 +4,8 @@
 .homePageWrapper {
   @include flex-justify-center;
 
+  align-items: center;
+
   .homePage {
     @include flex-justify-center;
 
@@ -11,7 +13,40 @@
     width: 100%;
   }
 
+  .cardsSection {
+    background-color: #202027;
+
+    .cardTeaserContainer {
+      margin-bottom: 60px;
+      background-color: #202027;
+    }
+  }
+
   .presentation {
-    background-color: #20232d;
+    width: 38%;
+    margin: auto;
+    text-align: center;
+    background-color: #202027;
+
+    .title {
+      margin: 60px 0;
+      font-size: 22px;
+      font-weight: 600;
+      color: theme.$branding-font-color;
+    }
+
+    .subtitle {
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .missionText {
+      margin: 60px 0;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.85;
+    }
   }
 }

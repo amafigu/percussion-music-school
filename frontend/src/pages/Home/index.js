@@ -6,17 +6,22 @@ const Home = () => {
     <div className={styles.homePageWrapper}>
       <div className={styles.homePage}>
         <VideoBanner />
-        <div className={styles.presentation}>
-          <p>Tierra y Aire </p>
-          <p> Rosario's largest specialized drum school since 2018</p>
-          <p>
-            Our mission is to inspire and educate drummers by using the latest
-            technology and resources in providing a distinctive contemporary
-            drum education.
-          </p>
-        </div>
-
-        <CoursesCardTeaser />
+        <section className={styles.cardsSection}>
+          <div className={styles.presentation}>
+            <p className={styles.title}>Tierra y Aire </p>
+            <p className={styles.subtitle}>
+              Rosario's largest specialized drum school since 2018
+            </p>
+            <p className={styles.missionText}>
+              Our mission is to inspire and educate drummers by using the latest
+              technology and resources in providing a distinctive contemporary
+              drum education.
+            </p>
+          </div>
+          <div className={styles.cardTeaserContainer}>
+            <CoursesCardTeaser />
+          </div>
+        </section>
       </div>
     </div>
   );
