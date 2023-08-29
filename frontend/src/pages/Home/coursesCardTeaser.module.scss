@@ -1,0 +1,17 @@
+@use "#styles/theme" as theme;
+@import "#styles/helpers/mixins";
+
+.coursesCardTeaserWrapper {
+  @include flex-justify-center;
+
+  width: 100%;
+
+  .coursesCardTeaser {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    height: fit-content;
+    background-color: theme.$primary-background-color;
+  }
+}
