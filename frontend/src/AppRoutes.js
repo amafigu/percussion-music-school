@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import styles from "./appRoutes.module.scss";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 
@@ -12,6 +13,7 @@ const AppRoutes = () => {
           <Route path='/' element={<Home />} />
         </Routes>
       </div>
+      <Footer />
     </div>
   );
 };
