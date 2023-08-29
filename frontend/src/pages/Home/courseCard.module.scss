@@ -1,0 +1,21 @@
+@use "#styles/theme" as theme;
+@import "#styles/helpers/mixins";
+
+.courseCardWrapper {
+  @include flex-justify-center;
+
+  .courseCard {
+    width: 420px;
+    height: 800px;
+  }
+
+  .infoColumn {
+    color: #fff;
+    background-color: #20232d;
+  }
+
+  .image {
+    width: 100%;
+    height: 40%;
+  }
+}

@@ -7,6 +7,7 @@
   .homePage {
     @include flex-justify-center;
 
-    width: theme.$default-page-width;
+    flex-direction: column;
+    width: 100%;
   }
 }
