@@ -7,7 +7,7 @@ const Footer = () => {
     <div className={styles.footerWrapper}>
       <div className={styles.footer}>
         <div className={styles.columnsContainer}>
-          <div className={styles.column}>
+          <div className={`${styles.column} ${styles.logoColumn}`}>
             <div className={styles.logoContainer}>
               <img
                 className={styles.logo}
@@ -52,12 +52,31 @@ const Footer = () => {
               <span className={styles.content}>Corporate</span>
             </Link>
           </div>
-          <div className={styles.columnSocialMedia}>
+          <div className={`${styles.column} ${styles.socialColumn}`}>
             <h3 className={styles.title}>Social Links</h3>
             <div className={styles.icons}>
-              <i className={`fab fa-instagram ${styles.customIcon}`}></i>
-              <i className={`fab fa-youtube ${styles.customIcon}`}></i>
-              <i className={`fab fa-facebook-f ${styles.customIcon}`}></i>
+              <a
+                href='https://www.instagram.com/earth_and_air_percussion/'
+                target='_blanck'
+              >
+                <i
+                  className={`fab fa-instagram fa-2x ${styles.customIcon}`}
+                ></i>
+              </a>
+              <a
+                href='https://www.facebook.com/profile.php?id=100051507198313'
+                target='_blanck'
+              >
+                <i
+                  className={`fab fa-facebook-f fa-2x ${styles.customIcon}`}
+                ></i>
+              </a>
+              <a
+                href='https://www.youtube.com/channel/UCsiOSd5aX8udIbNF5LST8ag'
+                target='_blanck'
+              >
+                <i className={`fab fa-youtube fa-2x ${styles.customIcon}`}></i>
+              </a>
             </div>
           </div>
         </div>
@@ -66,7 +85,6 @@ const Footer = () => {
             <span>
               Tierra y Aire Percusion is a registered trademark in Argentina. ©
               2023 Tierra y Aire Percusion - Argentina. All Rights Reserved.
-              Terms of Use
             </span>
           </div>
 
