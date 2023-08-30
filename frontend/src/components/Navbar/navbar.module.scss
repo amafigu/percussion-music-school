@@ -16,6 +16,7 @@
   .column {
     display: flex;
     gap: 40px;
+    align-items: center;
   }
 
   .logo {
@@ -24,9 +25,31 @@
     border-radius: 50%;
   }
 
+  .link {
+    cursor: pointer;
+  }
+
   .linkContent {
     font-family: theme.$main-font-family;
     font-weight: 600;
     text-transform: uppercase;
+  }
+
+  .mailButton {
+    display: flex;
+    justify-content: center;
+    width: 172px;
+    height: 60px;
+    padding: 18px 35px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: theme.$primary-background-color;
+    background-color: theme.$branding-font-color;
+    border-radius: 10px;
+
+    &:hover {
+      background-color: #fff;
+    }
   }
 }

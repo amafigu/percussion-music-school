@@ -1,0 +1,10 @@
+@use "#styles/theme" as theme;
+@import "#styles/helpers/mixins";
+
+.dropdownMenu {
+  position: fixed;
+  top: 0;
+  right: 50%;
+  width: 200px;
+  height: 200px;
+}
