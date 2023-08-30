@@ -1,3 +1,5 @@
+import { faGreaterThan } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { React, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import DropdownMenu from "./DropdownMenu";
@@ -28,7 +30,9 @@ const Navbar = () => {
           </Link>
 
           <div className={styles.link} onClick={() => toogleDropdown()}>
-            <span className={styles.linkContent}>programmes</span>
+            <span className={styles.linkContent}>
+              programmes <FontAwesomeIcon icon={faGreaterThan} />
+            </span>
             {isDropdownOpen && (
               <div ref={menuDropdownRef} className={styles.menuDropdown}>
                 <DropdownMenu />

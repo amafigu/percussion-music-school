@@ -5,4 +5,21 @@
   display: flex;
   flex-direction: column;
   color: #fff;
+  visibility: visible;
+  transition: all 0.3s linear;
+
+  .listItem {
+    padding: 14px 20px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 1px solid #3b3e4b;
+
+    &:hover {
+      color: theme.$branding-font-color;
+    }
+  }
 }
