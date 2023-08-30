@@ -32,4 +32,11 @@
     width: 872px;
     height: 485px;
   }
+
+  .whatsappButtonPosition {
+    position: absolute;
+    top: 40%;
+    right: -90px;
+    transform: rotate(360deg);
+  }
 }
