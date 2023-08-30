@@ -16,8 +16,7 @@ const Footer = () => {
               />
               <div className={styles.text}>
                 <div className={styles.word}>TIERRA</div>
-                <div className={styles.word}>Y</div>
-                <div className={styles.word}>AIRE</div>
+                <div className={styles.word}>Y AIRE</div>
               </div>
             </div>
 
