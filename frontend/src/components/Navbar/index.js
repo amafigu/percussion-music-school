@@ -29,9 +29,11 @@ const Navbar = () => {
 
           <div className={styles.link} onClick={() => toogleDropdown()}>
             <span className={styles.linkContent}>programmes</span>
-          </div>
-          <div ref={menuDropdownRef} className={styles.dropdownMenu}>
-            {isDropdownOpen && <DropdownMenu />}
+            {isDropdownOpen && (
+              <div ref={menuDropdownRef} className={styles.menuDropdown}>
+                <DropdownMenu />
+              </div>
+            )}
           </div>
 
           <Link className={styles.link} to='/faq'>

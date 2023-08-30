@@ -2,9 +2,7 @@
 @import "#styles/helpers/mixins";
 
 .dropdownMenu {
-  position: fixed;
-  top: 0;
-  right: 50%;
-  width: 200px;
-  height: 200px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
 }
