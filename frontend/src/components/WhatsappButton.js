@@ -9,7 +9,7 @@ const WhatsAppButton = () => {
         target='_blank'
         className={styles.link}
         role='button'
-        rel='noopener nofollow'
+        rel='noreferrer'
       >
         <i className={`${styles.customIcon} fab fa-whatsapp fa-2x`}></i>
         <span className={styles.text}>Chat On WhatsApp</span>
