@@ -1,9 +1,35 @@
+import { TESTEMONIALS } from "#utils/constants";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import { React, useCallback, useEffect, useState } from "react";
 import styles from "./testemonialCarousel.module.scss";
 
 const TestemonialCarousel = () => {
+  const [currentTestemonialIndex, setCurrentTestemonialIndex] = useState(0);
+
+  const nextTestemonial = useCallback(() => {
+    const nextIndex = currentTestemonialIndex + 1;
+    setCurrentTestemonialIndex(
+      nextIndex >= TESTEMONIALS.length ? 0 : nextIndex,
+    );
+  }, [currentTestemonialIndex]);
+
+  const previousTestemonial = useCallback(() => {
+    const nextIndex = currentTestemonialIndex - 1;
+    setCurrentTestemonialIndex(
+      nextIndex < 0 ? TESTEMONIALS.length - 1 : nextIndex,
+    );
+  }, [currentTestemonialIndex]);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      nextTestemonial();
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [nextTestemonial]);
+
+  const currentTestimonial = TESTEMONIALS[currentTestemonialIndex];
   return (
     <div className={styles.testemonialCarouselWrapper}>
       <div className={styles.testemonialCarousel}>
@@ -20,24 +46,17 @@ const TestemonialCarousel = () => {
               />
             </div>
             <div className={styles.text}>
-              <p>
-                The lessons at My Drum School are well structured for
-                progression in drum learning. There is also an emphasis on
-                applying what I have learnt into songs, and it keeps the
-                learning practical and enjoyable! Thanks goes to my educator,
-                Jiaxing, who is always very encouraging and motivates me to keep
-                improving.
-              </p>
+              <p>{currentTestimonial.text}</p>
             </div>
             <div className={styles.testemonialPerson}>
-              <p>Amadeusongo</p>
+              <p>{currentTestimonial.person}</p>
             </div>
           </div>
           <div className={styles.rightColumn}>
             <div className={styles.imageContainer}>
               <img
                 className={styles.image}
-                src={`${process.env.PUBLIC_URL}/assets/testemonial1.png`}
+                src={`${process.env.PUBLIC_URL}/assets/${currentTestimonial.image}`}
               ></img>
             </div>
           </div>
