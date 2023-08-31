@@ -2,7 +2,7 @@
 @import "#styles/helpers/mixins";
 
 .navbarWrapper {
-  @include flex-justify-center;
+  @include flex-horizontal-center;
 
   .navbar {
     display: flex;

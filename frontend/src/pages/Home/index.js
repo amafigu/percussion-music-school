@@ -1,4 +1,5 @@
 import CoursesCardTeaser from "./CoursesCardTeaser";
+import TestemonialCarousel from "./TestemonialCarousel";
 import VideoBanner from "./VideoBanner";
 import styles from "./home.module.scss";
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
             <CoursesCardTeaser />
           </div>
         </section>
+        <TestemonialCarousel />
       </div>
     </div>
   );
