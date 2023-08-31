@@ -10,12 +10,15 @@ const TestemonialCarousel = () => {
         <div className={styles.title}>
           <span>Testemonials</span>
         </div>
-        <div className={styles.title}>
-          <FontAwesomeIcon icon={faQuoteLeft} />
-        </div>
+
         <div className={styles.textAndImageContainer}>
           <div className={styles.leftColumn}>
-            <div className={styles.icon}></div>
+            <div className={styles.iconContainer}>
+              <FontAwesomeIcon
+                icon={faQuoteLeft}
+                className={styles.customIcon}
+              />
+            </div>
             <div className={styles.text}>
               <p>
                 The lessons at My Drum School are well structured for
@@ -26,7 +29,9 @@ const TestemonialCarousel = () => {
                 improving.
               </p>
             </div>
-            <div className={styles.testemonialPerson}>Fulanit@</div>
+            <div className={styles.testemonialPerson}>
+              <p>Amadeusongo</p>
+            </div>
           </div>
           <div className={styles.rightColumn}>
             <div className={styles.imageContainer}>
