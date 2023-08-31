@@ -14,6 +14,7 @@ const TestemonialCarousel = () => {
     );
   }, [currentTestemonialIndex]);
 
+  /* eslint-disable no-unused-vars */
   const previousTestemonial = useCallback(() => {
     const nextIndex = currentTestemonialIndex - 1;
     setCurrentTestemonialIndex(
@@ -24,7 +25,7 @@ const TestemonialCarousel = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       nextTestemonial();
-    }, 5000);
+    }, 12000);
 
     return () => clearInterval(timer);
   }, [nextTestemonial]);
@@ -57,6 +58,7 @@ const TestemonialCarousel = () => {
               <img
                 className={styles.image}
                 src={`${process.env.PUBLIC_URL}/assets/${currentTestimonial.image}`}
+                alt='Testemonial'
               ></img>
             </div>
           </div>
