@@ -2,7 +2,7 @@
 @import "#styles/helpers/mixins";
 
 .coursesCardTeaserWrapper {
-  @include flex-justify-center;
+  @include flex-horizontal-center;
 
   width: 100%;
 

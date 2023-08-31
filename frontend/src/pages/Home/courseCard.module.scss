@@ -2,7 +2,7 @@
 @import "#styles/helpers/mixins";
 
 .courseCardWrapper {
-  @include flex-justify-center;
+  @include flex-horizontal-center;
 
   .courseCard {
     width: 440px;

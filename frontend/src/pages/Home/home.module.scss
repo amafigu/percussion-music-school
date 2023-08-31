@@ -2,12 +2,12 @@
 @import "#styles/helpers/mixins";
 
 .homePageWrapper {
-  @include flex-justify-center;
+  @include flex-horizontal-center;
 
   align-items: center;
 
   .homePage {
-    @include flex-justify-center;
+    @include flex-horizontal-center;
 
     flex-direction: column;
     width: 100%;
