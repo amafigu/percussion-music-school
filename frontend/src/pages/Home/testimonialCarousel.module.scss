@@ -23,6 +23,8 @@
       line-height: 1.2;
       color: #fff;
       letter-spacing: 0;
+      user-select: none;
+      -webkit-text-select: none;
     }
 
     background: theme.$secondary-background-color;
@@ -31,15 +33,17 @@
       @include flex-all-center;
 
       cursor: pointer;
-      user-select: none; // chrome and Opera
-      -webkit-text-select: none; // IOS Safari
+      user-select: none;
+      -webkit-text-select: none;
     }
   }
 
   .image {
     width: 578px;
     height: 432px;
+    user-select: none;
     border-radius: 16px;
+    -webkit-text-select: none;
   }
 
   .leftColumn {

@@ -7,6 +7,18 @@ import styles from "./testimonialCarousel.module.scss";
 const TestimonialCarousel = () => {
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
   const [touchStartX, setTouchStartX] = useState(null);
+  const [dragging, setDragging] = useState(false);
+  const [translateX, setTranslateX] = useState(0);
+
+  const handleMouseMove = useCallback(
+    (e) => {
+      if (dragging) {
+        const offsetX = e.clientX - touchStartX;
+        setTranslateX(offsetX);
+      }
+    },
+    [dragging, touchStartX],
+  );
 
   const nextTestimonial = useCallback(() => {
     const nextIndex = currentTestimonialIndex + 1;
@@ -33,23 +45,36 @@ const TestimonialCarousel = () => {
 
   const touchStart = (e) => {
     setTouchStartX(e.clientX);
+    setDragging(true);
+
     console.log("start", touchStartX);
   };
 
   const touchEnd = (e) => {
+    setDragging(false);
     const diffX = touchStartX - e.screenX;
+    setTranslateX(0);
 
-    console.log("end");
+    console.log("end", diffX);
 
     if (diffX > 0) {
       console.log("left ", diffX);
-      // Swiped left
       previousTestemonial();
     } else if (diffX < 0) {
-      // Swiped right
       console.log("right ", diffX);
       nextTestimonial();
     }
+  };
+
+  useEffect(() => {
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, [handleMouseMove]);
+
+  const dynamicStyles = {
+    transform: `translateX(${translateX}px)`,
   };
 
   const currentTestimonial = TESTIMONIALS[currentTestimonialIndex];
@@ -61,11 +86,12 @@ const TestimonialCarousel = () => {
         onMouseUp={touchEnd}
       >
         <div className={styles.title}>
-          <span>Testemonials</span>
+          <span>Testimonials</span>
         </div>
 
         <div
           className={`${styles.textAndImageContainer} ${styles.transitionEffect}`}
+          style={dragging ? dynamicStyles : {}}
         >
           <div className={styles.leftColumn}>
             <div className={styles.iconContainer}>
