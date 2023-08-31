@@ -54,6 +54,10 @@
     margin-right: 60px;
   }
 
+  .rightColumn {
+    pointer-events: none;
+  }
+
   .text {
     display: flex;
     flex-grow: 1;

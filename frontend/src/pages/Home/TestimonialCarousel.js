@@ -10,16 +10,6 @@ const TestimonialCarousel = () => {
   const [dragging, setDragging] = useState(false);
   const [translateX, setTranslateX] = useState(0);
 
-  const handleMouseMove = useCallback(
-    (e) => {
-      if (dragging) {
-        const offsetX = e.clientX - touchStartX;
-        setTranslateX(offsetX);
-      }
-    },
-    [dragging, touchStartX],
-  );
-
   const nextTestimonial = useCallback(() => {
     const nextIndex = currentTestimonialIndex + 1;
     setCurrentTestimonialIndex(
@@ -43,6 +33,16 @@ const TestimonialCarousel = () => {
     return () => clearInterval(timer);
   }, [nextTestimonial]);
 
+  const handleMouseMove = useCallback(
+    (e) => {
+      if (dragging) {
+        const offsetX = e.clientX - touchStartX;
+        setTranslateX(offsetX);
+      }
+    },
+    [dragging, touchStartX],
+  );
+
   const touchStart = (e) => {
     setTouchStartX(e.clientX);
     setDragging(true);
@@ -51,18 +51,25 @@ const TestimonialCarousel = () => {
   };
 
   const touchEnd = (e) => {
+    const THRESHOLD_LEFT = 400;
+    const THRESHOLD_RIGHT = -400;
     setDragging(false);
     const diffX = touchStartX - e.screenX;
     setTranslateX(0);
 
     console.log("end", diffX);
-
-    if (diffX > 0) {
-      console.log("left ", diffX);
-      previousTestemonial();
-    } else if (diffX < 0) {
-      console.log("right ", diffX);
-      nextTestimonial();
+    if (Math.abs(diffX) > THRESHOLD_LEFT || Math.abs(diffX) < THRESHOLD_RIGHT) {
+      if (diffX > 0) {
+        console.log("left ", diffX);
+        previousTestemonial();
+        setTranslateX(0);
+        setDragging(false);
+      } else if (diffX < 0) {
+        console.log("right ", diffX);
+        nextTestimonial();
+        setTranslateX(0);
+        setDragging(false);
+      }
     }
   };
 
@@ -79,7 +86,7 @@ const TestimonialCarousel = () => {
 
   const currentTestimonial = TESTIMONIALS[currentTestimonialIndex];
   return (
-    <div className={styles.testimonialCarouselWrapper}>
+    <div className={styles.testimonialCarouselWrapper} onMouseLeave={touchEnd}>
       <div
         className={styles.testimonialCarousel}
         onMouseDown={touchStart}
