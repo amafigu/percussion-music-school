@@ -1,7 +1,7 @@
 @use "#styles/theme" as theme;
 @import "#styles/helpers/mixins";
 
-.testemonialCarouselWrapper {
+.testimonialCarouselWrapper {
   @include flex-all-center;
 
   width: 100%;
@@ -9,7 +9,7 @@
   padding: 80px 20px 120px;
   background: theme.$secondary-background-color;
 
-  .testemonialCarousel {
+  .testimonialCarousel {
     @include flex-column-all-center;
 
     padding: 0 20px;
@@ -29,6 +29,10 @@
 
     .textAndImageContainer {
       @include flex-all-center;
+
+      cursor: pointer;
+      user-select: none; // chrome and Opera
+      -webkit-text-select: none; // IOS Safari
     }
   }
 
@@ -79,5 +83,28 @@
 
   .customIcon {
     color: theme.$branding-font-color;
+  }
+
+  .itemsSelectorContainer {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .selector {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+
+    &:hover {
+      color: theme.$branding-font-color;
+      background-color: theme.$branding-font-color;
+    }
+  }
+
+  .transitionEffect {
+    transition: transform 0.3s ease-in-out;
   }
 }
