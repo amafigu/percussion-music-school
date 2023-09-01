@@ -1,6 +1,7 @@
 @use "~minireset.css/minireset.min";
 @use "./media";
 @use "./theme";
+@import "./global";
 
 a {
   color: inherit;

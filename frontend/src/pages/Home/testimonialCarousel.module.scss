@@ -1,0 +1,115 @@
+@use "#styles/theme" as theme;
+@import "#styles/helpers/mixins";
+
+.testimonialCarouselWrapper {
+  width: 100%;
+  min-width: 100px;
+  height: 780px;
+  height: fit-content;
+  min-height: 100px;
+  padding: 60px;
+  background: theme.$secondary-background-color;
+
+  .title {
+    width: 100%;
+    font-size: 42px;
+    font-weight: 800 !important;
+    line-height: 1.2;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0;
+    user-select: none;
+    -webkit-text-select: none;
+  }
+
+  .textAndImageContainerWrapper {
+    display: flex;
+    margin: 40px 0;
+  }
+
+  .textAndImageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    -webkit-text-select: none;
+  }
+
+  .image {
+    width: 578px;
+    height: 432px;
+    user-select: none;
+    border-radius: 16px;
+    -webkit-text-select: none;
+  }
+
+  .leftColumn {
+    @include flex-column-horizontal-center;
+
+    width: 522px;
+    height: fit-content;
+    margin-right: 60px;
+  }
+
+  .rightColumn {
+    pointer-events: none;
+  }
+
+  .text {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    padding: 40px 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    color: rgba($color: #fff, $alpha: 80%);
+  }
+
+  .testimonialPerson {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+    color: theme.$branding-font-color;
+    text-align: left;
+  }
+
+  .iconContainer {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #fff;
+  }
+
+  .customIcon {
+    color: theme.$branding-font-color;
+  }
+
+  .itemsSelectorContainer {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .selector {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+
+    &:hover {
+      color: theme.$branding-font-color;
+      background-color: theme.$branding-font-color;
+    }
+  }
+
+  .transitionEffect {
+    transition: transform 0.3s ease-in-out;
+  }
+}
