@@ -5,35 +5,35 @@
   width: 100%;
   min-width: 100px;
   height: 780px;
+  height: fit-content;
   min-height: 100px;
-  padding: 80px 20px 120px;
+  padding: 60px;
   background: theme.$secondary-background-color;
 
-  .testimonialCarousel {
-    padding: 0 20px;
+  .title {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    font-size: 42px;
+    font-weight: 800 !important;
+    line-height: 1.2;
+    color: #fff;
+    letter-spacing: 0;
+    user-select: none;
+    -webkit-text-select: none;
+  }
 
-    .title {
-      display: flex;
-      justify-content: flex-start;
-      width: 100%;
-      font-size: 42px;
-      font-weight: 800 !important;
-      line-height: 1.2;
-      color: #fff;
-      letter-spacing: 0;
-      user-select: none;
-      -webkit-text-select: none;
-    }
+  .textAndImageContainerWrapper {
+    display: flex;
+  }
 
-    background: theme.$secondary-background-color;
-
-    .textAndImageContainer {
-      @include flex-all-center;
-
-      cursor: pointer;
-      user-select: none;
-      -webkit-text-select: none;
-    }
+  .textAndImageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    -webkit-text-select: none;
   }
 
   .image {

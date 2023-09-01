@@ -23,7 +23,7 @@ const TestimonialCarousel = () => {
       </div>
       <Slider {...settings}>
         {TESTIMONIALS.map((testimonial, index) => (
-          <div key={index}>
+          <div className={styles.textAndImageContainerWrapper} key={index}>
             <div className={styles.textAndImageContainer}>
               <div className={styles.leftColumn}>
                 <div className={styles.iconContainer}>
