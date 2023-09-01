@@ -11,13 +11,12 @@
   background: theme.$secondary-background-color;
 
   .title {
-    display: flex;
-    justify-content: flex-start;
     width: 100%;
     font-size: 42px;
     font-weight: 800 !important;
     line-height: 1.2;
     color: #fff;
+    text-align: center;
     letter-spacing: 0;
     user-select: none;
     -webkit-text-select: none;
@@ -25,6 +24,7 @@
 
   .textAndImageContainerWrapper {
     display: flex;
+    margin: 40px 0;
   }
 
   .textAndImageContainer {
@@ -67,14 +67,13 @@
     color: rgba($color: #fff, $alpha: 80%);
   }
 
-  .testemonialPerson {
-    display: flex;
-    justify-content: flex-start;
+  .testimonialPerson {
     width: 100%;
     font-size: 18px;
     font-weight: 700;
     line-height: 32px;
     color: theme.$branding-font-color;
+    text-align: left;
   }
 
   .iconContainer {

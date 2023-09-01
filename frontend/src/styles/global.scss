@@ -1,0 +1,27 @@
+/* stylelint-disable selector-class-pattern */
+
+.slick-next,
+.slick-prev {
+  display: none !important;
+}
+
+.slick-dots li button::before {
+  content: "" !important;
+}
+
+.slick-dots li button {
+  width: 4px !important;
+  height: 4px !important ;
+  content: "";
+  background: #fff !important;
+  border-radius: 50%;
+}
+
+.slick-dots li button:hover {
+  color: #ed068a !important;
+  background: #ed068a !important;
+}
+
+.slick-dots li.slick-active button {
+  color: #ed068a !important;
+}

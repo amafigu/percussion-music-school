@@ -6,12 +6,11 @@ import Slider from "react-slick";
 import styles from "./testimonialCarousel.module.scss";
 
 const TestimonialCarousel = () => {
-  // Slider settings
   const settings = {
     dots: true,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 120000,
+    autoplaySpeed: 12000,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
