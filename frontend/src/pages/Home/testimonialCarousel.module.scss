@@ -2,16 +2,14 @@
 @import "#styles/helpers/mixins";
 
 .testimonialCarouselWrapper {
-  @include flex-all-center;
-
   width: 100%;
+  min-width: 100px;
   height: 780px;
+  min-height: 100px;
   padding: 80px 20px 120px;
   background: theme.$secondary-background-color;
 
   .testimonialCarousel {
-    @include flex-column-all-center;
-
     padding: 0 20px;
 
     .title {
