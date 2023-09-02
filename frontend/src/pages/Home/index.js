@@ -1,11 +1,16 @@
+import WhatsappButton from "#components/WhatsappButton";
 import CoursesCardTeaser from "./CoursesCardTeaser";
 import TestimonialCarousel from "./TestimonialCarousel";
 import VideoBanner from "./VideoBanner";
+
 import styles from "./home.module.scss";
 const Home = () => {
   return (
     <div className={styles.homePageWrapper}>
       <div className={styles.homePage}>
+        <div className={styles.whatsappButtonPosition}>
+          <WhatsappButton />
+        </div>
         <VideoBanner />
         <section className={styles.cardsSection}>
           <div className={styles.presentation}>

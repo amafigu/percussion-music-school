@@ -13,6 +13,13 @@
     width: 100%;
   }
 
+  .whatsappButtonPosition {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: rotate(90deg) translateY(-150%);
+  }
+
   .cardsSection {
     background-color: #202027;
 
