@@ -1,13 +1,9 @@
-import WhatsappButton from "#components/WhatsappButton";
 import React from "react";
 import { TEASER_VIDEO } from "../../utils/constants";
 import styles from "./videoBanner.module.scss";
 const VideoBanner = () => {
   return (
     <div className={styles.videoBannerWrapper}>
-      <div className={styles.whatsappButtonPosition}>
-        <WhatsappButton />
-      </div>
       <div className={styles.videoBanner}>
         <iframe
           className={styles.iframeVideo}

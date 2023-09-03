@@ -24,7 +24,7 @@
 
   .textAndImageContainerWrapper {
     display: flex;
-    margin: 40px 0;
+    margin: 60px 0 40px;
   }
 
   .textAndImageContainer {
@@ -37,8 +37,8 @@
   }
 
   .image {
-    width: 578px;
-    height: 432px;
+    width: 460px;
+    height: 420px;
     user-select: none;
     border-radius: 16px;
     -webkit-text-select: none;
@@ -47,9 +47,9 @@
   .leftColumn {
     @include flex-column-horizontal-center;
 
-    width: 522px;
+    width: 462px;
     height: fit-content;
-    margin-right: 60px;
+    margin-right: 120px;
   }
 
   .rightColumn {
