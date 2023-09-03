@@ -6,22 +6,25 @@
 }
 
 .slick-dots li button::before {
+  display: inline-block; // Makes it inline-level
+  width: 8px !important;
+  height: 8px !important ;
+  color: white !important;
   content: "" !important;
+  background-color: white; // Or whatever color you want for the circle
+  border-radius: 50%; // Makes it a circle
+  opacity: 1 !important;
 }
 
-.slick-dots li button {
-  width: 4px !important;
-  height: 4px !important ;
-  content: "";
-  background: #fff !important;
-  border-radius: 50%;
-}
-
-.slick-dots li button:hover {
+.slick-dots li button:hover::before,
+.slick-dots li button:focus::before {
   color: #ed068a !important;
-  background: #ed068a !important;
+  background-color: #ed068a !important;
+  opacity: 0.75 !important;
 }
 
-.slick-dots li.slick-active button {
+.slick-dots li.slick-active button::before {
   color: #ed068a !important;
+  background-color: #ed068a !important;
+  opacity: 1 !important;
 }
