@@ -43,6 +43,7 @@
   .button {
     @include main-button;
 
+    font-weight: 400;
     color: #ed068a;
 
     &:hover {
