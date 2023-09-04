@@ -4,7 +4,7 @@ import styles from "./appRoutes.module.scss";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-
+import Pagenotfound from "./pages/Pagenotfound";
 const AppRoutes = () => {
   return (
     <div className={styles.appRoutesWrapper}>
@@ -16,6 +16,7 @@ const AppRoutes = () => {
       <div className={styles.content}>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='*' element={<Pagenotfound />} />
         </Routes>
       </div>
       <Footer />
