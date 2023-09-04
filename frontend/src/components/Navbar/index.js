@@ -17,11 +17,13 @@ const Navbar = () => {
         onMouseLeave={() => setDropdownOpen(false)}
       >
         <div className={styles.column}>
-          <img
-            className={styles.logo}
-            src={`${process.env.PUBLIC_URL}/assets/logo.png`}
-            alt='logo'
-          />
+          <Link to='/'>
+            <img
+              className={styles.logo}
+              src={`${process.env.PUBLIC_URL}/assets/logo.png`}
+              alt='logo'
+            />
+          </Link>
         </div>
         <div className={styles.column}>
           <Link className={styles.link} to='/about'>
