@@ -10,7 +10,7 @@ const TestimonialCarousel = () => {
     dots: true,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 1200000,
+    autoplaySpeed: 12000,
     slidesToShow: 1,
     slidesToScroll: 1,
   };

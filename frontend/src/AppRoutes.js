@@ -3,7 +3,10 @@ import { Route, Routes } from "react-router-dom";
 import styles from "./appRoutes.module.scss";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import About from "./pages/About";
 import Home from "./pages/Home";
+import InitialPage from "./pages/InitialPage";
+
 import Pagenotfound from "./pages/Pagenotfound";
 const AppRoutes = () => {
   return (
@@ -15,7 +18,10 @@ const AppRoutes = () => {
 
       <div className={styles.content}>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<InitialPage />}>
+            <Route path='/about' element={<About />} />
+            <Route index element={<Home />} />
+          </Route>
           <Route path='*' element={<Pagenotfound />} />
         </Routes>
       </div>

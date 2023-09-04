@@ -4,6 +4,8 @@
 .whatsAppButton {
   @include main-button;
 
+  z-index: 5000;
+
   .link {
     display: flex;
     align-items: center;
