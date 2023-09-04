@@ -8,4 +8,11 @@
     flex-grow: 1;
     min-height: theme.$min-vh-page-wrapper;
   }
+
+  .whatsappButtonPosition {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: rotate(90deg) translateY(-156%);
+  }
 }
