@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import Home from "./pages/Home";
-import LandingPage from "./pages/StandardPage";
+import InitialPage from "./pages/InitialPage";
 
 import Pagenotfound from "./pages/Pagenotfound";
 const AppRoutes = () => {
@@ -18,7 +18,7 @@ const AppRoutes = () => {
 
       <div className={styles.content}>
         <Routes>
-          <Route path='/' element={<LandingPage />}>
+          <Route path='/' element={<InitialPage />}>
             <Route path='/about' element={<About />} />
             <Route index element={<Home />} />
           </Route>
