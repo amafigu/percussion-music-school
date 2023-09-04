@@ -1,0 +1,12 @@
+@use "#styles/theme" as theme;
+@import "#styles/helpers/mixins";
+
+.aboutPageWrapper {
+  display: flex;
+  justify-content: center;
+  background-color: aqua;
+
+  .aboutPage {
+    min-height: theme.$min-vh-page-wrapper;
+  }
+}
