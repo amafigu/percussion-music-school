@@ -88,9 +88,13 @@ const Footer = () => {
           </div>
 
           <div className={styles.links}>
-            <Link to='/terms-conditions'>Terms of Use</Link>
+            <Link className={styles.linkLegal} to='/terms-conditions'>
+              Terms of Use
+            </Link>
             <span> | </span>
-            <Link to='/privacy-policy '>Privacy Policy</Link>
+            <Link className={styles.linkLegal} to='/privacy-policy '>
+              Privacy Policy
+            </Link>
           </div>
         </div>
       </div>

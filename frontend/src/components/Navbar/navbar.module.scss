@@ -35,6 +35,10 @@
     font-family: theme.$main-font-family;
     font-weight: 600;
     text-transform: uppercase;
+
+    &:hover {
+      color: #ed068a;
+    }
   }
 
   .mailButton {

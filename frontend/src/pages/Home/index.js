@@ -1,9 +1,11 @@
+import { useEffectScrollTop } from "#utils/utils";
 import CoursesCardTeaser from "./CoursesCardTeaser";
 import TestimonialCarousel from "./TestimonialCarousel";
 import VideoBanner from "./VideoBanner";
-
 import styles from "./home.module.scss";
+
 const Home = () => {
+  useEffectScrollTop();
   return (
     <div className={styles.homePageWrapper}>
       <div className={styles.homePage}>

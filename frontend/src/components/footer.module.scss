@@ -30,6 +30,12 @@
     width: 164px;
   }
 
+  .linkLegal {
+    &:hover {
+      color: theme.$branding-font-color;
+    }
+  }
+
   .column {
     display: flex;
     flex-direction: column;
