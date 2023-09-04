@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./pagenotfound.module.scss";
 
 const PageNotfound = () => {
@@ -15,6 +16,11 @@ const PageNotfound = () => {
             homepage and see if you can find what you are looking for.
           </p>
         </div>
+        <Link className={styles.button} to='/'>
+          <div className={styles.link}>
+            <span className={styles.buttonText}>Back to Home</span>
+          </div>
+        </Link>
       </div>
     </div>
   );

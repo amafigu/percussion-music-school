@@ -2,34 +2,7 @@
 @import "#styles/helpers/mixins";
 
 .whatsAppButton {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 250px;
-  height: 60px;
-  color: theme.$branding-font-color;
-  background-color: #2f323f;
-  border: solid 1px #2f323f;
-  border-radius: 8px;
-
-  &:hover {
-    color: #000;
-    background-color: theme.$branding-font-color;
-    border: solid 1px theme.$branding-font-color;
-  }
-
-  .customIcon {
-    margin-right: 8px;
-  }
-
-  &:hover .customIcon {
-    color: #000;
-  }
-
-  .text {
-    font-size: 18px;
-  }
+  @include main-button;
 
   .link {
     display: flex;
