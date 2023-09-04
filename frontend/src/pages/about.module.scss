@@ -4,9 +4,44 @@
 .aboutPageWrapper {
   display: flex;
   justify-content: center;
-  background-color: aqua;
 
   .aboutPage {
+    width: 100%;
     min-height: theme.$min-vh-page-wrapper;
+    background-color: theme.$secondary-background-color;
+
+    .upperBanner {
+      position: relative; // Relative positioning
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 660px;
+
+      .upperBannerText {
+        z-index: 200;
+        width: 1200px;
+        padding-top: 150px;
+        padding-bottom: 150px;
+
+        .title {
+          margin-bottom: 40px;
+          font-size: 48px;
+          font-weight: 800;
+          line-height: 1.2;
+          opacity: 0.8;
+        }
+
+        .content {
+          width: 50%;
+          margin-bottom: 20px;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 1.85;
+          color: #ddd;
+          opacity: 0.6;
+        }
+      }
+    }
   }
 }
