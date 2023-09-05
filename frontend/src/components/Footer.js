@@ -55,7 +55,7 @@ const Footer = () => {
             <h3 className={styles.title}>Social Links</h3>
             <div className={styles.icons}>
               <a
-                href='https://www.instagram.com/earth_and_air_percussion/'
+                href='https://www.instagram.com/tierrayairepercusion/'
                 target='_blanck'
               >
                 <i
