@@ -3,8 +3,7 @@
 
 .whatsAppButton {
   @include main-button;
-
-  z-index: 5000;
+  @include z-index(upperbannertext);
 
   .link {
     display: flex;

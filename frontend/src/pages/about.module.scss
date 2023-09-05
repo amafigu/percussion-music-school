@@ -2,8 +2,7 @@
 @import "#styles/helpers/mixins";
 
 .aboutPageWrapper {
-  display: flex;
-  justify-content: center;
+  @include flex-horizontal-center;
 
   .aboutPage {
     width: 100%;
@@ -11,15 +10,16 @@
     background-color: theme.$secondary-background-color;
 
     .upperBanner {
-      position: relative; // Relative positioning
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      position: relative;
+
+      @include flex-all-center;
+
       width: 100%;
       height: 660px;
 
       .upperBannerText {
-        z-index: 200;
+        @include z-index(upperbannertext);
+
         width: 1200px;
         padding-top: 150px;
         padding-bottom: 150px;
@@ -40,6 +40,109 @@
           line-height: 1.85;
           color: #ddd;
           opacity: 0.6;
+        }
+      }
+    }
+
+    .listItem {
+      text-transform: uppercase;
+    }
+
+    .linksRow {
+      @include flex-horizontal-center;
+
+      min-width: 1200px;
+      height: 86px;
+      background-color: theme.$option-row-background-color;
+
+      ul {
+        gap: 40px;
+
+        @include flex-all-center;
+
+        width: 1200px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 16px;
+      }
+    }
+
+    .educationSection {
+      @include flex-column-horizontal-center;
+
+      width: 100%;
+      background-color: theme.$secondary-background-color;
+
+      .imageContainer {
+        position: relative;
+
+        @include flex-horizontal-center;
+
+        width: 54%;
+        margin: 80px 0;
+
+        .textLayer {
+          position: absolute;
+          right: 0;
+          bottom: -20px;
+
+          @include flex-all-center;
+
+          width: 620px;
+          height: 180px;
+          background: #20232d;
+          border-radius: 10px;
+
+          .text {
+            width: 80%;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.85;
+            color: #ddd;
+            opacity: 0.9;
+          }
+        }
+      }
+
+      .imageEducation {
+        width: 100%;
+        border-radius: 24px;
+        opacity: 0.5;
+      }
+
+      .logoAndTextContainer {
+        @include flex-vertical-center;
+
+        width: 54%;
+        height: 300px;
+
+        .logoAboveText {
+          display: flex;
+          flex-direction: column;
+          width: 30%;
+
+          .logo {
+            width: fit-content;
+            height: 82px;
+            border-radius: 50%;
+          }
+
+          .text {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.4;
+          }
+        }
+
+        .longText {
+          width: 66%;
+          padding-right: 120px;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 1.85;
+          color: #ddd;
+          opacity: 0.9;
         }
       }
     }
