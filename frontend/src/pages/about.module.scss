@@ -152,6 +152,7 @@
       @include flex-horizontal-center;
 
       width: 100%;
+      margin-bottom: 60px;
 
       .imageAndTextPhilosophyContainer {
         position: relative;
@@ -196,6 +197,86 @@
           font-weight: 400;
           line-height: 1.85;
           color: #ddd;
+        }
+      }
+    }
+
+    .founderSection {
+      @include flex-horizontal-center;
+
+      width: 100%;
+      margin: 92px 0 80px;
+
+      .presentation {
+        @include flex-all-center;
+
+        gap: 120px;
+        width: 60%;
+
+        .imageContaier {
+          display: flex;
+          width: 490px;
+          height: 560px;
+
+          .image {
+            width: 100%;
+          }
+        }
+
+        .textAndIcons {
+          width: 46%;
+
+          .name {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: 0;
+          }
+
+          p {
+            width: 80%;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.85;
+            color: #ddd;
+          }
+
+          .position {
+            margin-bottom: 40px;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.85;
+            color: #ddd;
+          }
+
+          .socialIcons {
+            flex-direction: column;
+            width: 100%;
+            margin-top: 40px;
+
+            @include flex-horizontal-center;
+
+            .text {
+              margin-bottom: 24px;
+              color: theme.$branding-font-color;
+            }
+
+            .customIcon {
+              color: theme.$branding-font-color;
+            }
+
+            .icons {
+              display: flex;
+              gap: 20px;
+              justify-content: space-around;
+            }
+
+            .row {
+              display: flex;
+              gap: 28px;
+              width: 100%;
+            }
+          }
         }
       }
     }
