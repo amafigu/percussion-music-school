@@ -44,10 +44,6 @@
       }
     }
 
-    .listItem {
-      text-transform: uppercase;
-    }
-
     .linksRow {
       @include flex-horizontal-center;
 
@@ -64,14 +60,19 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 16px;
+
+        .listItem {
+          text-transform: uppercase;
+        }
       }
     }
 
     .educationSection {
-      @include flex-column-horizontal-center;
-
       width: 100%;
+      margin: 80px 0;
       background-color: theme.$secondary-background-color;
+
+      @include flex-column-horizontal-center;
 
       .imageContainer {
         position: relative;
@@ -79,7 +80,13 @@
         @include flex-horizontal-center;
 
         width: 54%;
-        margin: 80px 0;
+        margin-bottom: 80px;
+
+        .imageEducation {
+          width: 100%;
+          border-radius: 24px;
+          opacity: 0.5;
+        }
 
         .textLayer {
           position: absolute;
@@ -103,12 +110,6 @@
             opacity: 0.9;
           }
         }
-      }
-
-      .imageEducation {
-        width: 100%;
-        border-radius: 24px;
-        opacity: 0.5;
       }
 
       .logoAndTextContainer {
@@ -143,6 +144,58 @@
           line-height: 1.85;
           color: #ddd;
           opacity: 0.9;
+        }
+      }
+    }
+
+    .philosophySection {
+      @include flex-horizontal-center;
+
+      width: 100%;
+
+      .imageAndTextPhilosophyContainer {
+        position: relative;
+        width: 100%;
+      }
+
+      .imagePhilosophy {
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+      }
+
+      .philosophyText {
+        position: absolute;
+        top: 38%;
+
+        @include flex-horizontal-center;
+
+        .columnLeft {
+          width: 20%;
+
+          .textTop {
+            margin-bottom: 40px;
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: 0;
+          }
+
+          .textBottom {
+            width: 80%;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 1.85;
+            color: #ddd;
+          }
+        }
+
+        .columnRight {
+          width: 32%;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 1.85;
+          color: #ddd;
         }
       }
     }

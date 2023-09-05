@@ -97,6 +97,35 @@ const About = () => {
             </div>
           </div>
         </section>
+        <section className={styles.philosophySection}>
+          <div className={styles.imageAndTextPhilosophyContainer}>
+            <img
+              alt='philosophy'
+              className={styles.imagePhilosophy}
+              src={`${process.env.PUBLIC_URL}/assets/about_page_philosophy.png`}
+            ></img>
+            <div className={styles.philosophyText}>
+              <div className={styles.columnLeft}>
+                <div className={styles.textTop}>
+                  <span>Our Philosophy</span>
+                </div>
+                <div className={styles.textBottom}>
+                  <span>Skill should not be harnessed by hard work alone.</span>
+                </div>
+              </div>
+              <div className={styles.columnRight}>
+                At Tierra y Aire, we believe that passion is the fundamental
+                building block to every student’s success. Through passion comes
+                curiosity, and it is this very curiosity that would spur the
+                student to continuously work, and learn, more on his or her
+                craft. It is our responsibility, as educators, to fuel that
+                curiosity in every student; constantly nurturing, guiding and
+                motivating every student to eventually reach their individual
+                and collective music objectives.
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );
