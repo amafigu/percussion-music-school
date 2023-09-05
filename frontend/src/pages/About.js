@@ -17,6 +17,13 @@ const About = () => {
     zIndex: 0,
   };
 
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className={styles.aboutPageWrapper}>
       <div className={styles.aboutPage}>
@@ -34,18 +41,24 @@ const About = () => {
         </div>
         <div className={styles.linksRow}>
           <ul>
-            <li className={styles.listItem}>
-              <a href='#school'>our school</a>
+            <li
+              className={styles.listItem}
+              onClick={() => scrollToSection("school")}
+            >
+              <span>our school</span>
             </li>
 
-            <li className={styles.listItem}>
-              <a href='#philosophy'>our philosophy</a>
+            <li
+              className={styles.listItem}
+              onClick={() => scrollToSection("philosophy")}
+            >
+              <span>our philosophy</span>
             </li>
-            <li className={styles.listItem}>
-              <a href='#founder'>our founder</a>
-            </li>
-            <li className={styles.listItem}>
-              <a href='#story'>our story</a>
+            <li
+              className={styles.listItem}
+              onClick={() => scrollToSection("founder")}
+            >
+              <span>our founder</span>
             </li>
           </ul>
         </div>
