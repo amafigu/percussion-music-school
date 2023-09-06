@@ -30,7 +30,7 @@
         gap: 20px;
         align-items: center;
         height: auto;
-        padding-top: 20px;
+        padding-top: 50px;
         text-align: center;
       }
 
@@ -41,6 +41,10 @@
       padding-top: 80px;
 
       .column {
+        @include media.mobile {
+          width: theme.$mobile-default-page-width !important;
+        }
+
         display: flex;
         flex-direction: column;
 
@@ -48,12 +52,17 @@
           margin-bottom: 16px;
           font-family: theme.$main-font-family;
           font-weight: 600;
-          text-transform: uppercase;
         }
 
         .icons {
+          @include media.mobile {
+            gap: 30px;
+            width: fit-content;
+            margin: auto;
+          }
+
           display: flex;
-          gap: 20px;
+          gap: 40px;
           justify-content: space-around;
         }
 
@@ -78,9 +87,19 @@
 
       .socialColumn {
         width: 164px;
+
+        .title {
+          @include media.mobile {
+            margin-bottom: 26px;
+          }
+        }
       }
 
       .logoColumn {
+        @include media.mobile {
+          margin-bottom: 4px;
+        }
+
         width: 226px;
 
         .teaserText {
@@ -89,8 +108,9 @@
 
         .logoContainer {
           @include media.mobile {
-            justify-content: center;
-            margin-bottom: 20px;
+            @include flex-all-center;
+
+            margin-bottom: 40px;
           }
 
           display: flex;
@@ -119,8 +139,13 @@
         justify-content: center;
         width: 100%;
         height: auto;
-        padding: 0 20px;
-        margin: 30px 0;
+        padding: 0 24px;
+        margin: 40px 0;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20.3px;
+        color: #606060;
         text-align: center;
       }
 
@@ -131,7 +156,13 @@
       height: 128px;
       margin: auto;
 
-      .links {
+      .textCopyright {
+        @include media.mobile {
+          margin-bottom: 48px;
+        }
+      }
+
+      .columns {
         @include media.mobile {
           margin-top: 20px;
         }

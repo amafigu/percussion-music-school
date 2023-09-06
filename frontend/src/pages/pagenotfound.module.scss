@@ -1,13 +1,18 @@
 @use "#styles/theme" as theme;
+@use "#styles/media" as media;
 @import "#styles/helpers/mixins";
 
 .pageNotFoundWrapper {
   display: flex;
   justify-content: center;
-  height: theme.$min-vh-page-wrapper;
+  min-height: theme.$min-vh-page-wrapper;
   background-color: theme.$secondary-background-color;
 
   .pageNotFound {
+    @include media.mobile {
+      margin-top: 60px;
+    }
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,6 +20,12 @@
   }
 
   .httpErrorNumber {
+    @include media.mobile {
+      font-size: 86px;
+      font-weight: 700;
+      letter-spacing: 4px;
+    }
+
     font-size: 100px;
     font-weight: 700;
     text-align: center;
@@ -22,6 +33,12 @@
   }
 
   .httpErrorText {
+    @include media.mobile {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 4px;
+    }
+
     margin-bottom: 60px;
     font-size: 60px;
     font-weight: 700;
@@ -30,6 +47,10 @@
   }
 
   .text {
+    @include media.mobile {
+      width: 80%;
+    }
+
     width: 760px;
     margin-bottom: 36px;
     font-size: 18px;
@@ -41,6 +62,12 @@
   }
 
   .button {
+    @include media.mobile {
+      width: 80% !important;
+      margin-bottom: 131px !important;
+      border-radius: 8px !important;
+    }
+
     @include main-button;
 
     font-weight: 400;
