@@ -6,7 +6,7 @@
   @include flex-horizontal-center;
 
   @include media.mobile {
-    width: 80%;
+    width: theme.$mobile-default-page-width;
     height: auto;
     margin-bottom: 64px;
   }

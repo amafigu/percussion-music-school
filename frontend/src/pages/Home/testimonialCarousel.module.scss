@@ -74,7 +74,7 @@
   .leftColumn {
     @include media.mobile {
       order: 2;
-      width: 90%;
+      width: theme.$mobile-default-page-width;
       margin-right: 0;
     }
 
@@ -88,7 +88,7 @@
   .rightColumn {
     @include media.mobile {
       order: 1;
-      width: 90%;
+      width: theme.$mobile-default-page-width;
       margin-right: 0;
       margin-bottom: 46px;
     }
