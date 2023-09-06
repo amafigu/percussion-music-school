@@ -1,4 +1,5 @@
 @use "#styles/theme" as theme;
+@use "#styles/media" as media;
 @import "#styles/helpers/mixins";
 
 .videoBannerWrapper {
@@ -6,10 +7,14 @@
   justify-content: center;
 
   .videoBanner {
-    position: relative;
+    @include media.mobile {
+      display: block;
+      height: 560px;
+    }
 
     @include z-index(videobanner);
 
+    position: relative;
     width: 100vw;
     height: 70vh;
     pointer-events: none;
@@ -21,6 +26,10 @@
   }
 
   .borderDiv {
+    @include media.mobile {
+      display: none;
+    }
+
     position: absolute;
     inset: 0;
     pointer-events: none;
