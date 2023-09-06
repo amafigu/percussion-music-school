@@ -4,18 +4,26 @@
 
 .testimonialCarouselWrapper {
   @include media.mobile {
-    padding: 10px;
+    height: auto;
+    padding: 0;
   }
 
   width: 100%;
   min-width: 100px;
-  height: 780px;
   height: fit-content;
   min-height: 100px;
   padding: 60px;
   background: theme.$secondary-background-color;
 
   .title {
+    @include media.mobile {
+      @include flex-all-center;
+
+      margin: 46px 0 26px;
+      font-size: 27px;
+      font-weight: 800;
+    }
+
     width: 100%;
     font-size: 42px;
     font-weight: 800 !important;
@@ -28,6 +36,10 @@
   }
 
   .textAndImageContainerWrapper {
+    @include media.mobile {
+      margin: 0;
+    }
+
     display: flex;
     margin: 60px 0 40px;
   }
@@ -46,6 +58,12 @@
   }
 
   .image {
+    @include media.mobile {
+      width: 100%;
+      height: calc(0.67 * 100vw);
+      border-radius: 8px;
+    }
+
     width: 460px;
     height: 420px;
     user-select: none;
@@ -55,7 +73,8 @@
 
   .leftColumn {
     @include media.mobile {
-      width: 100%;
+      order: 2;
+      width: theme.$mobile-default-page-width;
       margin-right: 0;
     }
 
@@ -67,10 +86,22 @@
   }
 
   .rightColumn {
+    @include media.mobile {
+      order: 1;
+      width: theme.$mobile-default-page-width;
+      margin-right: 0;
+      margin-bottom: 46px;
+    }
+
     pointer-events: none;
   }
 
   .text {
+    @include media.mobile {
+      padding: 20px 0 0;
+      margin-bottom: 20px;
+    }
+
     display: flex;
     flex-grow: 1;
     align-items: center;

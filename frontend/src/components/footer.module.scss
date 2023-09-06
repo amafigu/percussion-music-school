@@ -3,6 +3,11 @@
 @import "#styles/helpers/mixins";
 
 .footerWrapper {
+  @include media.mobile {
+    position: relative;
+    bottom: 60px;
+  }
+
   @include flex-horizontal-center;
 
   background-color: theme.$primary-background-color;
@@ -18,108 +23,126 @@
     width: 80%;
     height: 512px;
     background-color: theme.$primary-background-color;
-  }
 
-  .columnsContainer {
-    @include media.mobile {
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
-      height: auto;
-      padding-top: 20px;
-    }
+    .columnsContainer {
+      @include media.mobile {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        height: auto;
+        padding-top: 20px;
+        text-align: center;
+      }
 
-    display: flex;
-    gap: 120px;
-    justify-content: center;
-    height: 384px;
-    padding-top: 80px;
-  }
-
-  .logoColumn {
-    width: 226px;
-  }
-
-  .socialColumn {
-    width: 164px;
-  }
-
-  .linkLegal {
-    &:hover {
-      color: theme.$branding-font-color;
-    }
-  }
-
-  .column {
-    display: flex;
-    flex-direction: column;
-
-    .icons {
       display: flex;
-      gap: 20px;
-      justify-content: space-around;
-    }
+      gap: 120px;
+      justify-content: center;
+      height: 384px;
+      padding-top: 80px;
 
-    .link {
-      padding: 10px 0;
+      .column {
+        display: flex;
+        flex-direction: column;
 
-      .content {
-        font-size: 16px;
-        line-height: 1;
-        color: #a8a8a8;
+        .title {
+          margin-bottom: 16px;
+          font-family: theme.$main-font-family;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
 
-        &:hover {
+        .icons {
+          display: flex;
+          gap: 20px;
+          justify-content: space-around;
+        }
+
+        .customIcon {
           color: theme.$branding-font-color;
+        }
+
+        .link {
+          padding: 10px 0;
+
+          .content {
+            font-size: 16px;
+            line-height: 1;
+            color: #a8a8a8;
+
+            &:hover {
+              color: theme.$branding-font-color;
+            }
+          }
+        }
+      }
+
+      .socialColumn {
+        width: 164px;
+      }
+
+      .logoColumn {
+        width: 226px;
+
+        .teaserText {
+          color: #a8a8a8;
+        }
+
+        .logoContainer {
+          @include media.mobile {
+            justify-content: center;
+            margin-bottom: 20px;
+          }
+
+          display: flex;
+          margin-bottom: 40px;
+
+          .logo {
+            width: 66px;
+            height: 66px;
+            margin-right: 8px;
+            border-radius: 50%;
+          }
+
+          .text {
+            .word {
+              font-size: 20px;
+              font-weight: 700;
+            }
+          }
         }
       }
     }
-  }
 
-  .title {
-    margin-bottom: 16px;
-    font-family: theme.$main-font-family;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
+    .copyright {
+      @include media.mobile {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        padding: 0 20px;
+        margin: 30px 0;
+        text-align: center;
+      }
 
-  .logoContainer {
-    @include media.mobile {
-      justify-content: center;
-      margin-bottom: 20px;
-    }
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 75%;
+      height: 128px;
+      margin: auto;
 
-    display: flex;
-    margin-bottom: 40px;
+      .links {
+        @include media.mobile {
+          margin-top: 20px;
+        }
 
-    .logo {
-      width: 66px;
-      height: 66px;
-      margin-right: 8px;
-      border-radius: 50%;
-    }
-
-    .text {
-      .word {
-        font-size: 20px;
-        font-weight: 700;
+        .linkLegal {
+          &:hover {
+            color: theme.$branding-font-color;
+            cursor: pointer;
+          }
+        }
       }
     }
-  }
-
-  .teaserText {
-    color: #a8a8a8;
-  }
-
-  .copyright {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 75%;
-    height: 128px;
-    margin: auto;
-  }
-
-  .customIcon {
-    color: theme.$branding-font-color;
   }
 }

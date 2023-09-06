@@ -10,6 +10,11 @@
   .coursesCardTeaser {
     @include media.mobile {
       flex-direction: column;
+      width: 100%;
+
+      :last-child {
+        margin-bottom: 0;
+      }
     }
 
     display: flex;

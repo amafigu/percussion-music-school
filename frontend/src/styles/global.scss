@@ -1,4 +1,5 @@
 /* stylelint-disable selector-class-pattern */
+@use "./media" as media;
 
 .slick-next,
 .slick-prev {
@@ -30,5 +31,11 @@
 }
 
 .slick-slider {
-  margin-bottom: 60px;
+  margin-bottom: 60px !important;
+}
+
+.slick-list {
+  @include media.mobile {
+    margin: 0 0 120px !important;
+  }
 }
