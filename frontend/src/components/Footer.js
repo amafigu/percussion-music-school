@@ -80,7 +80,7 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.copyright}>
-          <div className={styles.text}>
+          <div className={styles.textCopyright}>
             <span>
               Tierra y Aire Percusion is a registered trademark in Argentina. ©
               2023 Tierra y Aire Percusion - Argentina. All Rights Reserved.
