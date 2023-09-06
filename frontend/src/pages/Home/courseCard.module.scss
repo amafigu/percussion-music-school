@@ -1,10 +1,16 @@
 @use "#styles/theme" as theme;
+@use "#styles/media" as media;
 @import "#styles/helpers/mixins";
 
 .courseCardWrapper {
   @include flex-horizontal-center;
 
   .courseCard {
+    @include media.mobile {
+      width: 100%;
+      height: auto;
+    }
+
     width: 372px;
     height: 524px;
     background-color: #20232d;

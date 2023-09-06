@@ -1,4 +1,5 @@
 @use "#styles/theme" as theme;
+@use "#styles/media" as media;
 @import "#styles/helpers/mixins";
 
 .footerWrapper {
@@ -7,6 +8,11 @@
   background-color: theme.$primary-background-color;
 
   .footer {
+    @include media.mobile {
+      width: 100%;
+      height: auto;
+    }
+
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -15,6 +21,14 @@
   }
 
   .columnsContainer {
+    @include media.mobile {
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      height: auto;
+      padding-top: 20px;
+    }
+
     display: flex;
     gap: 120px;
     justify-content: center;
@@ -69,6 +83,11 @@
   }
 
   .logoContainer {
+    @include media.mobile {
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
     display: flex;
     margin-bottom: 40px;
 

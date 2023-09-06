@@ -1,4 +1,5 @@
 @use "#styles/theme" as theme;
+@use "#styles/media" as media;
 @import "#styles/helpers/mixins";
 
 .homePageWrapper {
@@ -23,6 +24,10 @@
   }
 
   .presentation {
+    @include media.mobile {
+      width: 100%;
+    }
+
     width: 38%;
     margin: auto;
     text-align: center;
@@ -36,6 +41,12 @@
     }
 
     .subtitle {
+      @include media.mobile {
+        font-size: 27px;
+        line-height: 1.4;
+        letter-spacing: 0;
+      }
+
       font-size: 42px;
       font-weight: 800;
       line-height: 1.2;

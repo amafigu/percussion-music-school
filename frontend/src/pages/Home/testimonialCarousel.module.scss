@@ -1,7 +1,12 @@
 @use "#styles/theme" as theme;
+@use "#styles/media" as media;
 @import "#styles/helpers/mixins";
 
 .testimonialCarouselWrapper {
+  @include media.mobile {
+    padding: 10px;
+  }
+
   width: 100%;
   min-width: 100px;
   height: 780px;
@@ -28,6 +33,10 @@
   }
 
   .textAndImageContainer {
+    @include media.mobile {
+      flex-direction: column;
+    }
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,6 +54,11 @@
   }
 
   .leftColumn {
+    @include media.mobile {
+      width: 100%;
+      margin-right: 0;
+    }
+
     @include flex-column-horizontal-center;
 
     width: 462px;
