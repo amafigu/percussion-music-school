@@ -5,6 +5,12 @@
 .courseCardWrapper {
   @include flex-horizontal-center;
 
+  @include media.mobile {
+    width: 80%;
+    height: auto;
+    margin-bottom: 64px;
+  }
+
   .courseCard {
     @include media.mobile {
       width: 100%;
