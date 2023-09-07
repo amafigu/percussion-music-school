@@ -1,0 +1,25 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.menuWrapper {
+  @include flex-all-center;
+
+  .menu {
+    @include flex-column-all-center;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 6000;
+    width: 400px;
+
+    // width: theme.$mobile-default-page-width;
+    background-color: beige;
+    border: blue solid 2px;
+
+    .cell {
+      border: red solid 2px;
+    }
+  }
+}
