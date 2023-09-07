@@ -62,7 +62,7 @@ const Navbar = () => {
           </Link>
           <a
             href='mailto:percusion.tierrayaire@gmail.com'
-            className={styles.mailButton}
+            className={`${styles.mailButton} ${styles.hideForMobile}`}
           >
             <span>Contact Us</span>
           </a>

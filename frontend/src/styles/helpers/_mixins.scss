@@ -74,12 +74,30 @@
 }
 
 @mixin menu-list-cell {
-  width: 80%;
+  width: 100%;
   padding: 20px;
   font-size: 16px;
   line-height: 1.3em;
   text-transform: uppercase;
   border-bottom: solid grey 1px;
+}
+
+@mixin mail-button {
+  @include flex-horizontal-center;
+
+  width: 172px;
+  height: 60px;
+  padding: 18px 35px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: theme.$primary-background-color;
+  background-color: theme.$branding-font-color;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: #fff;
+  }
 }
 
 @mixin z-index($key) {

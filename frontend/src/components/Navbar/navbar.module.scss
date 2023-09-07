@@ -105,24 +105,12 @@
       }
 
       .mailButton {
+        @include mail-button;
+      }
+
+      .hideForMobile {
         @include media.mobile {
           display: none;
-        }
-
-        @include flex-horizontal-center;
-
-        width: 172px;
-        height: 60px;
-        padding: 18px 35px;
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 1.5;
-        color: theme.$primary-background-color;
-        background-color: theme.$branding-font-color;
-        border-radius: 10px;
-
-        &:hover {
-          background-color: #fff;
         }
       }
 
