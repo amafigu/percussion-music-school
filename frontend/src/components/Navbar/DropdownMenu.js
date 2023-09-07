@@ -2,22 +2,34 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./dropdownMenu.module.scss";
 
-const DropdownMenu = () => {
+const DropdownMenu = ({ setMenuVisible }) => {
   return (
     <ul className={styles.dropdownMenu}>
       <li className={styles.listItem}>
-        <Link className={styles.link} to='/programs/regular'>
+        <Link
+          className={styles.link}
+          onClick={() => setMenuVisible(false)}
+          to='/programs/regular'
+        >
           <span className={styles.linkContent}>regular</span>
         </Link>
       </li>
 
       <li className={styles.listItem}>
-        <Link className={styles.link} to='/programs/short-courses'>
+        <Link
+          className={styles.link}
+          onClick={() => setMenuVisible(false)}
+          to='/programs/short-courses'
+        >
           <span className={styles.linkContent}>short courses</span>
         </Link>
       </li>
       <li className={styles.listItem}>
-        <Link className={styles.link} to='/programs/corporate'>
+        <Link
+          className={styles.link}
+          onClick={() => setMenuVisible(false)}
+          to='/programs/corporate'
+        >
           <span className={styles.linkContent}>corporate</span>
         </Link>
       </li>

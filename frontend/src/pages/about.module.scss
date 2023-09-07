@@ -12,6 +12,10 @@
     scroll-behavior: smooth;
 
     .upperBanner {
+      @include media.mobile {
+        height: auto;
+      }
+
       position: relative;
 
       @include flex-all-center;
@@ -19,14 +23,44 @@
       width: 100%;
       height: 660px;
 
+      .imageForBigScreen {
+        @include media.mobile {
+          display: none;
+        }
+      }
+
+      .imageForMobileScreen {
+        display: none;
+
+        @include media.mobile {
+          display: flex;
+        }
+      }
+
       .upperBannerText {
         @include z-index(upperbannertext);
+
+        @include media.mobile {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 84%;
+          padding-top: 30px;
+          padding-bottom: 30px;
+          margin: 40px 0;
+        }
 
         width: 1200px;
         padding-top: 150px;
         padding-bottom: 150px;
 
         .title {
+          @include media.mobile {
+            width: 100%;
+            margin-bottom: 60px;
+            font-size: 28px;
+          }
+
           margin-bottom: 40px;
           font-size: 48px;
           font-weight: 800;
@@ -35,6 +69,12 @@
         }
 
         .content {
+          @include media.mobile {
+            width: 100%;
+            font-size: 16px;
+            line-height: 1.45;
+          }
+
           width: 50%;
           margin-bottom: 20px;
           font-size: 18px;
@@ -48,8 +88,7 @@
 
     .linksRow {
       @include media.mobile {
-        display: block;
-        width: 100%;
+        min-width: 100%;
         height: 90px;
       }
 
@@ -60,6 +99,12 @@
       background-color: theme.$option-row-background-color;
 
       ul {
+        @include media.mobile {
+          gap: 20px;
+          width: 100%;
+          padding: 0 20px;
+        }
+
         @include flex-all-center;
 
         gap: 40px;
@@ -69,6 +114,7 @@
         line-height: 16px;
 
         .listItem {
+          text-align: center;
           text-transform: uppercase;
           cursor: pointer;
         }
@@ -76,26 +122,58 @@
     }
 
     .educationSection {
+      @include media.mobile {
+        margin: 0;
+      }
+
       @include flex-column-horizontal-center;
 
       width: 100%;
       margin: 80px 0;
       background-color: theme.$secondary-background-color;
 
-      .imageContainer {
+      .imageAndTextLayerContainer {
+        @include media.mobile {
+          flex-direction: column;
+          width: theme.$mobile-default-page-width;
+          margin-top: 30px;
+          margin-bottom: 40px;
+        }
+
         @include flex-horizontal-center;
 
         position: relative;
         width: 54%;
         margin-bottom: 80px;
 
-        .imageEducation {
+        .imageEducationBigScreen {
+          @include media.mobile {
+            display: none;
+          }
+
           width: 100%;
           border-radius: 24px;
           opacity: 0.5;
         }
 
+        .imageEducationMobileScreen {
+          @include media.mobile {
+            display: flex;
+          }
+
+          display: none;
+        }
+
         .textLayer {
+          @include media.mobile {
+            position: static;
+            right: unset;
+            bottom: unset;
+            width: 100%;
+            height: auto;
+            margin-top: 40px;
+          }
+
           @include flex-all-center;
 
           position: absolute;
@@ -107,6 +185,10 @@
           border-radius: 10px;
 
           .text {
+            @include media.mobile {
+              margin: 30px auto;
+            }
+
             width: 80%;
             font-size: 18px;
             font-style: normal;
@@ -119,23 +201,40 @@
       }
 
       .logoAndTextContainer {
+        @include media.mobile {
+          flex-direction: column;
+          width: 100%;
+          height: auto;
+        }
+
         @include flex-vertical-center;
 
         width: 54%;
         height: 300px;
 
         .logoAboveText {
+          @include media.mobile {
+            width: theme.$mobile-default-page-width;
+          }
+
           display: flex;
           flex-direction: column;
           width: 30%;
 
           .logo {
-            width: fit-content;
+            width: 82px;
             height: 82px;
             border-radius: 50%;
           }
 
           .text {
+            @include media.mobile {
+              margin-top: 20px;
+              font-size: 25px;
+              line-height: 1.4;
+              letter-spacing: 0;
+            }
+
             font-size: 32px;
             font-weight: 800;
             line-height: 1.4;
@@ -143,6 +242,12 @@
         }
 
         .longText {
+          @include media.mobile {
+            width: theme.$mobile-default-page-width;
+            padding-right: 0;
+            margin-top: 40px;
+          }
+
           width: 66%;
           padding-right: 120px;
           font-size: 18px;
@@ -150,6 +255,10 @@
           line-height: 1.85;
           color: #ddd;
           opacity: 0.9;
+
+          .paragraphs {
+            font-size: 18px;
+          }
         }
       }
     }
@@ -165,9 +274,24 @@
         width: 100%;
       }
 
-      .imagePhilosophy {
+      .imagePhilosophyBigScreen {
+        @include media.mobile {
+          display: none;
+        }
+
         width: 100%;
         height: 100%;
+        opacity: 0.5;
+      }
+
+      .imagePhilosophyMobileScreen {
+        @include media.mobile {
+          display: flex;
+        }
+
+        display: none;
+        width: 100%;
+        height: auto;
         opacity: 0.5;
       }
 
