@@ -12,6 +12,10 @@
     scroll-behavior: smooth;
 
     .upperBanner {
+      @include media.mobile {
+        height: auto;
+      }
+
       position: relative;
 
       @include flex-all-center;
@@ -19,14 +23,44 @@
       width: 100%;
       height: 660px;
 
+      .imageForBigScreen {
+        @include media.mobile {
+          display: none;
+        }
+      }
+
+      .imageForMobileScreen {
+        display: none;
+
+        @include media.mobile {
+          display: flex;
+        }
+      }
+
       .upperBannerText {
         @include z-index(upperbannertext);
+
+        @include media.mobile {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 84%;
+          padding-top: 30px;
+          padding-bottom: 30px;
+          margin: 40px 0;
+        }
 
         width: 1200px;
         padding-top: 150px;
         padding-bottom: 150px;
 
         .title {
+          @include media.mobile {
+            width: 100%;
+            margin-bottom: 60px;
+            font-size: 28px;
+          }
+
           margin-bottom: 40px;
           font-size: 48px;
           font-weight: 800;
@@ -35,6 +69,12 @@
         }
 
         .content {
+          @include media.mobile {
+            width: 100%;
+            font-size: 16px;
+            line-height: 1.45;
+          }
+
           width: 50%;
           margin-bottom: 20px;
           font-size: 18px;
@@ -48,8 +88,7 @@
 
     .linksRow {
       @include media.mobile {
-        display: block;
-        width: 100%;
+        min-width: 100%;
         height: 90px;
       }
 
@@ -60,6 +99,12 @@
       background-color: theme.$option-row-background-color;
 
       ul {
+        @include media.mobile {
+          gap: 20px;
+          width: 100%;
+          padding: 0 20px;
+        }
+
         @include flex-all-center;
 
         gap: 40px;
@@ -69,6 +114,7 @@
         line-height: 16px;
 
         .listItem {
+          text-align: center;
           text-transform: uppercase;
           cursor: pointer;
         }
@@ -119,6 +165,11 @@
       }
 
       .logoAndTextContainer {
+        @include media.mobile {
+          width: 100%;
+          height: auto;
+        }
+
         @include flex-vertical-center;
 
         width: 54%;
@@ -150,6 +201,10 @@
           line-height: 1.85;
           color: #ddd;
           opacity: 0.9;
+
+          .paragraphs {
+            font-size: 18px;
+          }
         }
       }
     }

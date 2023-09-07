@@ -3,7 +3,7 @@ import styles from "./about.module.scss";
 
 const About = () => {
   useEffectScrollTop();
-  const backgroundImage = {
+  const backgroundImageDesktop = {
     backgroundImage: `url(${process.env.PUBLIC_URL}/assets/banner_about.png)`,
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -14,6 +14,20 @@ const About = () => {
     left: 0,
     width: "100%",
     height: "660px",
+    zIndex: 0,
+  };
+
+  const backgroundImageMobile = {
+    backgroundImage: `url(${process.env.PUBLIC_URL}/assets/banner_about_mobile.png)`,
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "100% auto",
+    opacity: "0.3",
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
     zIndex: 0,
   };
 
@@ -28,7 +42,14 @@ const About = () => {
     <div className={styles.aboutPageWrapper}>
       <div className={styles.aboutPage}>
         <div className={styles.upperBanner}>
-          <div style={backgroundImage}></div>
+          <div
+            className={styles.imageForBigScreen}
+            style={backgroundImageDesktop}
+          ></div>
+          <div
+            className={styles.imageForMobileScreen}
+            style={backgroundImageMobile}
+          ></div>
           <div className={styles.upperBannerText}>
             <div className={styles.title}>About Tierra y Aire</div>
             <div className={styles.content}>
