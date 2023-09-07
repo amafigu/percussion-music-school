@@ -27,7 +27,7 @@
   .navbar {
     @include media.mobile {
       width: 100%;
-      height: 66px;
+      height: 90px;
     }
 
     @include flex-vertical-center;
@@ -70,13 +70,31 @@
       gap: 40px;
 
       .reactLink {
+        @include media.mobile {
+          margin-right: 12px;
+        }
+
         @include flex-vertical-center;
+      }
+
+      .logoContainer {
+        display: flex;
+        align-items: center;
+
+        .text {
+          @include media.mobile {
+            font-weight: 800;
+            line-height: 128%;
+            opacity: 0.9;
+            transform: scale(1, 1.1);
+          }
+        }
       }
 
       .logo {
         @include media.mobile {
-          width: 46px;
-          height: 46px;
+          width: 70px;
+          height: 70px;
         }
 
         width: 80px;

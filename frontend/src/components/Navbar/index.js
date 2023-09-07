@@ -20,13 +20,19 @@ const Navbar = () => {
         onMouseLeave={() => setDropdownOpen(false)}
       >
         <div className={`${styles.column} ${styles.left}`}>
-          <Link className={styles.reactLink} to='/'>
-            <img
-              className={styles.logo}
-              src={`${process.env.PUBLIC_URL}/assets/logo.png`}
-              alt='logo'
-            />
-          </Link>
+          <div className={styles.logoContainer}>
+            <Link className={styles.reactLink} to='/'>
+              <img
+                className={styles.logo}
+                src={`${process.env.PUBLIC_URL}/assets/logo.png`}
+                alt='logo'
+              />
+            </Link>
+            <div className={styles.text}>
+              <div className={styles.word}>TIERRA</div>
+              <div className={styles.word}>Y AIRE</div>
+            </div>
+          </div>
           <div
             className={styles.menuIconWrapper}
             onClick={() => setMenuOpen(true)}
