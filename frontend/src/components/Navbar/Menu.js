@@ -1,4 +1,4 @@
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
@@ -16,7 +16,11 @@ const Menu = ({ setMenu }) => {
           X
         </li>
         <li className={styles.listItem}>
-          <Link className={styles.link} to='/about'>
+          <Link
+            className={styles.link}
+            onClick={() => setMenu(false)}
+            to='/about'
+          >
             <span className={styles.linkContent}>about</span>
           </Link>
         </li>
@@ -24,25 +28,46 @@ const Menu = ({ setMenu }) => {
           className={styles.listDropdownItem}
           onClick={() => setDropdownOpen((isDropdownOpen) => !isDropdownOpen)}
         >
-          <span className={styles.listDropdownLinkContent}>
-            programmes <FontAwesomeIcon icon={faChevronDown} />
-          </span>
+          <div className={styles.listDropdownLinkContent}>
+            <div className={styles.itemsContainer}>
+              <div className={styles.item}>programmes</div>
+              {isDropdownOpen && <FontAwesomeIcon icon={faChevronDown} />}
+              {!isDropdownOpen && <FontAwesomeIcon icon={faChevronUp} />}
+            </div>
+          </div>
           {isDropdownOpen && (
             <div className={styles.menuDropdown}>
-              <DropdownMenu />
+              <DropdownMenu setMenuVisible={setMenu} />
             </div>
           )}
         </li>
 
         <li className={styles.listItem}>
-          <Link className={styles.link} to='/programs/short-courses'>
+          <Link
+            className={styles.link}
+            onClick={() => setMenu(false)}
+            to='/programs/short-courses'
+          >
             <span className={styles.linkContent}>short courses</span>
           </Link>
         </li>
         <li className={styles.listItem}>
-          <Link className={styles.link} to='/programs/corporate'>
+          <Link
+            className={styles.link}
+            onClick={() => setMenu(false)}
+            to='/programs/corporate'
+          >
             <span className={styles.linkContent}>corporate</span>
           </Link>
+        </li>
+        <li className={styles.listItem}>
+          <a
+            onClick={() => setMenu(false)}
+            href='mailto:percusion.tierrayaire@gmail.com'
+            className={styles.mailButton}
+          >
+            <span>Contact Us</span>
+          </a>
         </li>
       </ul>
     </div>
