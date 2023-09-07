@@ -87,8 +87,13 @@ const About = () => {
           <div className={styles.imageAndTextLayerContainer}>
             <img
               alt='inspiration'
-              className={styles.imageEducation}
+              className={styles.imageEducationBigScreen}
               src={`${process.env.PUBLIC_URL}/assets/about_page_school.png`}
+            ></img>
+            <img
+              alt='inspiration'
+              className={styles.imageEducationMobileScreen}
+              src={`${process.env.PUBLIC_URL}/assets/about_page_school_mobile.png`}
             ></img>
             <div className={styles.textLayer}>
               <span className={styles.text}>
@@ -133,8 +138,13 @@ const About = () => {
           <div className={styles.imageAndTextPhilosophyContainer}>
             <img
               alt='philosophy'
-              className={styles.imagePhilosophy}
+              className={`${styles.imagePhilosophyBigScreen}`}
               src={`${process.env.PUBLIC_URL}/assets/about_page_philosophy.png`}
+            ></img>
+            <img
+              alt='philosophy'
+              className={`${styles.imagePhilosophyMobileScreen}`}
+              src={`${process.env.PUBLIC_URL}/assets/about_page_philosophy_mobile.png`}
             ></img>
             <div className={styles.philosophyText}>
               <div className={styles.columnLeft}>

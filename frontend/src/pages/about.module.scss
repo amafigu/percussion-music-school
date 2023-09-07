@@ -146,10 +146,22 @@
         width: 54%;
         margin-bottom: 80px;
 
-        .imageEducation {
+        .imageEducationBigScreen {
+          @include media.mobile {
+            display: none;
+          }
+
           width: 100%;
           border-radius: 24px;
           opacity: 0.5;
+        }
+
+        .imageEducationMobileScreen {
+          @include media.mobile {
+            display: flex;
+          }
+
+          display: none;
         }
 
         .textLayer {
@@ -190,6 +202,7 @@
 
       .logoAndTextContainer {
         @include media.mobile {
+          flex-direction: column;
           width: 100%;
           height: auto;
         }
@@ -200,6 +213,10 @@
         height: 300px;
 
         .logoAboveText {
+          @include media.mobile {
+            width: theme.$mobile-default-page-width;
+          }
+
           display: flex;
           flex-direction: column;
           width: 30%;
@@ -211,6 +228,13 @@
           }
 
           .text {
+            @include media.mobile {
+              margin-top: 20px;
+              font-size: 25px;
+              line-height: 1.4;
+              letter-spacing: 0;
+            }
+
             font-size: 32px;
             font-weight: 800;
             line-height: 1.4;
@@ -218,6 +242,12 @@
         }
 
         .longText {
+          @include media.mobile {
+            width: theme.$mobile-default-page-width;
+            padding-right: 0;
+            margin-top: 40px;
+          }
+
           width: 66%;
           padding-right: 120px;
           font-size: 18px;
@@ -244,9 +274,24 @@
         width: 100%;
       }
 
-      .imagePhilosophy {
+      .imagePhilosophyBigScreen {
+        @include media.mobile {
+          display: none;
+        }
+
         width: 100%;
         height: 100%;
+        opacity: 0.5;
+      }
+
+      .imagePhilosophyMobileScreen {
+        @include media.mobile {
+          display: flex;
+        }
+
+        display: none;
+        width: 100%;
+        height: auto;
         opacity: 0.5;
       }
 
