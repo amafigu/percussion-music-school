@@ -12,14 +12,32 @@
     top: 0;
     right: 0;
     z-index: 6000;
+    width: 90%;
     width: 400px;
+    background-color: theme.$option-row-background-color;
 
     // width: theme.$mobile-default-page-width;
-    background-color: beige;
+
     border: blue solid 2px;
 
-    .cell {
-      border: red solid 2px;
+    .listItem {
+      @include menu-list-cell;
+
+      height: 60px;
+    }
+
+    .listDropdownItem {
+      @include menu-list-cell;
+
+      height: auto;
+    }
+
+    .listDropdownLinkContent {
+      @include menu-list-cell;
+
+      height: auto;
+      padding: 0 0 20px;
+      border-bottom: 0;
     }
   }
 }

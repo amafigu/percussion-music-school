@@ -73,6 +73,15 @@
   }
 }
 
+@mixin menu-list-cell {
+  width: 80%;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.3em;
+  text-transform: uppercase;
+  border-bottom: solid grey 1px;
+}
+
 @mixin z-index($key) {
   z-index: functions.z-index($key);
 }

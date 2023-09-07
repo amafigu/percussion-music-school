@@ -12,14 +12,19 @@ const Menu = ({ setMenu }) => {
   return (
     <div className={styles.menuWrapper}>
       <ul className={styles.menu}>
-        <li onClick={() => setMenu(false)}>X</li>
+        <li className={styles.listItem} onClick={() => setMenu(false)}>
+          X
+        </li>
         <li className={styles.listItem}>
           <Link className={styles.link} to='/about'>
             <span className={styles.linkContent}>about</span>
           </Link>
         </li>
-        <li className={styles.link} onClick={() => setDropdownOpen(true)}>
-          <span className={styles.linkContent}>
+        <li
+          className={styles.listDropdownItem}
+          onClick={() => setDropdownOpen((isDropdownOpen) => !isDropdownOpen)}
+        >
+          <span className={styles.listDropdownLinkContent}>
             programmes <FontAwesomeIcon icon={faChevronDown} />
           </span>
           {isDropdownOpen && (
