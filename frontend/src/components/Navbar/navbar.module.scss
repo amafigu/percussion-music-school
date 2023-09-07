@@ -70,6 +70,8 @@
       gap: 40px;
 
       .reactLink {
+        margin-right: 18px;
+
         @include media.mobile {
           margin-right: 12px;
         }
@@ -82,12 +84,10 @@
         align-items: center;
 
         .text {
-          @include media.mobile {
-            font-weight: 800;
-            line-height: 128%;
-            opacity: 0.9;
-            transform: scale(1, 1.1);
-          }
+          font-weight: 800;
+          line-height: 128%;
+          opacity: 0.9;
+          transform: scale(1, 1.1);
         }
       }
 

@@ -84,7 +84,7 @@ const About = () => {
           </ul>
         </div>
         <section className={styles.educationSection} id='school'>
-          <div className={styles.imageContainer}>
+          <div className={styles.imageAndTextLayerContainer}>
             <img
               alt='inspiration'
               className={styles.imageEducation}
