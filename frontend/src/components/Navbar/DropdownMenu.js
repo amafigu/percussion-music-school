@@ -1,37 +1,35 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styles from "./dropdownMenu.module.scss";
 
 const DropdownMenu = ({ setMenuVisible }) => {
+  const navigate = useNavigate();
+
+  const navigateAndCloseMenu = (route) => {
+    setMenuVisible(false);
+    navigate(route);
+  };
+
   return (
     <ul className={styles.dropdownMenu}>
-      <li className={styles.listItem}>
-        <Link
-          className={styles.link}
-          onClick={() => setMenuVisible(false)}
-          to='/programs/regular'
-        >
-          <span className={styles.linkContent}>regular</span>
-        </Link>
+      <li
+        className={styles.listItem}
+        onClick={() => navigateAndCloseMenu("/programs/regular")}
+      >
+        <span className={styles.linkContent}>regular</span>
       </li>
 
-      <li className={styles.listItem}>
-        <Link
-          className={styles.link}
-          onClick={() => setMenuVisible(false)}
-          to='/programs/short-courses'
-        >
-          <span className={styles.linkContent}>short courses</span>
-        </Link>
+      <li
+        className={styles.listItem}
+        onClick={() => navigateAndCloseMenu("/programs/short-courses")}
+      >
+        <span className={styles.linkContent}>short courses</span>
       </li>
-      <li className={styles.listItem}>
-        <Link
-          className={styles.link}
-          onClick={() => setMenuVisible(false)}
-          to='/programs/corporate'
-        >
-          <span className={styles.linkContent}>corporate</span>
-        </Link>
+      <li
+        className={styles.listItem}
+        onClick={() => navigateAndCloseMenu("/programs/corporate")}
+      >
+        <span className={styles.linkContent}>corporate</span>
       </li>
     </ul>
   );

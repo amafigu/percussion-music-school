@@ -3,6 +3,8 @@
 @import "#styles/helpers/mixins";
 
 .dropdownMenu {
+  @include z-index(dropdownmenu);
+
   @include media.mobile {
     background-color: #3b3e4b;
   }
