@@ -75,13 +75,10 @@
             line-height: 1.45;
           }
 
+          @include about-page-content;
+
           width: 50%;
           margin-bottom: 20px;
-          font-size: 18px;
-          font-weight: 400;
-          line-height: 1.85;
-          color: #ddd;
-          opacity: 0.6;
         }
       }
     }
@@ -159,6 +156,7 @@
         .imageEducationMobileScreen {
           @include media.mobile {
             display: flex;
+            border-radius: 14px;
           }
 
           display: none;
@@ -230,18 +228,13 @@
           .text {
             @include media.mobile {
               margin-top: 20px;
-              font-size: 25px;
-              line-height: 1.4;
-              letter-spacing: 0;
             }
 
-            font-size: 32px;
-            font-weight: 800;
-            line-height: 1.4;
+            @include about-page-title;
           }
         }
 
-        .longText {
+        .paragraphsContainer {
           @include media.mobile {
             width: theme.$mobile-default-page-width;
             padding-right: 0;
@@ -250,18 +243,13 @@
 
           width: 66%;
           padding-right: 120px;
-          font-size: 18px;
-          font-weight: 400;
-          line-height: 1.85;
-          color: #ddd;
-          opacity: 0.9;
 
           .paragraphs {
             @include media.mobile {
               margin-bottom: 20px;
             }
 
-            font-size: 18px;
+            @include about-page-content;
           }
         }
       }
@@ -314,9 +302,9 @@
           @include media.mobile {
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
             width: 100%;
+            padding: 0 20px;
           }
 
           width: 20%;
@@ -324,16 +312,10 @@
           .textTop {
             @include media.mobile {
               display: flex;
-              justify-content: center;
               margin-bottom: 60px;
-              font-size: 28px;
             }
 
-            margin-bottom: 40px;
-            font-size: 42px;
-            font-weight: 800;
-            line-height: 1.2;
-            letter-spacing: 0;
+            @include about-page-title;
           }
 
           .textBottom {
@@ -358,57 +340,95 @@
             line-height: 1.45;
           }
 
+          @include about-page-content;
+
           width: 32%;
-          font-size: 18px;
-          font-weight: 400;
-          line-height: 1.85;
-          color: #ddd;
         }
       }
     }
 
     .founderSection {
-      @include flex-horizontal-center;
+      @include media.mobile {
+        margin-bottom: 30px;
+      }
 
-      flex-direction: column;
       width: 100%;
+      margin-bottom: 60px;
 
       .presentation {
+        @include media.mobile {
+          flex-direction: column;
+        }
+
         @include flex-all-center;
 
         gap: 20px;
         width: 100%;
 
         .imageContaier {
-          display: flex;
-          width: 490px;
-          height: 560px;
-
-          .image {
+          @include media.mobile {
+            flex-direction: column;
+            justify-content: center;
             width: 100%;
+          }
+
+          display: flex;
+          justify-content: flex-end;
+          width: 50%;
+
+          .imageForBigScreen {
+            @include media.mobile {
+              display: none;
+            }
+
+            width: 490px;
+            height: 560px;
+            margin-right: 60px;
+            border-radius: 14px;
+          }
+
+          .imageForMobileScreen {
+            @include media.mobile {
+              display: block;
+              width: 90%;
+              margin: auto;
+            }
+
+            display: none;
+            border-radius: 14px;
           }
         }
 
-        .textAndIcons {
+        .textAndIconsContainer {
           @include media.mobile {
+            display: flex;
+            justify-content: center;
             width: 100%;
           }
 
-          width: 46%;
+          width: 50%;
+
+          .textAndIcons {
+            @include media.mobile {
+              width: 90%;
+              margin-top: 20px;
+            }
+
+            width: 52%;
+          }
 
           .name {
-            font-size: 42px;
-            font-weight: 800;
-            line-height: 1.2;
-            letter-spacing: 0;
+            @include about-page-title;
           }
 
           p {
+            @include media.mobile {
+              width: 100%;
+            }
+
+            @include about-page-content;
+
             width: 80%;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 1.85;
-            color: #ddd;
           }
 
           .position {

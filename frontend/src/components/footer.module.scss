@@ -5,7 +5,6 @@
 .footerWrapper {
   @include media.mobile {
     position: relative;
-    bottom: 60px;
   }
 
   @include flex-horizontal-center;
