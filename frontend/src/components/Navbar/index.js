@@ -11,7 +11,6 @@ const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const menuDropdownRef = useRef(null);
-  console.log("isMenuOpen", isMenuOpen);
 
   return (
     <div className={styles.navbarWrapper}>

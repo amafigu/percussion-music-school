@@ -30,6 +30,11 @@
       height: 90px;
     }
 
+    @include media.tablet {
+      width: 94%;
+      height: 90px;
+    }
+
     @include flex-vertical-center;
 
     justify-content: space-between;
@@ -45,16 +50,12 @@
       }
 
       .menuIconWrapper {
-        @include media.desktop {
-          display: none;
+        @include media.mobile {
+          display: block;
+          cursor: pointer;
         }
 
-        @include media.tablet {
-          display: none;
-        }
-
-        display: block;
-        cursor: pointer;
+        display: none;
       }
     }
 
