@@ -257,6 +257,10 @@
           opacity: 0.9;
 
           .paragraphs {
+            @include media.mobile {
+              margin-bottom: 20px;
+            }
+
             font-size: 18px;
           }
         }
@@ -296,15 +300,35 @@
       }
 
       .philosophyText {
+        @include media.mobile {
+          top: 10%;
+          flex-direction: column;
+        }
+
         position: absolute;
         top: 38%;
 
         @include flex-horizontal-center;
 
         .columnLeft {
+          @include media.mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+          }
+
           width: 20%;
 
           .textTop {
+            @include media.mobile {
+              display: flex;
+              justify-content: center;
+              margin-bottom: 60px;
+              font-size: 28px;
+            }
+
             margin-bottom: 40px;
             font-size: 42px;
             font-weight: 800;
@@ -313,6 +337,11 @@
           }
 
           .textBottom {
+            @include media.mobile {
+              font-size: 22px;
+              line-height: 1.45;
+            }
+
             width: 80%;
             font-size: 24px;
             font-weight: 400;
@@ -322,6 +351,13 @@
         }
 
         .columnRight {
+          @include media.mobile {
+            width: 100%;
+            padding: 20px;
+            font-size: 16px;
+            line-height: 1.45;
+          }
+
           width: 32%;
           font-size: 18px;
           font-weight: 400;
@@ -334,14 +370,14 @@
     .founderSection {
       @include flex-horizontal-center;
 
+      flex-direction: column;
       width: 100%;
-      margin: 92px 0 80px;
 
       .presentation {
         @include flex-all-center;
 
-        gap: 120px;
-        width: 60%;
+        gap: 20px;
+        width: 100%;
 
         .imageContaier {
           display: flex;
@@ -354,6 +390,10 @@
         }
 
         .textAndIcons {
+          @include media.mobile {
+            width: 100%;
+          }
+
           width: 46%;
 
           .name {
