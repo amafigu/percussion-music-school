@@ -14,14 +14,11 @@
   background-color: #202027;
 
   .menuWrapper {
-    display: none;
-
-    @include media.mobile {
+    @include media.tablet-narrow {
       display: flex;
-      flex-grow: 1;
-      width: 100%;
-      height: auto;
     }
+
+    display: none;
   }
 
   .navbar {
@@ -30,8 +27,13 @@
       height: 90px;
     }
 
-    @include media.tablet {
+    @include media.tablet-wide {
       width: 94%;
+      height: 90px;
+    }
+
+    @include media.desktop {
+      width: 84%;
       height: 90px;
     }
 
@@ -43,14 +45,14 @@
     background-color: theme.$primary-background-color;
 
     .left {
-      @include media.mobile {
-        flex-grow: 1;
+      @include media.tablet-narrow {
+        flex-grow: 1 !important;
         justify-content: space-between;
         margin: 0 20px 0 10px;
       }
 
       .menuIconWrapper {
-        @include media.mobile {
+        @include media.tablet-narrow {
           display: block;
           cursor: pointer;
         }
@@ -62,6 +64,10 @@
     .right {
       @include media.mobile {
         display: none;
+      }
+
+      @include media.tablet-narrow {
+        display: none !important;
       }
     }
 

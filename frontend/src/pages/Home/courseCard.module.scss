@@ -3,13 +3,24 @@
 @import "#styles/helpers/mixins";
 
 .courseCardWrapper {
-  @include flex-horizontal-center;
-
   @include media.mobile {
     width: theme.$mobile-default-page-width;
     height: auto;
     margin-bottom: 64px;
   }
+
+  @include media.tablet-wide {
+    width: 50%;
+    height: auto;
+    margin-bottom: 40px;
+  }
+
+  @include media.desktop {
+    width: 30%;
+    height: auto;
+  }
+
+  @include flex-horizontal-center;
 
   .courseCard {
     @include media.mobile {

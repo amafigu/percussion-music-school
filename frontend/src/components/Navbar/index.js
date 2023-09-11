@@ -74,11 +74,7 @@ const Navbar = () => {
         </div>
       </nav>
       <div className={styles.menuWrapper}>
-        {isMenuOpen && (
-          <div className={styles.menuContainer}>
-            <Menu setMenu={setMenuOpen} />
-          </div>
-        )}
+        {isMenuOpen && <Menu setMenu={setMenuOpen} />}
       </div>
     </div>
   );
