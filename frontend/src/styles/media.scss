@@ -21,14 +21,14 @@ $widescreen: 1152px;
   }
 }
 
-@mixin desktop-only {
-  @media screen and (min-width: $desktop) and (max-width: ($widescreen - 1px)) {
+@mixin desktop {
+  @media screen and (max-width: $desktop) {
     @content;
   }
 }
 
-@mixin desktop {
-  @media screen and (min-width: $desktop) {
+@mixin desktop-only {
+  @media screen and (min-width: $desktop) and (max-width: ($widescreen - 1px)) {
     @content;
   }
 }
