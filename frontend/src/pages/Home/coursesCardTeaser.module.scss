@@ -22,6 +22,8 @@
     }
 
     @include media.widescreen {
+      width: 80%;
+
       :last-child {
         margin-bottom: 0;
       }

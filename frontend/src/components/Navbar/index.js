@@ -47,6 +47,7 @@ const Navbar = () => {
           <div
             className={styles.link}
             onMouseEnter={() => setDropdownOpen(true)}
+            onClick={() => setDropdownOpen(true)}
           >
             <span className={styles.linkContent}>
               programmes <FontAwesomeIcon icon={faChevronDown} />

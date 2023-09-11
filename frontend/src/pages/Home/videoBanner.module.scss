@@ -5,6 +5,7 @@
 .videoBannerWrapper {
   display: flex;
   justify-content: center;
+  background-color: theme.$primary-background-color;
 
   .videoBanner {
     @include media.mobile {
