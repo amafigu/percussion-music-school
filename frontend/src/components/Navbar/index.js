@@ -57,7 +57,7 @@ const Navbar = () => {
                 className={styles.menuDropdown}
                 onMouseLeave={() => setDropdownOpen(false)}
               >
-                <DropdownMenu />
+                <DropdownMenu setMenuVisible={setMenuOpen} />
               </div>
             )}
           </div>
