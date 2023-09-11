@@ -3,10 +3,9 @@
 @import "#styles/helpers/mixins";
 
 .courseCardWrapper {
-  @include media.mobile {
-    width: theme.$mobile-default-page-width;
+  @include media.desktop-only {
+    width: 30%;
     height: auto;
-    margin-bottom: 64px;
   }
 
   @include media.tablet-wide {
@@ -15,9 +14,10 @@
     margin-bottom: 40px;
   }
 
-  @include media.desktop {
-    width: 30%;
+  @include media.mobile {
+    width: theme.$mobile-default-page-width;
     height: auto;
+    margin-bottom: 64px;
   }
 
   @include flex-horizontal-center;

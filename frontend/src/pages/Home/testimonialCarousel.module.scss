@@ -3,6 +3,11 @@
 @import "#styles/helpers/mixins";
 
 .testimonialCarouselWrapper {
+  @include media.tablet-wide {
+    height: auto;
+    padding: 60px 0 0;
+  }
+
   @include media.mobile {
     height: auto;
     padding: 0;
@@ -20,17 +25,13 @@
       @include flex-all-center;
 
       margin: 46px 0 26px;
-      font-size: 27px;
-      font-weight: 800;
     }
 
+    @include standard-page-title;
+
     width: 100%;
-    font-size: 42px;
-    font-weight: 800 !important;
-    line-height: 1.2;
     color: #fff;
     text-align: center;
-    letter-spacing: 0;
     user-select: none;
     -webkit-text-select: none;
   }
@@ -45,6 +46,11 @@
   }
 
   .textAndImageContainer {
+    @include media.tablet-wide {
+      width: 90%;
+      margin: auto;
+    }
+
     @include media.mobile {
       flex-direction: column;
     }
@@ -58,6 +64,12 @@
   }
 
   .image {
+    @include media.tablet-wide {
+      width: 100%;
+      height: calc(0.5 * 100vw);
+      border-radius: 8px;
+    }
+
     @include media.mobile {
       width: 100%;
       height: calc(0.67 * 100vw);
@@ -72,6 +84,11 @@
   }
 
   .leftColumn {
+    @include media.tablet-wide {
+      width: 50%;
+      margin-right: 40px;
+    }
+
     @include media.mobile {
       order: 2;
       width: theme.$mobile-default-page-width;
@@ -102,14 +119,12 @@
       margin-bottom: 20px;
     }
 
+    @include standard-page-content;
+
     display: flex;
     flex-grow: 1;
     align-items: center;
     padding: 40px 0;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 32px;
-    color: rgba($color: #fff, $alpha: 80%);
   }
 
   .testimonialPerson {
