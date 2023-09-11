@@ -5,7 +5,6 @@
 .footerWrapper {
   @include media.mobile {
     position: relative;
-    bottom: 60px;
   }
 
   @include flex-horizontal-center;
@@ -13,7 +12,7 @@
   background-color: theme.$primary-background-color;
 
   .footer {
-    @include media.mobile {
+    @include media.tablet-narrow {
       width: 100%;
       height: auto;
     }
@@ -21,11 +20,18 @@
     display: flex;
     flex-direction: column;
     width: 80%;
-    height: 512px;
     background-color: theme.$primary-background-color;
 
     .columnsContainer {
       @include media.mobile {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding-top: 50px;
+        text-align: center;
+      }
+
+      @include media.tablet-wide {
         flex-direction: column;
         gap: 20px;
         align-items: center;
@@ -96,7 +102,8 @@
       }
 
       .logoColumn {
-        @include media.mobile {
+        @include media.tablet-wide {
+          width: 90%;
           margin-bottom: 4px;
         }
 
@@ -107,7 +114,7 @@
         }
 
         .logoContainer {
-          @include media.mobile {
+          @include media.tablet-wide {
             @include flex-all-center;
 
             margin-bottom: 40px;
@@ -134,13 +141,13 @@
     }
 
     .copyright {
-      @include media.mobile {
+      @include media.tablet-wide {
         flex-direction: column;
         justify-content: center;
         width: 100%;
         height: auto;
         padding: 0 24px;
-        margin: 40px 0;
+        margin: 40px 0 80px;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -157,21 +164,27 @@
       margin: auto;
 
       .textCopyright {
-        @include media.mobile {
-          margin-bottom: 48px;
+        @include media.tablet-wide {
+          margin-bottom: 40px;
+        }
+      }
+
+      .links {
+        @include media.tablet-wide {
+          margin-bottom: 32px;
+        }
+      }
+
+      .linkLegal {
+        &:hover {
+          color: theme.$branding-font-color !important;
+          cursor: pointer;
         }
       }
 
       .columns {
         @include media.mobile {
           margin-top: 20px;
-        }
-
-        .linkLegal {
-          &:hover {
-            color: theme.$branding-font-color;
-            cursor: pointer;
-          }
         }
       }
     }

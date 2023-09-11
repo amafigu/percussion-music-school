@@ -1,9 +1,15 @@
 @use "#styles/theme" as theme;
+@use "#styles/media" as media;
 @import "#styles/helpers/mixins";
 
 .whatsAppButton {
   @include main-button;
   @include z-index(upperbannertext);
+
+  @include media.tablet-wide {
+    width: 100%;
+    border-radius: 2px;
+  }
 
   .link {
     display: flex;

@@ -40,6 +40,7 @@
       @include menu-list-cell;
 
       height: 60px;
+      cursor: pointer;
     }
 
     .listItem:first-child {
@@ -54,6 +55,7 @@
 
       height: auto;
       padding: 0;
+      cursor: pointer;
     }
 
     .listDropdownLinkContent {

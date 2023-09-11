@@ -8,10 +8,20 @@
   width: 100%;
 
   .coursesCardTeaser {
-    @include media.mobile {
+    @include media.tablet-wide {
       flex-direction: column;
       width: 100%;
 
+      :last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @include media.desktop {
+      width: 100%;
+    }
+
+    @include media.widescreen {
       :last-child {
         margin-bottom: 0;
       }

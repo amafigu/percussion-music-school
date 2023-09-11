@@ -11,7 +11,6 @@ const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const menuDropdownRef = useRef(null);
-  console.log("isMenuOpen", isMenuOpen);
 
   return (
     <div className={styles.navbarWrapper}>
@@ -58,7 +57,7 @@ const Navbar = () => {
                 className={styles.menuDropdown}
                 onMouseLeave={() => setDropdownOpen(false)}
               >
-                <DropdownMenu />
+                <DropdownMenu setMenuVisible={setMenuOpen} />
               </div>
             )}
           </div>
@@ -75,11 +74,7 @@ const Navbar = () => {
         </div>
       </nav>
       <div className={styles.menuWrapper}>
-        {isMenuOpen && (
-          <div className={styles.menuContainer}>
-            <Menu setMenu={setMenuOpen} />
-          </div>
-        )}
+        {isMenuOpen && <Menu setMenu={setMenuOpen} />}
       </div>
     </div>
   );

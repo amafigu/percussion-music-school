@@ -5,12 +5,19 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { React, useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import DropdownMenu from "./DropdownMenu";
 import styles from "./menu.module.scss";
 
 const Menu = ({ setMenu }) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+
+  const navigate = useNavigate();
+
+  const navigateAndCloseMenu = (route) => {
+    setMenu(false);
+    navigate(route);
+  };
 
   console.log("isDropdownOpen ", isDropdownOpen);
   return (
@@ -23,14 +30,11 @@ const Menu = ({ setMenu }) => {
           >
             <FontAwesomeIcon icon={faX} />
           </li>
-          <li className={styles.listItem}>
-            <Link
-              className={styles.link}
-              onClick={() => setMenu(false)}
-              to='/about'
-            >
-              <span className={styles.linkContent}>about</span>
-            </Link>
+          <li
+            className={styles.listItem}
+            onClick={() => navigateAndCloseMenu("/about")}
+          >
+            <span className={styles.linkContent}>about</span>
           </li>
           <li
             className={styles.listDropdownItem}
@@ -54,24 +58,11 @@ const Menu = ({ setMenu }) => {
               </div>
             )}
           </li>
-
-          <li className={styles.listItem}>
-            <Link
-              className={styles.link}
-              onClick={() => setMenu(false)}
-              to='/programs/short-courses'
-            >
-              <span className={styles.linkContent}>short courses</span>
-            </Link>
-          </li>
-          <li className={styles.listItem}>
-            <Link
-              className={styles.link}
-              onClick={() => setMenu(false)}
-              to='/programs/corporate'
-            >
-              <span className={styles.linkContent}>corporate</span>
-            </Link>
+          <li
+            className={styles.listItem}
+            onClick={() => navigateAndCloseMenu("/faq")}
+          >
+            <span className={styles.linkContent}>faq</span>
           </li>
         </ul>
         <a

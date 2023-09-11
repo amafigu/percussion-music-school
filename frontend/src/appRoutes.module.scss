@@ -11,7 +11,7 @@
   }
 
   .whatsappButtonPosition {
-    @include media.mobile {
+    @include media.tablet-wide {
       position: fixed;
       top: unset;
       bottom: 0;
