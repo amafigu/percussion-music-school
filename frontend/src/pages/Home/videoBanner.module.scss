@@ -25,20 +25,6 @@
     height: 100%;
   }
 
-  .borderDiv {
-    @include media.mobile {
-      display: none;
-    }
-
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    content: "";
-    background-color: rgba($color: #000, $alpha: 72%);
-    border-right: 19vw solid #000;
-    border-left: 19vw solid #000;
-  }
-
   .videoWrapper {
     width: 872px;
     height: 485px;

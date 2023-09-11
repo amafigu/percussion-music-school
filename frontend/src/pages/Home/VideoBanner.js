@@ -11,7 +11,6 @@ const VideoBanner = () => {
           title='teaser video'
           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
         ></iframe>
-        <div className={styles.borderDiv}></div>
       </div>
     </div>
   );
