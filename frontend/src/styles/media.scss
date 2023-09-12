@@ -15,6 +15,12 @@ $widescreen: 1152px;
   }
 }
 
+@mixin tablet-narrow-up {
+  @media screen and (min-width: $tablet-narrow) {
+    @content;
+  }
+}
+
 @mixin tablet-wide {
   @media screen and (max-width: ($desktop - 1px)) {
     @content;
@@ -41,6 +47,12 @@ $widescreen: 1152px;
 
 @mixin widescreen {
   @media screen and (min-width: $widescreen) {
+    @content;
+  }
+}
+
+@mixin widescreen-down {
+  @media screen and (max-width: ($widescreen - 1px)) {
     @content;
   }
 }

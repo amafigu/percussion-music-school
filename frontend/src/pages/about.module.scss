@@ -370,16 +370,16 @@
         margin: auto;
 
         .imageContaier {
-          @include media.desktop {
-            width: 68%;
-          }
-
           @include media.desktop-up {
             width: 80%;
           }
 
-          @include media.tablet-narrow {
-            width: 100%;
+          @include media.desktop {
+            width: 68% !important;
+          }
+
+          @include media.mobile {
+            width: 100% !important;
           }
 
           display: flex;
@@ -409,9 +409,13 @@
           }
 
           @include media.tablet-wide {
-            display: flex;
-            justify-content: center;
-            width: 100%;
+            width: 68% !important;
+            margin-top: 20px;
+            margin-left: 0 !important;
+          }
+
+          @include media.mobile {
+            width: 100% !important;
           }
 
           width: 50%;

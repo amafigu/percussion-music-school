@@ -141,30 +141,23 @@
     }
 
     .copyright {
-      @include media.tablet-wide {
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        height: auto;
-        padding: 0 24px;
-        margin: 40px 0 80px;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 20.3px;
-        color: #606060;
-        text-align: center;
-      }
-
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      width: 75%;
-      height: 128px;
-      margin: auto;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: auto;
+      padding: 0 24px;
+      margin: 40px 0 80px;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20.3px;
+      color: #606060;
+      text-align: center;
 
       .textCopyright {
-        @include media.tablet-wide {
+        margin-bottom: 40px;
+
+        @include media.widescreen {
           margin-bottom: 40px;
         }
       }
