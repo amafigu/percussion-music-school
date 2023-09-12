@@ -4,7 +4,7 @@
 
 .whatsAppButton {
   @include main-button;
-  @include z-index(upperbannertext);
+  @include z-index(bannerText);
 
   @include media.tablet-wide {
     width: 100%;

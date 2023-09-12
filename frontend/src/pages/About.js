@@ -1,35 +1,12 @@
+import {
+  aboutPagePhilosophySectionBackground,
+  aboutPageUpperSectionBackground,
+} from "#utils/constants";
 import { useEffectScrollTop } from "#utils/utils";
 import styles from "./about.module.scss";
 
 const About = () => {
   useEffectScrollTop();
-  const backgroundImageDesktop = {
-    backgroundImage: `url(${process.env.PUBLIC_URL}/assets/banner_about.png)`,
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "100% auto",
-    opacity: "0.3",
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "660px",
-    zIndex: 0,
-  };
-
-  const backgroundImageMobile = {
-    backgroundImage: `url(${process.env.PUBLIC_URL}/assets/banner_about_mobile.png)`,
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "100% auto",
-    opacity: "0.3",
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "100%",
-    zIndex: 0,
-  };
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -41,16 +18,13 @@ const About = () => {
   return (
     <div className={styles.aboutPageWrapper}>
       <div className={styles.aboutPage}>
-        <div className={styles.upperBanner}>
+        <section className={styles.upperSection}>
           <div
-            className={styles.imageForBigScreen}
-            style={backgroundImageDesktop}
+            className={styles.backgroundImage}
+            style={aboutPageUpperSectionBackground}
           ></div>
-          <div
-            className={styles.imageForMobileScreen}
-            style={backgroundImageMobile}
-          ></div>
-          <div className={styles.upperBannerText}>
+
+          <div className={styles.text}>
             <div className={styles.title}>About Tierra y Aire</div>
             <div className={styles.content}>
               Established since 2018, the Tierra y Aire ethos has always been
@@ -59,7 +33,7 @@ const About = () => {
               in Rosario.
             </div>
           </div>
-        </div>
+        </section>
         <div className={styles.linksRow}>
           <ul>
             <li
@@ -87,14 +61,10 @@ const About = () => {
           <div className={styles.imageAndTextLayerContainer}>
             <img
               alt='inspiration'
-              className={styles.imageEducationBigScreen}
+              className={styles.imageEducation}
               src={`${process.env.PUBLIC_URL}/assets/about_page_school.png`}
             ></img>
-            <img
-              alt='inspiration'
-              className={styles.imageEducationMobileScreen}
-              src={`${process.env.PUBLIC_URL}/assets/about_page_school_mobile.png`}
-            ></img>
+
             <div className={styles.textLayer}>
               <span className={styles.text}>
                 We seek to inspire and educate drummers by using their own
@@ -134,52 +104,40 @@ const About = () => {
             </div>
           </div>
         </section>
+
         <section className={styles.philosophySection} id='philosophy'>
-          <div className={styles.imageAndTextPhilosophyContainer}>
-            <img
-              alt='philosophy'
-              className={`${styles.imagePhilosophyBigScreen}`}
-              src={`${process.env.PUBLIC_URL}/assets/about_page_philosophy.png`}
-            ></img>
-            <img
-              alt='philosophy'
-              className={`${styles.imagePhilosophyMobileScreen}`}
-              src={`${process.env.PUBLIC_URL}/assets/about_page_philosophy_mobile.png`}
-            ></img>
-            <div className={styles.philosophyText}>
-              <div className={styles.columnLeft}>
-                <div className={styles.textTop}>
-                  <span>Our Philosophy</span>
-                </div>
-                <div className={styles.textBottom}>
-                  <span>Skill should not be harnessed by hard work alone.</span>
-                </div>
-              </div>
-              <div className={styles.columnRight}>
-                At Tierra y Aire, we believe that passion is the fundamental
-                building block to every student’s success. Through passion comes
-                curiosity, and it is this very curiosity that would spur the
-                student to continuously work, and learn, more on his or her
-                craft. It is our responsibility, as educators, to fuel that
-                curiosity in every student; constantly nurturing, guiding and
-                motivating every student to eventually reach their individual
-                and collective music objectives.
-              </div>
+          <div
+            className={styles.imageForBigScreen}
+            style={aboutPagePhilosophySectionBackground}
+          ></div>
+
+          <div className={styles.text}>
+            <div className={styles.title}>
+              <span>Our Philosophy</span>
+            </div>
+            <div className={styles.subtitle}>
+              <span>Skill should not be harnessed by hard work alone.</span>
+            </div>
+            <div className={styles.content}>
+              At Tierra y Aire, we believe that passion is the fundamental
+              building block to every student’s success. Through passion comes
+              curiosity, and it is this very curiosity that would spur the
+              student to continuously work, and learn, more on his or her craft.
+              It is our responsibility, as educators, to fuel that curiosity in
+              every student; constantly nurturing, guiding and motivating every
+              student to eventually reach their individual and collective music
+              objectives.
             </div>
           </div>
         </section>
+
         <section className={styles.founderSection} id='founder'>
           <div className={styles.presentation}>
             <div className={styles.imageContaier}>
               <img
                 alt='founder'
-                className={styles.imageForBigScreen}
+                className={styles.founderImage}
                 src={`${process.env.PUBLIC_URL}/assets/card3.png`}
-              />
-              <img
-                alt='founder'
-                className={styles.imageForMobileScreen}
-                src={`${process.env.PUBLIC_URL}/assets/about_page_founder_mobile.png`}
               />
             </div>
             <div className={styles.textAndIconsContainer}>

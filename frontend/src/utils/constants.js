@@ -18,3 +18,14 @@ export const TESTIMONIALS = [
     image: "testimonial3.png",
   },
 ];
+
+export const aboutPageUpperSectionBackground = {
+  backgroundImage: `url(${process.env.PUBLIC_URL}/assets/banner_about.png)`,
+};
+
+export const aboutPagePhilosophySectionBackground = {
+  backgroundImage: `url(${process.env.PUBLIC_URL}/assets/about_page_philosophy_desktop.png)`,
+};
+export const educationBanner = {
+  backgroundImage: `url(${process.env.PUBLIC_URL}/assets/about_page_school.png)`,
+};
