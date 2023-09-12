@@ -11,6 +11,106 @@
     background-color: theme.$secondary-background-color;
     scroll-behavior: smooth;
 
+    .upperSection {
+      @include media.tablet-wide {
+        height: auto;
+      }
+
+      position: relative;
+      width: 100%;
+      height: auto;
+
+      @include flex-all-center;
+
+      .backgroundImage {
+        @include background-image;
+      }
+
+      .text {
+        @include z-index(bannerText);
+
+        @include media.widescreen {
+          margin: 220px 0;
+        }
+
+        @include media.tablet-wide {
+          display: flex;
+          flex-direction: column;
+          width: 84%;
+          padding-top: 30px;
+          padding-bottom: 30px;
+          margin: 140px 0;
+        }
+
+        width: 80%;
+        margin: 160px 0;
+
+        .title {
+          @include media.tablet-wide {
+            font-size: 32px !important;
+          }
+
+          @include media.mobile {
+            width: 100%;
+            margin-bottom: 60px;
+          }
+
+          @include standard-page-title;
+
+          margin-bottom: 40px;
+          opacity: 0.8;
+        }
+
+        .content {
+          @include media.widescreen {
+            width: 30%;
+          }
+
+          @include media.mobile {
+            width: 100%;
+          }
+
+          @include standard-page-content;
+
+          width: 80%;
+        }
+      }
+    }
+
+    .linksRow {
+      @include media.desktop {
+        height: 90px;
+      }
+
+      @include flex-horizontal-center;
+
+      width: 100%;
+      height: 86px;
+      background-color: theme.$option-row-background-color;
+
+      ul {
+        @include media.mobile {
+          gap: 20px;
+          width: 100%;
+          padding: 0 20px;
+        }
+
+        @include flex-all-center;
+
+        gap: 40px;
+        width: 1200px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 16px;
+
+        .listItem {
+          text-align: center;
+          text-transform: uppercase;
+          cursor: pointer;
+        }
+      }
+    }
+
     .philosophySection {
       @include media.tablet-wide {
         height: auto;
@@ -40,7 +140,7 @@
           margin: 40px 0;
         }
 
-        width: 1200px;
+        width: 80%;
         padding-top: 150px;
         padding-bottom: 150px;
 
@@ -81,6 +181,10 @@
         }
 
         .content {
+          @include media.widescreen {
+            width: 50%;
+          }
+
           @include media.tablet-narrow {
             width: 100%;
           }
@@ -89,101 +193,6 @@
 
           width: 82%;
           margin-bottom: 20px;
-        }
-      }
-    }
-
-    .upperSection {
-      @include media.tablet-wide {
-        height: auto;
-      }
-
-      position: relative;
-      width: 100%;
-      height: auto;
-
-      @include flex-all-center;
-
-      .backgroundImage {
-        @include background-image;
-      }
-
-      .text {
-        @include z-index(bannerText);
-
-        @include media.tablet-wide {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 84%;
-          padding-top: 30px;
-          padding-bottom: 30px;
-          margin: 40px 0;
-        }
-
-        width: 1200px;
-        padding-top: 150px;
-        padding-bottom: 150px;
-
-        .title {
-          @include media.tablet-wide {
-            font-size: 32px !important;
-          }
-
-          @include media.mobile {
-            width: 100%;
-            margin-bottom: 60px;
-          }
-
-          @include standard-page-title;
-
-          margin-bottom: 40px;
-          opacity: 0.8;
-        }
-
-        .content {
-          @include media.mobile {
-            width: 100%;
-          }
-
-          @include standard-page-content;
-
-          width: 50%;
-          margin-bottom: 20px;
-        }
-      }
-    }
-
-    .linksRow {
-      @include media.desktop {
-        height: 90px;
-      }
-
-      @include flex-horizontal-center;
-
-      width: 100%;
-      height: 86px;
-      background-color: theme.$option-row-background-color;
-
-      ul {
-        @include media.mobile {
-          gap: 20px;
-          width: 100%;
-          padding: 0 20px;
-        }
-
-        @include flex-all-center;
-
-        gap: 40px;
-        width: 1200px;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 16px;
-
-        .listItem {
-          text-align: center;
-          text-transform: uppercase;
-          cursor: pointer;
         }
       }
     }
@@ -200,6 +209,10 @@
       background-color: theme.$secondary-background-color;
 
       .imageAndTextLayerContainer {
+        @include media.widescreen {
+          width: 70%;
+        }
+
         @include media.tablet-wide {
           flex-direction: column;
           width: theme.$mobile-default-page-width;
@@ -210,20 +223,33 @@
         @include flex-horizontal-center;
 
         position: relative;
-        width: 54%;
+        width: 86%;
         margin-bottom: 80px;
 
         .imageEducation {
+          @include media.widescreen {
+            width: 100%;
+          }
+
           width: 100%;
           border-radius: 24px;
+          opacity: 0.8;
         }
 
         .textLayer {
-          @include media.desktop {
-            width: 80%;
+          @include media.widescreen {
+            width: 50%;
             height: auto;
-            padding: 10px 0;
+            padding: 32px 0;
             margin-top: 40px;
+            font-size: 16px;
+          }
+
+          @include media.tablet-wide {
+            width: 76%;
+            height: auto;
+            padding: 16px 0;
+            margin-top: 20px;
             font-size: 14px;
           }
 
@@ -263,7 +289,11 @@
       }
 
       .logoAndTextContainer {
-        @include media.tablet-wide {
+        @include media.widescreen {
+          width: 70%;
+        }
+
+        @include media.desktop {
           flex-direction: column;
           width: 100%;
           height: auto;
@@ -271,8 +301,7 @@
 
         @include flex-vertical-center;
 
-        width: 54%;
-        height: 300px;
+        width: 80%;
 
         .logoAboveText {
           @include media.tablet-wide {
@@ -282,8 +311,8 @@
 
           display: flex;
           flex-direction: column;
-          width: 30%;
-          margin-right: 60px;
+          width: 90%;
+          padding-right: 2%;
 
           .logo {
             width: 82px;
@@ -321,6 +350,10 @@
       }
     }
 
+    //////////////////////////
+    ///
+    ///
+
     .founderSection {
       @include media.mobile {
         margin: 30px 0;
@@ -345,8 +378,12 @@
             width: 68%;
           }
 
+          @include media.tablet-wide {
+            width: 64%;
+          }
+
           @include media.tablet-narrow {
-            width: 88%;
+            width: 70%;
           }
 
           @include media.mobile {
@@ -359,6 +396,16 @@
           width: 50%;
 
           .founderImage {
+            @include media.widescreen {
+              width: 80%;
+              margin: auto;
+            }
+
+            @include media.desktop {
+              width: 80%;
+              margin: auto;
+            }
+
             width: 100%;
             height: auto;
             border-radius: 14px;
@@ -367,7 +414,7 @@
 
         .textAndIconsContainer {
           @include media.desktop {
-            width: 68%;
+            width: 88%;
             margin-left: 20px;
           }
 
@@ -385,7 +432,8 @@
               margin-top: 20px;
             }
 
-            width: 52%;
+            width: 90%;
+            margin-left: 80px;
           }
 
           .name {
