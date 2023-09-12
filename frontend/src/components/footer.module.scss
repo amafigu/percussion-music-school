@@ -41,7 +41,7 @@
       }
 
       display: flex;
-      gap: 120px;
+      gap: 100px;
       justify-content: center;
       height: 384px;
       padding-top: 80px;
@@ -107,9 +107,11 @@
           margin-bottom: 4px;
         }
 
-        width: 226px;
-
         .teaserText {
+          @include media.desktop-up {
+            max-width: 160px;
+          }
+
           color: #a8a8a8;
         }
 

@@ -371,7 +371,7 @@
 
         .imageContaier {
           @include media.desktop-up {
-            width: 80%;
+            width: 100%;
           }
 
           @include media.desktop {
@@ -383,13 +383,12 @@
           }
 
           display: flex;
-          justify-content: flex-end;
+          justify-content: center;
           width: 50%;
 
           .founderImage {
             @include media.widescreen {
-              width: 100%;
-              margin: auto;
+              width: 80%;
             }
 
             @include media.mobile {
@@ -421,6 +420,12 @@
           width: 50%;
 
           .textAndIcons {
+            @include media.desktop-only {
+              width: 100%;
+              margin-top: 20px;
+              margin-left: 40px;
+            }
+
             @include media.desktop {
               width: 100%;
               margin-top: 20px;
@@ -428,7 +433,6 @@
             }
 
             width: 90%;
-            margin-left: 80px;
           }
 
           .name {
