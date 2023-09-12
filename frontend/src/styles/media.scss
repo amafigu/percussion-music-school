@@ -27,6 +27,12 @@ $widescreen: 1152px;
   }
 }
 
+@mixin desktop-up {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
 @mixin desktop-only {
   @media screen and (min-width: $desktop) and (max-width: ($widescreen - 1px)) {
     @content;

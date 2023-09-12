@@ -350,10 +350,6 @@
       }
     }
 
-    //////////////////////////
-    ///
-    ///
-
     .founderSection {
       @include media.mobile {
         margin: 30px 0;
@@ -378,17 +374,12 @@
             width: 68%;
           }
 
-          @include media.tablet-wide {
-            width: 64%;
+          @include media.desktop-up {
+            width: 80%;
           }
 
           @include media.tablet-narrow {
-            width: 70%;
-          }
-
-          @include media.mobile {
-            width: 80%;
-            margin-left: 0;
+            width: 100%;
           }
 
           display: flex;
@@ -397,12 +388,12 @@
 
           .founderImage {
             @include media.widescreen {
-              width: 80%;
+              width: 100%;
               margin: auto;
             }
 
-            @include media.desktop {
-              width: 80%;
+            @include media.mobile {
+              width: 100%;
               margin: auto;
             }
 
@@ -413,12 +404,11 @@
         }
 
         .textAndIconsContainer {
-          @include media.desktop {
+          @include media.desktop-up {
             width: 88%;
-            margin-left: 20px;
           }
 
-          @include media.tablet-narrow {
+          @include media.tablet-wide {
             display: flex;
             justify-content: center;
             width: 100%;
@@ -427,9 +417,10 @@
           width: 50%;
 
           .textAndIcons {
-            @include media.tablet-wide {
-              width: 90%;
+            @include media.desktop {
+              width: 100%;
               margin-top: 20px;
+              margin-left: 0 !important;
             }
 
             width: 90%;
@@ -447,7 +438,7 @@
 
             @include standard-page-content;
 
-            width: 80%;
+            width: 100%;
           }
 
           .position {
