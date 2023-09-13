@@ -14,20 +14,20 @@ const DropdownMenu = ({ setMenuVisible }) => {
     <ul className={styles.dropdownMenu}>
       <li
         className={styles.listItem}
-        onClick={() => navigateAndCloseMenu("/programs/regular")}
+        onClick={() => navigateAndCloseMenu("/courses/regular")}
       >
         <span className={styles.linkContent}>regular</span>
       </li>
 
       <li
         className={styles.listItem}
-        onClick={() => navigateAndCloseMenu("/programs/short-courses")}
+        onClick={() => navigateAndCloseMenu("/courses/short-courses")}
       >
         <span className={styles.linkContent}>short courses</span>
       </li>
       <li
         className={styles.listItem}
-        onClick={() => navigateAndCloseMenu("/programs/corporate")}
+        onClick={() => navigateAndCloseMenu("/courses/corporate")}
       >
         <span className={styles.linkContent}>corporate</span>
       </li>

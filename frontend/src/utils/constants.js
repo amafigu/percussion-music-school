@@ -26,6 +26,34 @@ export const aboutPageUpperSectionBackground = {
 export const aboutPagePhilosophySectionBackground = {
   backgroundImage: `url(${process.env.PUBLIC_URL}/assets/about_page_philosophy_desktop.png)`,
 };
+
 export const educationBanner = {
   backgroundImage: `url(${process.env.PUBLIC_URL}/assets/about_page_school.png)`,
 };
+export const regularCoursesPageUpperSectionBackground = {
+  backgroundImage: `url(${process.env.PUBLIC_URL}/assets/regular_courses_page_upper_section_background.png)`,
+};
+export const shortCoursesPageUpperSectionBackground = {
+  backgroundImage: `url(${process.env.PUBLIC_URL}/assets/short_courses_page_upper_section_background.png)`,
+};
+export const corporateCoursesPageUpperSectionBackground = {
+  backgroundImage: `url(${process.env.PUBLIC_URL}/assets/corporate_courses_page_upper_section_background.png)`,
+};
+
+// TEXT TO PLACE IN I18N
+
+export const aboutPageUpperSectionTitle = "About Tierra y Aire";
+export const aboutPageUpperSectionText =
+  " Established since 2018, the Tierra y Aire ethos has always been one of integration and sharing. Today, we have become the people’s choice for drum education as the largest specialized drum school in Rosario.";
+
+export const regularCoursesPageUpperSectionTitle = "Regular Programme";
+export const regularCoursesPageUpperSectionText =
+  "The Regular Programme is designed for students with medium to long-term goals in mastering the instrument through one-on-one weekly drum lessons..";
+
+export const shortCoursesPageUpperSectionTitle = "Short Courses";
+export const shortCoursesPageUpperSectionText =
+  "The Short Course is for students with specific goals and limited time. These courses are crafted to help you get started on learning the basic concepts to drumming.";
+
+export const corporateCoursesPageUpperSectionTitle = "Corporate ";
+export const corporateCoursesPageUpperSectionText =
+  "We incorporate drumming into team building programmes that allow our participants to experience the fun and unity through music and drums.";
