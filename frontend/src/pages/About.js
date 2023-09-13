@@ -1,8 +1,13 @@
 import {
+  aboutPageNavigationItems,
   aboutPagePhilosophySectionBackground,
   aboutPageUpperSectionBackground,
+  aboutPageUpperSectionText,
+  aboutPageUpperSectionTitle,
 } from "#utils/constants";
 import { useEffectScrollTop } from "#utils/utils";
+import OptionsToNavigate from "../components/OptionsToNavigate";
+import UpperBanner from "../components/UpperBanner";
 import styles from "./about.module.scss";
 
 const About = () => {
@@ -18,45 +23,15 @@ const About = () => {
   return (
     <div className={styles.aboutPageWrapper}>
       <div className={styles.aboutPage}>
-        <section className={styles.upperSection}>
-          <div
-            className={styles.backgroundImage}
-            style={aboutPageUpperSectionBackground}
-          ></div>
-
-          <div className={styles.text}>
-            <div className={styles.title}>About Tierra y Aire</div>
-            <div className={styles.content}>
-              Established since 2018, the Tierra y Aire ethos has always been
-              one of integration and sharing. Today, we have become the people’s
-              choice for drum education as the largest specialized drum school
-              in Rosario.
-            </div>
-          </div>
-        </section>
-        <div className={styles.linksRow}>
-          <ul>
-            <li
-              className={styles.listItem}
-              onClick={() => scrollToSection("school")}
-            >
-              <span>our school</span>
-            </li>
-
-            <li
-              className={styles.listItem}
-              onClick={() => scrollToSection("philosophy")}
-            >
-              <span>our philosophy</span>
-            </li>
-            <li
-              className={styles.listItem}
-              onClick={() => scrollToSection("founder")}
-            >
-              <span>our founder</span>
-            </li>
-          </ul>
-        </div>
+        <UpperBanner
+          backgroundUrl={aboutPageUpperSectionBackground}
+          title={aboutPageUpperSectionTitle}
+          text={aboutPageUpperSectionText}
+        />
+        <OptionsToNavigate
+          navigate={scrollToSection}
+          items={aboutPageNavigationItems}
+        />
         <section className={styles.educationSection} id='school'>
           <div className={styles.imageAndTextLayerContainer}>
             <img

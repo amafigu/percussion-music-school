@@ -1,0 +1,78 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.coursesPageWrapper {
+  .coursesPage {
+    width: 100%;
+    min-height: theme.$min-vh-page-wrapper;
+    background-color: theme.$secondary-background-color;
+    scroll-behavior: smooth;
+
+    .upperSection {
+      @include media.tablet-wide {
+        height: auto;
+      }
+
+      position: relative;
+      width: 100%;
+      height: auto;
+
+      @include flex-all-center;
+
+      .backgroundImage {
+        @include background-image;
+      }
+
+      .text {
+        @include z-index(bannerText);
+
+        @include media.widescreen {
+          margin: 220px 0;
+        }
+
+        @include media.tablet-wide {
+          display: flex;
+          flex-direction: column;
+          width: 84%;
+          padding-top: 30px;
+          padding-bottom: 30px;
+          margin: 140px 0;
+        }
+
+        width: 80%;
+        margin: 160px 0;
+
+        .title {
+          @include media.tablet-wide {
+            font-size: 32px !important;
+          }
+
+          @include media.mobile {
+            width: 100%;
+            margin-bottom: 60px;
+          }
+
+          @include standard-page-title;
+
+          margin-bottom: 40px;
+          opacity: 0.8;
+        }
+
+        .content {
+          @include media.widescreen {
+            width: 30%;
+          }
+
+          @include media.mobile {
+            width: 100%;
+          }
+
+          @include standard-page-content;
+
+          width: 80%;
+        }
+      }
+    }
+  }
+}

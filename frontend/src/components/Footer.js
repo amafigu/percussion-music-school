@@ -31,23 +31,20 @@ const Footer = () => {
               <span className={styles.content}>About</span>
             </Link>
 
-            <Link className={styles.link} to='/programs'>
-              <span className={styles.content}>Programs</span>
-            </Link>
             <Link className={styles.link} to='/faq'>
               <span className={styles.content}>Faq</span>
             </Link>
           </div>
           <div className={styles.column}>
             <h3 className={styles.title}>Programmes</h3>
-            <Link className={styles.link} to='/programs/regular'>
+            <Link className={styles.link} to='/courses/regular'>
               <span className={styles.content}>Regular Programme</span>
             </Link>
 
-            <Link className={styles.link} to='/programs/short-courses'>
+            <Link className={styles.link} to='/courses/short'>
               <span className={styles.content}>Short Courses</span>
             </Link>
-            <Link className={styles.link} to='/programs/corporate'>
+            <Link className={styles.link} to='/courses/corporate'>
               <span className={styles.content}>Corporate</span>
             </Link>
           </div>
