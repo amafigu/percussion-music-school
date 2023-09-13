@@ -1,11 +1,16 @@
 import UpperBanner from "#components/UpperBanner";
 import {
+  corporateCoursePageOfferImage,
+  corporateCoursePageOfferName,
+  corporateCoursePageOfferSubtitle,
+  corporateCoursePageOfferText,
   corporateCoursesPageUpperSectionBackground,
   corporateCoursesPageUpperSectionText,
   corporateCoursesPageUpperSectionTitle,
   coursesPagesNavigationItems,
 } from "#utils/constants";
 import { useNavigate } from "react-router-dom";
+import CourseBanner from "../components/CourseBanner";
 
 import { useEffectScrollTop } from "#utils/utils";
 import React from "react";
@@ -31,6 +36,12 @@ const CorporateCourses = () => {
         <OptionsToNavigate
           navigate={navitageToPage}
           items={coursesPagesNavigationItems}
+        />
+        <CourseBanner
+          imageUrl={corporateCoursePageOfferImage}
+          name={corporateCoursePageOfferName}
+          subtitle={corporateCoursePageOfferSubtitle}
+          text={corporateCoursePageOfferText}
         />
       </div>
     </div>

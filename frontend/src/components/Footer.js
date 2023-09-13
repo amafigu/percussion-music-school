@@ -31,9 +31,6 @@ const Footer = () => {
               <span className={styles.content}>About</span>
             </Link>
 
-            <Link className={styles.link} to='/courses'>
-              <span className={styles.content}>Programs</span>
-            </Link>
             <Link className={styles.link} to='/faq'>
               <span className={styles.content}>Faq</span>
             </Link>

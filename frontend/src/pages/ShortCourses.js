@@ -1,6 +1,14 @@
 import UpperBanner from "#components/UpperBanner";
 import {
   coursesPagesNavigationItems,
+  shortCoursePageHolidayImage,
+  shortCoursePageHolidayName,
+  shortCoursePageHolidaySubtitle,
+  shortCoursePageHolidayText,
+  shortCoursePageIntroDrummingImage,
+  shortCoursePageIntroDrummingName,
+  shortCoursePageIntroDrummingSubtitle,
+  shortCoursePageIntroDrummingText,
   shortCoursesPageUpperSectionBackground,
   shortCoursesPageUpperSectionText,
   shortCoursesPageUpperSectionTitle,
@@ -8,6 +16,7 @@ import {
 import { useEffectScrollTop } from "#utils/utils";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import CourseBanner from "../components/CourseBanner";
 import OptionsToNavigate from "../components/OptionsToNavigate";
 import styles from "./shortCourses.module.scss";
 
@@ -30,6 +39,19 @@ const ShortCourses = () => {
         <OptionsToNavigate
           navigate={navitageToPage}
           items={coursesPagesNavigationItems}
+        />
+        <CourseBanner
+          imageUrl={shortCoursePageHolidayImage}
+          name={shortCoursePageHolidayName}
+          subtitle={shortCoursePageHolidaySubtitle}
+          text={shortCoursePageHolidayText}
+        />
+        <CourseBanner
+          imageUrl={shortCoursePageIntroDrummingImage}
+          name={shortCoursePageIntroDrummingName}
+          subtitle={shortCoursePageIntroDrummingSubtitle}
+          text={shortCoursePageIntroDrummingText}
+          invert={true}
         />
       </div>
     </div>
