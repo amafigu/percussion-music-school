@@ -15,7 +15,7 @@ const CoursesCardTeaser = () => {
         <CourseCard
           image='card2.png'
           name='Short Courses '
-          path='/courses/short-courses'
+          path='/courses/short'
           description='The Short Course is for students with specific goals and limited time. These courses are crafted to help you get started on learning the basic concepts to drumming.'
         />
         <CourseCard

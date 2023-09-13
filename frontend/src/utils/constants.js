@@ -57,3 +57,30 @@ export const shortCoursesPageUpperSectionText =
 export const corporateCoursesPageUpperSectionTitle = "Corporate ";
 export const corporateCoursesPageUpperSectionText =
   "We incorporate drumming into team building programmes that allow our participants to experience the fun and unity through music and drums.";
+
+export const coursesPagesNavigationItems = [
+  { name: "regular courses", path: "/courses/regular" },
+  { name: "short courses", path: "/courses/short" },
+  { name: "corporate courses", path: "/courses/corporate" },
+];
+
+export const aboutPageNavigationItems = [
+  { name: "our school", path: "school" },
+  { name: "our philosophy", path: "philosophy" },
+  { name: "our founder", path: "founder" },
+];
+
+export const regularCoursePageBeginnerBannerImage = `${process.env.PUBLIC_URL}/assets/regular_courses_page_beginner.png`;
+
+export const regularCoursePageBeginnerBannerName = "Junior";
+export const regularCoursePageBeginnerBannerSubtitle = "Coordination & Control";
+export const regularCoursePageBeginnerBannerText =
+  "For every young drummer, it's important to acquire appropriate development and control techniques to achieve mastery over the drum set.";
+
+export const regularCoursePageIntermediateBannerImage = `${process.env.PUBLIC_URL}/assets/regular_courses_page_intermediate.png`;
+
+export const regularCoursePageIntermediateBannerName = "Intermediate";
+export const regularCoursePageIntermediateBannerSubtitle =
+  "Coordination & Control";
+export const regularCoursePageIntermediateBannerText =
+  "Every young drummer needs proper development and control techniques. The child will begin to attain control over the drum set by exploring";

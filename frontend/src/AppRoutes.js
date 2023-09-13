@@ -25,7 +25,7 @@ const AppRoutes = () => {
             <Route path='/about' element={<About />} />
             <Route index element={<Home />} />
             <Route path='/courses/regular' element={<RegularCourses />} />
-            <Route path='/courses/short-courses' element={<ShortCourses />} />
+            <Route path='/courses/short' element={<ShortCourses />} />
             <Route path='/courses/corporate' element={<CorporateCourses />} />
           </Route>
           <Route path='*' element={<Pagenotfound />} />

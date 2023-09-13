@@ -21,7 +21,7 @@ const DropdownMenu = ({ setMenuVisible }) => {
 
       <li
         className={styles.listItem}
-        onClick={() => navigateAndCloseMenu("/courses/short-courses")}
+        onClick={() => navigateAndCloseMenu("/courses/short")}
       >
         <span className={styles.linkContent}>short courses</span>
       </li>

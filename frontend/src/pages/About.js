@@ -1,10 +1,12 @@
 import {
+  aboutPageNavigationItems,
   aboutPagePhilosophySectionBackground,
   aboutPageUpperSectionBackground,
   aboutPageUpperSectionText,
   aboutPageUpperSectionTitle,
 } from "#utils/constants";
 import { useEffectScrollTop } from "#utils/utils";
+import OptionsToNavigate from "../components/OptionsToNavigate";
 import UpperBanner from "../components/UpperBanner";
 import styles from "./about.module.scss";
 
@@ -26,29 +28,10 @@ const About = () => {
           title={aboutPageUpperSectionTitle}
           text={aboutPageUpperSectionText}
         />
-        <div className={styles.linksRow}>
-          <ul>
-            <li
-              className={styles.listItem}
-              onClick={() => scrollToSection("school")}
-            >
-              <span>our school</span>
-            </li>
-
-            <li
-              className={styles.listItem}
-              onClick={() => scrollToSection("philosophy")}
-            >
-              <span>our philosophy</span>
-            </li>
-            <li
-              className={styles.listItem}
-              onClick={() => scrollToSection("founder")}
-            >
-              <span>our founder</span>
-            </li>
-          </ul>
-        </div>
+        <OptionsToNavigate
+          navigate={scrollToSection}
+          items={aboutPageNavigationItems}
+        />
         <section className={styles.educationSection} id='school'>
           <div className={styles.imageAndTextLayerContainer}>
             <img

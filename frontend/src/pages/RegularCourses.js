@@ -1,5 +1,14 @@
 import UpperBanner from "#components/UpperBanner";
 import {
+  coursesPagesNavigationItems,
+  regularCoursePageBeginnerBannerImage,
+  regularCoursePageBeginnerBannerName,
+  regularCoursePageBeginnerBannerSubtitle,
+  regularCoursePageBeginnerBannerText,
+  regularCoursePageIntermediateBannerImage,
+  regularCoursePageIntermediateBannerName,
+  regularCoursePageIntermediateBannerSubtitle,
+  regularCoursePageIntermediateBannerText,
   regularCoursesPageUpperSectionBackground,
   regularCoursesPageUpperSectionText,
   regularCoursesPageUpperSectionTitle,
@@ -7,6 +16,8 @@ import {
 import { useEffectScrollTop } from "#utils/utils";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import CourseBanner from "../components/CourseBanner";
+import OptionsToNavigate from "../components/OptionsToNavigate";
 import styles from "./regularCourses.module.scss";
 
 const RegularCourses = () => {
@@ -26,35 +37,29 @@ const RegularCourses = () => {
           text={regularCoursesPageUpperSectionText}
         />
 
-        <div className={styles.linksRow}>
-          <ul>
-            <li
-              className={styles.listItem}
-              onClick={() =>
-                navitageToPage("/courses/regular", { relative: "path" })
-              }
-            >
-              <span>regular courses</span>
-            </li>
-
-            <li
-              className={styles.listItem}
-              onClick={() =>
-                navitageToPage("/courses/short-courses", { relative: "path" })
-              }
-            >
-              <span>short courses</span>
-            </li>
-            <li
-              className={styles.listItem}
-              onClick={() =>
-                navitageToPage("/courses/corporate", { relative: "path" })
-              }
-            >
-              <span>corporate</span>
-            </li>
-          </ul>
-        </div>
+        <OptionsToNavigate
+          navigate={navitageToPage}
+          items={coursesPagesNavigationItems}
+        />
+        <CourseBanner
+          imageUrl={regularCoursePageBeginnerBannerImage}
+          name={regularCoursePageBeginnerBannerName}
+          subtitle={regularCoursePageBeginnerBannerSubtitle}
+          text={regularCoursePageBeginnerBannerText}
+        />
+        <CourseBanner
+          imageUrl={regularCoursePageBeginnerBannerImage}
+          name={regularCoursePageBeginnerBannerName}
+          subtitle={regularCoursePageBeginnerBannerSubtitle}
+          text={regularCoursePageBeginnerBannerText}
+          invert={true}
+        />
+        <CourseBanner
+          imageUrl={regularCoursePageIntermediateBannerImage}
+          name={regularCoursePageIntermediateBannerName}
+          subtitle={regularCoursePageIntermediateBannerSubtitle}
+          text={regularCoursePageIntermediateBannerText}
+        />
       </div>
     </div>
   );

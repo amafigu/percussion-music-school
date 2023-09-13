@@ -44,7 +44,7 @@ const Footer = () => {
               <span className={styles.content}>Regular Programme</span>
             </Link>
 
-            <Link className={styles.link} to='/courses/short-courses'>
+            <Link className={styles.link} to='/courses/short'>
               <span className={styles.content}>Short Courses</span>
             </Link>
             <Link className={styles.link} to='/courses/corporate'>
