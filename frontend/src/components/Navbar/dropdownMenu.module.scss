@@ -5,7 +5,7 @@
 .dropdownMenu {
   @include z-index(dropdownmenu);
 
-  @include media.mobile {
+  @include media.tablet-narrow {
     background-color: #3b3e4b;
   }
 

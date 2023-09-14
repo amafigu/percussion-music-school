@@ -5,20 +5,19 @@
 .coursesPageWrapper {
   .coursesPage {
     width: 100%;
-    min-height: theme.$min-vh-page-wrapper;
     background-color: theme.$secondary-background-color;
     scroll-behavior: smooth;
 
     .upperSection {
-      @include media.tablet-wide {
-        height: auto;
+      @media screen and (height <= 1200px) {
+        height: 60vh;
       }
+
+      @include flex-all-center;
 
       position: relative;
       width: 100%;
-      height: auto;
-
-      @include flex-all-center;
+      height: 40vh;
 
       .backgroundImage {
         @include background-image;

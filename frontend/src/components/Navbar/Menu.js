@@ -58,12 +58,6 @@ const Menu = ({ setMenu }) => {
               </div>
             )}
           </li>
-          <li
-            className={styles.listItem}
-            onClick={() => navigateAndCloseMenu("/faq")}
-          >
-            <span className={styles.linkContent}>faq</span>
-          </li>
         </ul>
         <a
           onClick={() => setMenu(false)}

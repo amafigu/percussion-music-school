@@ -10,20 +10,17 @@
   .presentation {
     @include media.tablet-wide {
       flex-direction: column;
+      gap: 28px;
     }
 
     @include flex-all-center;
 
-    gap: 20px;
     width: 90%;
     margin: auto;
+    margin-top: 60px;
 
     .imageContaier {
-      @include media.desktop-up {
-        width: 100%;
-      }
-
-      @include media.desktop {
+      @include media.tablet-wide {
         order: 1 !important;
         width: 68% !important;
       }
@@ -41,11 +38,6 @@
           width: 80%;
         }
 
-        @include media.mobile {
-          width: 100%;
-          margin: auto;
-        }
-
         width: 100%;
         height: auto;
         border-radius: 14px;
@@ -54,10 +46,7 @@
 
     .textAndIconsContainer {
       display: flex;
-
-      @include media.desktop-up {
-        width: 88%;
-      }
+      justify-content: center;
 
       @include media.tablet-wide {
         width: 68% !important;
@@ -72,19 +61,14 @@
       width: 50%;
 
       .textAndIcons {
-        @include media.desktop-only {
-          width: 100%;
-          margin-top: 20px;
-          margin-left: 40px;
-        }
-
         @include media.desktop {
           width: 100%;
           margin-top: 20px;
           margin-left: 0 !important;
         }
 
-        width: 90%;
+        width: 80%;
+        max-width: 780px;
       }
 
       .name {

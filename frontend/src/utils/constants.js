@@ -85,6 +85,13 @@ export const regularCoursePageIntermediateBannerSubtitle =
 export const regularCoursePageIntermediateBannerText =
   "Every young drummer needs proper development and control techniques. The child will begin to attain control over the drum set by exploring";
 
+export const regularCoursePageAdvancedBannerImage = `${process.env.PUBLIC_URL}/assets/regular_courses_page_advanced.png`;
+
+export const regularCoursePageAdvancedBannerName = "Advanced";
+export const regularCoursePageAdvancedBannerSubtitle = "Coordination & Control";
+export const regularCoursePageAdvancedBannerText =
+  "Every experienced drummer needs more techniques. The student will begin to attain control over the drum set by exploring";
+
 export const shortCoursePageHolidayImage = `${process.env.PUBLIC_URL}/assets/short_courses_page_holiday.png`;
 
 export const shortCoursePageHolidayName = "Holiday Programme";
@@ -93,7 +100,7 @@ export const shortCoursePageHolidaySubtitle =
 export const shortCoursePageHolidayText =
   "Every young drummer needs proper development and control techniques";
 
-export const shortCoursePageIntroDrummingImage = `${process.env.PUBLIC_URL}/assets/short_courses_page_holiday.png`;
+export const shortCoursePageIntroDrummingImage = `${process.env.PUBLIC_URL}/assets/short_courses_page_intro_drumming.png`;
 
 export const shortCoursePageIntroDrummingName = "Introduction to Drumming";
 export const shortCoursePageIntroDrummingSubtitle =
