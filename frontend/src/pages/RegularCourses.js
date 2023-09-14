@@ -1,6 +1,10 @@
 import UpperBanner from "#components/UpperBanner";
 import {
   coursesPagesNavigationItems,
+  regularCoursePageAdvancedBannerImage,
+  regularCoursePageAdvancedBannerName,
+  regularCoursePageAdvancedBannerSubtitle,
+  regularCoursePageAdvancedBannerText,
   regularCoursePageBeginnerBannerImage,
   regularCoursePageBeginnerBannerName,
   regularCoursePageBeginnerBannerSubtitle,
@@ -47,18 +51,20 @@ const RegularCourses = () => {
           subtitle={regularCoursePageBeginnerBannerSubtitle}
           text={regularCoursePageBeginnerBannerText}
         />
-        <CourseBanner
-          imageUrl={regularCoursePageBeginnerBannerImage}
-          name={regularCoursePageBeginnerBannerName}
-          subtitle={regularCoursePageBeginnerBannerSubtitle}
-          text={regularCoursePageBeginnerBannerText}
-          invert={true}
-        />
+
         <CourseBanner
           imageUrl={regularCoursePageIntermediateBannerImage}
           name={regularCoursePageIntermediateBannerName}
           subtitle={regularCoursePageIntermediateBannerSubtitle}
           text={regularCoursePageIntermediateBannerText}
+          invert={true}
+        />
+
+        <CourseBanner
+          imageUrl={regularCoursePageAdvancedBannerImage}
+          name={regularCoursePageAdvancedBannerName}
+          subtitle={regularCoursePageAdvancedBannerSubtitle}
+          text={regularCoursePageAdvancedBannerText}
         />
       </div>
     </div>

@@ -28,11 +28,15 @@
   .courseCard {
     @include media.mobile {
       width: 100%;
-      height: auto;
+    }
+
+    @include media.widescreen {
+      width: 76%;
     }
 
     width: 90%;
-    height: 524px;
+    max-width: 360px;
+    height: auto;
     background-color: #20232d;
     border-radius: 24px;
   }
