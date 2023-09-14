@@ -83,16 +83,6 @@ const Footer = () => {
               2023 Tierra y Aire Percusion - Argentina. All Rights Reserved.
             </span>
           </div>
-
-          <div className={styles.links}>
-            <Link className={styles.linkLegal} to='/terms-conditions'>
-              Terms of Use
-            </Link>
-            <span> | </span>
-            <Link className={styles.linkLegal} to='/privacy-policy '>
-              Privacy Policy
-            </Link>
-          </div>
         </div>
       </div>
     </div>
