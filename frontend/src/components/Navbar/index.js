@@ -63,9 +63,6 @@ const Navbar = () => {
             )}
           </div>
 
-          <Link className={styles.link} to='/faq'>
-            <span className={styles.linkContent}>faq</span>
-          </Link>
           <a
             href='mailto:percusion.tierrayaire@gmail.com'
             className={`${styles.mailButton} ${styles.hideForMobile}`}
