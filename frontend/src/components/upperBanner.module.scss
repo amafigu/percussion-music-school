@@ -9,7 +9,7 @@
     scroll-behavior: smooth;
 
     .upperSection {
-      @media screen and (height <= 1200px) {
+      @include media.short {
         height: 60vh;
       }
 
