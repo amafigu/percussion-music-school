@@ -30,10 +30,6 @@ const Footer = () => {
             <Link className={styles.link} to='/about'>
               <span className={styles.content}>About</span>
             </Link>
-
-            <Link className={styles.link} to='/faq'>
-              <span className={styles.content}>Faq</span>
-            </Link>
           </div>
           <div className={styles.column}>
             <h3 className={styles.title}>Programmes</h3>
