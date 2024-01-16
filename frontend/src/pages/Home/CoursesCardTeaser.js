@@ -1,28 +1,52 @@
+import useLocaleContext from "#context/localeContext";
 import React from "react";
 import CourseCard from "./CourseCard";
 import styles from "./coursesCardTeaser.module.scss";
 
 const CoursesCardTeaser = () => {
+  const { translate } = useLocaleContext();
+  const textCards = translate.components.courses.titleAndDescription;
+  console.log(textCards);
   return (
     <div className={styles.coursesCardTeaserWrapper}>
       <div className={styles.coursesCardTeaser}>
         <CourseCard
           image='card1.png'
-          name='Regular'
+          name={textCards.ensemble.title}
           path='/courses/regular'
-          description='The Regular Programme is designed for students with medium to long-term goals in mastering the instrument through one-on-one weekly drum lessons.'
+          description={textCards.ensemble.description}
         />
         <CourseCard
           image='card2.png'
-          name='Short Courses '
+          name={textCards.handTechnique.title}
           path='/courses/short'
-          description='The Short Course is for students with specific goals and limited time. These courses are crafted to help you get started on learning the basic concepts to drumming.'
+          description={textCards.handTechnique.description}
         />
         <CourseCard
           image='card3.png'
-          name='Corporate '
+          name={textCards.stickTechnique.title}
           path='/courses/corporate'
-          description='We incorporate drumming into team building programmes that allow our participants to experience the fun and unity through music and drums.'
+          description={textCards.stickTechnique.description}
+        />
+      </div>
+      <div className={styles.coursesCardTeaser}>
+        <CourseCard
+          image='card1.png'
+          name={textCards.musicalLanguage.title}
+          path='/courses/regular'
+          description={textCards.musicalLanguage.description}
+        />
+        <CourseCard
+          image='card2.png'
+          name={textCards.musicalDirection.title}
+          path='/courses/short'
+          description={textCards.musicalDirection.description}
+        />
+        <CourseCard
+          image='card3.png'
+          name={textCards.ensembleComposition.title}
+          path='/courses/corporate'
+          description={textCards.ensembleComposition.description}
         />
       </div>
     </div>
