@@ -1,3 +1,16 @@
+export const ROUTES = {
+  HOME: "/",
+  ABOUT: "/about",
+  COURSES: {
+    ENSEMBLE: "/courses/ensemble",
+    ENSEMBLE_COMPOSITION: "/courses/ensemble-composition",
+    HAND_TECHNIQUE: "/courses/hand-technique",
+    MUSICAL_DIRECTION: "/courses/musical-direction",
+    MUSICAL_LANGUAGE: "/courses/musical-language",
+    STICK_TECHNIQUE: "/courses/stick-technique",
+  },
+};
+
 export const TEASER_VIDEO =
   "https://www.youtube.com/embed/btd8Tbcs5GU?autoplay=1&loop=1&playlist=btd8Tbcs5GU&controls=0&modestbranding=1&mute=1&showinfo=0&rel=0";
 
@@ -114,4 +127,4 @@ export const corporateCoursePageOfferName = "Overview";
 export const corporateCoursePageOfferSubtitle =
   "Are you looking for a unique and effective way to bring your team together and improve communication and teamwork? ";
 export const corporateCoursePageOfferText =
-  "Our experienced instructors are committed to providing your team with a positive and engaging experience that will leave them eager for more. We’ve worked with numerous organizations and over 5,000 students, making us well-versed in adapting to cultural, racial, and language differences.  Through the power of drumming, we can help bring your team together and provide a professional development opportunity unlike any other. Don’t miss out on this chance to boost team morale and productivity. Contact us today to book your workshop!";
+  "Our experienced instructors are committed to providing your team with a positive and engaging experience that will leave them eager for more. We’ve worked with numerous organizations and over 5,000 students, making us well-versed in adapting to cultural, racial, and language differences.  Through the power of drumming, we can help bring your team together and provide a professional development opportunity unlike any other. Don’t miss out on this chance to boost team morale and productivity. Contact us today to book your course!";
