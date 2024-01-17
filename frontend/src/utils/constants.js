@@ -109,9 +109,9 @@ export const coursesPagesNavigationItems = [
 ];
 
 export const aboutPageNavigationItems = [
-  { courseName: "our school", path: "school" },
-  { courseName: "our philosophy", path: "philosophy" },
-  { courseName: "our founder", path: "founder" },
+  { courseName: "school", path: "school" },
+  { courseName: "philosophy", path: "philosophy" },
+  { courseName: "founder", path: "founder" },
 ];
 
 export const ensembleCoursesPageBeginnerBannerImage = `${process.env.PUBLIC_URL}/assets/regular_courses_page_beginner.png`;

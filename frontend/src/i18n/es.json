@@ -15,57 +15,36 @@
     "courses": {
       "ensemble": {
         "title": "Práctica de ensamble",
+        "subtitle": "compartir la música",
         "description": "Se entiende por ensamble a la agrupación de instrumentos de distinto timbre; conga, djembe, batería de surdo, dum, campana, chico, etc. En este curso se trabaja la práctica y el aprendizaje de repertorio con los instrumentos antes mencionados, teniendo por finalidad la realización de presentaciones en vivo."
       },
       "handTechnique": {
         "title": "Técnica de manos",
+        "subtitle": "El ritmo en tu cuerpo",
         "description": "En este curso se trabajan los diferentes sonidos de los instrumentos conga y djembe, haciendo foco en las distintas posiciones de manos, para un audio logrado de slap, tono, bajo, palma y punta. (A este curso sólo se pueden inscribir quienes estén realizando el curso 'Práctica de ensamble')."
       },
       "stickTechnique": {
         "title": "Técnica de palos",
+        "subtitle": "control y dinamismo",
         "description": "En este curso se trabajan los diferentes sonidos de los instrumentos conga y djembe, haciendo foco en las distintas posiciones de manos, para un audio logrado de slap, tono, bajo, palma y punta. (A este curso sólo se pueden inscribir quienes estén realizando el curso 'Práctica de ensamble')."
       },
       "musicalLanguage": {
         "title": "Lenguaje Musical",
+        "subtitle": "entende la música",
         "description": "En este curso se trabajará la notación musical y sus valores, es decir, aprenderemos a leer y escribir música, haciendo hincapié en el ritmo."
       },
       "musicalDirection": {
         "title": "Dirección musical",
+        "subtitle": "la expresión en tus manos",
         "description": "Este curso tiene el objetivo de formar directores musicales. Se brindarán las herramientas necesarias para el desarrollo del lenguaje de señas musical. (A este curso sólo se pueden inscribir quienes estén realizando el curso 'Práctica de ensamble')."
       },
       "ensembleComposition": {
         "title": "Composición de ensambles",
+        "subtitle": "crea tus ritmos",
         "description": "Este curso comprende la invención de voces (patrones rítmicos), para generar ritmo y formas musicales. Procura la creación de plumas o ritmos. (A este curso sólo se pueden inscribir quienes estén realizando el curso 'Práctica de ensamble')."
       }
     },
-    "coursesCardTeaser": {
-      "cards": {
-        "ensemble": {
-          "title": "Práctica de ensamble",
-          "description": "texto corto definicion"
-        },
-        "handTechnique": {
-          "title": "Técnica de manos",
-          "description": "texto corto definicion"
-        },
-        "stickTechnique": {
-          "title": "Técnica de palos",
-          "description": "texto corto definicion"
-        },
-        "musicalLanguage": {
-          "title": "Lenguaje Musical",
-          "description": "texto corto definicion"
-        },
-        "musicalDirection": {
-          "title": "Dirección musical",
-          "description": "texto corto definicion"
-        },
-        "ensembleComposition": {
-          "title": "Composición de ensambles",
-          "description": "texto corto definicion"
-        }
-      }
-    },
+
     "home": {
       "title": "La escuela especializada en percusión más grande de Rosario desde 2018",
       "subtitle": "Nuestra misión es inspirar y educar a los bateristas mediante el uso de la última tecnología y recursos para brindar una educación de percusión contemporánea distintiva."
@@ -104,6 +83,37 @@
         }
       }
     },
+    "courseCard": {
+      "seeMore": "ver más"
+    },
+    "coursesCardTeaser": {
+      "cards": {
+        "ensemble": {
+          "title": "Práctica de ensamble",
+          "description": "compartir la música"
+        },
+        "handTechnique": {
+          "title": "Técnica de manos",
+          "description": "El ritmo en tu cuerpo"
+        },
+        "stickTechnique": {
+          "title": "Técnica de palos",
+          "description": "control y dinamismo"
+        },
+        "musicalLanguage": {
+          "title": "Lenguaje Musical",
+          "description": "entende la música"
+        },
+        "musicalDirection": {
+          "title": "Dirección musical",
+          "description": "la expresión en tus manos"
+        },
+        "ensembleComposition": {
+          "title": "Composición de ensambles",
+          "description": "crea tus ritmos"
+        }
+      }
+    },
 
     "navbar": {
       "links": {
@@ -120,9 +130,11 @@
       "stickTechnique": "Técnica de palos",
       "musicalLanguage": "Lenguaje Musical",
       "musicalDirection": "Dirección musical",
-      "ensembleComposition": "Composición de ensambles"
+      "ensembleComposition": "Composición de ensambles",
+      "school": "nuestra escuela",
+      "philosophy": "nuestra filosofía",
+      "founder": "nuestro fundador"
     },
-
     "footer": {
       "teaserText": "Fundada desde 2018, Tierra Y Aire es la elección popular para la educación en percusión en Rosario.",
       "linksColumn": {
@@ -147,7 +159,7 @@
     "testimonialCarousel": {
       "title": "testimonios",
       "mikeTiseyra": "Tierra y Aire es para mí, un espacio de Aprendizaje, de Disfrute, de Contención, y de Amistad, dónde cada uno de nosotros, (adultos y niños), de la mano de nuestro profesor y director Rolo Verón, nos hace plasmar, en las clases, ensayos, y  presentaciones en público, los conocimientos adquiridos, desde un lado desafiante y placentero. En los 8 años que hace que pertenezco a Tierra y Aire puedo decir que ES UN SENTIMIENTO",
-      "silvinaRaquel": "Yo me siento  contenida ,agradecida y feliz por estar dentro de un grupo en donde la musica ,la amistad y la risa se mezclan y se  complementan unas con otras.Para mí es una experiencia nueva y también un ambiente nuevo, del cual no sabia nada pero lo que haces vos con esto es grandioso y siento que lo puedo hacer ...Más lento o más rápido .... Pero... Hace que me mantenga firme para apreender y seguir adelante asi que....Gracias por tu aporte y soporte....Sin vos seria mucho mas  dificil capo.Bancanos siempre con esa dedicacion y locura por lo que haces....Se transmite y no sabes como !!! Te y los quiero",
+      "silvinaRaquel": "Yo me siento  contenida ,agradecida y feliz por estar dentro de un grupo en donde la música ,la amistad y la risa se mezclan y se  complementan unas con otras.Para mí es una experiencia nueva y también un ambiente nuevo, del cual no sabia nada pero lo que haces vos con esto es grandioso y siento que lo puedo hacer ...Más lento o más rápido .... Pero... Hace que me mantenga firme para apreender y seguir adelante asi que....Gracias por tu aporte y soporte....Sin vos seria mucho mas  dificil capo.Bancanos siempre con esa dedicacion y locura por lo que haces....Se transmite y no sabes como !!! Te y los quiero",
       "luisa": "Tierra y aire fue un gran descubrimiento para mi, me sentí feliz desde la primera clase, encontré una nueva pasión y un grupo humano incomparable. Rolo es lo más! Tiene una pasión y una paciencia infinita, las clases son muy ágiles y nunca salgo sin aprender algo nuevo, trabajamos seriamente pero de una manera muy divertida. Nunca pensé que sería posible tocar un instrumento desde el primer día!",
       "mumi": "Tierra y aire empezó como una aventura, una actividad para despertar la adrenalina, porque nunca incursioné en la música... Se abrió en mí un abanico de sensaciones que superó mis expectativas: coordinación, atención, disfrute,... Un grupo de coordialidad, amistad y compañerismo. La contención, paciencia y amor brindada por el director rolo es incomparable... Mirar la vida desde otra perspectiva saludable al alma.",
       "marito": "Tierra y aire es mí espacio de concentración, relajación y concentración músical. Lo más lindo son los grupos las buenas energías de la gente y del profe Rolo. Puedo compartir este espacio en shows con mí familia. Eso es impagable, que te vallan a ver arriba de escenario y verlos desde el mismo quedas muy de cara",

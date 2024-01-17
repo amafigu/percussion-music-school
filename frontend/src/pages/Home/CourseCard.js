@@ -1,7 +1,12 @@
+import useLocaleContext from "#context/localeContext";
+import { camelCaseToTitleCase } from "#utils/utils";
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./courseCard.module.scss";
 const CourseCard = ({ name, description, path, image }) => {
+  const { translate } = useLocaleContext();
+  const text = translate.components.courseCard;
+
   return (
     <div className={styles.courseCardWrapper}>
       <div className={styles.courseCard}>
@@ -12,10 +17,12 @@ const CourseCard = ({ name, description, path, image }) => {
         ></img>
         <div className={styles.infoColumn}>
           <div className={styles.descriptionAndLink}>
-            <div className={styles.category}>{name}</div>
-            <div className={styles.text}> {description}</div>
+            <div className={styles.category}>{camelCaseToTitleCase(name)}</div>
+            <div className={styles.text}>
+              {camelCaseToTitleCase(description)}
+            </div>
             <Link className={styles.link} to={path}>
-              See more
+              {camelCaseToTitleCase(text.seeMore)}
             </Link>
           </div>
         </div>

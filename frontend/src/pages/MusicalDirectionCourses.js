@@ -28,13 +28,15 @@ const MusicalDirectionCourses = () => {
         <UpperBanner
           backgroundUrl={musicalLanguageCoursesPageUpperSectionBackground}
           title={text.musicalDirection.title}
-          text={"definicion corta"}
+          text={text.musicalDirection.subtitle}
         />
 
-        <SubNavbar
-          navigate={navitageToPage}
-          items={coursesPagesNavigationItems}
-        />
+        <div className={styles.hiddeMobile}>
+          <SubNavbar
+            navigate={navitageToPage}
+            items={coursesPagesNavigationItems}
+          />
+        </div>
         <CourseBanner
           imageUrl={handTechniqueCoursePageSecondImage}
           name={"algun titulo, algo como -Objetivos-"}

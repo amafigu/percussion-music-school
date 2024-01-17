@@ -31,12 +31,14 @@ const EnsembleCourses = () => {
         <UpperBanner
           backgroundUrl={ensembleCoursesPageUpperSectionBackground}
           title={text.ensemble.title}
-          text={"texto corto definicion"}
+          text={text.ensemble.subtitle}
         />
-        <SubNavbar
-          navigate={navitageToPage}
-          items={coursesPagesNavigationItems}
-        />
+        <div className={styles.hiddeMobile}>
+          <SubNavbar
+            navigate={navitageToPage}
+            items={coursesPagesNavigationItems}
+          />
+        </div>
         <CourseBanner
           imageUrl={ensembleCoursesPageBeginnerBannerImage}
           name={"algun titulo, algo como -Objetivos-"}

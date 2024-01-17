@@ -1,8 +1,10 @@
+import LanguagesDropdown from "#components/LanguagesDropdown";
 import useLocaleContext from "#context/localeContext";
 import { ROUTES } from "#utils/constants";
 import {
   faChevronDown,
   faChevronUp,
+  faGlobe,
   faX,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,6 +15,7 @@ import styles from "./mobileMenu.module.scss";
 
 const MobileMenu = ({ setMenu }) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [isLanguageDropdownOpen, setLanguageDropdownOpen] = useState(false);
 
   const navigate = useNavigate();
   const navigateAndCloseMenu = (route) => {
@@ -31,6 +34,36 @@ const MobileMenu = ({ setMenu }) => {
             onClick={() => setMenu(false)}
           >
             <FontAwesomeIcon icon={faX} />
+          </li>
+          <li
+            className={styles.listDropdownItem}
+            style={{
+              borderBottom: isLanguageDropdownOpen && "none",
+            }}
+            onClick={() => setLanguageDropdownOpen((prevState) => !prevState)}
+          >
+            <div className={styles.listDropdownLinkContent}>
+              <div className={styles.itemsContainer}>
+                <div className={styles.item}>
+                  <FontAwesomeIcon
+                    icon={faGlobe}
+                    className={styles.languageIcon}
+                    size='lg'
+                  />
+                </div>
+                {!isLanguageDropdownOpen && (
+                  <FontAwesomeIcon icon={faChevronDown} />
+                )}
+                {isLanguageDropdownOpen && (
+                  <FontAwesomeIcon icon={faChevronUp} />
+                )}
+              </div>
+            </div>
+            {isLanguageDropdownOpen && (
+              <div className={styles.menuDropdown}>
+                <LanguagesDropdown setMenuVisible={setMenu} />
+              </div>
+            )}
           </li>
           <li
             className={styles.listItem}

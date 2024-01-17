@@ -15,7 +15,7 @@ import MobileMenu from "./MobileMenu";
 import styles from "./navbar.module.scss";
 
 const Navbar = () => {
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [isDropdownOpen, setDropdownOpen] = useState(true);
   const [isLanguageDropdownOpen, setLanguageDropdownOpen] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
 
@@ -23,11 +23,16 @@ const Navbar = () => {
   const { translate } = useLocaleContext();
   const text = translate.components.navbar;
 
+  const setAllDropdownsClosed = () => {
+    setLanguageDropdownOpen(false);
+    setDropdownOpen(false);
+  };
+
   return (
     <div className={styles.navbarWrapper}>
       <nav
         className={styles.navbar}
-        onMouseLeave={() => setDropdownOpen(false)}
+        onMouseLeave={() => setAllDropdownsClosed()}
       >
         <div className={`${styles.column} ${styles.left}`}>
           <div className={styles.logoContainer}>
@@ -59,9 +64,11 @@ const Navbar = () => {
             onMouseEnter={() => setDropdownOpen(true)}
             onClick={() => setDropdownOpen(true)}
           >
-            <span className={styles.linkContent}>
-              {text.links.courses} <FontAwesomeIcon icon={faChevronDown} />
+            <span className={`${styles.linkContent} ${styles.linkCourses}`}>
+              {text.links.courses}
             </span>
+            {!isDropdownOpen && <FontAwesomeIcon icon={faChevronDown} />}
+            {isDropdownOpen && <FontAwesomeIcon icon={faChevronUp} />}
             {isDropdownOpen && (
               <div
                 ref={menuDropdownRef}
@@ -72,26 +79,24 @@ const Navbar = () => {
               </div>
             )}
           </div>
-          <div className={styles.languageOptionsContainer}>
-            <div
-              onClick={() => setLanguageDropdownOpen((prevState) => !prevState)}
-            >
-              <div className={styles.languageChevronContainer}>
-                <FontAwesomeIcon
-                  icon={faGlobe}
-                  className={styles.languageIcon}
-                  size='xl'
-                />
-                {!isLanguageDropdownOpen && (
-                  <FontAwesomeIcon icon={faChevronDown} />
-                )}
-                {isLanguageDropdownOpen && (
-                  <FontAwesomeIcon icon={faChevronUp} />
-                )}
-              </div>
+          <div
+            onMouseEnter={() => setLanguageDropdownOpen(true)}
+            onClick={() => setLanguageDropdownOpen((prevState) => !prevState)}
+          >
+            <div className={styles.languageChevronContainer}>
+              <FontAwesomeIcon
+                icon={faGlobe}
+                className={styles.languageIcon}
+                size='lg'
+              />
+              {!isLanguageDropdownOpen && (
+                <FontAwesomeIcon icon={faChevronDown} />
+              )}
+              {isLanguageDropdownOpen && <FontAwesomeIcon icon={faChevronUp} />}
             </div>
+
             {isLanguageDropdownOpen && (
-              <div className={styles.languageDropdownContainer}>
+              <div className={styles.menuDropdown}>
                 <LanguagesDropdown />
               </div>
             )}
