@@ -45,7 +45,9 @@
     "faq": {}
   },
   "components": {
-    "whatsAppButton": {},
+    "whatsAppButton": {
+      "text": "Chat On WhatsApp"
+    },
     "courses": {
       "titleAndDescription": {
         "ensemble": {
@@ -102,6 +104,7 @@
         }
       }
     },
+
     "navbar": {
       "links": {
         "about": "about us",

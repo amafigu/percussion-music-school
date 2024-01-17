@@ -1,7 +1,10 @@
+import useLocaleContext from "#context/localeContext";
 import React from "react";
 import styles from "./whatsappButton.module.scss";
 
 const WhatsAppButton = () => {
+  const { translate } = useLocaleContext();
+  const text = translate.components.whatsAppButton;
   return (
     <a
       href='https://api.whatsapp.com/send?phone=5493413223169'
@@ -12,7 +15,7 @@ const WhatsAppButton = () => {
     >
       <div className={styles.link}>
         <i className={`${styles.customIcon} fab fa-whatsapp fa-2x`}></i>
-        <span className={styles.text}>Chat On WhatsApp</span>
+        <span className={styles.text}>{text.text}</span>
       </div>
     </a>
   );
