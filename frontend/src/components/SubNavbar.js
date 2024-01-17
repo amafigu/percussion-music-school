@@ -4,6 +4,7 @@ import styles from "./subNavbar.module.scss";
 const SubNavbar = ({ navigate, items }) => {
   const { translate } = useLocaleContext();
   const text = translate.components.subNavbar;
+
   return (
     <div className={styles.linksRow}>
       <ul>

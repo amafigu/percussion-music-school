@@ -32,10 +32,12 @@ const MusicalLanguageCourses = () => {
           title={text.musicalLanguage.title}
           text={text.musicalLanguage.subtitle}
         />
-        <SubNavbar
-          navigate={navitageToPage}
-          items={coursesPagesNavigationItems}
-        />
+        <div className={styles.hiddeMobile}>
+          <SubNavbar
+            navigate={navitageToPage}
+            items={coursesPagesNavigationItems}
+          />
+        </div>
         <CourseBanner
           imageUrl={handTechniqueCoursePageSecondImage}
           name={"algun titulo cortina"}

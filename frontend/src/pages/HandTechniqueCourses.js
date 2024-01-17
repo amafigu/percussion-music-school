@@ -29,10 +29,12 @@ const HandTechniqueCourses = () => {
           title={text.handTechnique.title}
           text={text.handTechnique.subtitle}
         />
-        <SubNavbar
-          navigate={navitageToPage}
-          items={coursesPagesNavigationItems}
-        />
+        <div className={styles.hiddeMobile}>
+          <SubNavbar
+            navigate={navitageToPage}
+            items={coursesPagesNavigationItems}
+          />
+        </div>
         <CourseBanner
           imageUrl={handTechniqueCoursePageSecondImage}
           name={"algun titulo, algo como -Objetivos-"}

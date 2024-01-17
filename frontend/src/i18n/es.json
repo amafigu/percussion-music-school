@@ -83,6 +83,9 @@
         }
       }
     },
+    "courseCard": {
+      "seeMore": "ver más"
+    },
     "coursesCardTeaser": {
       "cards": {
         "ensemble": {

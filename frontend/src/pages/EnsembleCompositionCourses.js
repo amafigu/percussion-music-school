@@ -33,11 +33,13 @@ const EnsembleCompositionCourses = () => {
           title={text.ensembleComposition.title}
           text={text.ensembleComposition.subtitle}
         />
+        <div className={styles.hiddeMobile}>
+          <SubNavbar
+            navigate={navitageToPage}
+            items={coursesPagesNavigationItems}
+          />
+        </div>
 
-        <SubNavbar
-          navigate={navitageToPage}
-          items={coursesPagesNavigationItems}
-        />
         <CourseBanner
           imageUrl={ensembleCoursesPageBeginnerBannerImage}
           name={"algun titulo, algo como -Objetivos-"}

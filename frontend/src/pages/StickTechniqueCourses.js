@@ -32,10 +32,12 @@ const StickTechniqueCourses = () => {
           title={text.stickTechnique.title}
           text={text.stickTechnique.subtitle}
         />
-        <SubNavbar
-          navigate={navitageToPage}
-          items={coursesPagesNavigationItems}
-        />
+        <div className={styles.hiddeMobile}>
+          <SubNavbar
+            navigate={navitageToPage}
+            items={coursesPagesNavigationItems}
+          />
+        </div>
         <CourseBanner
           imageUrl={stickTechniqueCoursePageOfferImage}
           name={"algun titulo, algo como -Objetivos-"}

@@ -3,6 +3,12 @@
 @import "#styles/helpers/mixins";
 
 .coursesPageWrapper {
+  .hiddeMobile {
+    @include media.tablet-narrow {
+      display: none;
+    }
+  }
+
   .coursesPage {
     width: 100%;
     min-height: theme.$min-vh-page-wrapper;
