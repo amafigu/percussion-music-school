@@ -71,7 +71,15 @@
         }
       }
     },
-    "navbar": {},
+    "navbar": {
+      "links": {
+        "about": "nuestra historia",
+        "courses": "cursos"
+      },
+      "buttons": {
+        "contact": "contactanos"
+      }
+    },
     "subNavbar": {
       "ensemble": "Práctica de ensamble",
       "handTechnique": "Técnica de manos",

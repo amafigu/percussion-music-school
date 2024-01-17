@@ -24,6 +24,7 @@ const EnsembleCompositionCourses = () => {
   const { translate } = useLocaleContext();
   const text = translate.pages.courses;
   useEffectScrollTop();
+
   return (
     <div className={styles.coursesPageWrapper}>
       <div className={styles.coursesPage}>

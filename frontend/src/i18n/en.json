@@ -71,7 +71,15 @@
         }
       }
     },
-    "navbar": {},
+    "navbar": {
+      "links": {
+        "about": "about us",
+        "courses": "courses"
+      },
+      "buttons": {
+        "contact": "contact us"
+      }
+    },
     "subNavbar": {
       "ensemble": "Ensemble practice",
       "handTechnique": "Hand technique",
