@@ -46,6 +46,14 @@
       }
     },
     "navbar": {},
+    "subNavbar": {
+      "ensemble": "Práctica de ensamble",
+      "handTechnique": "Técnica de manos",
+      "stickTechnique": "Técnica de palos",
+      "musicalLanguage": "Lenguaje Musical",
+      "musicalDirection": "Dirección musical",
+      "ensembleComposition": "Composición de ensambles"
+    },
 
     "footer": {
       "linksColumns": {},

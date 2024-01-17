@@ -72,15 +72,21 @@ export const corporateCoursesPageUpperSectionText =
   "We incorporate drumming into team building programmes that allow our participants to experience the fun and unity through music and drums.";
 
 export const coursesPagesNavigationItems = [
-  { name: "regular courses", path: "/courses/regular" },
-  { name: "short courses", path: "/courses/short" },
-  { name: "corporate courses", path: "/courses/corporate" },
+  { courseName: "ensemble", path: ROUTES.COURSES.ENSEMBLE },
+  { courseName: "handTechnique", path: ROUTES.COURSES.HAND_TECHNIQUE },
+  { courseName: "stickTechnique", path: ROUTES.COURSES.STICK_TECHNIQUE },
+  { courseName: "musicalLanguage", path: ROUTES.COURSES.MUSICAL_LANGUAGE },
+  { courseName: "musicalDirection", path: ROUTES.COURSES.MUSICAL_DIRECTION },
+  {
+    courseName: "ensembleComposition",
+    path: ROUTES.COURSES.ENSEMBLE_COMPOSITION,
+  },
 ];
 
 export const aboutPageNavigationItems = [
-  { name: "our school", path: "school" },
-  { name: "our philosophy", path: "philosophy" },
-  { name: "our founder", path: "founder" },
+  { courseName: "our school", path: "school" },
+  { courseName: "our philosophy", path: "philosophy" },
+  { courseName: "our founder", path: "founder" },
 ];
 
 export const regularCoursePageBeginnerBannerImage = `${process.env.PUBLIC_URL}/assets/regular_courses_page_beginner.png`;

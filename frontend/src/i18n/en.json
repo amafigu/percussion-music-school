@@ -46,7 +46,14 @@
       }
     },
     "navbar": {},
-
+    "subNavbar": {
+      "ensemble": "Ensemble practice",
+      "handTechnique": "Hand technique",
+      "stickTechnique": "Stick technique",
+      "musicalLanguage": "Musical language",
+      "musicalDirection": "Musical direction",
+      "ensembleComposition": "Ensemble composition"
+    },
     "footer": {
       "linksColumns": {},
 

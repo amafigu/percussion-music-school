@@ -1,3 +1,5 @@
+import CourseBanner from "#components/CourseBanner";
+import SubNavbar from "#components/SubNavbar";
 import UpperBanner from "#components/UpperBanner";
 import {
   coursesPagesNavigationItems,
@@ -16,11 +18,9 @@ import {
 import { useEffectScrollTop } from "#utils/utils";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import CourseBanner from "../components/CourseBanner";
-import OptionsToNavigate from "../components/OptionsToNavigate";
-import styles from "./shortCourses.module.scss";
+import styles from "./musicalDirectionCourses.module.scss";
 
-const ShortCourses = () => {
+const MusicalDirectionCourses = () => {
   useEffectScrollTop();
   const navigate = useNavigate();
 
@@ -36,7 +36,7 @@ const ShortCourses = () => {
           text={shortCoursesPageUpperSectionText}
         />
 
-        <OptionsToNavigate
+        <SubNavbar
           navigate={navitageToPage}
           items={coursesPagesNavigationItems}
         />
@@ -58,4 +58,4 @@ const ShortCourses = () => {
   );
 };
 
-export default ShortCourses;
+export default MusicalDirectionCourses;

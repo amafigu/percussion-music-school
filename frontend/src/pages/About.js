@@ -1,4 +1,4 @@
-import OptionsToNavigate from "#components/OptionsToNavigate";
+import SubNavbar from "#components/SubNavbar";
 import UpperBanner from "#components/UpperBanner";
 import useLocaleContext from "#context/localeContext";
 import {
@@ -29,7 +29,7 @@ const About = () => {
           title={text.aboutPageUpperSectionTitle}
           text={text.aboutPageUpperSectionText}
         />
-        <OptionsToNavigate
+        <SubNavbar
           navigate={scrollToSection}
           items={aboutPageNavigationItems}
         />

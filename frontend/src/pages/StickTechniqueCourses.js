@@ -14,10 +14,10 @@ import CourseBanner from "../components/CourseBanner";
 
 import { useEffectScrollTop } from "#utils/utils";
 import React from "react";
-import OptionsToNavigate from "../components/OptionsToNavigate";
-import styles from "./corporateCourses.module.scss";
+import SubNavbar from "../components/SubNavbar";
+import styles from "./stickTechniqueCourses.module.scss";
 
-const CorporateCourses = () => {
+const StickTechniqueCourses = () => {
   const navigate = useNavigate();
 
   const navitageToPage = (route) => {
@@ -33,7 +33,7 @@ const CorporateCourses = () => {
           title={corporateCoursesPageUpperSectionTitle}
           text={corporateCoursesPageUpperSectionText}
         />
-        <OptionsToNavigate
+        <SubNavbar
           navigate={navitageToPage}
           items={coursesPagesNavigationItems}
         />
@@ -48,4 +48,4 @@ const CorporateCourses = () => {
   );
 };
 
-export default CorporateCourses;
+export default StickTechniqueCourses;

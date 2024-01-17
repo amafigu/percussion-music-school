@@ -21,10 +21,10 @@ import { useEffectScrollTop } from "#utils/utils";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import CourseBanner from "../components/CourseBanner";
-import OptionsToNavigate from "../components/OptionsToNavigate";
-import styles from "./regularCourses.module.scss";
+import SubNavbar from "../components/SubNavbar";
+import styles from "./ensembleCompositionCourses.module.scss";
 
-const RegularCourses = () => {
+const EnsembleCompositionCourses = () => {
   const navigate = useNavigate();
 
   const navitageToPage = (route) => {
@@ -41,7 +41,7 @@ const RegularCourses = () => {
           text={regularCoursesPageUpperSectionText}
         />
 
-        <OptionsToNavigate
+        <SubNavbar
           navigate={navitageToPage}
           items={coursesPagesNavigationItems}
         />
@@ -71,4 +71,4 @@ const RegularCourses = () => {
   );
 };
 
-export default RegularCourses;
+export default EnsembleCompositionCourses;
