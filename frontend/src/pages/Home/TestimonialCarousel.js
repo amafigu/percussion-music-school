@@ -1,5 +1,6 @@
 import useLocaleContext from "#context/localeContext";
 import { TESTIMONIALS } from "#utils/constants";
+import { camelCaseToTitleCase } from "#utils/utils";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
@@ -20,7 +21,7 @@ const TestimonialCarousel = () => {
   return (
     <div className={styles.testimonialCarouselWrapper}>
       <div className={styles.title}>
-        <span>Testimonials</span>
+        <span>{camelCaseToTitleCase(text.title)}</span>
       </div>
       <Slider {...settings}>
         {TESTIMONIALS.map((testimonial, index) => (
@@ -37,7 +38,7 @@ const TestimonialCarousel = () => {
                   <p>{text[testimonial.person]}</p>
                 </div>
                 <div className={styles.testimonialPerson}>
-                  <p>{testimonial.person}</p>
+                  <p>{camelCaseToTitleCase(testimonial.person)}</p>
                 </div>
               </div>
               <div className={styles.rightColumn}>
