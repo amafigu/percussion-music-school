@@ -83,8 +83,8 @@
     border-radius: 8px;
 
     &:hover {
-      color: theme.$branding-font-color;
-      border: theme.$branding-font-color solid 1px;
+      color: theme.$branding-color-primary;
+      border: theme.$branding-color-primary solid 1px;
     }
   }
 }

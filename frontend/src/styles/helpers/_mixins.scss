@@ -43,15 +43,15 @@
   justify-content: center;
   width: 250px;
   height: 60px;
-  color: theme.$branding-font-color;
+  color: theme.$branding-color-primary;
   background-color: #2f323f;
   border: solid 1px #2f323f;
   border-radius: 8px;
 
   &:hover {
     color: #000;
-    background-color: theme.$branding-font-color;
-    border: solid 1px theme.$branding-font-color;
+    background-color: theme.$branding-color-primary;
+    border: solid 1px theme.$branding-color-primary;
   }
 
   .customIcon {
@@ -86,7 +86,7 @@
   font-weight: 500;
   line-height: 1.5;
   color: theme.$primary-background-color;
-  background-color: theme.$branding-font-color;
+  background-color: theme.$branding-color-primary;
   border-radius: 10px;
 
   &:hover {

@@ -73,7 +73,7 @@
         }
 
         .customIcon {
-          color: theme.$branding-font-color;
+          color: theme.$branding-color-primary;
         }
 
         .link {
@@ -85,7 +85,7 @@
             color: #a8a8a8;
 
             &:hover {
-              color: theme.$branding-font-color;
+              color: theme.$branding-color-primary;
             }
           }
         }
@@ -172,7 +172,7 @@
 
       .linkLegal {
         &:hover {
-          color: theme.$branding-font-color !important;
+          color: theme.$branding-color-primary !important;
           cursor: pointer;
         }
       }

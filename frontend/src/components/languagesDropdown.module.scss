@@ -1,0 +1,20 @@
+@use "#styles/media" as media;
+@use "#styles/theme" as theme;
+@import "#styles/helpers/mixins";
+
+.dropdownMenu {
+  color: theme.$font-color-primary;
+  border: theme.$border-regular-component;
+
+  @include media.mobile {
+    border: none;
+  }
+
+  .activeCategory {
+    color: theme.$branding-color-primary;
+  }
+
+  .linkContent {
+    cursor: pointer;
+  }
+}
