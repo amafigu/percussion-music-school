@@ -51,30 +51,6 @@ const Navbar = () => {
           </div>
         </div>
         <div className={`${styles.column} ${styles.right}`}>
-          <div className={styles.languageOptionsContainer}>
-            <div
-              onClick={() => setLanguageDropdownOpen((prevState) => !prevState)}
-            >
-              <div className={styles.languageChevronContainer}>
-                <FontAwesomeIcon
-                  icon={faGlobe}
-                  className={styles.languageIcon}
-                  size='xl'
-                />
-                {!isLanguageDropdownOpen && (
-                  <FontAwesomeIcon icon={faChevronDown} size='2xs' />
-                )}
-                {isLanguageDropdownOpen && (
-                  <FontAwesomeIcon icon={faChevronUp} size='2xs' />
-                )}
-              </div>
-            </div>
-            {isLanguageDropdownOpen && (
-              <div className={styles.languageDropdownContainer}>
-                <LanguagesDropdown />
-              </div>
-            )}
-          </div>
           <Link className={styles.link} to={ROUTES.ABOUT}>
             <span className={styles.linkContent}>{text.links.about}</span>
           </Link>
@@ -93,6 +69,30 @@ const Navbar = () => {
                 onMouseLeave={() => setDropdownOpen(false)}
               >
                 <DropdownMenu setMenuVisible={setMenuOpen} />
+              </div>
+            )}
+          </div>
+          <div className={styles.languageOptionsContainer}>
+            <div
+              onClick={() => setLanguageDropdownOpen((prevState) => !prevState)}
+            >
+              <div className={styles.languageChevronContainer}>
+                <FontAwesomeIcon
+                  icon={faGlobe}
+                  className={styles.languageIcon}
+                  size='xl'
+                />
+                {!isLanguageDropdownOpen && (
+                  <FontAwesomeIcon icon={faChevronDown} />
+                )}
+                {isLanguageDropdownOpen && (
+                  <FontAwesomeIcon icon={faChevronUp} />
+                )}
+              </div>
+            </div>
+            {isLanguageDropdownOpen && (
+              <div className={styles.languageDropdownContainer}>
+                <LanguagesDropdown />
               </div>
             )}
           </div>
