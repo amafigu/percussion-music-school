@@ -6,7 +6,7 @@ const languages = { en, es };
 const LocaleContext = createContext();
 
 export const LocaleContextProvider = ({ children }) => {
-  const [language, setLanguage] = useState("es");
+  const [language, setLanguage] = useState("en");
 
   return (
     <LocaleContext.Provider
