@@ -132,7 +132,7 @@
     font-size: 18px;
     font-weight: 700;
     line-height: 32px;
-    color: theme.$branding-font-color;
+    color: theme.$branding-color-primary;
     text-align: left;
   }
 
@@ -147,7 +147,7 @@
   }
 
   .customIcon {
-    color: theme.$branding-font-color;
+    color: theme.$branding-color-primary;
   }
 
   .itemsSelectorContainer {
@@ -164,8 +164,8 @@
     border-radius: 50%;
 
     &:hover {
-      color: theme.$branding-font-color;
-      background-color: theme.$branding-font-color;
+      color: theme.$branding-color-primary;
+      background-color: theme.$branding-color-primary;
     }
   }
 

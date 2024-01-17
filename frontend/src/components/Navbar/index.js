@@ -1,6 +1,12 @@
+import LanguagesDropdown from "#components/LanguagesDropdown";
 import useLocaleContext from "#context/localeContext";
 import { ROUTES } from "#utils/constants";
-import { faBars, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faChevronDown,
+  faChevronUp,
+  faGlobe,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { React, useRef, useState } from "react";
 import { Link } from "react-router-dom";
@@ -10,6 +16,7 @@ import styles from "./navbar.module.scss";
 
 const Navbar = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [isLanguageDropdownOpen, setLanguageDropdownOpen] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const menuDropdownRef = useRef(null);
@@ -44,10 +51,33 @@ const Navbar = () => {
           </div>
         </div>
         <div className={`${styles.column} ${styles.right}`}>
+          <div className={styles.languageOptionsContainer}>
+            <div
+              onClick={() => setLanguageDropdownOpen((prevState) => !prevState)}
+            >
+              <div className={styles.languageChevronContainer}>
+                <FontAwesomeIcon
+                  icon={faGlobe}
+                  className={styles.languageIcon}
+                  size='xl'
+                />
+                {!isLanguageDropdownOpen && (
+                  <FontAwesomeIcon icon={faChevronDown} size='2xs' />
+                )}
+                {isLanguageDropdownOpen && (
+                  <FontAwesomeIcon icon={faChevronUp} size='2xs' />
+                )}
+              </div>
+            </div>
+            {isLanguageDropdownOpen && (
+              <div className={styles.languageDropdownContainer}>
+                <LanguagesDropdown />
+              </div>
+            )}
+          </div>
           <Link className={styles.link} to={ROUTES.ABOUT}>
             <span className={styles.linkContent}>{text.links.about}</span>
           </Link>
-
           <div
             className={styles.link}
             onMouseEnter={() => setDropdownOpen(true)}
