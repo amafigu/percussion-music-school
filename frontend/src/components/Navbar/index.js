@@ -1,3 +1,5 @@
+import useLocaleContext from "#context/localeContext";
+import { ROUTES } from "#utils/constants";
 import { faBars, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { React, useRef, useState } from "react";
@@ -11,6 +13,8 @@ const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const menuDropdownRef = useRef(null);
+  const { translate } = useLocaleContext();
+  const text = translate.components.navbar;
 
   return (
     <div className={styles.navbarWrapper}>
@@ -40,8 +44,8 @@ const Navbar = () => {
           </div>
         </div>
         <div className={`${styles.column} ${styles.right}`}>
-          <Link className={styles.link} to='/about'>
-            <span className={styles.linkContent}>about</span>
+          <Link className={styles.link} to={ROUTES.ABOUT}>
+            <span className={styles.linkContent}>{text.links.about}</span>
           </Link>
 
           <div
@@ -50,7 +54,7 @@ const Navbar = () => {
             onClick={() => setDropdownOpen(true)}
           >
             <span className={styles.linkContent}>
-              programmes <FontAwesomeIcon icon={faChevronDown} />
+              {text.links.courses} <FontAwesomeIcon icon={faChevronDown} />
             </span>
             {isDropdownOpen && (
               <div
@@ -62,12 +66,11 @@ const Navbar = () => {
               </div>
             )}
           </div>
-
           <a
             href='mailto:percusion.tierrayaire@gmail.com'
             className={`${styles.mailButton} ${styles.hideForMobile}`}
           >
-            <span>Contact Us</span>
+            <span>{text.buttons.contact}</span>
           </a>
         </div>
       </nav>

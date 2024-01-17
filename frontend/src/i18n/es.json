@@ -38,7 +38,38 @@
         "description": "Este curso comprende la invención de voces (patrones rítmicos), para generar ritmo y formas musicales. Procura la creación de plumas o ritmos. (A este curso sólo se pueden inscribir quienes estén realizando el curso 'Práctica de ensamble')."
       }
     },
-    "home": {},
+    "coursesCardTeaser": {
+      "cards": {
+        "ensemble": {
+          "title": "Práctica de ensamble",
+          "description": "texto corto definicion"
+        },
+        "handTechnique": {
+          "title": "Técnica de manos",
+          "description": "texto corto definicion"
+        },
+        "stickTechnique": {
+          "title": "Técnica de palos",
+          "description": "texto corto definicion"
+        },
+        "musicalLanguage": {
+          "title": "Lenguaje Musical",
+          "description": "texto corto definicion"
+        },
+        "musicalDirection": {
+          "title": "Dirección musical",
+          "description": "texto corto definicion"
+        },
+        "ensembleComposition": {
+          "title": "Composición de ensambles",
+          "description": "texto corto definicion"
+        }
+      }
+    },
+    "home": {
+      "title": "La escuela especializada en percusión más grande de Rosario desde 2018",
+      "subtitle": "Nuestra misión es inspirar y educar a los bateristas mediante el uso de la última tecnología y recursos para brindar una educación de percusión contemporánea distintiva."
+    },
     "faq": {}
   },
   "components": {
@@ -71,7 +102,15 @@
         }
       }
     },
-    "navbar": {},
+    "navbar": {
+      "links": {
+        "about": "nuestra historia",
+        "courses": "cursos"
+      },
+      "buttons": {
+        "contact": "contactanos"
+      }
+    },
     "subNavbar": {
       "ensemble": "Práctica de ensamble",
       "handTechnique": "Técnica de manos",
@@ -82,9 +121,24 @@
     },
 
     "footer": {
-      "linksColumns": {},
-
-      "copy": "Tierra y Aire Percusion is a registered trademark in Argentina. © 2023 Tierra y Aire Percusion - Argentina. All Rights Reserved."
+      "teaserText": "Fundada desde 2018, Tierra Y Aire es la elección popular para la educación en percusión en Rosario.",
+      "linksColumn": {
+        "title": "enlaces",
+        "about": "sobre nosotros"
+      },
+      "coursesColumn": {
+        "title": "cursos",
+        "ensemble": "Práctica de ensamble",
+        "handTechnique": "Técnica de manos",
+        "stickTechnique": "Técnica de palos",
+        "musicalLanguage": "Lenguaje Musical",
+        "musicalDirection": "Dirección musical",
+        "ensembleComposition": "Composición de ensambles"
+      },
+      "socialMediaLinksColumn": {
+        "title": "Enlaces de redes sociales"
+      },
+      "copyright": "Tierra y Aire Percusión es una marca registrada en Argentina. © 2023 Tierra y Aire Percusión - Argentina. Todos los derechos reservados."
     }
   }
 }

@@ -38,7 +38,10 @@
         "description": "This course includes the invention of voices (rhythmic patterns), to generate rhythm and musical forms. Try to create feathers or rhythms. (You can only attend this course register those who are doing the 'Assembly Practice' course)."
       }
     },
-    "home": {},
+    "home": {
+      "title": "Rosario's largest specialized drum school since 2018",
+      "subtitle": "Our mission is to inspire and educate drummers by using the latest technology and resources in providing a distinctive contemporary drum education."
+    },
     "faq": {}
   },
   "components": {
@@ -71,7 +74,43 @@
         }
       }
     },
-    "navbar": {},
+    "coursesCardTeaser": {
+      "cards": {
+        "ensemble": {
+          "title": "Ensemble practice",
+          "description": "Ensemble is ..."
+        },
+        "handTechnique": {
+          "title": "Hand technique",
+          "description": "Ensemble is ..."
+        },
+        "stickTechnique": {
+          "title": "Stick technique",
+          "description": "Ensemble is ..."
+        },
+        "musicalLanguage": {
+          "title": "Musical language",
+          "description": "Ensemble is ..."
+        },
+        "musicalDirection": {
+          "title": "Musical direction",
+          "description": "Ensemble is ..."
+        },
+        "ensembleComposition": {
+          "title": "Ensemble composition",
+          "description": "Ensemble is ..."
+        }
+      }
+    },
+    "navbar": {
+      "links": {
+        "about": "about us",
+        "courses": "courses"
+      },
+      "buttons": {
+        "contact": "contact us"
+      }
+    },
     "subNavbar": {
       "ensemble": "Ensemble practice",
       "handTechnique": "Hand technique",
@@ -81,9 +120,24 @@
       "ensembleComposition": "Ensemble composition"
     },
     "footer": {
-      "linksColumns": {},
-
-      "copy": "Tierra y Aire Percusion is a registered trademark in Argentina. © 2023 Tierra y Aire Percusion - Argentina. All Rights Reserved."
+      "teaserText": "Established since 2018, Tierra Y Aire is the people’s choice for drum education in Rosario.",
+      "linksColumn": {
+        "title": "links",
+        "about": "about us"
+      },
+      "coursesColumn": {
+        "title": "courses",
+        "ensemble": "Ensemble practice",
+        "handTechnique": "Hand technique",
+        "stickTechnique": "Stick technique",
+        "musicalLanguage": "Musical language",
+        "musicalDirection": "Musical direction",
+        "ensembleComposition": "Ensemble composition"
+      },
+      "socialMediaLinksColumn": {
+        "title": "social links"
+      },
+      "copyright": "Tierra y Aire Percusion is a registered trademark in Argentina. © 2023 Tierra y Aire Percusion - Argentina. All Rights Reserved."
     }
   }
 }
