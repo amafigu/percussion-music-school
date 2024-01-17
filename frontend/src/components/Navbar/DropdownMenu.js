@@ -19,6 +19,7 @@ const DropdownMenu = ({ setMenuVisible }) => {
     <ul className={styles.dropdownMenu}>
       {coursesPagesNavigationItems.map((item) => (
         <li
+          key={item.courseName}
           className={styles.listItem}
           onClick={() => navigateAndCloseMenu(item.path)}
         >

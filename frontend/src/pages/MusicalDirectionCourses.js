@@ -28,7 +28,7 @@ const MusicalDirectionCourses = () => {
         <UpperBanner
           backgroundUrl={musicalLanguageCoursesPageUpperSectionBackground}
           title={text.musicalDirection.title}
-          text={"definicion corta"}
+          text={text.musicalDirection.subtitle}
         />
 
         <SubNavbar

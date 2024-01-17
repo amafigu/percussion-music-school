@@ -31,7 +31,7 @@ const EnsembleCompositionCourses = () => {
         <UpperBanner
           backgroundUrl={ensembleCoursesPageUpperSectionBackground}
           title={text.ensembleComposition.title}
-          text={"texto corto definicion"}
+          text={text.ensembleComposition.subtitle}
         />
 
         <SubNavbar

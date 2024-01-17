@@ -15,29 +15,36 @@
     "courses": {
       "ensemble": {
         "title": "Ensemble practice",
+        "subtitle": "share the music",
         "description": "Ensemble is understood as the grouping of instruments of different timbre; conga, djembe, surdo drums, dum, bell, boy, etc. In this course, we work on practicing and learning repertoire with the aforementioned instruments, with the purpose of performing live performances."
       },
       "handTechnique": {
         "title": "Hand technique",
+        "subtitle": "The rhythm in your body",
         "description": "In this course the different sounds of the conga and djembe instruments are worked on, focusing on the different hand positions, for an accomplished audio of slap, tone, bottom, palm and tip. (Only those who are taking the course can register for this course. course 'Assembly practice')."
       },
       "stickTechnique": {
         "title": "Stick technique",
+        "subtitle": "control and dynamism",
         "description": "This course aims to offer tools to save energy and to develop precision and control of instruments struck with sticks when playing: Uruguayan chico, surdo, snare drum, cymbal, dum drums, etc. (Only those who are taking the 'Assembly Practice' course can register for this course)."
       },
       "musicalLanguage": {
         "title": "Musical language",
+        "subtitle": "understand music",
         "description": "In this course we will work on musical notation and its values, that is, we will learn to read and write music, emphasizing rhythm."
       },
       "musicalDirection": {
         "title": "Musical direction",
+        "subtitle": "The expression in your hands",
         "description": "This course has the objective of training musical directors. The necessary tools for the development of musical sign language will be provided. (Only those who are taking the 'Ensemble Practice' course can register for this course)."
       },
       "ensembleComposition": {
         "title": "Ensemble composition",
+        "subtitle": "create your rhythms",
         "description": "This course includes the invention of voices (rhythmic patterns), to generate rhythm and musical forms. Try to create feathers or rhythms. (You can only attend this course register those who are doing the 'Assembly Practice' course)."
       }
     },
+
     "home": {
       "title": "Rosario's largest specialized drum school since 2018",
       "subtitle": "Our mission is to inspire and educate drummers by using the latest technology and resources in providing a distinctive contemporary drum education."
@@ -80,27 +87,27 @@
       "cards": {
         "ensemble": {
           "title": "Ensemble practice",
-          "description": "Ensemble is ..."
+          "description": "share the music"
         },
         "handTechnique": {
           "title": "Hand technique",
-          "description": "Ensemble is ..."
+          "description": "The rhythm in your body"
         },
         "stickTechnique": {
           "title": "Stick technique",
-          "description": "Ensemble is ..."
+          "description": "control and dynamism"
         },
         "musicalLanguage": {
           "title": "Musical language",
-          "description": "Ensemble is ..."
+          "description": "understand music"
         },
         "musicalDirection": {
           "title": "Musical direction",
-          "description": "Ensemble is ..."
+          "description": "The expression in your hands"
         },
         "ensembleComposition": {
           "title": "Ensemble composition",
-          "description": "Ensemble is ..."
+          "description": "create your rhythms"
         }
       }
     },
@@ -120,7 +127,10 @@
       "stickTechnique": "Stick technique",
       "musicalLanguage": "Musical language",
       "musicalDirection": "Musical direction",
-      "ensembleComposition": "Ensemble composition"
+      "ensembleComposition": "Ensemble composition",
+      "school": "our school",
+      "philosophy": "our philosophy",
+      "founder": "our founder"
     },
     "footer": {
       "teaserText": "Established since 2018, Tierra Y Aire is the people’s choice for drum education in Rosario.",

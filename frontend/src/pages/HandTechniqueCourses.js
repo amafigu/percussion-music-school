@@ -27,7 +27,7 @@ const HandTechniqueCourses = () => {
         <UpperBanner
           backgroundUrl={musicalLanguageCoursesPageUpperSectionBackground}
           title={text.handTechnique.title}
-          text={"texto corto definicion"}
+          text={text.handTechnique.subtitle}
         />
         <SubNavbar
           navigate={navitageToPage}

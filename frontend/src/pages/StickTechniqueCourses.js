@@ -30,7 +30,7 @@ const StickTechniqueCourses = () => {
         <UpperBanner
           backgroundUrl={stickTechniqueCoursesPageUpperSectionBackground}
           title={text.stickTechnique.title}
-          text={"texto corto definicion"}
+          text={text.stickTechnique.subtitle}
         />
         <SubNavbar
           navigate={navitageToPage}

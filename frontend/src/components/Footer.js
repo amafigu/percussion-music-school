@@ -1,5 +1,6 @@
 import useLocaleContext from "#context/localeContext";
 import { coursesPagesNavigationItems } from "#utils/constants";
+import { camelCaseToTitleCase } from "#utils/utils";
 import React from "react";
 
 import { Link } from "react-router-dom";
@@ -28,24 +29,34 @@ const Footer = () => {
             <div className={styles.teaserText}>{text.teaserText}</div>
           </div>
           <div className={styles.column}>
-            <h3 className={styles.title}>{text.linksColumn.title}</h3>
+            <h3 className={styles.title}>
+              {camelCaseToTitleCase(text.linksColumn.title)}
+            </h3>
             <Link className={styles.link} to='/about'>
-              <span className={styles.content}>{text.linksColumn.about}</span>
+              <span className={styles.content}>
+                {camelCaseToTitleCase(text.linksColumn.about)}
+              </span>
             </Link>
           </div>
           <div className={styles.column}>
-            <h3 className={styles.title}>{text.coursesColumn.title}</h3>
+            <h3 className={styles.title}>
+              {camelCaseToTitleCase(text.coursesColumn.title)}
+            </h3>
             {coursesPagesNavigationItems.map((item) => (
-              <Link className={styles.link} to={item.path}>
+              <Link
+                className={styles.link}
+                to={item.path}
+                key={item.courseName}
+              >
                 <span className={styles.content}>
-                  {text.coursesColumn[item.courseName]}
+                  {camelCaseToTitleCase(text.coursesColumn[item.courseName])}
                 </span>
               </Link>
             ))}
           </div>
           <div className={`${styles.column} ${styles.socialColumn}`}>
             <h3 className={styles.title}>
-              {text.socialMediaLinksColumn.title}
+              {camelCaseToTitleCase(text.socialMediaLinksColumn.title)}
             </h3>
             <div className={styles.icons}>
               <a
