@@ -1,19 +1,15 @@
 import UpperBanner from "#components/UpperBanner";
-import {
-  corporateCoursePageOfferImage,
-  corporateCoursePageOfferName,
-  corporateCoursePageOfferSubtitle,
-  corporateCoursePageOfferText,
-  corporateCoursesPageUpperSectionBackground,
-  corporateCoursesPageUpperSectionText,
-  corporateCoursesPageUpperSectionTitle,
-  coursesPagesNavigationItems,
-} from "#utils/constants";
-import { useNavigate } from "react-router-dom";
-import CourseBanner from "../components/CourseBanner";
+import useLocaleContext from "#context/localeContext";
 
+import {
+  coursesPagesNavigationItems,
+  stickTechniqueCoursePageOfferImage,
+  stickTechniqueCoursesPageUpperSectionBackground,
+} from "#utils/constants";
 import { useEffectScrollTop } from "#utils/utils";
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import CourseBanner from "../components/CourseBanner";
 import SubNavbar from "../components/SubNavbar";
 import styles from "./stickTechniqueCourses.module.scss";
 
@@ -23,25 +19,28 @@ const StickTechniqueCourses = () => {
   const navitageToPage = (route) => {
     navigate(route);
   };
+
+  const { translate } = useLocaleContext();
+  const text = translate.pages.courses;
   useEffectScrollTop();
 
   return (
     <div className={styles.coursesPageWrapper}>
       <div className={styles.coursesPage}>
         <UpperBanner
-          backgroundUrl={corporateCoursesPageUpperSectionBackground}
-          title={corporateCoursesPageUpperSectionTitle}
-          text={corporateCoursesPageUpperSectionText}
+          backgroundUrl={stickTechniqueCoursesPageUpperSectionBackground}
+          title={text.stickTechnique.title}
+          text={"texto corto definicion"}
         />
         <SubNavbar
           navigate={navitageToPage}
           items={coursesPagesNavigationItems}
         />
         <CourseBanner
-          imageUrl={corporateCoursePageOfferImage}
-          name={corporateCoursePageOfferName}
-          subtitle={corporateCoursePageOfferSubtitle}
-          text={corporateCoursePageOfferText}
+          imageUrl={stickTechniqueCoursePageOfferImage}
+          name={"algun titulo, algo como -Objetivos-"}
+          subtitle={"subtitulo medio descriptivo"}
+          text={text.stickTechnique.description}
         />
       </div>
     </div>

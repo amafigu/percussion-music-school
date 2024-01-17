@@ -1,27 +1,17 @@
+import CourseBanner from "#components/CourseBanner";
+import SubNavbar from "#components/SubNavbar";
 import UpperBanner from "#components/UpperBanner";
+import useLocaleContext from "#context/localeContext";
 import {
   coursesPagesNavigationItems,
   ensembleCoursesPageAdvancedBannerImage,
   ensembleCoursesPageBeginnerBannerImage,
   ensembleCoursesPageIntermediateBannerImage,
   ensembleCoursesPageUpperSectionBackground,
-  regularCoursePageAdvancedBannerName,
-  regularCoursePageAdvancedBannerSubtitle,
-  regularCoursePageAdvancedBannerText,
-  regularCoursePageBeginnerBannerName,
-  regularCoursePageBeginnerBannerSubtitle,
-  regularCoursePageBeginnerBannerText,
-  regularCoursePageIntermediateBannerName,
-  regularCoursePageIntermediateBannerSubtitle,
-  regularCoursePageIntermediateBannerText,
-  regularCoursesPageUpperSectionText,
-  regularCoursesPageUpperSectionTitle,
 } from "#utils/constants";
 import { useEffectScrollTop } from "#utils/utils";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import CourseBanner from "../components/CourseBanner";
-import SubNavbar from "../components/SubNavbar";
 import styles from "./ensembleCompositionCourses.module.scss";
 
 const EnsembleCompositionCourses = () => {
@@ -31,14 +21,16 @@ const EnsembleCompositionCourses = () => {
     navigate(route);
   };
 
+  const { translate } = useLocaleContext();
+  const text = translate.pages.courses;
   useEffectScrollTop();
   return (
     <div className={styles.coursesPageWrapper}>
       <div className={styles.coursesPage}>
         <UpperBanner
           backgroundUrl={ensembleCoursesPageUpperSectionBackground}
-          title={regularCoursesPageUpperSectionTitle}
-          text={regularCoursesPageUpperSectionText}
+          title={text.ensembleComposition.title}
+          text={"texto corto definicion"}
         />
 
         <SubNavbar
@@ -47,24 +39,28 @@ const EnsembleCompositionCourses = () => {
         />
         <CourseBanner
           imageUrl={ensembleCoursesPageBeginnerBannerImage}
-          name={regularCoursePageBeginnerBannerName}
-          subtitle={regularCoursePageBeginnerBannerSubtitle}
-          text={regularCoursePageBeginnerBannerText}
+          name={"algun titulo, algo como -Objetivos-"}
+          subtitle={"algun subtitulo, o si queres Rolinho, no pones nada"}
+          text={text.ensembleComposition.description}
         />
 
         <CourseBanner
           imageUrl={ensembleCoursesPageIntermediateBannerImage}
-          name={regularCoursePageIntermediateBannerName}
-          subtitle={regularCoursePageIntermediateBannerSubtitle}
-          text={regularCoursePageIntermediateBannerText}
+          name={"algun titulo, algo como -Objetivos-"}
+          subtitle={"algun subtitulo, o si queres Rolinho, no pones nada"}
+          text={
+            "pensalo siempre en el combo - titulo, subtitulo, y text al lado de una image, avisa que imagenes queres poner adonde, los textos mandame por mensaje de texto y no de audio, asi puedo copiar y pegar"
+          }
           invert={true}
         />
 
         <CourseBanner
           imageUrl={ensembleCoursesPageAdvancedBannerImage}
-          name={regularCoursePageAdvancedBannerName}
-          subtitle={regularCoursePageAdvancedBannerSubtitle}
-          text={regularCoursePageAdvancedBannerText}
+          name={"algun titulo, algo como -Objetivos-"}
+          subtitle={"algun subtitulo, o si queres Rolinho, no pones nada"}
+          text={
+            "pensalo siempre en el combo - titulo, subtitulo, y text al lado de una image, avisa que imagenes queres poner adonde, los textos mandame por mensaje de texto y no de audio, asi puedo copiar y pegar"
+          }
         />
       </div>
     </div>

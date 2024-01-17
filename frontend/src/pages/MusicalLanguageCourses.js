@@ -1,19 +1,12 @@
 import CourseBanner from "#components/CourseBanner";
 import SubNavbar from "#components/SubNavbar";
 import UpperBanner from "#components/UpperBanner";
+import useLocaleContext from "#context/localeContext";
 import {
   coursesPagesNavigationItems,
-  shortCoursePageHolidayImage,
-  shortCoursePageHolidayName,
-  shortCoursePageHolidaySubtitle,
-  shortCoursePageHolidayText,
-  shortCoursePageIntroDrummingImage,
-  shortCoursePageIntroDrummingName,
-  shortCoursePageIntroDrummingSubtitle,
-  shortCoursePageIntroDrummingText,
-  shortCoursesPageUpperSectionBackground,
-  shortCoursesPageUpperSectionText,
-  shortCoursesPageUpperSectionTitle,
+  handTechniqueCoursePageSecondImage,
+  musicalLanguageCoursePageImage,
+  musicalLanguageCoursesPageUpperSectionBackground,
 } from "#utils/constants";
 import { useEffectScrollTop } from "#utils/utils";
 import React from "react";
@@ -21,19 +14,23 @@ import { useNavigate } from "react-router-dom";
 import styles from "./musicalLanguageCourses.module.scss";
 
 const MusicalLanguageCourses = () => {
-  useEffectScrollTop();
   const navigate = useNavigate();
 
   const navitageToPage = (route) => {
     navigate(route);
   };
+
+  const { translate } = useLocaleContext();
+  const text = translate.pages.courses;
+  useEffectScrollTop();
+
   return (
     <div className={styles.coursesPageWrapper}>
       <div className={styles.coursesPage}>
         <UpperBanner
-          backgroundUrl={shortCoursesPageUpperSectionBackground}
-          title={shortCoursesPageUpperSectionTitle}
-          text={shortCoursesPageUpperSectionText}
+          backgroundUrl={musicalLanguageCoursesPageUpperSectionBackground}
+          title={text.musicalLanguage.title}
+          text={"texto corto definicion"}
         />
 
         <SubNavbar
@@ -41,16 +38,18 @@ const MusicalLanguageCourses = () => {
           items={coursesPagesNavigationItems}
         />
         <CourseBanner
-          imageUrl={shortCoursePageHolidayImage}
-          name={shortCoursePageHolidayName}
-          subtitle={shortCoursePageHolidaySubtitle}
-          text={shortCoursePageHolidayText}
+          imageUrl={handTechniqueCoursePageSecondImage}
+          name={"algun titulo cortina"}
+          subtitle='subtitulo frasesinha sugundungu'
+          text={text.musicalLanguage.description}
         />
         <CourseBanner
-          imageUrl={shortCoursePageIntroDrummingImage}
-          name={shortCoursePageIntroDrummingName}
-          subtitle={shortCoursePageIntroDrummingSubtitle}
-          text={shortCoursePageIntroDrummingText}
+          imageUrl={musicalLanguageCoursePageImage}
+          name={"algun titulo, como en el bloque anterior,"}
+          subtitle=' subitiulo cortina'
+          text={
+            "pensalo siempre en el combo - titulo, subtitulo, y text al lado de una image, avisa que imagenes queres poner adonde, los textos mandame por mensaje de texto y no de audio, asi puedo copiar y pegar"
+          }
           invert={true}
         />
       </div>

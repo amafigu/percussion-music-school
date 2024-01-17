@@ -6,14 +6,7 @@ import {
   ensembleCoursesPageBeginnerBannerImage,
   ensembleCoursesPageIntermediateBannerImage,
   ensembleCoursesPageUpperSectionBackground,
-  regularCoursePageAdvancedBannerName,
-  regularCoursePageAdvancedBannerSubtitle,
-  regularCoursePageAdvancedBannerText,
-  regularCoursePageBeginnerBannerName,
   regularCoursePageBeginnerBannerSubtitle,
-  regularCoursePageIntermediateBannerName,
-  regularCoursePageIntermediateBannerSubtitle,
-  regularCoursePageIntermediateBannerText,
 } from "#utils/constants";
 import { useEffectScrollTop } from "#utils/utils";
 import React from "react";
@@ -46,22 +39,22 @@ const EnsembleCourses = () => {
         />
         <CourseBanner
           imageUrl={ensembleCoursesPageBeginnerBannerImage}
-          name={regularCoursePageBeginnerBannerName}
+          name={"algun titulo, algo como -Objetivos-"}
           subtitle={regularCoursePageBeginnerBannerSubtitle}
           text={text.ensemble.description}
         />
         <CourseBanner
           imageUrl={ensembleCoursesPageIntermediateBannerImage}
-          name={regularCoursePageIntermediateBannerName}
-          subtitle={regularCoursePageIntermediateBannerSubtitle}
-          text={regularCoursePageIntermediateBannerText}
+          name={"algun titulo, algo como -Objetivos-"}
+          subtitle='pensalo siempre en el combo - titulo, subtitulo, y text al lado de una image, avisa que imagenes queres poner adonde, los textos mandame por mensaje de texto y no de audio, asi puedo copiar y pegar'
+          text={"PONELE ALGO COMO ESTA EN TEXT ANTERIOR ROLO"}
           invert={true}
         />
         <CourseBanner
           imageUrl={ensembleCoursesPageAdvancedBannerImage}
-          name={regularCoursePageAdvancedBannerName}
-          subtitle={regularCoursePageAdvancedBannerSubtitle}
-          text={regularCoursePageAdvancedBannerText}
+          name={"algun titulo, como en el bloque anterior,"}
+          subtitle=' pensalo siempre en el combo - titulo, subtitulo, y text al lado de una image, avisa que imagenes queres poner adonde, los textos mandame por mensaje de texto y no de audio, asi puedo copiar y pegar'
+          text={"PONELE ALGO COMO ESTA EN TEXT ANTERIOR ROLO"}
         />
       </div>
     </div>

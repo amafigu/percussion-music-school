@@ -1,18 +1,12 @@
 import CourseBanner from "#components/CourseBanner";
 import SubNavbar from "#components/SubNavbar";
 import UpperBanner from "#components/UpperBanner";
+import useLocaleContext from "#context/localeContext";
 import {
   coursesPagesNavigationItems,
-  shortCoursePageHolidayImage,
-  shortCoursePageHolidaySubtitle,
-  shortCoursePageHolidayText,
-  shortCoursePageIntroDrummingImage,
-  shortCoursePageIntroDrummingName,
-  shortCoursePageIntroDrummingSubtitle,
-  shortCoursePageIntroDrummingText,
-  shortCoursesPageUpperSectionBackground,
-  shortCoursesPageUpperSectionText,
-  shortCoursesPageUpperSectionTitle,
+  handTechniqueCoursePageSecondImage,
+  musicalLanguageCoursePageImage,
+  musicalLanguageCoursesPageUpperSectionBackground,
 } from "#utils/constants";
 import { useEffectScrollTop } from "#utils/utils";
 import React from "react";
@@ -20,19 +14,21 @@ import { useNavigate } from "react-router-dom";
 import styles from "./musicalDirectionCourses.module.scss";
 
 const MusicalDirectionCourses = () => {
-  useEffectScrollTop();
+  const { translate } = useLocaleContext();
+  const text = translate.pages.courses;
   const navigate = useNavigate();
 
   const navitageToPage = (route) => {
     navigate(route);
   };
+  useEffectScrollTop();
   return (
     <div className={styles.coursesPageWrapper}>
       <div className={styles.coursesPage}>
         <UpperBanner
-          backgroundUrl={shortCoursesPageUpperSectionBackground}
-          title={shortCoursesPageUpperSectionTitle}
-          text={shortCoursesPageUpperSectionText}
+          backgroundUrl={musicalLanguageCoursesPageUpperSectionBackground}
+          title={text.musicalDirection.title}
+          text={"definicion corta"}
         />
 
         <SubNavbar
@@ -40,16 +36,18 @@ const MusicalDirectionCourses = () => {
           items={coursesPagesNavigationItems}
         />
         <CourseBanner
-          imageUrl={shortCoursePageHolidayImage}
+          imageUrl={handTechniqueCoursePageSecondImage}
           name={"algun titulo, algo como -Objetivos-"}
-          subtitle={shortCoursePageHolidaySubtitle}
-          text={shortCoursePageHolidayText}
+          subtitle={"subtitulitus"}
+          text={text.musicalDirection.description}
         />
         <CourseBanner
-          imageUrl={shortCoursePageIntroDrummingImage}
-          name={shortCoursePageIntroDrummingName}
-          subtitle={shortCoursePageIntroDrummingSubtitle}
-          text={shortCoursePageIntroDrummingText}
+          imageUrl={musicalLanguageCoursePageImage}
+          name={"algun titulo, algo como -Objetivos-"}
+          subtitle={"subtitulitus"}
+          text={
+            "text descriptivo que me lo mandas por mensaje de texto, email o paloma mensajera, pero no por audio"
+          }
           invert={true}
         />
       </div>

@@ -46,10 +46,10 @@ export const educationBanner = {
 export const ensembleCoursesPageUpperSectionBackground = {
   backgroundImage: `url(${process.env.PUBLIC_URL}/assets/regular_courses_page_upper_section_background.png)`,
 };
-export const shortCoursesPageUpperSectionBackground = {
+export const musicalLanguageCoursesPageUpperSectionBackground = {
   backgroundImage: `url(${process.env.PUBLIC_URL}/assets/short_courses_page_upper_section_background.png)`,
 };
-export const corporateCoursesPageUpperSectionBackground = {
+export const stickTechniqueCoursesPageUpperSectionBackground = {
   backgroundImage: `url(${process.env.PUBLIC_URL}/assets/corporate_courses_page_upper_section_background.png)`,
 };
 
@@ -111,7 +111,7 @@ export const regularCoursePageAdvancedBannerSubtitle = "Coordination & Control";
 export const regularCoursePageAdvancedBannerText =
   "Every experienced drummer needs more techniques. The student will begin to attain control over the drum set by exploring";
 
-export const shortCoursePageHolidayImage = `${process.env.PUBLIC_URL}/assets/short_courses_page_holiday.png`;
+export const handTechniqueCoursePageSecondImage = `${process.env.PUBLIC_URL}/assets/short_courses_page_holiday.png`;
 
 export const shortCoursePageHolidayName = "Holiday Programme";
 export const shortCoursePageHolidaySubtitle =
@@ -119,15 +119,15 @@ export const shortCoursePageHolidaySubtitle =
 export const shortCoursePageHolidayText =
   "Every young drummer needs proper development and control techniques";
 
-export const shortCoursePageIntroDrummingImage = `${process.env.PUBLIC_URL}/assets/short_courses_page_intro_drumming.png`;
+export const musicalLanguageCoursePageImage = `${process.env.PUBLIC_URL}/assets/short_courses_page_intro_drumming.png`;
 
 export const shortCoursePageIntroDrummingName = "Introduction to Drumming";
 export const shortCoursePageIntroDrummingSubtitle =
   "We have developed ‘Intro to Drumming’ for adults and students who have a limited time but want to get the most out of it.";
 export const shortCoursePageIntroDrummingText =
-  "In 4 lessons, students with little or no drumming experience will be rapidly introduced to the drum kit.Intro to Drumming is extremely beneficial for adults who are new beginners to drumming, and who are looking for a quick “crash course” introduction to the instrument.This course is also a great option for students to have-a-go at the instrument for 4 lessons before committing to a regular weekly slot.The Educator and student will plan 4 lessons at any time during a 1 month period (or 8 lessons within 2 months), subject to availability. Lessons can be more than once a week, and no student deposit is required. Students are allowed to take this short course more than once.";
+  "PONELE ALGO COMO ESTA EN TEXT ANTERIOR ROLO n 4 lessons, students with little or no drumming experience will be rapidly introduced to the drum kit.Intro to Drumming is extremely beneficial for adults who are new beginners to drumming, and who are looking for a quick “crash course” introduction to the instrument.This course is also a great option for students to have-a-go at the instrument for 4 lessons before committing to a regular weekly slot.The Educator and student will plan 4 lessons at any time during a 1 month period (or 8 lessons within 2 months), subject to availability. Lessons can be more than once a week, and no student deposit is required. Students are allowed to take this short course more than once.";
 
-export const corporateCoursePageOfferImage = `${process.env.PUBLIC_URL}/assets/corporate_courses_offer.png`;
+export const stickTechniqueCoursePageOfferImage = `${process.env.PUBLIC_URL}/assets/corporate_courses_offer.png`;
 
 export const corporateCoursePageOfferName = "Overview";
 export const corporateCoursePageOfferSubtitle =
