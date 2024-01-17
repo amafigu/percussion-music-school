@@ -1,3 +1,5 @@
+import useLocaleContext from "#context/localeContext";
+import { coursesPagesNavigationItems } from "#utils/constants";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./dropdownMenu.module.scss";
@@ -10,27 +12,21 @@ const DropdownMenu = ({ setMenuVisible }) => {
     navigate(route);
   };
 
+  const { translate } = useLocaleContext();
+  const text = translate.pages.courses;
+
   return (
     <ul className={styles.dropdownMenu}>
-      <li
-        className={styles.listItem}
-        onClick={() => navigateAndCloseMenu("/courses/regular")}
-      >
-        <span className={styles.linkContent}>regular</span>
-      </li>
-
-      <li
-        className={styles.listItem}
-        onClick={() => navigateAndCloseMenu("/courses/short")}
-      >
-        <span className={styles.linkContent}>short courses</span>
-      </li>
-      <li
-        className={styles.listItem}
-        onClick={() => navigateAndCloseMenu("/courses/corporate")}
-      >
-        <span className={styles.linkContent}>corporate</span>
-      </li>
+      {coursesPagesNavigationItems.map((item) => (
+        <li
+          className={styles.listItem}
+          onClick={() => navigateAndCloseMenu(item.path)}
+        >
+          <span className={styles.linkContent}>
+            {text[item.courseName].title}
+          </span>
+        </li>
+      ))}
     </ul>
   );
 };

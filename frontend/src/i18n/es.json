@@ -12,6 +12,32 @@
         "descriptionSecond": "En el año 2016 fundó el proyecto «Tierra y Aire percusión», un espacio de aprendizaje musical que enseña a niños, jóvenes y adultos, incluyendo a personas con discapacidad a tocar varios instrumentos de distintas regiones tales como: congas, djembe, dun dun, zurdos, claves, campanas, entre otros. En nuestra ciudad formó parte de distintos eventos, tales como TedX, Rosario bajo las estrellas, Carnaval en el Anfiteatro Humberto de Nito, Inauguración del Mercado del Patio, entre otros grandes eventos. Cabe destacar que en el año 2020/21 compone su primer disco solista al cual titula 'Fluir', siendo grabado y masterizado en estudios Penny Lane de la ciudad de Rosario. El proyecto, presentado por Fernanda Gigliani, Iniciativa Popular, fue aprobado por unanimidad por el resto de concejales y concejalas del cuerpo legislativo. La Presidenta del Concejo Municipal, María Eugenia Schmuck se dirigió al recinto: “Es un placer que el recinto se llene de arte, estamos muy orgullosos de esta distinción ya que tenemos una ciudad que es semillero de grandes músicos, artistas y educadores. No cualquier persona por más buena que sea en su disciplina puede enseñar, sólo pueden hacerlo quienes pueden transformar el conocimiento en empatía, generando un espacio de construcción donde todos crecen, por eso es admirable y ejemplar la hazaña que estamos distinguiendo hoy”."
       }
     },
+    "courses": {
+      "ensemble": {
+        "title": "Práctica de ensamble",
+        "description": "Se entiende por ensamble a la agrupación de instrumentos de distinto timbre; conga, djembe, batería de surdo, dum, campana, chico, etc. En este curso se trabaja la práctica y el aprendizaje de repertorio con los instrumentos antes mencionados, teniendo por finalidad la realización de presentaciones en vivo."
+      },
+      "handTechnique": {
+        "title": "Técnica de manos",
+        "description": "En este curso se trabajan los diferentes sonidos de los instrumentos conga y djembe, haciendo foco en las distintas posiciones de manos, para un audio logrado de slap, tono, bajo, palma y punta. (A este curso sólo se pueden inscribir quienes estén realizando el curso 'Práctica de ensamble')."
+      },
+      "stickTechnique": {
+        "title": "Técnica de palos",
+        "description": "En este curso se trabajan los diferentes sonidos de los instrumentos conga y djembe, haciendo foco en las distintas posiciones de manos, para un audio logrado de slap, tono, bajo, palma y punta. (A este curso sólo se pueden inscribir quienes estén realizando el curso 'Práctica de ensamble')."
+      },
+      "musicalLanguage": {
+        "title": "Lenguaje Musical",
+        "description": "En este curso se trabajará la notación musical y sus valores, es decir, aprenderemos a leer y escribir música, haciendo hincapié en el ritmo."
+      },
+      "musicalDirection": {
+        "title": "Dirección musical",
+        "description": "Este curso tiene el objetivo de formar directores musicales. Se brindarán las herramientas necesarias para el desarrollo del lenguaje de señas musical. (A este curso sólo se pueden inscribir quienes estén realizando el curso 'Práctica de ensamble')."
+      },
+      "ensembleComposition": {
+        "title": "Composición de ensambles",
+        "description": "Este curso comprende la invención de voces (patrones rítmicos), para generar ritmo y formas musicales. Procura la creación de plumas o ritmos. (A este curso sólo se pueden inscribir quienes estén realizando el curso 'Práctica de ensamble')."
+      }
+    },
     "home": {},
     "faq": {}
   },
@@ -46,6 +72,14 @@
       }
     },
     "navbar": {},
+    "subNavbar": {
+      "ensemble": "Práctica de ensamble",
+      "handTechnique": "Técnica de manos",
+      "stickTechnique": "Técnica de palos",
+      "musicalLanguage": "Lenguaje Musical",
+      "musicalDirection": "Dirección musical",
+      "ensembleComposition": "Composición de ensambles"
+    },
 
     "footer": {
       "linksColumns": {},

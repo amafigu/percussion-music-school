@@ -43,13 +43,13 @@ export const aboutPagePhilosophySectionBackground = {
 export const educationBanner = {
   backgroundImage: `url(${process.env.PUBLIC_URL}/assets/about_page_school.png)`,
 };
-export const regularCoursesPageUpperSectionBackground = {
+export const ensembleCoursesPageUpperSectionBackground = {
   backgroundImage: `url(${process.env.PUBLIC_URL}/assets/regular_courses_page_upper_section_background.png)`,
 };
-export const shortCoursesPageUpperSectionBackground = {
+export const musicalLanguageCoursesPageUpperSectionBackground = {
   backgroundImage: `url(${process.env.PUBLIC_URL}/assets/short_courses_page_upper_section_background.png)`,
 };
-export const corporateCoursesPageUpperSectionBackground = {
+export const stickTechniqueCoursesPageUpperSectionBackground = {
   backgroundImage: `url(${process.env.PUBLIC_URL}/assets/corporate_courses_page_upper_section_background.png)`,
 };
 
@@ -72,25 +72,31 @@ export const corporateCoursesPageUpperSectionText =
   "We incorporate drumming into team building programmes that allow our participants to experience the fun and unity through music and drums.";
 
 export const coursesPagesNavigationItems = [
-  { name: "regular courses", path: "/courses/regular" },
-  { name: "short courses", path: "/courses/short" },
-  { name: "corporate courses", path: "/courses/corporate" },
+  { courseName: "ensemble", path: ROUTES.COURSES.ENSEMBLE },
+  { courseName: "handTechnique", path: ROUTES.COURSES.HAND_TECHNIQUE },
+  { courseName: "stickTechnique", path: ROUTES.COURSES.STICK_TECHNIQUE },
+  { courseName: "musicalLanguage", path: ROUTES.COURSES.MUSICAL_LANGUAGE },
+  { courseName: "musicalDirection", path: ROUTES.COURSES.MUSICAL_DIRECTION },
+  {
+    courseName: "ensembleComposition",
+    path: ROUTES.COURSES.ENSEMBLE_COMPOSITION,
+  },
 ];
 
 export const aboutPageNavigationItems = [
-  { name: "our school", path: "school" },
-  { name: "our philosophy", path: "philosophy" },
-  { name: "our founder", path: "founder" },
+  { courseName: "our school", path: "school" },
+  { courseName: "our philosophy", path: "philosophy" },
+  { courseName: "our founder", path: "founder" },
 ];
 
-export const regularCoursePageBeginnerBannerImage = `${process.env.PUBLIC_URL}/assets/regular_courses_page_beginner.png`;
+export const ensembleCoursesPageBeginnerBannerImage = `${process.env.PUBLIC_URL}/assets/regular_courses_page_beginner.png`;
 
 export const regularCoursePageBeginnerBannerName = "Junior";
 export const regularCoursePageBeginnerBannerSubtitle = "Coordination & Control";
 export const regularCoursePageBeginnerBannerText =
   "For every young drummer, it's important to acquire appropriate development and control techniques to achieve mastery over the drum set.";
 
-export const regularCoursePageIntermediateBannerImage = `${process.env.PUBLIC_URL}/assets/regular_courses_page_intermediate.png`;
+export const ensembleCoursesPageIntermediateBannerImage = `${process.env.PUBLIC_URL}/assets/regular_courses_page_intermediate.png`;
 
 export const regularCoursePageIntermediateBannerName = "Intermediate";
 export const regularCoursePageIntermediateBannerSubtitle =
@@ -98,14 +104,14 @@ export const regularCoursePageIntermediateBannerSubtitle =
 export const regularCoursePageIntermediateBannerText =
   "Every young drummer needs proper development and control techniques. The child will begin to attain control over the drum set by exploring";
 
-export const regularCoursePageAdvancedBannerImage = `${process.env.PUBLIC_URL}/assets/regular_courses_page_advanced.png`;
+export const ensembleCoursesPageAdvancedBannerImage = `${process.env.PUBLIC_URL}/assets/regular_courses_page_advanced.png`;
 
 export const regularCoursePageAdvancedBannerName = "Advanced";
 export const regularCoursePageAdvancedBannerSubtitle = "Coordination & Control";
 export const regularCoursePageAdvancedBannerText =
   "Every experienced drummer needs more techniques. The student will begin to attain control over the drum set by exploring";
 
-export const shortCoursePageHolidayImage = `${process.env.PUBLIC_URL}/assets/short_courses_page_holiday.png`;
+export const handTechniqueCoursePageSecondImage = `${process.env.PUBLIC_URL}/assets/short_courses_page_holiday.png`;
 
 export const shortCoursePageHolidayName = "Holiday Programme";
 export const shortCoursePageHolidaySubtitle =
@@ -113,15 +119,15 @@ export const shortCoursePageHolidaySubtitle =
 export const shortCoursePageHolidayText =
   "Every young drummer needs proper development and control techniques";
 
-export const shortCoursePageIntroDrummingImage = `${process.env.PUBLIC_URL}/assets/short_courses_page_intro_drumming.png`;
+export const musicalLanguageCoursePageImage = `${process.env.PUBLIC_URL}/assets/short_courses_page_intro_drumming.png`;
 
 export const shortCoursePageIntroDrummingName = "Introduction to Drumming";
 export const shortCoursePageIntroDrummingSubtitle =
   "We have developed ‘Intro to Drumming’ for adults and students who have a limited time but want to get the most out of it.";
 export const shortCoursePageIntroDrummingText =
-  "In 4 lessons, students with little or no drumming experience will be rapidly introduced to the drum kit.Intro to Drumming is extremely beneficial for adults who are new beginners to drumming, and who are looking for a quick “crash course” introduction to the instrument.This course is also a great option for students to have-a-go at the instrument for 4 lessons before committing to a regular weekly slot.The Educator and student will plan 4 lessons at any time during a 1 month period (or 8 lessons within 2 months), subject to availability. Lessons can be more than once a week, and no student deposit is required. Students are allowed to take this short course more than once.";
+  "PONELE ALGO COMO ESTA EN TEXT ANTERIOR ROLO n 4 lessons, students with little or no drumming experience will be rapidly introduced to the drum kit.Intro to Drumming is extremely beneficial for adults who are new beginners to drumming, and who are looking for a quick “crash course” introduction to the instrument.This course is also a great option for students to have-a-go at the instrument for 4 lessons before committing to a regular weekly slot.The Educator and student will plan 4 lessons at any time during a 1 month period (or 8 lessons within 2 months), subject to availability. Lessons can be more than once a week, and no student deposit is required. Students are allowed to take this short course more than once.";
 
-export const corporateCoursePageOfferImage = `${process.env.PUBLIC_URL}/assets/corporate_courses_offer.png`;
+export const stickTechniqueCoursePageOfferImage = `${process.env.PUBLIC_URL}/assets/corporate_courses_offer.png`;
 
 export const corporateCoursePageOfferName = "Overview";
 export const corporateCoursePageOfferSubtitle =
