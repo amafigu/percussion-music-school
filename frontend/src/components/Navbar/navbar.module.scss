@@ -21,6 +21,14 @@
     display: none;
   }
 
+  .languageIcon {
+    margin-right: 6px;
+  }
+
+  .languageChevronContainer {
+    cursor: pointer;
+  }
+
   .navbar {
     @include media.mobile {
       width: 100%;
@@ -126,6 +134,10 @@
           &:hover {
             color: #ed068a;
           }
+        }
+
+        .linkCourses {
+          margin-right: 6px;
         }
       }
 

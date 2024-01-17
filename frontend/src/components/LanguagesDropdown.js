@@ -13,7 +13,7 @@ const LanguagesDropdown = ({ setMenuOpen }) => {
   };
 
   return (
-    <ul className={styles.dropdownMenu}>
+    <ul className={styles.languageDropdownMenuWrapper}>
       <li
         className={`${styles.listItem} ${
           language === "es" ? styles.activeCategory : ""
