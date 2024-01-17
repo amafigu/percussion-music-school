@@ -13,40 +13,40 @@ const CoursesCardTeaser = () => {
         <CourseCard
           image='card1.png'
           name={textCards.ensemble.title}
-          path='/courses/regular'
-          description={textCards.ensemble.description}
+          path='/courses/ensemble'
+          description={"algo"}
         />
         <CourseCard
           image='card2.png'
           name={textCards.handTechnique.title}
-          path='/courses/short'
-          description={textCards.handTechnique.description}
+          path='/courses/hand-technique'
+          description={"algo"}
         />
         <CourseCard
           image='card3.png'
           name={textCards.stickTechnique.title}
-          path='/courses/corporate'
-          description={textCards.stickTechnique.description}
+          path='/courses/stick-technique'
+          description={"algo"}
         />
       </div>
       <div className={styles.coursesCardTeaser}>
         <CourseCard
           image='card1.png'
           name={textCards.musicalLanguage.title}
-          path='/courses/regular'
-          description={textCards.musicalLanguage.description}
+          path='/courses/musical-language'
+          description={"algo"}
         />
         <CourseCard
           image='card2.png'
           name={textCards.musicalDirection.title}
-          path='/courses/short'
-          description={textCards.musicalDirection.description}
+          path='/courses/musical-direction'
+          description={"algo"}
         />
         <CourseCard
           image='card3.png'
           name={textCards.ensembleComposition.title}
-          path='/courses/corporate'
-          description={textCards.ensembleComposition.description}
+          path='/courses/ensemble-composition'
+          description={"algo"}
         />
       </div>
     </div>

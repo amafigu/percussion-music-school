@@ -1,8 +1,13 @@
+import useLocaleContext from "#context/localeContext";
+import { coursesPagesNavigationItems } from "#utils/constants";
 import React from "react";
+
 import { Link } from "react-router-dom";
 import styles from "./footer.module.scss";
 
 const Footer = () => {
+  const { translate } = useLocaleContext();
+  const text = translate.components.footer;
   return (
     <div className={styles.footerWrapper}>
       <div className={styles.footer}>
@@ -20,32 +25,28 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className={styles.teaserText}>
-              Established since 2018, Tierra Y Aire is the people’s choice for
-              drum education in Rosario.
-            </div>
+            <div className={styles.teaserText}>{text.teaserText}</div>
           </div>
           <div className={styles.column}>
-            <h3 className={styles.title}>Links</h3>
+            <h3 className={styles.title}>{text.linksColumn.title}</h3>
             <Link className={styles.link} to='/about'>
-              <span className={styles.content}>About</span>
+              <span className={styles.content}>{text.linksColumn.about}</span>
             </Link>
           </div>
           <div className={styles.column}>
-            <h3 className={styles.title}>Programmes</h3>
-            <Link className={styles.link} to='/courses/regular'>
-              <span className={styles.content}>Regular Programme</span>
-            </Link>
-
-            <Link className={styles.link} to='/courses/short'>
-              <span className={styles.content}>Short Courses</span>
-            </Link>
-            <Link className={styles.link} to='/courses/corporate'>
-              <span className={styles.content}>Corporate</span>
-            </Link>
+            <h3 className={styles.title}>{text.coursesColumn.title}</h3>
+            {coursesPagesNavigationItems.map((item) => (
+              <Link className={styles.link} to={item.path}>
+                <span className={styles.content}>
+                  {text.coursesColumn[item.courseName]}
+                </span>
+              </Link>
+            ))}
           </div>
           <div className={`${styles.column} ${styles.socialColumn}`}>
-            <h3 className={styles.title}>Social Links</h3>
+            <h3 className={styles.title}>
+              {text.socialMediaLinksColumn.title}
+            </h3>
             <div className={styles.icons}>
               <a
                 href='https://www.instagram.com/tierrayairepercusion/'
@@ -74,10 +75,7 @@ const Footer = () => {
         </div>
         <div className={styles.copyright}>
           <div className={styles.textCopyright}>
-            <span>
-              Tierra y Aire Percusion is a registered trademark in Argentina. ©
-              2023 Tierra y Aire Percusion - Argentina. All Rights Reserved.
-            </span>
+            <span>{text.copyright}</span>
           </div>
         </div>
       </div>
