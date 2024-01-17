@@ -17,7 +17,7 @@ import styles from "./navbar.module.scss";
 const Navbar = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(true);
   const [isLanguageDropdownOpen, setLanguageDropdownOpen] = useState(false);
-  const [isMenuOpen, setMenuOpen] = useState(true);
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
   const menuDropdownRef = useRef(null);
   const { translate } = useLocaleContext();
