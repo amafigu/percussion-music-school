@@ -1,3 +1,5 @@
+import useLocaleContext from "#context/localeContext";
+import { ROUTES } from "#utils/constants";
 import {
   faChevronDown,
   faChevronUp,
@@ -7,19 +9,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { React, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import DropdownMenu from "./DropdownMenu";
-import styles from "./menu.module.scss";
+import styles from "./mobileMenu.module.scss";
 
-const Menu = ({ setMenu }) => {
+const MobileMenu = ({ setMenu }) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   const navigate = useNavigate();
-
   const navigateAndCloseMenu = (route) => {
     setMenu(false);
     navigate(route);
   };
+  const { translate } = useLocaleContext();
+  const text = translate.components.navbar;
 
-  console.log("isDropdownOpen ", isDropdownOpen);
   return (
     <div className={styles.menuWrapper}>
       <div className={styles.menuAndMailButtonContainer}>
@@ -32,9 +34,9 @@ const Menu = ({ setMenu }) => {
           </li>
           <li
             className={styles.listItem}
-            onClick={() => navigateAndCloseMenu("/about")}
+            onClick={() => navigateAndCloseMenu(ROUTES.ABOUT)}
           >
-            <span className={styles.linkContent}>about</span>
+            <span className={styles.linkContent}>{text.links.about}</span>
           </li>
           <li
             className={styles.listDropdownItem}
@@ -46,7 +48,7 @@ const Menu = ({ setMenu }) => {
             <div className={styles.listDropdownLinkContent}>
               <div className={styles.itemsContainer}>
                 <div className={styles.item}>
-                  <span>programmes</span>
+                  <span>{text.links.courses}</span>
                 </div>
                 {!isDropdownOpen && <FontAwesomeIcon icon={faChevronDown} />}
                 {isDropdownOpen && <FontAwesomeIcon icon={faChevronUp} />}
@@ -64,11 +66,11 @@ const Menu = ({ setMenu }) => {
           href='mailto:percusion.tierrayaire@gmail.com'
           className={styles.mailButton}
         >
-          Contact Us
+          {text.buttons.contact}
         </a>
       </div>
     </div>
   );
 };
 
-export default Menu;
+export default MobileMenu;

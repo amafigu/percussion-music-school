@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./courseBanner.module.scss";
 
 const CourseBanner = ({ imageUrl, name, subtitle, text, invert }) => {
-  console.log(imageUrl);
   return (
     <section className={styles.courseBannerSection}>
       <div className={styles.presentation}>

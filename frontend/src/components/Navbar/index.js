@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { React, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import DropdownMenu from "./DropdownMenu";
-import Menu from "./Menu";
+import MobileMenu from "./MobileMenu";
 import styles from "./navbar.module.scss";
 
 const Navbar = () => {
@@ -75,7 +75,7 @@ const Navbar = () => {
         </div>
       </nav>
       <div className={styles.menuWrapper}>
-        {isMenuOpen && <Menu setMenu={setMenuOpen} />}
+        {isMenuOpen && <MobileMenu setMenu={setMenuOpen} />}
       </div>
     </div>
   );
