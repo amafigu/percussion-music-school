@@ -1,19 +1,19 @@
 import UpperBanner from "#components/UpperBanner";
 import {
   coursesPagesNavigationItems,
-  regularCoursePageAdvancedBannerImage,
+  ensembleCoursesPageAdvancedBannerImage,
+  ensembleCoursesPageBeginnerBannerImage,
+  ensembleCoursesPageIntermediateBannerImage,
+  ensembleCoursesPageUpperSectionBackground,
   regularCoursePageAdvancedBannerName,
   regularCoursePageAdvancedBannerSubtitle,
   regularCoursePageAdvancedBannerText,
-  regularCoursePageBeginnerBannerImage,
   regularCoursePageBeginnerBannerName,
   regularCoursePageBeginnerBannerSubtitle,
   regularCoursePageBeginnerBannerText,
-  regularCoursePageIntermediateBannerImage,
   regularCoursePageIntermediateBannerName,
   regularCoursePageIntermediateBannerSubtitle,
   regularCoursePageIntermediateBannerText,
-  regularCoursesPageUpperSectionBackground,
   regularCoursesPageUpperSectionText,
   regularCoursesPageUpperSectionTitle,
 } from "#utils/constants";
@@ -36,7 +36,7 @@ const EnsembleCompositionCourses = () => {
     <div className={styles.coursesPageWrapper}>
       <div className={styles.coursesPage}>
         <UpperBanner
-          backgroundUrl={regularCoursesPageUpperSectionBackground}
+          backgroundUrl={ensembleCoursesPageUpperSectionBackground}
           title={regularCoursesPageUpperSectionTitle}
           text={regularCoursesPageUpperSectionText}
         />
@@ -46,14 +46,14 @@ const EnsembleCompositionCourses = () => {
           items={coursesPagesNavigationItems}
         />
         <CourseBanner
-          imageUrl={regularCoursePageBeginnerBannerImage}
+          imageUrl={ensembleCoursesPageBeginnerBannerImage}
           name={regularCoursePageBeginnerBannerName}
           subtitle={regularCoursePageBeginnerBannerSubtitle}
           text={regularCoursePageBeginnerBannerText}
         />
 
         <CourseBanner
-          imageUrl={regularCoursePageIntermediateBannerImage}
+          imageUrl={ensembleCoursesPageIntermediateBannerImage}
           name={regularCoursePageIntermediateBannerName}
           subtitle={regularCoursePageIntermediateBannerSubtitle}
           text={regularCoursePageIntermediateBannerText}
@@ -61,7 +61,7 @@ const EnsembleCompositionCourses = () => {
         />
 
         <CourseBanner
-          imageUrl={regularCoursePageAdvancedBannerImage}
+          imageUrl={ensembleCoursesPageAdvancedBannerImage}
           name={regularCoursePageAdvancedBannerName}
           subtitle={regularCoursePageAdvancedBannerSubtitle}
           text={regularCoursePageAdvancedBannerText}

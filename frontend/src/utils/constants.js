@@ -43,7 +43,7 @@ export const aboutPagePhilosophySectionBackground = {
 export const educationBanner = {
   backgroundImage: `url(${process.env.PUBLIC_URL}/assets/about_page_school.png)`,
 };
-export const regularCoursesPageUpperSectionBackground = {
+export const ensembleCoursesPageUpperSectionBackground = {
   backgroundImage: `url(${process.env.PUBLIC_URL}/assets/regular_courses_page_upper_section_background.png)`,
 };
 export const shortCoursesPageUpperSectionBackground = {
@@ -89,14 +89,14 @@ export const aboutPageNavigationItems = [
   { courseName: "our founder", path: "founder" },
 ];
 
-export const regularCoursePageBeginnerBannerImage = `${process.env.PUBLIC_URL}/assets/regular_courses_page_beginner.png`;
+export const ensembleCoursesPageBeginnerBannerImage = `${process.env.PUBLIC_URL}/assets/regular_courses_page_beginner.png`;
 
 export const regularCoursePageBeginnerBannerName = "Junior";
 export const regularCoursePageBeginnerBannerSubtitle = "Coordination & Control";
 export const regularCoursePageBeginnerBannerText =
   "For every young drummer, it's important to acquire appropriate development and control techniques to achieve mastery over the drum set.";
 
-export const regularCoursePageIntermediateBannerImage = `${process.env.PUBLIC_URL}/assets/regular_courses_page_intermediate.png`;
+export const ensembleCoursesPageIntermediateBannerImage = `${process.env.PUBLIC_URL}/assets/regular_courses_page_intermediate.png`;
 
 export const regularCoursePageIntermediateBannerName = "Intermediate";
 export const regularCoursePageIntermediateBannerSubtitle =
@@ -104,7 +104,7 @@ export const regularCoursePageIntermediateBannerSubtitle =
 export const regularCoursePageIntermediateBannerText =
   "Every young drummer needs proper development and control techniques. The child will begin to attain control over the drum set by exploring";
 
-export const regularCoursePageAdvancedBannerImage = `${process.env.PUBLIC_URL}/assets/regular_courses_page_advanced.png`;
+export const ensembleCoursesPageAdvancedBannerImage = `${process.env.PUBLIC_URL}/assets/regular_courses_page_advanced.png`;
 
 export const regularCoursePageAdvancedBannerName = "Advanced";
 export const regularCoursePageAdvancedBannerSubtitle = "Coordination & Control";

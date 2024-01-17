@@ -1,21 +1,19 @@
 import UpperBanner from "#components/UpperBanner";
+import useLocaleContext from "#context/localeContext";
 import {
   coursesPagesNavigationItems,
-  regularCoursePageAdvancedBannerImage,
+  ensembleCoursesPageAdvancedBannerImage,
+  ensembleCoursesPageBeginnerBannerImage,
+  ensembleCoursesPageIntermediateBannerImage,
+  ensembleCoursesPageUpperSectionBackground,
   regularCoursePageAdvancedBannerName,
   regularCoursePageAdvancedBannerSubtitle,
   regularCoursePageAdvancedBannerText,
-  regularCoursePageBeginnerBannerImage,
   regularCoursePageBeginnerBannerName,
   regularCoursePageBeginnerBannerSubtitle,
-  regularCoursePageBeginnerBannerText,
-  regularCoursePageIntermediateBannerImage,
   regularCoursePageIntermediateBannerName,
   regularCoursePageIntermediateBannerSubtitle,
   regularCoursePageIntermediateBannerText,
-  regularCoursesPageUpperSectionBackground,
-  regularCoursesPageUpperSectionText,
-  regularCoursesPageUpperSectionTitle,
 } from "#utils/constants";
 import { useEffectScrollTop } from "#utils/utils";
 import React from "react";
@@ -25,6 +23,8 @@ import SubNavbar from "../components/SubNavbar";
 import styles from "./ensembleCourses.module.scss";
 
 const EnsembleCourses = () => {
+  const { translate } = useLocaleContext();
+  const text = translate.pages.courses;
   const navigate = useNavigate();
 
   const navitageToPage = (route) => {
@@ -36,32 +36,29 @@ const EnsembleCourses = () => {
     <div className={styles.coursesPageWrapper}>
       <div className={styles.coursesPage}>
         <UpperBanner
-          backgroundUrl={regularCoursesPageUpperSectionBackground}
-          title={regularCoursesPageUpperSectionTitle}
-          text={regularCoursesPageUpperSectionText}
+          backgroundUrl={ensembleCoursesPageUpperSectionBackground}
+          title={text.ensemble.title}
+          text={"texto corto definicion"}
         />
-
         <SubNavbar
           navigate={navitageToPage}
           items={coursesPagesNavigationItems}
         />
         <CourseBanner
-          imageUrl={regularCoursePageBeginnerBannerImage}
+          imageUrl={ensembleCoursesPageBeginnerBannerImage}
           name={regularCoursePageBeginnerBannerName}
           subtitle={regularCoursePageBeginnerBannerSubtitle}
-          text={regularCoursePageBeginnerBannerText}
+          text={text.ensemble.description}
         />
-
         <CourseBanner
-          imageUrl={regularCoursePageIntermediateBannerImage}
+          imageUrl={ensembleCoursesPageIntermediateBannerImage}
           name={regularCoursePageIntermediateBannerName}
           subtitle={regularCoursePageIntermediateBannerSubtitle}
           text={regularCoursePageIntermediateBannerText}
           invert={true}
         />
-
         <CourseBanner
-          imageUrl={regularCoursePageAdvancedBannerImage}
+          imageUrl={ensembleCoursesPageAdvancedBannerImage}
           name={regularCoursePageAdvancedBannerName}
           subtitle={regularCoursePageAdvancedBannerSubtitle}
           text={regularCoursePageAdvancedBannerText}

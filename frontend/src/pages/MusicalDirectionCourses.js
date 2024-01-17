@@ -4,7 +4,6 @@ import UpperBanner from "#components/UpperBanner";
 import {
   coursesPagesNavigationItems,
   shortCoursePageHolidayImage,
-  shortCoursePageHolidayName,
   shortCoursePageHolidaySubtitle,
   shortCoursePageHolidayText,
   shortCoursePageIntroDrummingImage,
@@ -42,7 +41,7 @@ const MusicalDirectionCourses = () => {
         />
         <CourseBanner
           imageUrl={shortCoursePageHolidayImage}
-          name={shortCoursePageHolidayName}
+          name={"algun titulo, algo como -Objetivos-"}
           subtitle={shortCoursePageHolidaySubtitle}
           text={shortCoursePageHolidayText}
         />

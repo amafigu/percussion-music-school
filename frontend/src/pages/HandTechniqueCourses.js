@@ -1,19 +1,15 @@
 import CourseBanner from "#components/CourseBanner";
 import SubNavbar from "#components/SubNavbar";
 import UpperBanner from "#components/UpperBanner";
+import useLocaleContext from "#context/localeContext";
 import {
   coursesPagesNavigationItems,
   shortCoursePageHolidayImage,
-  shortCoursePageHolidayName,
-  shortCoursePageHolidaySubtitle,
-  shortCoursePageHolidayText,
   shortCoursePageIntroDrummingImage,
   shortCoursePageIntroDrummingName,
   shortCoursePageIntroDrummingSubtitle,
   shortCoursePageIntroDrummingText,
   shortCoursesPageUpperSectionBackground,
-  shortCoursesPageUpperSectionText,
-  shortCoursesPageUpperSectionTitle,
 } from "#utils/constants";
 import { useEffectScrollTop } from "#utils/utils";
 import React from "react";
@@ -21,6 +17,8 @@ import { useNavigate } from "react-router-dom";
 import styles from "./handTechniqueCourses.module.scss";
 
 const HandTechniqueCourses = () => {
+  const { translate } = useLocaleContext();
+  const text = translate.pages.courses;
   useEffectScrollTop();
   const navigate = useNavigate();
 
@@ -32,19 +30,18 @@ const HandTechniqueCourses = () => {
       <div className={styles.coursesPage}>
         <UpperBanner
           backgroundUrl={shortCoursesPageUpperSectionBackground}
-          title={shortCoursesPageUpperSectionTitle}
-          text={shortCoursesPageUpperSectionText}
+          title={text.handTechnique.title}
+          text={"texto corto definicion"}
         />
-
         <SubNavbar
           navigate={navitageToPage}
           items={coursesPagesNavigationItems}
         />
         <CourseBanner
           imageUrl={shortCoursePageHolidayImage}
-          name={shortCoursePageHolidayName}
-          subtitle={shortCoursePageHolidaySubtitle}
-          text={shortCoursePageHolidayText}
+          name={"algun titulo, algo como -Objetivos-"}
+          subtitle={"algun subtitulo, o si queres Rolinho, no pones nada"}
+          text={text.handTechnique.description}
         />
         <CourseBanner
           imageUrl={shortCoursePageIntroDrummingImage}
