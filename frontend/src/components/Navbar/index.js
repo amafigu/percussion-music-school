@@ -15,7 +15,7 @@ import MobileMenu from "./MobileMenu";
 import styles from "./navbar.module.scss";
 
 const Navbar = () => {
-  const [isDropdownOpen, setDropdownOpen] = useState(true);
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isLanguageDropdownOpen, setLanguageDropdownOpen] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
 

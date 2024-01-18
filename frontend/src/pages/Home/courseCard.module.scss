@@ -3,39 +3,19 @@
 @import "#styles/helpers/mixins";
 
 .courseCardWrapper {
-  @include media.desktop-up {
-    width: 80%;
-    height: auto;
-  }
-
-  @include media.desktop {
-    width: 50%;
-    margin-bottom: 40px;
-  }
-
-  @include media.tablet-narrow {
-    width: 60%;
-  }
+  flex-wrap: wrap;
+  width: 320px;
+  margin: theme.$spacing-large 0;
 
   @include media.mobile {
     width: theme.$mobile-default-page-width;
     height: auto;
-    margin-bottom: 64px;
   }
 
   @include flex-horizontal-center;
 
   .courseCard {
-    @include media.mobile {
-      width: 100%;
-    }
-
-    @include media.widescreen {
-      width: 76%;
-    }
-
-    width: 90%;
-    max-width: 360px;
+    width: 320px;
     height: auto;
     background-color: #20232d;
     border-radius: 24px;

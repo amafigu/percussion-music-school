@@ -9,7 +9,7 @@ const CoursesCardTeaser = () => {
 
   return (
     <div className={styles.coursesCardTeaserWrapper}>
-      <div className={styles.coursesCardTeaser}>
+      <div className={`${styles.coursesCardTeaser}`}>
         <CourseCard
           image='card1.png'
           name={textCards.ensemble.title}
@@ -28,8 +28,7 @@ const CoursesCardTeaser = () => {
           path='/courses/stick-technique'
           description={textCards.stickTechnique.description}
         />
-      </div>
-      <div className={styles.coursesCardTeaser}>
+
         <CourseCard
           image='card1.png'
           name={textCards.musicalLanguage.title}
