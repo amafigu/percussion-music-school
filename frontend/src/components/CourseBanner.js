@@ -1,3 +1,4 @@
+import { camelCaseToTitleCase } from "#utils/utils";
 import React from "react";
 import styles from "./courseBanner.module.scss";
 
@@ -16,8 +17,10 @@ const CourseBanner = ({ imageUrl, name, subtitle, text, invert }) => {
           style={invert ? { order: 1 } : { order: 2 }}
         >
           <div className={styles.textAndIcons}>
-            <div className={styles.name}>{name}</div>
-            <div className={styles.position}>{subtitle}</div>
+            <div className={styles.name}>{camelCaseToTitleCase(name)}</div>
+            <div className={styles.position}>
+              {camelCaseToTitleCase(subtitle)}
+            </div>
             <p>{text}</p>
             <br />
           </div>

@@ -109,6 +109,17 @@
   }
 }
 
+@mixin standard-page-subtitle {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 128%;
+  letter-spacing: 0;
+
+  @include media.tablet-wide {
+    font-size: 22px;
+  }
+}
+
 @mixin standard-page-content {
   font-size: 18px;
   font-weight: 400;

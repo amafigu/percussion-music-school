@@ -4,10 +4,19 @@
       "aboutPageUpperSectionTitle": "About Tierra y Aire",
       "aboutPageUpperSectionText": "Established since 2018, the Tierra y Aire ethos has always been one of integration and sharing. Today, we have become the people’s choice for drum education as the largest specialized drum school in Rosario.",
       "firstImageCard": "We seek to inspire and educate drummers by using their own musicallity and from there to offer resources of contemporary drum education.",
+      "ourPhilosophyTitle": "Our Philosophy",
       "ourPhilosophySubtitle": "Skill should not be harnessed by hard work alone",
       "ourPhilosophyFirst": "At Tierra y Aire, we believe that passion is the fundamental building block to every student’s success. Through passion comes curiosity, and it is this very curiosity that would spur the student to continuously work, and learn, more on his or her craft.",
       "inspirationAndPhilosophySecond": "It is our responsibility, as educators, to fuel that curiosity in every student; constantly nurturing, guiding and motivating every student to eventually reach their individual and collective music objectives.",
+      "inspirationAndEducation": {
+        "title": "Inspiration & education",
+        "firstParagraph": "At Tierra y Aire, we believe that the heartbeat of percusion begins with inspiration. Our programmes are created with creativity, innovation, improvisation and practice drumming. We ensure the right balance for your specific needs at every musical level.",
+        "secondParagraph": "Our method has been thoughtfully designed with your objectives in mind — we place a priority on the musicality of the students by playing percussion from the very first day and  performing live in short term."
+      },
       "artist": {
+        "role": "Founder and Managing Director",
+        "follow": "Follow",
+        "followAt": "at",
         "descriptionFirst": "In the city of Rosario - Argetina, one of the largest cradles of musicians on the continent, Carlos Rodrigo “Rolo” Verón was recognized as a “distinguished artist” in the city of Rosario - Arget for his vast career and his permanent contribution to culture local and national. With an outstanding talent in percussion, he joined groups that led him to compose and collaborate in a large number of genres, ranging from tropical rhythms, folklore and rock and roll. With his art he not only toured the country, but his talent took him to the United States, Latin America and Europe.",
         "descriptionSecond": "In 2016 he founded the “Tierra y Aire percussion” project, a musical learning space that teaches children, young people and adults, including people with disabilities, to play various instruments from different regions such as: congas, djembe, dun dun, left-handed, keys, bells, among others. In our city he was part of different events, such as TedX, Rosario under the stars, Carnival at the Humberto de Nito Amphitheater, Inauguration of the Patio Market, among other great events. It should be noted that in 2020/21 he composed his first solo album, which he titled 'Fluir', being recorded and mastered at Penny Lane studios in the city of Rosario. The project, presented by Fernanda Gigliani, Popular Initiative, was unanimously approved by the rest of the councilors of the legislative body. The President of the Municipal Council, María Eugenia Schmuck, addressed the venue: “It is a pleasure that the venue is filled with art, we are very proud of this distinction since we have a city that is a breeding ground for great musicians, artists and educators. Not just anyone, no matter how good they are in their discipline, can teach, only those who can transform knowledge into empathy can do so, generating a construction space where everyone grows, which is why the feat that we are distinguishing today is admirable and exemplary."
       }

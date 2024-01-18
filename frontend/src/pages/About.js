@@ -54,24 +54,15 @@ const About = () => {
                   src={`${process.env.PUBLIC_URL}/assets/logo.png`}
                 ></img>
               </div>
-              <div className={styles.text}>Inspiration & Education</div>
+              <div className={styles.text}>
+                {text.inspirationAndEducation.title}
+              </div>
             </div>
             <div className={styles.paragraphsContainer}>
               <div className={styles.paragraphs}>
-                <p>
-                  At Tierra y Aire, we believe that the heartbeat of drumming
-                  begins with inspiration. Our programmes are created with
-                  creativity, innovation, originality, improvisation and
-                  extemporaneous drumming. We ensure the right balance for your
-                  specific needs at every drumming level.
-                </p>
+                <p>{text.inspirationAndEducation.firstParagraph}</p>
                 <br />
-                <p>
-                  Co-developed by the students, our curriculum has been
-                  thoughtfully designed with your objectives in mind — we place
-                  a priority on your progress and create fun drumming
-                  experiences.
-                </p>
+                <p>{text.inspirationAndEducation.secondParagraph}</p>
               </div>
             </div>
           </div>
@@ -85,7 +76,7 @@ const About = () => {
 
           <div className={styles.text}>
             <div className={styles.title}>
-              <span>Our Philosophy</span>
+              <span>{text.ourPhilosophyTitle}</span>
             </div>
             <div className={styles.subtitle}>
               <span>{text.ourPhilosophySubtitle}</span>
@@ -109,14 +100,14 @@ const About = () => {
             <div className={styles.textAndIconsContainer}>
               <div className={styles.textAndIcons}>
                 <div className={styles.name}>Rolo Veron</div>
-                <div className={styles.position}>
-                  Founder and Managing Director
-                </div>
+                <div className={styles.position}>{text.artist.role}</div>
                 <p>{text.artist.descriptionFirst}</p>
                 <br />
                 <p>{text.artist.descriptionSecond}</p>
                 <div className={styles.socialIcons}>
-                  <div className={styles.text}>Follow Rolo Veron @</div>
+                  <div className={styles.text}>
+                    {text.artist.follow} Rolo Veron {text.artist.followAt}
+                  </div>
                   <div className={styles.row}>
                     <div className={styles.icons}>
                       <a

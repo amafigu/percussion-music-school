@@ -4,7 +4,7 @@ import UpperBanner from "#components/UpperBanner";
 import useLocaleContext from "#context/localeContext";
 import {
   coursesPagesNavigationItems,
-  handTechniqueCoursePageSecondImage,
+  ensembleCoursesPageIntermediateBannerImage,
   musicalLanguageCoursesPageUpperSectionBackground,
 } from "#utils/constants";
 import { useEffectScrollTop } from "#utils/utils";
@@ -27,7 +27,7 @@ const HandTechniqueCourses = () => {
         <UpperBanner
           backgroundUrl={musicalLanguageCoursesPageUpperSectionBackground}
           title={text.handTechnique.title}
-          text={text.handTechnique.subtitle}
+          text={""}
         />
         <div className={styles.hiddeMobile}>
           <SubNavbar
@@ -36,17 +36,10 @@ const HandTechniqueCourses = () => {
           />
         </div>
         <CourseBanner
-          imageUrl={handTechniqueCoursePageSecondImage}
-          name={"algun titulo, algo como -Objetivos-"}
-          subtitle={"algun subtitulo, o si queres Rolinho, no pones nada"}
+          imageUrl={ensembleCoursesPageIntermediateBannerImage}
+          name={text.handTechnique.subtitle}
+          subtitle=''
           text={text.handTechnique.description}
-        />
-
-        <CourseBanner
-          imageUrl={handTechniqueCoursePageSecondImage}
-          name={"algun titulo, como en el bloque anterior,"}
-          subtitle=' pensalo siempre en el combo - titulo, subtitulo, y text al lado de una image, avisa que imagenes queres poner adonde, los textos mandame por mensaje de texto y no de audio, asi puedo copiar y pegar'
-          text={"PONELE ALGO COMO ESTA EN TEXT ANTERIOR ROLO"}
           invert={true}
         />
       </div>
