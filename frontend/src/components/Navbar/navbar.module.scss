@@ -25,6 +25,10 @@
     margin-right: 6px;
   }
 
+  .languageChevronContainerWrapper {
+    min-width: fit-content;
+  }
+
   .languageChevronContainer {
     cursor: pointer;
   }
@@ -119,12 +123,13 @@
       }
 
       .link {
+        position: relative;
+        min-width: fit-content;
+        cursor: pointer;
+
         @include media.mobile {
           display: none;
         }
-
-        position: relative;
-        cursor: pointer;
 
         .linkContent {
           font-family: theme.$main-font-family;

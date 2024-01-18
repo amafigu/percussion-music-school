@@ -4,9 +4,8 @@ import UpperBanner from "#components/UpperBanner";
 import useLocaleContext from "#context/localeContext";
 import {
   coursesPagesNavigationItems,
-  handTechniqueCoursePageSecondImage,
-  musicalLanguageCoursePageImage,
   musicalLanguageCoursesPageUpperSectionBackground,
+  stickTechniqueCoursePageOfferImage,
 } from "#utils/constants";
 import { useEffectScrollTop } from "#utils/utils";
 import React from "react";
@@ -38,19 +37,10 @@ const MusicalDirectionCourses = () => {
           />
         </div>
         <CourseBanner
-          imageUrl={handTechniqueCoursePageSecondImage}
-          name={"algun titulo, algo como -Objetivos-"}
-          subtitle={"subtitulitus"}
-          text={text.musicalDirection.description}
-        />
-        <CourseBanner
-          imageUrl={musicalLanguageCoursePageImage}
-          name={"algun titulo, algo como -Objetivos-"}
-          subtitle={"subtitulitus"}
-          text={
-            "text descriptivo que me lo mandas por mensaje de texto, email o paloma mensajera, pero no por audio"
-          }
-          invert={true}
+          imageUrl={stickTechniqueCoursePageOfferImage}
+          name={text.musicalDirection.subtitle}
+          subtitle={""}
+          text={text.stickTechnique.description}
         />
       </div>
     </div>

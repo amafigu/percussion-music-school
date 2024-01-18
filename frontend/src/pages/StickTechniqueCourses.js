@@ -3,7 +3,7 @@ import useLocaleContext from "#context/localeContext";
 
 import {
   coursesPagesNavigationItems,
-  stickTechniqueCoursePageOfferImage,
+  ensembleCoursesPageAdvancedBannerImage,
   stickTechniqueCoursesPageUpperSectionBackground,
 } from "#utils/constants";
 import { useEffectScrollTop } from "#utils/utils";
@@ -30,7 +30,7 @@ const StickTechniqueCourses = () => {
         <UpperBanner
           backgroundUrl={stickTechniqueCoursesPageUpperSectionBackground}
           title={text.stickTechnique.title}
-          text={text.stickTechnique.subtitle}
+          text={""}
         />
         <div className={styles.hiddeMobile}>
           <SubNavbar
@@ -39,9 +39,9 @@ const StickTechniqueCourses = () => {
           />
         </div>
         <CourseBanner
-          imageUrl={stickTechniqueCoursePageOfferImage}
-          name={"algun titulo, algo como -Objetivos-"}
-          subtitle={"subtitulo medio descriptivo"}
+          imageUrl={ensembleCoursesPageAdvancedBannerImage}
+          name={text.stickTechnique.subtitle}
+          subtitle=''
           text={text.stickTechnique.description}
         />
       </div>

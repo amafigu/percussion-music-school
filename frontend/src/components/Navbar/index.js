@@ -80,6 +80,7 @@ const Navbar = () => {
             )}
           </div>
           <div
+            className={styles.languageChevronContainerWrapper}
             onMouseEnter={() => setLanguageDropdownOpen(true)}
             onClick={() => setLanguageDropdownOpen((prevState) => !prevState)}
           >
