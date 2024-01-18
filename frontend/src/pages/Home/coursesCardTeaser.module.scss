@@ -3,37 +3,34 @@
 @import "#styles/helpers/mixins";
 
 .coursesCardTeaserWrapper {
-  @include flex-horizontal-center;
-
   width: 100%;
 
+  @include flex-column-horizontal-center;
+
   .coursesCardTeaser {
-    @include media.tablet-wide {
-      flex-direction: column;
-      width: 100%;
-
-      :last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    @include media.desktop {
-      width: 100%;
-    }
-
-    @include media.widescreen {
-      width: 80%;
-
-      :last-child {
-        margin-bottom: 0;
-      }
-    }
-
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    width: 100%;
+    width: 90%;
+    max-width: 1400px;
     height: fit-content;
     background-color: theme.$primary-background-color;
+
+    > div {
+      flex: 0 1 calc(33.333% - 10px);
+    }
+  }
+}
+
+@include media.widescreen-down {
+  .coursesCardTeaserWrapper .coursesCardTeaser > div {
+    flex-basis: calc(50% - 10px);
+  }
+}
+
+@include media.tablet-narrow {
+  .coursesCardTeaserWrapper .coursesCardTeaser > div {
+    flex-basis: 100%;
   }
 }

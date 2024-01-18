@@ -10,6 +10,23 @@ $main-box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
   0 1px 5px 0 rgb(0 0 0 / 12%);
 $light-box-shadow: 0 1px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%),
   0 1px 2px 0 rgb(0 0 0 / 12%);
+
+// SPACING - MARGIN OR PADDING
+$spacing-component-divider-vertical: 5rem;
+$spacing-extra-large: 4.5rem;
+$spacing-large: 2.5rem;
+$spacing-semi-large: 2rem;
+$spacing-regular-large: 1.75rem;
+$spacing-regular: 1.5rem;
+$spacing-semi-regular-large: 1.25rem;
+$spacing-semi-regular-semi-large: 1.125em;
+$spacing-semi-regular: 1rem;
+$spacing-small: 0.75rem;
+$spacing-smaller: 0.5rem;
+$spacing-smallest: 0.25rem;
+
+/////
+
 $form-background: #f4f4f4;
 $z-index: (
   whatsappbuttonposition: 500,

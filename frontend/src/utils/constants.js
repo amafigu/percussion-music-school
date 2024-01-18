@@ -55,6 +55,10 @@ export const TESTIMONIALS = [
     person: "alicia",
     image: "alicia.jpg",
   },
+  {
+    person: "lilianaMartinez",
+    image: "lilianaMartinez.jpg",
+  },
 ];
 
 export const aboutPageUpperSectionBackground = {
@@ -68,12 +72,15 @@ export const aboutPagePhilosophySectionBackground = {
 export const educationBanner = {
   backgroundImage: `url(${process.env.PUBLIC_URL}/assets/about_page_school.png)`,
 };
+
 export const ensembleCoursesPageUpperSectionBackground = {
   backgroundImage: `url(${process.env.PUBLIC_URL}/assets/regular_courses_page_upper_section_background.png)`,
 };
+
 export const musicalLanguageCoursesPageUpperSectionBackground = {
   backgroundImage: `url(${process.env.PUBLIC_URL}/assets/short_courses_page_upper_section_background.png)`,
 };
+
 export const stickTechniqueCoursesPageUpperSectionBackground = {
   backgroundImage: `url(${process.env.PUBLIC_URL}/assets/corporate_courses_page_upper_section_background.png)`,
 };
