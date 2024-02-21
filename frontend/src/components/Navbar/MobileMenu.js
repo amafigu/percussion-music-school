@@ -1,5 +1,6 @@
 import LanguagesDropdown from "#components/LanguagesDropdown";
 import useLocaleContext from "#context/localeContext";
+import { useNavigateToPage } from "#hooks/useNavigateToPage";
 import { ROUTES } from "#utils/constants";
 import {
   faChevronDown,
@@ -9,7 +10,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { React, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import DropdownMenu from "./DropdownMenu";
 import styles from "./mobileMenu.module.scss";
 
@@ -17,10 +17,10 @@ const MobileMenu = ({ setMenu }) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isLanguageDropdownOpen, setLanguageDropdownOpen] = useState(false);
 
-  const navigate = useNavigate();
+  const navigateToPage = useNavigateToPage();
   const navigateAndCloseMenu = (route) => {
     setMenu(false);
-    navigate(route);
+    navigateToPage(route);
   };
   const { translate } = useLocaleContext();
   const text = translate.components.navbar;

@@ -2,6 +2,7 @@ import CourseBanner from "#components/CourseBanner";
 import SubNavbar from "#components/SubNavbar";
 import UpperBanner from "#components/UpperBanner";
 import useLocaleContext from "#context/localeContext";
+import { useNavigateToPage } from "#hooks/useNavigateToPage";
 import {
   coursesPagesNavigationItems,
   handTechniqueCoursePageSecondImage,
@@ -9,15 +10,10 @@ import {
 } from "#utils/constants";
 import { useEffectScrollTop } from "#utils/utils";
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import styles from "./musicalLanguageCourses.module.scss";
 
 const MusicalLanguageCourses = () => {
-  const navigate = useNavigate();
-
-  const navitageToPage = (route) => {
-    navigate(route);
-  };
+  const navigateToPage = useNavigateToPage();
 
   const { translate } = useLocaleContext();
   const text = translate.pages.courses;
@@ -33,7 +29,7 @@ const MusicalLanguageCourses = () => {
         />
         <div className={styles.hiddeMobile}>
           <SubNavbar
-            navigate={navitageToPage}
+            navigate={navigateToPage}
             items={coursesPagesNavigationItems}
           />
         </div>
