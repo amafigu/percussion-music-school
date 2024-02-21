@@ -8,7 +8,7 @@ import {
   ensembleCoursesPageUpperSectionBackground,
   musicalLanguageCoursePageImage,
 } from "#utils/constants";
-import { useEffectScrollTop } from "#utils/utils";
+import { scrollToTop } from "#utils/utils";
 import React from "react";
 import styles from "./ensembleCompositionCourses.module.scss";
 
@@ -16,7 +16,7 @@ const EnsembleCompositionCourses = () => {
   const navigateToPage = useNavigateToPage();
   const translate = useTranslate();
   const text = translate.pages.courses;
-  useEffectScrollTop();
+  scrollToTop();
 
   return (
     <div className={styles.coursesPageWrapper}>

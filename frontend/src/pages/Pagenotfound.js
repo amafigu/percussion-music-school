@@ -1,9 +1,9 @@
-import { useEffectScrollTop } from "#utils/utils";
+import { scrollToTop } from "#utils/utils";
 import { Link } from "react-router-dom";
 import styles from "./pagenotfound.module.scss";
 
 const PageNotfound = () => {
-  useEffectScrollTop();
+  scrollToTop();
   return (
     <div className={styles.pageNotFoundWrapper}>
       <div className={styles.pageNotFound}>

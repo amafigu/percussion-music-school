@@ -6,7 +6,7 @@ import {
   ensembleCoursesPageAdvancedBannerImage,
   stickTechniqueCoursesPageUpperSectionBackground,
 } from "#utils/constants";
-import { useEffectScrollTop } from "#utils/utils";
+import { scrollToTop } from "#utils/utils";
 import React from "react";
 import CourseBanner from "../components/CourseBanner";
 import SubNavbar from "../components/SubNavbar";
@@ -16,7 +16,7 @@ const StickTechniqueCourses = () => {
   const navigateToPage = useNavigateToPage();
   const translate = useTranslate();
   const text = translate.pages.courses;
-  useEffectScrollTop();
+  scrollToTop();
 
   return (
     <div className={styles.coursesPageWrapper}>

@@ -1,9 +1,5 @@
-import { useEffect } from "react";
-
-export const useEffectScrollTop = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+export const scrollToTop = () => {
+  window.scrollTo(0, 0);
 };
 
 export const titleCase = (str, separator) => {

@@ -6,13 +6,13 @@ import {
   aboutPagePhilosophySectionBackground,
   aboutPageUpperSectionBackground,
 } from "#utils/constants";
-import { useEffectScrollTop } from "#utils/utils";
+import { scrollToTop } from "#utils/utils";
 import styles from "./about.module.scss";
 
 const About = () => {
   const translate = useTranslate();
   const text = translate.pages.about;
-  useEffectScrollTop();
+  scrollToTop();
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);

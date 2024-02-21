@@ -1,5 +1,5 @@
 import { useTranslate } from "#hooks/useTranslate";
-import { useEffectScrollTop } from "#utils/utils";
+import { scrollToTop } from "#utils/utils";
 import CoursesCardTeaser from "./CoursesCardTeaser";
 import TestimonialCarousel from "./TestimonialCarousel";
 import VideoBanner from "./VideoBanner";
@@ -9,7 +9,7 @@ const Home = () => {
   const translate = useTranslate();
   const text = translate.pages.home;
 
-  useEffectScrollTop();
+  scrollToTop();
   return (
     <div className={styles.homePageWrapper}>
       <div className={styles.homePage}>

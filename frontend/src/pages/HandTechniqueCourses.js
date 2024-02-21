@@ -8,12 +8,12 @@ import {
   ensembleCoursesPageIntermediateBannerImage,
   musicalLanguageCoursesPageUpperSectionBackground,
 } from "#utils/constants";
-import { useEffectScrollTop } from "#utils/utils";
+import { scrollToTop } from "#utils/utils";
 import React from "react";
 import styles from "./handTechniqueCourses.module.scss";
 
 const HandTechniqueCourses = () => {
-  useEffectScrollTop();
+  scrollToTop();
 
   const translate = useTranslate();
   const text = translate.pages.courses;

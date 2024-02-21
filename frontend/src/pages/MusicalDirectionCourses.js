@@ -8,7 +8,7 @@ import {
   musicalLanguageCoursesPageUpperSectionBackground,
   stickTechniqueCoursePageOfferImage,
 } from "#utils/constants";
-import { useEffectScrollTop } from "#utils/utils";
+import { scrollToTop } from "#utils/utils";
 import React from "react";
 import styles from "./musicalDirectionCourses.module.scss";
 
@@ -17,7 +17,7 @@ const MusicalDirectionCourses = () => {
   const text = translate.pages.courses;
   const navigateToPage = useNavigateToPage();
 
-  useEffectScrollTop();
+  scrollToTop();
   return (
     <div className={styles.coursesPageWrapper}>
       <div className={styles.coursesPage}>

@@ -6,7 +6,7 @@ import {
   ensembleCoursesPageBeginnerBannerImage,
   ensembleCoursesPageUpperSectionBackground,
 } from "#utils/constants";
-import { useEffectScrollTop } from "#utils/utils";
+import { scrollToTop } from "#utils/utils";
 import React from "react";
 import CourseBanner from "../components/CourseBanner";
 import SubNavbar from "../components/SubNavbar";
@@ -17,7 +17,7 @@ const EnsembleCourses = () => {
   const text = translate.pages.courses;
   const navigateToPage = useNavigateToPage();
 
-  useEffectScrollTop();
+  scrollToTop();
   return (
     <div className={styles.coursesPageWrapper}>
       <div className={styles.coursesPage}>
