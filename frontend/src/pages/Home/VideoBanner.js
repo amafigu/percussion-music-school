@@ -1,8 +1,9 @@
-import useLocaleContext from "#context/localeContext";
+import { useTranslate } from "#hooks/useTranslate";
 import React from "react";
 import styles from "./videoBanner.module.scss";
+
 const VideoBanner = () => {
-  const { translate } = useLocaleContext();
+  const translate = useTranslate();
   const t = translate.components.videoBanner;
   return (
     <div className={styles.videoBanner}>

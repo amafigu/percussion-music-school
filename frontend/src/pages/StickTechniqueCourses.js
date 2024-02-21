@@ -1,6 +1,6 @@
 import UpperBanner from "#components/UpperBanner";
-import useLocaleContext from "#context/localeContext";
 import { useNavigateToPage } from "#hooks/useNavigateToPage";
+import { useTranslate } from "#hooks/useTranslate";
 import {
   coursesPagesNavigationItems,
   ensembleCoursesPageAdvancedBannerImage,
@@ -14,7 +14,7 @@ import styles from "./stickTechniqueCourses.module.scss";
 
 const StickTechniqueCourses = () => {
   const navigateToPage = useNavigateToPage();
-  const { translate } = useLocaleContext();
+  const translate = useTranslate();
   const text = translate.pages.courses;
   useEffectScrollTop();
 

@@ -1,11 +1,13 @@
-import useLocaleContext from "#context/localeContext";
+import { useTranslate } from "#hooks/useTranslate";
 import { TESTIMONIALS } from "#utils/constants";
 import { camelCaseToTitleCase } from "#utils/utils";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import React from "react";
 import Slider from "react-slick";
 import styles from "./testimonialCarousel.module.scss";
+
 const TestimonialCarousel = () => {
   const settings = {
     dots: true,
@@ -16,7 +18,7 @@ const TestimonialCarousel = () => {
     slidesToScroll: 1,
   };
 
-  const { translate } = useLocaleContext();
+  const translate = useTranslate();
   const text = translate.components.testimonialCarousel;
   return (
     <div className={styles.testimonialCarouselWrapper}>

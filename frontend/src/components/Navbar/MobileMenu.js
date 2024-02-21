@@ -1,6 +1,6 @@
 import LanguagesDropdown from "#components/LanguagesDropdown";
-import useLocaleContext from "#context/localeContext";
 import { useNavigateToPage } from "#hooks/useNavigateToPage";
+import { useTranslate } from "#hooks/useTranslate";
 import { ROUTES } from "#utils/constants";
 import {
   faChevronDown,
@@ -22,7 +22,7 @@ const MobileMenu = ({ setMenu }) => {
     setMenu(false);
     navigateToPage(route);
   };
-  const { translate } = useLocaleContext();
+  const translate = useTranslate();
   const text = translate.components.navbar;
 
   return (

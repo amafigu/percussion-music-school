@@ -1,8 +1,8 @@
 import CourseBanner from "#components/CourseBanner";
 import SubNavbar from "#components/SubNavbar";
 import UpperBanner from "#components/UpperBanner";
-import useLocaleContext from "#context/localeContext";
 import { useNavigateToPage } from "#hooks/useNavigateToPage";
+import { useTranslate } from "#hooks/useTranslate";
 import {
   coursesPagesNavigationItems,
   ensembleCoursesPageUpperSectionBackground,
@@ -14,7 +14,7 @@ import styles from "./ensembleCompositionCourses.module.scss";
 
 const EnsembleCompositionCourses = () => {
   const navigateToPage = useNavigateToPage();
-  const { translate } = useLocaleContext();
+  const translate = useTranslate();
   const text = translate.pages.courses;
   useEffectScrollTop();
 

@@ -1,4 +1,4 @@
-import useLocaleContext from "#context/localeContext";
+import { useTranslate } from "#hooks/useTranslate";
 import { useEffectScrollTop } from "#utils/utils";
 import CoursesCardTeaser from "./CoursesCardTeaser";
 import TestimonialCarousel from "./TestimonialCarousel";
@@ -6,7 +6,7 @@ import VideoBanner from "./VideoBanner";
 import styles from "./home.module.scss";
 
 const Home = () => {
-  const { translate } = useLocaleContext();
+  const translate = useTranslate();
   const text = translate.pages.home;
 
   useEffectScrollTop();

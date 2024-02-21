@@ -1,8 +1,8 @@
 import CourseBanner from "#components/CourseBanner";
 import SubNavbar from "#components/SubNavbar";
 import UpperBanner from "#components/UpperBanner";
-import useLocaleContext from "#context/localeContext";
 import { useNavigateToPage } from "#hooks/useNavigateToPage";
+import { useTranslate } from "#hooks/useTranslate";
 import {
   coursesPagesNavigationItems,
   ensembleCoursesPageIntermediateBannerImage,
@@ -15,7 +15,7 @@ import styles from "./handTechniqueCourses.module.scss";
 const HandTechniqueCourses = () => {
   useEffectScrollTop();
 
-  const { translate } = useLocaleContext();
+  const translate = useTranslate();
   const text = translate.pages.courses;
   const navigateToPage = useNavigateToPage();
 

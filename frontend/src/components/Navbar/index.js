@@ -1,5 +1,5 @@
 import LanguagesDropdown from "#components/LanguagesDropdown";
-import useLocaleContext from "#context/localeContext";
+import { useTranslate } from "#hooks/useTranslate";
 import { ROUTES } from "#utils/constants";
 import {
   faBars,
@@ -20,7 +20,7 @@ const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const menuDropdownRef = useRef(null);
-  const { translate } = useLocaleContext();
+  const translate = useTranslate();
   const text = translate.components.navbar;
 
   const setAllDropdownsClosed = () => {

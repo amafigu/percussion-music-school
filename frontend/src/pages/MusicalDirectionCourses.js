@@ -1,8 +1,8 @@
 import CourseBanner from "#components/CourseBanner";
 import SubNavbar from "#components/SubNavbar";
 import UpperBanner from "#components/UpperBanner";
-import useLocaleContext from "#context/localeContext";
 import { useNavigateToPage } from "#hooks/useNavigateToPage";
+import { useTranslate } from "#hooks/useTranslate";
 import {
   coursesPagesNavigationItems,
   musicalLanguageCoursesPageUpperSectionBackground,
@@ -13,7 +13,7 @@ import React from "react";
 import styles from "./musicalDirectionCourses.module.scss";
 
 const MusicalDirectionCourses = () => {
-  const { translate } = useLocaleContext();
+  const translate = useTranslate();
   const text = translate.pages.courses;
   const navigateToPage = useNavigateToPage();
 

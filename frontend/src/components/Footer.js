@@ -1,13 +1,12 @@
-import useLocaleContext from "#context/localeContext";
+import { useTranslate } from "#hooks/useTranslate";
 import { coursesPagesNavigationItems } from "#utils/constants";
 import { camelCaseToTitleCase } from "#utils/utils";
 import React from "react";
-
 import { Link } from "react-router-dom";
 import styles from "./footer.module.scss";
 
 const Footer = () => {
-  const { translate } = useLocaleContext();
+  const translate = useTranslate();
   const text = translate.components.footer;
   return (
     <div className={styles.footerWrapper}>
