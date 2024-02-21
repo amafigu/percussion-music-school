@@ -1,10 +1,10 @@
-import useLocaleContext from "#context/localeContext";
+import { useTranslate } from "#hooks/useTranslate";
 import React from "react";
 import CourseCard from "./CourseCard";
 import styles from "./coursesCardTeaser.module.scss";
 
 const CoursesCardTeaser = () => {
-  const { translate } = useLocaleContext();
+  const translate = useTranslate();
   const textCards = translate.components.coursesCardTeaser.cards;
 
   return (

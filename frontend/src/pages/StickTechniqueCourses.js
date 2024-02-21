@@ -1,28 +1,22 @@
 import UpperBanner from "#components/UpperBanner";
-import useLocaleContext from "#context/localeContext";
-
+import { useNavigateToPage } from "#hooks/useNavigateToPage";
+import { useTranslate } from "#hooks/useTranslate";
 import {
   coursesPagesNavigationItems,
   ensembleCoursesPageAdvancedBannerImage,
   stickTechniqueCoursesPageUpperSectionBackground,
 } from "#utils/constants";
-import { useEffectScrollTop } from "#utils/utils";
+import { scrollToTop } from "#utils/utils";
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import CourseBanner from "../components/CourseBanner";
 import SubNavbar from "../components/SubNavbar";
 import styles from "./stickTechniqueCourses.module.scss";
 
 const StickTechniqueCourses = () => {
-  const navigate = useNavigate();
-
-  const navitageToPage = (route) => {
-    navigate(route);
-  };
-
-  const { translate } = useLocaleContext();
+  const navigateToPage = useNavigateToPage();
+  const translate = useTranslate();
   const text = translate.pages.courses;
-  useEffectScrollTop();
+  scrollToTop();
 
   return (
     <div className={styles.coursesPageWrapper}>
@@ -34,7 +28,7 @@ const StickTechniqueCourses = () => {
         />
         <div className={styles.hiddeMobile}>
           <SubNavbar
-            navigate={navitageToPage}
+            navigate={navigateToPage}
             items={coursesPagesNavigationItems}
           />
         </div>

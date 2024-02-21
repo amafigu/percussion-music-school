@@ -1,9 +1,9 @@
-import useLocaleContext from "#context/localeContext";
+import { useTranslate } from "#hooks/useTranslate";
 import React from "react";
 import styles from "./whatsappButton.module.scss";
 
 const WhatsAppButton = () => {
-  const { translate } = useLocaleContext();
+  const translate = useTranslate();
   const text = translate.components.whatsAppButton;
   return (
     <a

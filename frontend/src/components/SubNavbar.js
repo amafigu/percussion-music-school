@@ -1,8 +1,8 @@
-import useLocaleContext from "#context/localeContext";
+import { useTranslate } from "#hooks/useTranslate";
 import React from "react";
 import styles from "./subNavbar.module.scss";
 const SubNavbar = ({ navigate, items }) => {
-  const { translate } = useLocaleContext();
+  const translate = useTranslate();
   const text = translate.components.subNavbar;
 
   return (

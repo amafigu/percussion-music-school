@@ -1,10 +1,10 @@
-import useLocaleContext from "#context/localeContext";
+import { useTranslate } from "#hooks/useTranslate";
 import { camelCaseToTitleCase } from "#utils/utils";
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./courseCard.module.scss";
 const CourseCard = ({ name, description, path, image }) => {
-  const { translate } = useLocaleContext();
+  const translate = useTranslate();
   const text = translate.components.courseCard;
 
   return (

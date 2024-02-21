@@ -1,18 +1,18 @@
 import SubNavbar from "#components/SubNavbar";
 import UpperBanner from "#components/UpperBanner";
-import useLocaleContext from "#context/localeContext";
+import { useTranslate } from "#hooks/useTranslate";
 import {
   aboutPageNavigationItems,
   aboutPagePhilosophySectionBackground,
   aboutPageUpperSectionBackground,
 } from "#utils/constants";
-import { useEffectScrollTop } from "#utils/utils";
+import { scrollToTop } from "#utils/utils";
 import styles from "./about.module.scss";
 
 const About = () => {
-  const { translate } = useLocaleContext();
+  const translate = useTranslate();
   const text = translate.pages.about;
-  useEffectScrollTop();
+  scrollToTop();
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
