@@ -1,6 +1,6 @@
 import Footer from "#components/Footer";
 import Navbar from "#components/Navbar";
-import WhatsappButton from "#components/WhatsappButton";
+import WhatsappButton from "#components/ui/WhatsappButton";
 import About from "#pages/About";
 import EnsembleCompositionCourses from "#pages/EnsembleCompositionCourses";
 import EnsembleCourses from "#pages/EnsembleCourses";

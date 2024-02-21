@@ -1,6 +1,6 @@
-import CourseBanner from "#components/CourseBanner";
-import SubNavbar from "#components/SubNavbar";
-import UpperBanner from "#components/UpperBanner";
+import CourseBanner from "#components/ui/CourseBanner";
+import SubNavbar from "#components/ui/SubNavbar";
+import UpperBanner from "#components/ui/UpperBanner";
 import { useNavigateToPage } from "#hooks/useNavigateToPage";
 import { useTranslate } from "#hooks/useTranslate";
 import {

@@ -1,4 +1,4 @@
-import UpperBanner from "#components/UpperBanner";
+import UpperBanner from "#components/ui/UpperBanner";
 import { useNavigateToPage } from "#hooks/useNavigateToPage";
 import { useTranslate } from "#hooks/useTranslate";
 import {
@@ -8,8 +8,8 @@ import {
 } from "#utils/constants";
 import { scrollToTop } from "#utils/utils";
 import React from "react";
-import CourseBanner from "../components/CourseBanner";
-import SubNavbar from "../components/SubNavbar";
+import CourseBanner from "../components/ui/CourseBanner";
+import SubNavbar from "../components/ui/SubNavbar";
 import styles from "./stickTechniqueCourses.module.scss";
 
 const StickTechniqueCourses = () => {

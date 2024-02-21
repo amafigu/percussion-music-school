@@ -1,5 +1,5 @@
-import SubNavbar from "#components/SubNavbar";
-import UpperBanner from "#components/UpperBanner";
+import SubNavbar from "#components/ui/SubNavbar";
+import UpperBanner from "#components/ui/UpperBanner";
 import { useTranslate } from "#hooks/useTranslate";
 import {
   aboutPageNavigationItems,
