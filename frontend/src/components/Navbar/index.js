@@ -1,4 +1,4 @@
-import LanguagesDropdown from "#components/LanguagesDropdown";
+import LanguagesDropdown from "#components/ui/LanguagesDropdown";
 import { useTranslate } from "#hooks/useTranslate";
 import { ROUTES } from "#utils/constants";
 import {
