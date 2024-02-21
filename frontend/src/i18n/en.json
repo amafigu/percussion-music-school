@@ -64,6 +64,13 @@
     "whatsAppButton": {
       "text": "Chat On WhatsApp"
     },
+    "videoBanner": {
+      "titleFirst": "Our passion is",
+      "titleSecond": "the percussion",
+      "subtitleFirst": "We are a community of educators and students",
+      "subtitleSecond": "Music and it's rhythm bring us together being",
+      "subtitleThird": "a bond we celebrate with regular concerts"
+    },
     "courses": {
       "titleAndDescription": {
         "ensemble": {

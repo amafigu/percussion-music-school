@@ -101,7 +101,7 @@
 @mixin standard-page-title {
   font-size: 42px;
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 128%;
   letter-spacing: 0;
 
   @include media.tablet-wide {

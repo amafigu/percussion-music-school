@@ -64,6 +64,14 @@
     "whatsAppButton": {
       "text": "Chat en whatsapp"
     },
+    "videoBanner": {
+      "titleFirst": "Nuestra pasión es",
+      "titleSecond": "la percusión",
+      "subtitleFirst": "Somos una comunidad de educadores y alumnos",
+      "subtitleSecond": "Nos une la música y sus ritmos, la cual compartimos",
+      "subtitleThird": "a través de conciertos frecuentes"
+    },
+
     "courses": {
       "titleAndDescription": {
         "ensemble": {
