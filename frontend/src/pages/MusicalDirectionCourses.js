@@ -8,6 +8,7 @@ import { CoursePageContent } from "./CoursePageContent";
 
 const MusicalDirectionCourses = () => {
   scrollToTop();
+
   return (
     <CoursePageContent
       upperBannerImgPath={musicalLanguageCoursesPageUpperSectionBackground}
