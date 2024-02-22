@@ -11,6 +11,7 @@ import styles from "./coursePageContent.module.scss";
 export const CoursePageContent = ({
   upperBannerImgPath,
   courseBannerImgPath,
+  pageTranslationObj,
   invertLayout,
 }) => {
   const navigateToPage = useNavigateToPage();
@@ -23,7 +24,7 @@ export const CoursePageContent = ({
       <div className={styles.coursesPage}>
         <UpperBanner
           backgroundUrl={upperBannerImgPath}
-          title={text.handTechnique.title}
+          title={text[pageTranslationObj].title}
           text={""}
         />
         <div className={styles.hiddeMobile}>
@@ -34,9 +35,9 @@ export const CoursePageContent = ({
         </div>
         <CourseBanner
           imageUrl={courseBannerImgPath}
-          name={text.handTechnique.subtitle}
+          name={text[pageTranslationObj].subtitle}
           subtitle=''
-          text={text.handTechnique.description}
+          text={text[pageTranslationObj].description}
           invert={invertLayout}
         />
       </div>
