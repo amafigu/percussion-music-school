@@ -53,12 +53,16 @@
         "description": "This course includes the invention of voices (rhythmic patterns), to generate rhythm and musical forms. Try to create feathers or rhythms. (You can only attend this course register those who are doing the 'Assembly Practice' course)."
       }
     },
-
     "home": {
       "title": "Rosario's largest specialized drum school since 2018",
       "subtitle": "Our mission is to inspire and educate drummers by using the latest technology and resources in providing a distinctive contemporary drum education."
     },
-    "faq": {}
+    "pageNotFound": {
+      "title": "page not found",
+      "subtitleFirst": "The page you are looking for does not exist. It may have been moved,",
+      "subtitleSecond": "or removed altogether. Perhaps you can return back to the site's homepage and see if you can find what you are looking for.",
+      "backToHome": "back to home"
+    }
   },
   "components": {
     "whatsAppButton": {

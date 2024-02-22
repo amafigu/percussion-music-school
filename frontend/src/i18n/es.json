@@ -53,12 +53,16 @@
         "description": "Este curso comprende la invención de voces (patrones rítmicos), para generar ritmo y formas musicales. Procura la creación de plumas o ritmos. (A este curso sólo se pueden inscribir quienes estén realizando el curso 'Práctica de ensamble')."
       }
     },
-
     "home": {
       "title": "La escuela especializada en percusión más grande de Rosario desde 2018",
       "subtitle": "Nuestra misión es inspirar y educar a los alumnos mediante el uso de la última tecnología y recursos para brindar una educación de percusión contemporánea distintiva."
     },
-    "faq": {}
+    "pageNotFound": {
+      "title": "página no encontrada",
+      "subtitleFirst": "La página que buscas no existe. Puede que lo hayan movido,",
+      "subtitleSecond": "o eliminado por completo. Puedes regresar a la página de inicio y ver si encuentras lo que buscas.",
+      "backToHome": "página de inicio"
+    }
   },
   "components": {
     "whatsAppButton": {
