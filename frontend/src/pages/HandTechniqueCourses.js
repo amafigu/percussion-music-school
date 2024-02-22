@@ -13,6 +13,7 @@ const HandTechniqueCourses = () => {
     <CoursePageContent
       upperBannerImgPath={musicalLanguageCoursesPageUpperSectionBackground}
       courseBannerImgPath={ensembleCoursesPageIntermediateBannerImage}
+      pageTranslationObj={"handTechnique"}
       invertLayout={true}
     />
   );
