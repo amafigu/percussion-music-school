@@ -1,5 +1,5 @@
 import CourseBanner from "#components/ui/CourseBanner";
-import SubNavbar from "#components/ui/SubNavbar";
+import { NavigationMenu } from "#components/ui/NavigationMenu";
 import UpperBanner from "#components/ui/UpperBanner";
 import { useNavigateToPage } from "#hooks/useNavigateToPage";
 import { useTranslate } from "#hooks/useTranslate";
@@ -28,8 +28,8 @@ export const CoursePageContent = ({
           text={""}
         />
         <div className={styles.hiddeMobile}>
-          <SubNavbar
-            navigate={navigateToPage}
+          <NavigationMenu
+            navigationFunction={navigateToPage}
             items={coursesPagesNavigationItems}
           />
         </div>
