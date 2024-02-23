@@ -42,13 +42,9 @@ const Footer = () => {
               {camelCaseToTitleCase(text.coursesColumn.title)}
             </h3>
             {coursesPagesNavigationItems.map((item) => (
-              <Link
-                className={styles.link}
-                to={item.path}
-                key={item.courseName}
-              >
+              <Link className={styles.link} to={item.ref} key={item.name}>
                 <span className={styles.content}>
-                  {camelCaseToTitleCase(text.coursesColumn[item.courseName])}
+                  {camelCaseToTitleCase(text.coursesColumn[item.name])}
                 </span>
               </Link>
             ))}
