@@ -1,4 +1,4 @@
-export const useScrollToRef = (ref) => {
+export const useScrollToRef = () => {
   const scrollToRef = (ref) => {
     const element = ref.current;
     if (element) {
