@@ -1,25 +1,30 @@
-import SubNavbar from "#components/ui/SubNavbar";
+import { NavigationMenu } from "#components/ui/NavigationMenu";
 import UpperBanner from "#components/ui/UpperBanner";
+import { useScrollToRef } from "#hooks/useScrollToRef";
 import { useTranslate } from "#hooks/useTranslate";
 import {
-  aboutPageNavigationItems,
   aboutPagePhilosophySectionBackground,
   aboutPageUpperSectionBackground,
 } from "#utils/constants";
 import { scrollToTop } from "#utils/utils";
+import { useRef } from "react";
 import styles from "./about.module.scss";
 
 const About = () => {
   const translate = useTranslate();
   const text = translate.pages.about;
-  scrollToTop();
+  const scrollToRef = useScrollToRef();
+  const schoolSectionRef = useRef(null);
+  const philosophySectionRef = useRef(null);
+  const founderSectionRef = useRef(null);
 
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const navigationItems = [
+    { ref: schoolSectionRef, name: "school" },
+    { ref: philosophySectionRef, name: "philosophy" },
+    { ref: founderSectionRef, name: "founder" },
+  ];
+
+  scrollToTop();
 
   return (
     <div className={styles.aboutPageWrapper}>
@@ -29,11 +34,11 @@ const About = () => {
           title={text.aboutPageUpperSectionTitle}
           text={text.aboutPageUpperSectionText}
         />
-        <SubNavbar
-          navigate={scrollToSection}
-          items={aboutPageNavigationItems}
+        <NavigationMenu
+          navigationFunction={scrollToRef}
+          items={navigationItems}
         />
-        <section className={styles.educationSection} id='school'>
+        <section className={styles.educationSection} ref={schoolSectionRef}>
           <div className={styles.imageAndTextLayerContainer}>
             <img
               alt='inspiration'
@@ -68,7 +73,10 @@ const About = () => {
           </div>
         </section>
 
-        <section className={styles.philosophySection} id='philosophy'>
+        <section
+          className={styles.philosophySection}
+          ref={philosophySectionRef}
+        >
           <div
             className={styles.imageForBigScreen}
             style={aboutPagePhilosophySectionBackground}
@@ -88,7 +96,7 @@ const About = () => {
           </div>
         </section>
 
-        <section className={styles.founderSection} id='founder'>
+        <section className={styles.founderSection} ref={founderSectionRef}>
           <div className={styles.presentation}>
             <div className={styles.imageContaier}>
               <img
