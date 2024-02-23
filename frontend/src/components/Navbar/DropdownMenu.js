@@ -19,13 +19,11 @@ const DropdownMenu = ({ setMenuVisible }) => {
     <ul className={styles.dropdownMenu}>
       {coursesPagesNavigationItems.map((item) => (
         <li
-          key={item.courseName}
+          key={item.name}
           className={styles.listItem}
-          onClick={() => navigateAndCloseMenu(item.path)}
+          onClick={() => navigateAndCloseMenu(item.ref)}
         >
-          <span className={styles.linkContent}>
-            {text[item.courseName].title}
-          </span>
+          <span className={styles.linkContent}>{text[item.name].title}</span>
         </li>
       ))}
     </ul>
