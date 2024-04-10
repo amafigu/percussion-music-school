@@ -9,6 +9,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
+    "babel-jest": "^29.7.0",
     "minireset.css": "^0.0.7",
     "node-sass": "^7.0.3",
     "react": "^18.2.0",
@@ -23,16 +24,12 @@
   "imports": {
     "#*": "./src/*"
   },
-  "jest": {
-    "moduleNameMapper": {
-      "^#(.*)$": "<rootDir>/src/$1"
-    }
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "jest",
+    "eject": "react-scripts eject",
+    "lint": "npx eslint ."
   },
   "eslintConfig": {
     "extends": [
@@ -54,6 +51,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-react": "^7.24.1",
     "@testing-library/jest-dom": "^5.17.0",
     "prettier": "^2.8.8",
     "stylelint": "^15.10.2",
