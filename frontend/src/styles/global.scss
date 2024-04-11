@@ -1,5 +1,7 @@
 /* stylelint-disable selector-class-pattern */
 @use "./media" as media;
+@use "./theme.scss" as theme;
+@import "#styles/helpers/mixins";
 
 .slick-next,
 .slick-prev {
@@ -31,7 +33,22 @@
 }
 
 .slick-slider {
-  margin-bottom: 60px !important;
+  margin-bottom: theme.$spacing-extra-large !important;
+}
+
+.slick-track {
+  justify-content: center !important;
+  margin-bottom: 8px !important;
+
+  img {
+    max-width: 460px !important;
+    max-height: 460px !important;
+
+    @include media.mobile {
+      max-width: 100% !important;
+      max-height: 360px !important;
+    }
+  }
 }
 
 .slick-list {
