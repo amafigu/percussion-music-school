@@ -17,7 +17,7 @@
 
     width: 90%;
     margin: auto;
-    margin-top: 60px;
+    margin-top: theme.$spacing-extra-large;
 
     .imageContaier {
       @include media.tablet-wide {

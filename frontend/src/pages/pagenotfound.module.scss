@@ -10,7 +10,7 @@
 
   .pageNotFound {
     @include media.mobile {
-      margin-top: 60px;
+      margin-top: theme.$spacing-extra-large;
     }
 
     @include media.desktop {
@@ -47,8 +47,8 @@
       letter-spacing: 4px;
     }
 
-    margin-bottom: 60px;
-    font-size: 60px;
+    margin-bottom: theme.$spacing-extra-large;
+    font-size: theme.$spacing-extra-large;
     font-weight: 700;
     text-align: center;
     letter-spacing: 4px;

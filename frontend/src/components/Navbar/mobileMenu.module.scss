@@ -20,7 +20,7 @@
       @include mail-button;
 
       width: 90%;
-      height: 60px;
+      height: theme.$spacing-extra-large;
       margin: 40px 0;
     }
   }
@@ -39,7 +39,7 @@
     .listItem {
       @include menu-list-cell;
 
-      height: 60px;
+      height: theme.$spacing-extra-large;
       cursor: pointer;
     }
 

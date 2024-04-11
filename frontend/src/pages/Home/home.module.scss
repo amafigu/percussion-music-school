@@ -24,7 +24,7 @@
     background-color: #202027;
 
     .cardTeaserContainer {
-      margin-bottom: 60px;
+      margin-bottom: theme.$spacing-extra-large;
       background-color: #202027;
     }
   }
@@ -48,7 +48,7 @@
         margin: 32px 0 16px;
       }
 
-      margin: 60px 0;
+      margin: theme.$spacing-extra-large 0;
       font-size: 22px;
       font-weight: 600;
       color: theme.$branding-color-primary;
@@ -77,7 +77,7 @@
         color: rgb(221 221 221);
       }
 
-      margin: 60px 0;
+      margin: theme.$spacing-extra-large 0;
       font-size: 18px;
       font-weight: 400;
       line-height: 1.85;
