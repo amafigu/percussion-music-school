@@ -2,10 +2,14 @@
 @use "#styles/media" as media;
 @import "#styles/helpers/mixins";
 
-.testimonialCarouselWrapper {
+.testimonialCarousel {
+  width: 100%;
+  padding: theme.$spacing-extra-large;
+  background: theme.$secondary-background-color;
+
   @include media.tablet-wide {
     height: auto;
-    padding: 60px 0 0;
+    padding: theme.$spacing-extra-large 0 0;
   }
 
   @include media.mobile {
@@ -13,39 +17,36 @@
     padding: 0;
   }
 
-  width: 100%;
-  min-width: 100px;
-  height: fit-content;
-  min-height: 100px;
-  padding: 60px;
-  background: theme.$secondary-background-color;
-
   .title {
+    width: 100%;
+    color: theme.$font-color-primary;
+    text-align: center;
+
+    @include standard-page-title;
+    @include user-select-none;
+
     @include media.mobile {
       @include flex-all-center;
 
       margin: 46px 0 26px;
     }
-
-    @include standard-page-title;
-
-    width: 100%;
-    color: #fff;
-    text-align: center;
-    user-select: none;
-    -webkit-text-select: none;
   }
 
-  .textAndImageContainerWrapper {
+  .container {
+    margin: theme.$spacing-extra-large 0 40px;
+
     @include media.mobile {
       margin: 0;
     }
 
-    display: flex;
-    margin: 60px 0 40px;
+    @include flex-all-center;
   }
 
-  .textAndImageContainer {
+  .testimonial {
+    cursor: pointer;
+
+    @include user-select-none;
+
     @include media.tablet-wide {
       width: 90%;
       margin: auto;
@@ -55,35 +56,32 @@
       flex-direction: column;
     }
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    user-select: none;
-    -webkit-text-select: none;
+    @include flex-all-center;
+  }
+
+  .imageContainer {
+    max-width: 460px;
+    max-height: 460px;
+
+    @include media.mobile {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    @include flex-all-center;
   }
 
   .image {
-    @include media.tablet-wide {
-      width: 100%;
-      height: calc(0.5 * 100vw);
-      border-radius: 8px;
-    }
-
-    @include media.mobile {
-      width: 100%;
-      height: calc(0.67 * 100vw);
-      border-radius: 8px;
-    }
-
-    width: 460px;
-    height: 420px;
-    user-select: none;
     border-radius: 16px;
-    -webkit-text-select: none;
+
+    @include responsive-image;
   }
 
-  .leftColumn {
+  .textColumn {
+    width: 462px;
+    height: fit-content;
+    margin-right: 120px;
+
     @include media.tablet-wide {
       width: 50%;
       margin-right: 40px;
@@ -96,13 +94,11 @@
     }
 
     @include flex-column-horizontal-center;
-
-    width: 462px;
-    height: fit-content;
-    margin-right: 120px;
   }
 
   .rightColumn {
+    pointer-events: none;
+
     @include media.mobile {
       order: 1;
       width: theme.$mobile-default-page-width;
@@ -110,7 +106,7 @@
       margin-bottom: 46px;
     }
 
-    pointer-events: none;
+    @include flex-all-center;
   }
 
   .text {
@@ -119,12 +115,11 @@
       margin-bottom: 20px;
     }
 
-    @include standard-page-content;
-
-    display: flex;
     flex-grow: 1;
-    align-items: center;
     padding: 40px 0;
+
+    @include flex-vertical-center;
+    @include standard-page-content;
   }
 
   .testimonialPerson {
@@ -137,13 +132,13 @@
   }
 
   .iconContainer {
-    display: flex;
-    justify-content: flex-start;
     width: 100%;
     font-size: 42px;
     font-weight: 800;
     line-height: 1.2;
-    color: #fff;
+    color: theme.$font-color-primary;
+
+    @include flex-start;
   }
 
   .customIcon {
@@ -151,10 +146,10 @@
   }
 
   .itemsSelectorContainer {
-    display: flex;
     gap: 20px;
-    justify-content: flex-start;
     width: 100%;
+
+    @include flex-start;
   }
 
   .selector {
@@ -167,9 +162,5 @@
       color: theme.$branding-color-primary;
       background-color: theme.$branding-color-primary;
     }
-  }
-
-  .transitionEffect {
-    transition: transform 0.3s ease-in-out;
   }
 }

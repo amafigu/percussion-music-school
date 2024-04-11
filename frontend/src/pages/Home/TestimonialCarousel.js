@@ -9,7 +9,9 @@ import Slider from "react-slick";
 import styles from "./testimonialCarousel.module.scss";
 
 const TestimonialCarousel = () => {
-  const settings = {
+  const translate = useTranslate();
+  const text = translate.components.testimonialCarousel;
+  const sliderSettings = {
     dots: true,
     infinite: true,
     autoplay: true,
@@ -18,18 +20,16 @@ const TestimonialCarousel = () => {
     slidesToScroll: 1,
   };
 
-  const translate = useTranslate();
-  const text = translate.components.testimonialCarousel;
   return (
-    <div className={styles.testimonialCarouselWrapper}>
+    <section className={styles.testimonialCarousel}>
       <div className={styles.title}>
-        <span>{camelCaseToTitleCase(text.title)}</span>
+        <h2>{camelCaseToTitleCase(text.title)}</h2>
       </div>
-      <Slider {...settings}>
+      <Slider {...sliderSettings}>
         {TESTIMONIALS.map((testimonial, index) => (
-          <div className={styles.textAndImageContainerWrapper} key={index}>
-            <div className={styles.textAndImageContainer}>
-              <div className={styles.leftColumn}>
+          <article className={styles.container} key={index}>
+            <div className={styles.testimonial}>
+              <div className={styles.textColumn}>
                 <div className={styles.iconContainer}>
                   <FontAwesomeIcon
                     icon={faQuoteLeft}
@@ -53,10 +53,10 @@ const TestimonialCarousel = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </article>
         ))}
       </Slider>
-    </div>
+    </section>
   );
 };
 
