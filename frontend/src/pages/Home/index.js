@@ -1,8 +1,8 @@
 import { useTranslate } from "#hooks/useTranslate";
 import { scrollToTop } from "#utils/utils";
 import CoursesCardTeaser from "./CoursesCardTeaser";
+import { HomeBanner } from "./HomeBanner";
 import TestimonialCarousel from "./TestimonialCarousel";
-import VideoBanner from "./VideoBanner";
 import styles from "./home.module.scss";
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <div className={styles.homePageWrapper}>
       <div className={styles.homePage}>
-        <VideoBanner />
+        <HomeBanner />
         <section className={styles.cardsSection}>
           <div className={styles.presentation}>
             <p className={styles.title}>Tierra y Aire </p>
