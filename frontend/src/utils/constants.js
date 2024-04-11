@@ -11,9 +11,6 @@ export const ROUTES = {
   },
 };
 
-export const TEASER_VIDEO =
-  "https://www.youtube.com/embed/btd8Tbcs5GU?autoplay=1&loop=1&playlist=btd8Tbcs5GU&controls=0&modestbranding=1&mute=1&showinfo=0&rel=0";
-
 export const TESTIMONIALS = [
   {
     person: "mikeTiseyra",
@@ -51,10 +48,7 @@ export const TESTIMONIALS = [
     person: "flavia",
     image: "flavia.jpg",
   },
-  {
-    person: "alicia",
-    image: "alicia.jpg",
-  },
+
   {
     person: "lilianaMartinez",
     image: "lilianaMartinez.jpg",
@@ -86,22 +80,6 @@ export const stickTechniqueCoursesPageUpperSectionBackground = {
 };
 
 // TEXT TO PLACE IN I18N
-
-export const aboutPageUpperSectionTitle = "About Tierra y Aire";
-export const aboutPageUpperSectionText =
-  " Established since 2018, the Tierra y Aire ethos has always been one of integration and sharing. Today, we have become the people’s choice for drum education as the largest specialized drum school in Rosario.";
-
-export const regularCoursesPageUpperSectionTitle = "Regular Programme";
-export const regularCoursesPageUpperSectionText =
-  "The Regular Programme is designed for students with medium to long-term goals in mastering the instrument through one-on-one weekly drum lessons..";
-
-export const shortCoursesPageUpperSectionTitle = "Short Courses";
-export const shortCoursesPageUpperSectionText =
-  "The Short Course is for students with specific goals and limited time. These courses are crafted to help you get started on learning the basic concepts to drumming.";
-
-export const corporateCoursesPageUpperSectionTitle = "Corporate ";
-export const corporateCoursesPageUpperSectionText =
-  "We incorporate drumming into team building programmes that allow our participants to experience the fun and unity through music and drums.";
 
 export const coursesPagesNavigationItems = [
   { name: "ensemble", ref: ROUTES.COURSES.ENSEMBLE },
