@@ -4,8 +4,14 @@
 
 .homeBanner {
   background-color: theme.$primary-background-color;
-
+  height: 600px;
   @include flex-all-center;
+  @include media.tablet-wide {
+    height: 400px;
+  }
+  @include media.mobile {
+    height: 240px;
+  }
 }
 
 .container {
