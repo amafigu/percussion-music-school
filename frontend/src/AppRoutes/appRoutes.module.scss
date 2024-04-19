@@ -1,0 +1,28 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.appRoutesWrapper {
+  display: flex;
+  flex-direction: column;
+
+  .content {
+    min-height: theme.$min-vh-page-wrapper;
+  }
+
+  .whatsappButton {
+    @include media.tablet-wide {
+      position: fixed;
+      top: unset;
+      bottom: 0;
+      width: 100%;
+      transform: none;
+    }
+
+    position: fixed;
+    top: 50%;
+    right: 0;
+    z-index: 5000;
+    transform: rotate(90deg) translateY(-156%);
+  }
+}

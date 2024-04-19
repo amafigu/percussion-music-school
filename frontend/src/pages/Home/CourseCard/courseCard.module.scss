@@ -1,0 +1,70 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.courseCardWrapper {
+  flex-wrap: wrap;
+  width: 320px;
+  margin: theme.$spacing-large 0;
+
+  @include media.mobile {
+    width: theme.$mobile-default-page-width;
+    height: auto;
+  }
+
+  @include flex-horizontal-center;
+
+  .courseCard {
+    width: 320px;
+    height: auto;
+    background-color: #20232d;
+    border-radius: 24px;
+  }
+
+  .image {
+    width: 100%;
+    height: 268px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .infoColumn {
+    height: 252px;
+    color: #fff;
+    background-color: #20232d;
+    border-radius: 10px;
+  }
+
+  .descriptionAndLink {
+    padding: 20px 30px 10px;
+  }
+
+  .category {
+    margin-bottom: 32px;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .text {
+    height: theme.$spacing-extra-large;
+    margin-bottom: 32px;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 128%;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: theme.$spacing-extra-large;
+    border: #fff solid 1px;
+    border-radius: 8px;
+
+    &:hover {
+      color: theme.$branding-color-primary;
+      border: theme.$branding-color-primary solid 1px;
+    }
+  }
+}

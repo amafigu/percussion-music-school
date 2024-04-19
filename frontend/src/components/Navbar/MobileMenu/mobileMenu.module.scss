@@ -1,0 +1,75 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.menuWrapper {
+  @include flex-all-center;
+
+  .menuAndMailButtonContainer {
+    @include flex-column-all-center;
+    @include z-index(mobilemenu);
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: theme.$mobile-default-page-width;
+    width: 90%;
+    background-color: theme.$option-row-background-color;
+
+    .mailButton {
+      @include mail-button;
+
+      width: 90%;
+      height: theme.$spacing-extra-large;
+      margin: 40px 0;
+    }
+  }
+
+  .menu {
+    width: theme.$mobile-default-page-width;
+
+    :last-child {
+      border-bottom: none !important;
+    }
+
+    .closeIcon {
+      color: theme.$branding-color-primary;
+    }
+
+    .listItem {
+      @include menu-list-cell;
+
+      height: theme.$spacing-extra-large;
+      cursor: pointer;
+    }
+
+    .listItem:first-child {
+      right: 0;
+      text-align: right;
+      cursor: pointer;
+      border-bottom: none !important;
+    }
+
+    .listDropdownItem {
+      @include menu-list-cell;
+
+      height: auto;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .listDropdownLinkContent {
+      @include menu-list-cell;
+
+      width: 100%;
+      height: auto;
+      border-bottom: 0;
+    }
+
+    .itemsContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
