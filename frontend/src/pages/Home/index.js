@@ -1,11 +1,11 @@
 import { useTranslate } from "#hooks/useTranslate";
 import { scrollToTop } from "#utils/utils";
-import CoursesCardTeaser from "./CoursesCardTeaser";
+import { CoursesCardTeaser } from "./CoursesCardTeaser";
 import { HomeBanner } from "./HomeBanner";
-import TestimonialCarousel from "./TestimonialCarousel";
+import { TestimonialCarousel } from "./TestimonialCarousel";
 import styles from "./home.module.scss";
 
-const Home = () => {
+export const Home = () => {
   const translate = useTranslate();
   const text = translate.pages.home;
 
@@ -29,5 +29,3 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;
