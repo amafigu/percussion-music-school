@@ -5,11 +5,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./footer.module.scss";
 
-const Footer = () => {
+export const Footer = () => {
   const translate = useTranslate();
   const text = translate.components.footer;
   return (
-    <div className={styles.footerWrapper}>
+    <footer className={styles.footerWrapper}>
       <div className={styles.footer}>
         <div className={styles.columnsContainer}>
           <div className={`${styles.column} ${styles.logoColumn}`}>
@@ -85,8 +85,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
-
-export default Footer;
