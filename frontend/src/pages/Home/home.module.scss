@@ -15,17 +15,17 @@
 
     .hidden {
       height: 100vh;
-      background-color: #202027;
+      background-color: theme.$primary-background-color;
       opacity: 0;
     }
   }
 
   .cardsSection {
-    background-color: #202027;
+    background-color: theme.$primary-background-color;
 
     .cardTeaserContainer {
       margin-bottom: theme.$spacing-extra-large;
-      background-color: #202027;
+      background-color: theme.$primary-background-color;
     }
   }
 
@@ -37,7 +37,7 @@
     width: 38%;
     margin: auto;
     text-align: center;
-    background-color: #202027;
+    background-color: theme.$primary-background-color;
 
     .title {
       @include media.mobile {
