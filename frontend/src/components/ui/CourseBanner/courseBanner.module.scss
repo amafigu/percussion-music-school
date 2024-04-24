@@ -87,10 +87,8 @@
 
       .position {
         margin-bottom: 40px;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 1.85;
         color: theme.$font-color-secondary;
+        @include typography-semi-medium-normal;
       }
 
       .socialIcons {

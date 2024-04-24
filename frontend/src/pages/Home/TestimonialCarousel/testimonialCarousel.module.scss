@@ -133,7 +133,7 @@
 
   .iconContainer {
     width: 100%;
-    @include font-huge-extra-bold;
+    @include typography-huge-extra-bold;
     color: theme.$font-color-primary;
 
     @include flex-start;
