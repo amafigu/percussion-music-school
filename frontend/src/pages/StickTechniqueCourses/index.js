@@ -1,7 +1,5 @@
-import {
-  ensembleCoursesPageAdvancedBannerImage,
-  stickTechniqueCoursesPageUpperSectionBackground,
-} from "#utils/constants";
+import { stickTechniqueCoursesPageUpperSectionBackground } from "#constants/backgroundImages";
+import { ensembleCoursesPageAdvancedBannerImage } from "#constants/linkImages";
 import React from "react";
 import { CoursePageContent } from "../CoursePageContent";
 

@@ -1,7 +1,6 @@
+import { coursesPagesNavigationItems } from "#constants/coursesPagesNavigationItems";
 import { useNavigateToPage } from "#hooks/useNavigateToPage";
 import { useTranslate } from "#hooks/useTranslate";
-import { coursesPagesNavigationItems } from "#utils/constants";
-
 import React from "react";
 import styles from "./dropdownMenu.module.scss";
 

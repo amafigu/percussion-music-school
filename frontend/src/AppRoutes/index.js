@@ -1,6 +1,7 @@
 import { Footer } from "#components/Footer";
 import { Navbar } from "#components/Navbar";
 import { WhatsAppButton } from "#components/ui/WhatsAppButton";
+import { ROUTES } from "#constants/routes";
 import { About } from "#pages/About";
 import { EnsembleCompositionCourses } from "#pages/EnsembleCompositionCourses";
 import { EnsembleCourses } from "#pages/EnsembleCourses";
@@ -10,7 +11,6 @@ import { MusicalDirectionCourses } from "#pages/MusicalDirectionCourses";
 import { MusicalLanguageCourses } from "#pages/MusicalLanguageCourses";
 import { PageNotFound } from "#pages/PageNotFound";
 import { StickTechniqueCourses } from "#pages/StickTechniqueCourses";
-import { ROUTES } from "#utils/constants";
 import { Route, Routes } from "react-router-dom";
 import styles from "./appRoutes.module.scss";
 

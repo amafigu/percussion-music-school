@@ -1,8 +1,6 @@
+import { musicalLanguageCoursesPageUpperSectionBackground } from "#constants/backgroundImages";
+import { ensembleCoursesPageIntermediateBannerImage } from "#constants/linkImages";
 import { CoursePageContent } from "#pages/CoursePageContent";
-import {
-  ensembleCoursesPageIntermediateBannerImage,
-  musicalLanguageCoursesPageUpperSectionBackground,
-} from "#utils/constants";
 import React from "react";
 
 export const HandTechniqueCourses = () => {

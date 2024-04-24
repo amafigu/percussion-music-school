@@ -1,7 +1,7 @@
 import { LanguagesDropdown } from "#components/ui/LanguagesDropdown";
+import { ROUTES } from "#constants/routes";
 import { useNavigateToPage } from "#hooks/useNavigateToPage";
 import { useTranslate } from "#hooks/useTranslate";
-import { ROUTES } from "#utils/constants";
 import {
   faChevronDown,
   faChevronUp,

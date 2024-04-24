@@ -1,9 +1,8 @@
+import { TESTIMONIALS } from "#constants/testimonials";
 import { useTranslate } from "#hooks/useTranslate";
-import { TESTIMONIALS } from "#utils/constants";
 import { camelCaseToTitleCase } from "#utils/utils";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import React from "react";
 import Slider from "react-slick";
 import styles from "./testimonialCarousel.module.scss";

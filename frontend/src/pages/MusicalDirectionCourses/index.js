@@ -1,7 +1,5 @@
-import {
-  musicalLanguageCoursesPageUpperSectionBackground,
-  stickTechniqueCoursePageOfferImage,
-} from "#utils/constants";
+import { musicalLanguageCoursesPageUpperSectionBackground } from "#constants/backgroundImages";
+import { stickTechniqueCoursePageOfferImage } from "#constants/linkImages";
 import React from "react";
 import { CoursePageContent } from "../CoursePageContent";
 

@@ -1,8 +1,6 @@
+import { ensembleCoursesPageUpperSectionBackground } from "#constants/backgroundImages";
+import { ensembleCoursesPageBeginnerBannerImage } from "#constants/linkImages";
 import { CoursePageContent } from "#pages/CoursePageContent";
-import {
-  ensembleCoursesPageBeginnerBannerImage,
-  ensembleCoursesPageUpperSectionBackground,
-} from "#utils/constants";
 import React from "react";
 
 export const EnsembleCourses = () => {

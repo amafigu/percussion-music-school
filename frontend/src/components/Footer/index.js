@@ -1,5 +1,5 @@
+import { coursesPagesNavigationItems } from "#constants/coursesPagesNavigationItems";
 import { useTranslate } from "#hooks/useTranslate";
-import { coursesPagesNavigationItems } from "#utils/constants";
 import { camelCaseToTitleCase } from "#utils/utils";
 import React from "react";
 import { Link } from "react-router-dom";

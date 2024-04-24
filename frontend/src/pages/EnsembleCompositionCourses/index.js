@@ -1,7 +1,5 @@
-import {
-  ensembleCoursesPageUpperSectionBackground,
-  musicalLanguageCoursePageImage,
-} from "#utils/constants";
+import { ensembleCoursesPageUpperSectionBackground } from "#constants/backgroundImages";
+import { musicalLanguageCoursePageImage } from "#constants/linkImages";
 import React from "react";
 import { CoursePageContent } from "../CoursePageContent";
 

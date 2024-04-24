@@ -129,7 +129,7 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 1.85;
-  color: #ddd;
+  color: theme.$font-color-secondary;
   opacity: 0.8;
 
   @include media.tablet-wide {

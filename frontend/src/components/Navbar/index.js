@@ -1,6 +1,6 @@
 import { LanguagesDropdown } from "#components/ui/LanguagesDropdown";
+import { ROUTES } from "#constants/routes";
 import { useTranslate } from "#hooks/useTranslate";
-import { ROUTES } from "#utils/constants";
 import {
   faBars,
   faChevronDown,
