@@ -12,7 +12,7 @@
     height: 90px;
   }
 
-  @include flex-horizontal-center;
+  @include flex-justify-center;
 
   ul {
     @include media.mobile {

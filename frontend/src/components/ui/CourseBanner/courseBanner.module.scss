@@ -94,7 +94,7 @@
       }
 
       .socialIcons {
-        @include flex-horizontal-center;
+        @include flex-justify-center;
 
         flex-direction: column;
         width: 100%;

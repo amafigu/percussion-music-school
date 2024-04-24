@@ -12,7 +12,7 @@
     height: auto;
   }
 
-  @include flex-horizontal-center;
+  @include flex-justify-center;
 
   .courseCard {
     width: 320px;

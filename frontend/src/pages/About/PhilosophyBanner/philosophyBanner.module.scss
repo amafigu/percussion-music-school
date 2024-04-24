@@ -4,7 +4,7 @@
 
 .philosophyBanner {
   @include media.mobile {
-    @include flex-horizontal-center;
+    @include flex-justify-center;
   }
 }
 

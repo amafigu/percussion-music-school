@@ -3,12 +3,12 @@
 @import "#styles/helpers/mixins";
 
 .homePageWrapper {
-  @include flex-horizontal-center;
+  @include flex-justify-center;
 
   align-items: center;
 
   .homePage {
-    @include flex-horizontal-center;
+    @include flex-justify-center;
 
     flex-direction: column;
     width: 100%;

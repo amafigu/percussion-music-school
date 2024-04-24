@@ -2,7 +2,7 @@
 @use "../media" as media;
 @use "./functions" as functions;
 
-@mixin flex-horizontal-center {
+@mixin flex-justify-center {
   display: flex;
   justify-content: center;
 }
@@ -82,7 +82,7 @@
 }
 
 @mixin mail-button {
-  @include flex-horizontal-center;
+  @include flex-justify-center;
 
   width: 172px;
   height: theme.$spacing-extra-large;
