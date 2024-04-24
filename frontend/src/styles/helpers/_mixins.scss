@@ -161,3 +161,9 @@
   user-select: none;
   -webkit-text-select: none;
 }
+
+@mixin font-huge-extra-bold {
+  font-size: theme.$font-size-huge;
+  font-weight: theme.$font-weight-extra-bold;
+  line-height: theme.$line-height-primary;
+}

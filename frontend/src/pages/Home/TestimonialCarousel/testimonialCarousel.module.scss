@@ -125,7 +125,7 @@
   .testimonialPerson {
     width: 100%;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: theme.$font-weight-bold;
     line-height: 32px;
     color: theme.$branding-color-primary;
     text-align: left;
@@ -133,9 +133,7 @@
 
   .iconContainer {
     width: 100%;
-    font-size: 42px;
-    font-weight: 800;
-    line-height: 1.2;
+    @include font-huge-extra-bold;
     color: theme.$font-color-primary;
 
     @include flex-start;
