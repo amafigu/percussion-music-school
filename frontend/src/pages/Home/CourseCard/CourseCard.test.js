@@ -2,7 +2,7 @@ import { translate } from "#__mocks__/translate";
 import { useTranslate } from "#hooks/useTranslate";
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
-import CourseCard from "./CourseCard";
+import { CourseCard } from "./index";
 
 jest.mock("#hooks/useTranslate");
 
