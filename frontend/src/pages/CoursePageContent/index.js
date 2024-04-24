@@ -1,9 +1,9 @@
 import { CourseBanner } from "#components/ui/CourseBanner";
 import { NavigationMenu } from "#components/ui/NavigationMenu";
 import { UpperBanner } from "#components/ui/UpperBanner";
+import { coursesPagesNavigationItems } from "#constants/coursesPagesNavigationItems";
 import { useNavigateToPage } from "#hooks/useNavigateToPage";
 import { useTranslate } from "#hooks/useTranslate";
-import { coursesPagesNavigationItems } from "#utils/constants";
 import { scrollToTop } from "#utils/utils";
 import React from "react";
 import styles from "./coursePageContent.module.scss";
