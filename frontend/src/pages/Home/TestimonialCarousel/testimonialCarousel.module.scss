@@ -118,7 +118,7 @@
     flex-grow: 1;
     padding: 40px 0;
 
-    @include flex-vertical-center;
+    @include flex-align-center;
     @include standard-page-content;
   }
 

@@ -31,7 +31,7 @@
     height: auto;
   }
 
-  @include flex-vertical-center;
+  @include flex-align-center;
 
   .paragraphsContainer {
     @include media.desktop {

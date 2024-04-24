@@ -49,7 +49,7 @@
       height: 90px;
     }
 
-    @include flex-vertical-center;
+    @include flex-align-center;
 
     justify-content: space-between;
     width: 70%;
@@ -84,7 +84,7 @@
     }
 
     .column {
-      @include flex-vertical-center;
+      @include flex-align-center;
 
       gap: 40px;
 
@@ -95,7 +95,7 @@
           margin-right: 12px;
         }
 
-        @include flex-vertical-center;
+        @include flex-align-center;
       }
 
       .logoContainer {
