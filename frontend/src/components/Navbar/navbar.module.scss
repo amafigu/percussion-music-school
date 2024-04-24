@@ -103,7 +103,7 @@
         align-items: center;
 
         .text {
-          font-weight: 800;
+          font-weight: theme.$font-weight-extra-bold;
           line-height: 128%;
           opacity: 0.9;
           transform: scale(1, 1.1);
@@ -133,7 +133,7 @@
 
         .linkContent {
           font-family: theme.$main-font-family;
-          font-weight: 600;
+          font-weight: theme.$font-weight-semibold;
           text-transform: uppercase;
 
           &:hover {

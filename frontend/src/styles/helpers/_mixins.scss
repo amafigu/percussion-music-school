@@ -94,7 +94,7 @@
   height: theme.$spacing-extra-large;
   padding: 18px 35px;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: theme.$font-weight-medium;
   line-height: 1.5;
   color: theme.$primary-background-color;
   background-color: theme.$branding-color-primary;
@@ -111,7 +111,7 @@
 
 @mixin standard-page-title {
   font-size: 42px;
-  font-weight: 800;
+  font-weight: theme.$font-weight-extra-bold;
   line-height: 128%;
   letter-spacing: 0;
 
@@ -122,7 +122,7 @@
 
 @mixin standard-page-subtitle {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: theme.$font-weight-semibold;
   line-height: 128%;
   letter-spacing: 0;
 
@@ -133,7 +133,7 @@
 
 @mixin standard-page-content {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: theme.$font-weight-normal;
   line-height: 1.85;
   color: theme.$font-color-secondary;
   opacity: 0.8;

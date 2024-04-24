@@ -33,7 +33,7 @@
     .title {
       margin: theme.$spacing-extra-large 0;
       font-size: 22px;
-      font-weight: 600;
+      font-weight: theme.$font-weight-semibold;
       color: theme.$branding-color-primary;
       @include media.mobile {
         margin: 40px 0 20px;

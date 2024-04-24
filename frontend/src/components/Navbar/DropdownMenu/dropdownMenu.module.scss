@@ -16,14 +16,14 @@
 
   .listItem {
     @include media.mobile {
-      font-weight: 400;
+      font-weight: theme.$font-weight-normal;
       border-bottom: 1px solid theme.$border-color-dark;
     }
 
     padding: 14px 20px;
     font-size: 16px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: theme.$font-weight-semibold;
     line-height: 1.5;
     color: theme.$font-color-primary;
     text-transform: uppercase;

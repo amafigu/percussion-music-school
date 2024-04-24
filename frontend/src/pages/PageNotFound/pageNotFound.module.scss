@@ -72,7 +72,7 @@
 
     @include main-button;
 
-    font-weight: 400;
+    font-weight: theme.$font-weight-normal;
     color: #ed068a;
 
     &:hover {
