@@ -30,7 +30,7 @@
 
   .infoColumn {
     height: 252px;
-    color: #fff;
+    color: theme.$font-color-primary;
     background-color: #20232d;
     border-radius: 10px;
   }
@@ -59,7 +59,7 @@
     align-items: center;
     justify-content: center;
     height: theme.$spacing-extra-large;
-    border: #fff solid 1px;
+    border: theme.$font-color-primary solid 1px;
     border-radius: 8px;
 
     &:hover {
