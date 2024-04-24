@@ -1,4 +1,5 @@
 $font-color-primary: #fff;
+$font-color-secondary: #ddd;
 $branding-color-primary: #ed068a;
 $primary-background-color: #202027;
 $secondary-background-color: #12141d;
@@ -14,13 +15,13 @@ $spacing-extra-large: 4rem;
 $spacing-large: 2.5rem;
 $spacing-regular: 1.5rem;
 $border-radius-small: 4px;
-$z-index: (
-  whatsappbuttonposition: 500,
-  bannertext: 300,
-  mobilemenu: 9999,
-  dropdownmenu: 700,
-  homebannerimage: 1,
-  homebannertext: 2,
-);
 $min-vh-page-wrapper: 65vh;
 $mobile-default-page-width: 90%;
+$z-index: (
+  homebannerimage: 100,
+  homebannertext: 200,
+  bannertext: 300,
+  whatsappbuttonposition: 400,
+  dropdownmenu: 500,
+  mobilemenu: 600,
+);

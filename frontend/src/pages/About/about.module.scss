@@ -1,0 +1,104 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.aboutPageWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.aboutPage {
+  width: 100%;
+  min-height: theme.$min-vh-page-wrapper;
+  background-color: theme.$secondary-background-color;
+  scroll-behavior: smooth;
+}
+
+.philosophySectionBackgroundImage {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+
+  @include media.tablet-wide {
+    height: auto;
+  }
+
+  @include flex-all-center;
+}
+
+.imageForBigScreen {
+  @include background-image;
+}
+
+.text {
+  @include z-index(bannerText);
+
+  @include media.tablet-wide {
+    display: flex;
+    flex-direction: column;
+    width: 84%;
+  }
+
+  width: 80%;
+  margin: 100px 0;
+
+  .title {
+    @include media.tablet-wide {
+      font-size: 32px !important;
+    }
+
+    @include media.mobile {
+      width: 100%;
+    }
+
+    @include standard-page-title;
+
+    opacity: 0.8;
+  }
+
+  .subtitle {
+    @include media.tablet-wide {
+      width: 60%;
+      font-size: 22px;
+      line-height: 1.45;
+    }
+
+    @include media.tablet-narrow {
+      width: 80%;
+      font-size: 22px;
+      line-height: 1.45;
+    }
+
+    width: 80%;
+    margin: 2rem 0;
+    overflow: hidden;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.85;
+    color: theme.$font-color-secondary;
+  }
+
+  .content {
+    @include media.widescreen {
+      width: 50%;
+    }
+
+    @include media.tablet-narrow {
+      width: 100%;
+    }
+
+    @include standard-page-content;
+
+    width: 82%;
+    margin-bottom: 20px;
+  }
+}
+
+.founderSection {
+  @include media.mobile {
+    margin: 30px 0;
+  }
+
+  width: 100%;
+  margin: theme.$spacing-extra-large 0;
+}

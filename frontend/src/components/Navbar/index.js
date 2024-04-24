@@ -1,6 +1,6 @@
-import LanguagesDropdown from "#components/ui/LanguagesDropdown";
+import { LanguagesDropdown } from "#components/ui/LanguagesDropdown";
+import { ROUTES } from "#constants/routes";
 import { useTranslate } from "#hooks/useTranslate";
-import { ROUTES } from "#utils/constants";
 import {
   faBars,
   faChevronDown,
@@ -10,11 +10,11 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { React, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import DropdownMenu from "./DropdownMenu";
-import MobileMenu from "./MobileMenu";
+import { DropdownMenu } from "./DropdownMenu";
+import { MobileMenu } from "./MobileMenu";
 import styles from "./navbar.module.scss";
 
-const Navbar = () => {
+export const Navbar = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isLanguageDropdownOpen, setLanguageDropdownOpen] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -116,5 +116,3 @@ const Navbar = () => {
     </div>
   );
 };
-
-export default Navbar;

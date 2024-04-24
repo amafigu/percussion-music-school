@@ -1,15 +1,13 @@
 import { BrowserRouter } from "react-router-dom";
-import AppRoutes from "./AppRoutes";
+import { AppRoutes } from "./AppRoutes";
 import { LocaleContextProvider } from "./context/localeContext";
 
-const App = () => {
+export const App = () => {
   return (
     <BrowserRouter>
       <LocaleContextProvider>
-        <AppRoutes></AppRoutes>
+        <AppRoutes />
       </LocaleContextProvider>
     </BrowserRouter>
   );
 };
-
-export default App;

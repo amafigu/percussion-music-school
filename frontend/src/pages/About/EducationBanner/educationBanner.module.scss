@@ -1,0 +1,64 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.logoAndTextContainer {
+  @include media.widescreen {
+    width: 70%;
+  }
+
+  @include media.desktop {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  @include flex-vertical-center;
+
+  width: 80%;
+
+  .logoAboveText {
+    @include media.tablet-wide {
+      width: theme.$mobile-default-page-width;
+      margin: auto;
+    }
+
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding-right: 2%;
+
+    .logo {
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+    }
+
+    .text {
+      @include media.mobile {
+        margin-top: 20px;
+      }
+
+      @include standard-page-title;
+    }
+  }
+
+  .paragraphsContainer {
+    @include media.desktop {
+      width: theme.$mobile-default-page-width;
+      padding-right: 0;
+      margin-top: 40px;
+    }
+
+    width: 66%;
+    padding-right: 120px;
+
+    .paragraphs {
+      @include media.mobile {
+        margin-bottom: 20px;
+      }
+
+      @include standard-page-content;
+    }
+  }
+}
