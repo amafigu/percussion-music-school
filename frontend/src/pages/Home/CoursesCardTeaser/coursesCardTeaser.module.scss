@@ -5,7 +5,7 @@
 .coursesCardTeaserWrapper {
   width: 100%;
 
-  @include flex-column-horizontal-center;
+  @include flex-column-align-center;
 
   .coursesCardTeaser {
     display: flex;

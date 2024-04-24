@@ -93,7 +93,7 @@
       margin-right: 0;
     }
 
-    @include flex-column-horizontal-center;
+    @include flex-column-align-center;
   }
 
   .rightColumn {
