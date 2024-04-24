@@ -3,21 +3,21 @@
 @import "#styles/helpers/mixins";
 
 .dropdownMenu {
-  @include z-index(dropdownmenu);
+  color: theme.$font-color-primary;
+  transition: all 2s linear;
 
   @include media.tablet-narrow {
     background-color: theme.$border-or-background-color-dark;
   }
 
-  display: flex;
-  flex-direction: column;
-  color: theme.$font-color-primary;
-  transition: all 2s linear;
+  @include flex-column;
+
+  @include z-index(dropdownmenu);
 
   .listItem {
     @include media.mobile {
       font-weight: 400;
-      border-bottom: 1px solid #30343f;
+      border-bottom: 1px solid theme.$border-color-dark;
     }
 
     padding: 14px 20px;
