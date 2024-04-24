@@ -28,6 +28,12 @@
   flex-direction: column;
 }
 
+@mixin flex-column-justify-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 @mixin flex-column-align-center {
   display: flex;
   flex-direction: column;
