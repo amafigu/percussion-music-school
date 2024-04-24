@@ -100,7 +100,7 @@
     height: auto;
     padding: 16px 0;
     margin-top: 20px;
-    font-size: 14px;
+    font-size: theme.$font-size-small;
   }
 
   @include media.mobile {
