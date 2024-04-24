@@ -3,13 +3,13 @@
 @import "#styles/helpers/mixins";
 
 .footerWrapper {
+  background-color: theme.$primary-background-color;
+
   @include media.mobile {
     position: relative;
   }
 
   @include flex-justify-center;
-
-  background-color: theme.$primary-background-color;
 
   .footer {
     @include media.tablet-narrow {
@@ -17,42 +17,40 @@
       height: auto;
     }
 
-    display: flex;
-    flex-direction: column;
     width: 80%;
     background-color: theme.$primary-background-color;
+    @include flex-column;
 
     .columnsContainer {
-      @include media.mobile {
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-        padding-top: 50px;
-        text-align: center;
-      }
-
-      @include media.tablet-wide {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-        height: auto;
-        padding-top: 50px;
-        text-align: center;
-      }
-
-      display: flex;
       gap: 100px;
-      justify-content: center;
       height: 384px;
       padding-top: 80px;
 
+      @include flex-justify-center;
+
+      @include media.mobile {
+        height: auto;
+        padding-top: 50px;
+        text-align: center;
+
+        @include flex-column-align-center;
+      }
+
+      @include media.tablet-wide {
+        gap: 20px;
+        height: auto;
+        padding-top: 50px;
+        text-align: center;
+
+        @include flex-column-align-center;
+      }
+
       .column {
+        @include flex-column;
+
         @include media.mobile {
           width: theme.$mobile-default-page-width !important;
         }
-
-        display: flex;
-        flex-direction: column;
 
         .title {
           margin-bottom: 16px;
@@ -82,7 +80,7 @@
           .content {
             font-size: 16px;
             line-height: 1;
-            color: #a8a8a8;
+            color: theme.$font-color-footer;
 
             &:hover {
               color: theme.$branding-color-primary;
@@ -112,7 +110,7 @@
             max-width: 160px;
           }
 
-          color: #a8a8a8;
+          color: theme.$font-color-footer;
         }
 
         .logoContainer {
@@ -143,17 +141,16 @@
     }
 
     .copyright {
-      flex-direction: column;
-      justify-content: center;
+      @include flex-column-justify-center;
       width: 100%;
       height: auto;
       padding: 0 24px;
       margin: 40px 0 80px;
-      font-size: 14px;
+      font-size: theme.$font-size-small;
       font-style: normal;
-      font-weight: 400;
-      line-height: 20.3px;
-      color: #606060;
+      font-weight: theme.$font-weight-normal;
+      line-height: theme.$line-height-primary;
+      color: theme.$font-color-copyright;
       text-align: center;
 
       .textCopyright {

@@ -6,7 +6,7 @@
   @include z-index(dropdownmenu);
 
   @include media.tablet-narrow {
-    background-color: #3b3e4b;
+    background-color: theme.$border-or-background-color-dark;
   }
 
   display: flex;
@@ -28,7 +28,7 @@
     color: #fff;
     text-transform: uppercase;
     cursor: pointer;
-    border-bottom: 1px solid #3b3e4b;
+    border-bottom: 1px solid theme.$border-or-background-color-dark;
 
     &:hover {
       color: theme.$branding-color-primary;
