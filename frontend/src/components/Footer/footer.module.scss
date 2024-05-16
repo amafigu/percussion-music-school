@@ -1,0 +1,184 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.footerWrapper {
+  background-color: theme.$primary-background-color;
+
+  @include media.mobile {
+    position: relative;
+  }
+
+  @include flex-justify-center;
+
+  .footer {
+    @include media.tablet-narrow {
+      width: 100%;
+      height: auto;
+    }
+
+    width: 80%;
+    background-color: theme.$primary-background-color;
+    @include flex-column;
+
+    .columnsContainer {
+      gap: 100px;
+      height: 384px;
+      padding-top: 80px;
+
+      @include flex-justify-center;
+
+      @include media.mobile {
+        height: auto;
+        padding-top: 50px;
+        text-align: center;
+
+        @include flex-column-align-center;
+      }
+
+      @include media.tablet-wide {
+        gap: 20px;
+        height: auto;
+        padding-top: 50px;
+        text-align: center;
+
+        @include flex-column-align-center;
+      }
+
+      .column {
+        @include flex-column;
+
+        @include media.mobile {
+          width: theme.$mobile-default-page-width !important;
+        }
+
+        .title {
+          margin-bottom: 16px;
+          font-family: theme.$main-font-family;
+          font-weight: theme.$font-weight-semibold;
+        }
+
+        .icons {
+          @include media.mobile {
+            gap: 30px;
+            width: fit-content;
+            margin: auto;
+          }
+
+          display: flex;
+          gap: 40px;
+          justify-content: space-around;
+        }
+
+        .customIcon {
+          color: theme.$branding-color-primary;
+        }
+
+        .link {
+          padding: 10px 0;
+
+          .content {
+            font-size: 16px;
+            line-height: 1;
+            color: theme.$font-color-footer;
+
+            &:hover {
+              color: theme.$branding-color-primary;
+            }
+          }
+        }
+      }
+
+      .socialColumn {
+        width: 164px;
+
+        .title {
+          @include media.mobile {
+            margin-bottom: 26px;
+          }
+        }
+      }
+
+      .logoColumn {
+        @include media.tablet-wide {
+          width: 90%;
+          margin-bottom: 4px;
+        }
+
+        .teaserText {
+          @include media.desktop-up {
+            max-width: 160px;
+          }
+
+          color: theme.$font-color-footer;
+        }
+
+        .logoContainer {
+          @include media.tablet-wide {
+            @include flex-all-center;
+
+            margin-bottom: 40px;
+          }
+
+          display: flex;
+          margin-bottom: 40px;
+
+          .logo {
+            width: 66px;
+            height: 66px;
+            margin-right: 8px;
+            border-radius: 50%;
+          }
+
+          .text {
+            .word {
+              font-size: 20px;
+              font-weight: theme.$font-weight-bold;
+            }
+          }
+        }
+      }
+    }
+
+    .copyright {
+      @include flex-column-justify-center;
+      width: 100%;
+      height: auto;
+      padding: 0 24px;
+      margin: 40px 0 80px;
+      font-size: theme.$font-size-small;
+      font-style: normal;
+      font-weight: theme.$font-weight-normal;
+      line-height: theme.$line-height-primary;
+      color: theme.$font-color-copyright;
+      text-align: center;
+
+      .textCopyright {
+        margin-bottom: 40px;
+
+        @include media.widescreen {
+          margin-bottom: 40px;
+        }
+      }
+
+      .links {
+        @include media.tablet-wide {
+          margin-bottom: 32px;
+        }
+      }
+
+      .linkLegal {
+        &:hover {
+          color: theme.$branding-color-primary !important;
+          cursor: pointer;
+        }
+      }
+
+      .columns {
+        @include media.mobile {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

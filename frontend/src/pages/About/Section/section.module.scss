@@ -1,0 +1,21 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.educationSection {
+  width: 80%;
+  margin: 60px auto;
+  background-color: theme.$secondary-background-color;
+
+  @include media.tablet-wide {
+    margin: 0 auto;
+  }
+
+  @include flex-column-align-center;
+}
+
+.philosophySection {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+}

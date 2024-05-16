@@ -1,0 +1,56 @@
+@use "#styles/media" as media;
+@use "#styles/theme" as theme;
+@import "#styles/helpers/mixins";
+
+.languageDropdownMenuWrapper {
+  @include z-index(dropdownmenu);
+
+  display: flex;
+  flex-direction: column;
+  font-family: arial, sans-serif;
+  font-weight: theme.$font-weight-semibold;
+  color: theme.$font-color-primary;
+  text-transform: uppercase;
+  transition: all 2s linear;
+
+  .listItem {
+    @include media.mobile {
+      font-weight: theme.$font-weight-normal;
+      border-bottom: 1px solid theme.$border-color-dark;
+    }
+
+    padding: 14px 20px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: theme.$font-weight-semibold;
+    line-height: 1.5;
+    color: theme.$font-color-primary;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-bottom: 1px solid theme.$border-or-background-color-dark;
+
+    &:hover {
+      color: theme.$branding-color-primary;
+    }
+  }
+
+  .listItem:last-child {
+    border-bottom: none;
+  }
+
+  @include media.tablet-narrow {
+    background-color: theme.$border-or-background-color-dark;
+  }
+
+  @include media.mobile {
+    border: none;
+  }
+
+  .activeCategory {
+    color: theme.$branding-color-primary;
+  }
+
+  .linkContent {
+    cursor: pointer;
+  }
+}

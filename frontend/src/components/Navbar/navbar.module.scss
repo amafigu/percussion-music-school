@@ -1,0 +1,171 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.navbarWrapper {
+  @include media.mobile {
+    display: block;
+    width: 100%;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: theme.$primary-background-color;
+
+  .menuWrapper {
+    @include media.tablet-narrow {
+      display: flex;
+    }
+
+    display: none;
+  }
+
+  .languageIcon {
+    margin-right: 6px;
+  }
+
+  .languageChevronContainerWrapper {
+    min-width: fit-content;
+  }
+
+  .languageChevronContainer {
+    cursor: pointer;
+  }
+
+  .navbar {
+    @include media.mobile {
+      width: 100%;
+      height: 90px;
+    }
+
+    @include media.tablet-wide {
+      width: 94%;
+      height: 90px;
+    }
+
+    @include media.desktop-only {
+      width: 84%;
+      height: 90px;
+    }
+
+    @include flex-align-center;
+
+    justify-content: space-between;
+    width: 70%;
+    height: 100px;
+    background-color: theme.$primary-background-color;
+
+    .left {
+      @include media.tablet-narrow {
+        flex-grow: 1 !important;
+        justify-content: space-between;
+        margin: 0 20px 0 10px;
+      }
+
+      .menuIconWrapper {
+        @include media.tablet-narrow {
+          display: block;
+          cursor: pointer;
+        }
+
+        display: none;
+      }
+    }
+
+    .right {
+      @include media.mobile {
+        display: none;
+      }
+
+      @include media.tablet-narrow {
+        display: none !important;
+      }
+    }
+
+    .column {
+      @include flex-align-center;
+
+      gap: 40px;
+
+      .reactLink {
+        margin-right: 18px;
+
+        @include media.mobile {
+          margin-right: 12px;
+        }
+
+        @include flex-align-center;
+      }
+
+      .logoContainer {
+        display: flex;
+        align-items: center;
+
+        .text {
+          font-weight: theme.$font-weight-extra-bold;
+          line-height: 128%;
+          opacity: 0.9;
+          transform: scale(1, 1.1);
+        }
+      }
+
+      .logo {
+        @include media.mobile {
+          width: 70px;
+          height: 70px;
+        }
+
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+
+      .link {
+        position: relative;
+        min-width: fit-content;
+        cursor: pointer;
+
+        @include media.mobile {
+          display: none;
+        }
+
+        .linkContent {
+          font-family: theme.$main-font-family;
+          font-weight: theme.$font-weight-semibold;
+          text-transform: uppercase;
+
+          &:hover {
+            color: #ed068a;
+          }
+        }
+
+        .linkCourses {
+          margin-right: 6px;
+        }
+      }
+
+      .mailButton {
+        @include mail-button;
+      }
+
+      .hideForMobile {
+        @include media.mobile {
+          display: none;
+        }
+      }
+
+      .menuDropdown {
+        @include flex-column;
+        @include z-index(dropdownmenu);
+
+        position: absolute;
+        margin-top: 20px;
+        background-color: theme.$secondary-background-color;
+        border-radius: 8px;
+        box-shadow: theme.$main-box-shadow;
+      }
+    }
+  }
+}

@@ -1,0 +1,214 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.imageAndTextLayerContainer {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 80px;
+
+  @include media.tablet-wide {
+    flex-direction: column;
+    width: theme.$mobile-default-page-width;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  @include flex-justify-center;
+}
+
+.logoAndTextContainer {
+  width: 80%;
+
+  @include media.widescreen {
+    width: 70%;
+  }
+
+  @include media.desktop {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  @include flex-align-center;
+
+  .paragraphsContainer {
+    @include media.desktop {
+      width: theme.$mobile-default-page-width;
+      padding-right: 0;
+      margin-top: 40px;
+    }
+
+    width: 66%;
+    padding-right: 120px;
+
+    .paragraphs {
+      @include media.mobile {
+        margin-bottom: 20px;
+      }
+
+      @include standard-page-content;
+    }
+  }
+}
+
+.logoAboveText {
+  @include media.tablet-wide {
+    width: theme.$mobile-default-page-width;
+    margin: auto;
+  }
+
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding-right: 2%;
+
+  .logo {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+  }
+
+  .text {
+    @include media.mobile {
+      margin-top: 20px;
+    }
+
+    @include standard-page-title;
+  }
+}
+
+.imageEducation {
+  width: 100%;
+  border-radius: 24px;
+  opacity: 0.8;
+  object-fit: cover;
+}
+
+.textLayer {
+  @include media.widescreen {
+    width: 50%;
+    height: auto;
+    padding: 32px 0;
+    margin-top: 40px;
+    font-size: 16px;
+  }
+
+  @include media.tablet-wide {
+    width: 76%;
+    height: auto;
+    padding: 16px 0;
+    margin-top: 20px;
+    font-size: theme.$font-size-small;
+  }
+
+  @include media.mobile {
+    position: static;
+    right: unset;
+    bottom: unset;
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+  }
+
+  @include flex-all-center;
+
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  width: 620px;
+  height: 180px;
+  background: #20232d;
+  border-radius: 10px;
+
+  .text {
+    @include media.mobile {
+      margin: 30px auto;
+    }
+
+    width: 80%;
+    font-style: normal;
+    color: theme.$font-color-secondary;
+    opacity: 0.9;
+    @include typography-semi-medium-normal;
+  }
+}
+
+.imagePhilosophy {
+  width: 100%;
+  height: 100%;
+}
+
+.textPhilosophy {
+  position: absolute;
+  top: 80px;
+  right: 80px;
+}
+
+.textPhilosophyContainer {
+  position: absolute;
+  top: 40px;
+  right: 80px;
+  width: 80%;
+  margin: 100px 0;
+
+  @include z-index(bannerText);
+
+  @include media.tablet-wide {
+    display: flex;
+    flex-direction: column;
+    width: 84%;
+  }
+}
+
+.philosophyContent {
+  @include media.widescreen {
+    width: 50%;
+  }
+
+  @include media.tablet-narrow {
+    width: 100%;
+  }
+
+  @include standard-page-content;
+
+  width: 82%;
+  margin-bottom: 20px;
+}
+
+.philosophyTitle {
+  opacity: 0.8;
+
+  @include media.tablet-wide {
+    font-size: 32px !important;
+  }
+
+  @include media.mobile {
+    width: 100%;
+  }
+
+  @include standard-page-title;
+}
+
+.philosophySubtitle {
+  @include media.tablet-wide {
+    width: 60%;
+    font-size: 22px;
+    line-height: 1.45;
+  }
+
+  @include media.tablet-narrow {
+    width: 80%;
+    font-size: 22px;
+    line-height: 1.45;
+  }
+
+  width: 80%;
+  margin: 2rem 0;
+  overflow: hidden;
+  font-size: 1.5rem;
+  font-weight: theme.$font-weight-normal;
+  line-height: 1.85;
+  color: theme.$font-color-secondary;
+}

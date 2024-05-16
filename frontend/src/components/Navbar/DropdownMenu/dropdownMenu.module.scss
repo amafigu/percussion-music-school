@@ -1,0 +1,41 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.dropdownMenu {
+  color: theme.$font-color-primary;
+  transition: all 2s linear;
+
+  @include media.tablet-narrow {
+    background-color: theme.$border-or-background-color-dark;
+  }
+
+  @include flex-column;
+
+  @include z-index(dropdownmenu);
+
+  .listItem {
+    @include media.mobile {
+      font-weight: theme.$font-weight-normal;
+      border-bottom: 1px solid theme.$border-color-dark;
+    }
+
+    padding: 14px 20px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: theme.$font-weight-semibold;
+    line-height: 1.5;
+    color: theme.$font-color-primary;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-bottom: 1px solid theme.$border-or-background-color-dark;
+
+    &:hover {
+      color: theme.$branding-color-primary;
+    }
+  }
+
+  .listItem:last-child {
+    border-bottom: none;
+  }
+}

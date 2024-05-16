@@ -1,0 +1,84 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.philosophyBanner {
+  @include media.mobile {
+    @include flex-justify-center;
+  }
+}
+
+.background {
+  @include background-image;
+}
+
+.text {
+  width: 80%;
+  padding: 20px 40px;
+
+  @include z-index(bannertext);
+
+  @include media.tablet-wide {
+    width: 84%;
+
+    @include flex-column;
+  }
+
+  @include media.mobile {
+    width: theme.$mobile-default-page-width;
+    padding: 0;
+
+    @include flex-column;
+  }
+}
+
+.title {
+  opacity: 0.8;
+
+  @include media.tablet-wide {
+    font-size: 32px !important;
+  }
+
+  @include media.mobile {
+    width: 100%;
+  }
+
+  @include standard-page-title;
+}
+
+.subtitle {
+  width: 80%;
+  margin: 2rem 0;
+  overflow: hidden;
+  font-size: 1.5rem;
+  font-weight: theme.$font-weight-normal;
+  line-height: 1.85;
+  color: theme.$font-color-secondary;
+
+  @include media.tablet-wide {
+    width: 60%;
+    font-size: 22px;
+    line-height: 1.45;
+  }
+
+  @include media.tablet-narrow {
+    width: 80%;
+    font-size: 22px;
+    line-height: 1.45;
+  }
+}
+
+.content {
+  width: 82%;
+  margin-bottom: 20px;
+
+  @include media.widescreen {
+    width: 50%;
+  }
+
+  @include media.tablet-narrow {
+    width: 100%;
+  }
+
+  @include standard-page-content;
+}

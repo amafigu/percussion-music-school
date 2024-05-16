@@ -1,0 +1,133 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.founderBanner {
+  gap: 20px;
+  width: 90%;
+  padding: 40px 0;
+  margin: auto;
+
+  @include media.widescreen-down {
+    flex-direction: column;
+  }
+
+  @include flex-all-center;
+
+  .imageContainer {
+    width: 50%;
+
+    @include flex-justify-center;
+
+    @include media.desktop-up {
+      width: 100%;
+    }
+
+    @include media.desktop {
+      width: 68% !important;
+    }
+
+    @include media.mobile {
+      width: 100% !important;
+    }
+
+    .founderImage {
+      width: 100%;
+      max-width: 612px;
+      height: auto;
+      border-radius: 14px;
+
+      @include media.widescreen {
+        width: 80%;
+      }
+
+      @include media.mobile {
+        width: 100%;
+        margin: auto;
+      }
+    }
+  }
+
+  .textAndIconsContainer {
+    width: 50%;
+
+    @include media.desktop-up {
+      width: 88%;
+    }
+
+    @include media.tablet-wide {
+      width: 68% !important;
+      margin-top: 20px;
+      margin-left: 0 !important;
+    }
+
+    @include media.mobile {
+      width: 100% !important;
+    }
+
+    .textAndIcons {
+      @include media.desktop-only {
+        width: 80%;
+        margin-top: 20px;
+        margin-left: 40px;
+      }
+
+      @include media.desktop {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0 !important;
+      }
+
+      width: 90%;
+    }
+
+    .name {
+      @include standard-page-title;
+    }
+
+    p {
+      @include media.tablet-wide {
+        width: 100%;
+      }
+
+      @include standard-page-content;
+
+      width: 100%;
+    }
+
+    .position {
+      margin-bottom: 40px;
+      color: theme.$font-color-secondary;
+      @include typography-semi-medium-normal;
+    }
+
+    .socialIcons {
+      @include flex-justify-center;
+
+      flex-direction: column;
+      width: 100%;
+      margin-top: 40px;
+
+      .text {
+        margin-bottom: 24px;
+        color: theme.$branding-color-primary;
+      }
+
+      .customIcon {
+        color: theme.$branding-color-primary;
+      }
+
+      .icons {
+        display: flex;
+        gap: 20px;
+        justify-content: space-around;
+      }
+
+      .row {
+        display: flex;
+        gap: 28px;
+        width: 100%;
+      }
+    }
+  }
+}

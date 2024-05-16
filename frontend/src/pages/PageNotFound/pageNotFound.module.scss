@@ -1,0 +1,82 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.pageNotFoundWrapper {
+  min-height: theme.$min-vh-page-wrapper;
+  background-color: theme.$secondary-background-color;
+  @include flex-justify-center;
+
+  .pageNotFound {
+    @include media.mobile {
+      margin-top: theme.$spacing-extra-large;
+    }
+
+    @include media.desktop {
+      margin: 120px 0;
+    }
+
+    @include media.widescreen {
+      margin: 12% 0;
+    }
+
+    @include flex-column-all-center;
+  }
+
+  .httpErrorNumber {
+    @include media.mobile {
+      font-size: 86px;
+      font-weight: theme.$font-weight-bold;
+      letter-spacing: 4px;
+    }
+
+    font-size: 100px;
+    font-weight: theme.$font-weight-bold;
+    text-align: center;
+    letter-spacing: 4px;
+  }
+
+  .httpErrorText {
+    @include media.mobile {
+      font-size: 24px;
+      font-weight: theme.$font-weight-bold;
+      letter-spacing: 4px;
+    }
+
+    margin-bottom: theme.$spacing-extra-large;
+    font-size: theme.$spacing-extra-large;
+    font-weight: theme.$font-weight-bold;
+    text-align: center;
+    letter-spacing: 4px;
+  }
+
+  .text {
+    @include media.mobile {
+      width: 80%;
+    }
+
+    width: 760px;
+    margin-bottom: 36px;
+    font-style: normal;
+    color: theme.$font-color-secondary;
+    text-align: center;
+    @include typography-semi-medium-normal;
+  }
+
+  .button {
+    @include media.mobile {
+      width: 80% !important;
+      margin-bottom: 131px !important;
+      border-radius: 8px !important;
+    }
+
+    @include main-button;
+
+    font-weight: theme.$font-weight-normal;
+    color: #ed068a;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
