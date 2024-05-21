@@ -1,6 +1,7 @@
 export const ROUTES = {
   HOME: "/",
   ABOUT: "/about",
+  CONCERTS: "/concerts",
   COURSES: {
     ENSEMBLE: "/courses/ensemble",
     ENSEMBLE_COMPOSITION: "/courses/ensemble-composition",

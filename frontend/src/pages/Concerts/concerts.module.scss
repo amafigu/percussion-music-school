@@ -1,0 +1,25 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.concerts {
+  min-height: 80vh;
+  background-color: theme.$secondary-background-color;
+
+  @include flex-column-align-center;
+}
+
+.content {
+  width: theme.$desktop-default-page-width;
+
+  @include media.mobile {
+    width: theme.$mobile-default-page-width;
+  }
+}
+
+.title {
+  margin: theme.$spacing-regular 0;
+  background-color: theme.$secondary-background-color;
+
+  @include standard-page-title;
+}
