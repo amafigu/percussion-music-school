@@ -21,6 +21,9 @@
         "descriptionSecond": "In 2016 he founded the “Tierra y Aire percussion” project, a musical learning space that teaches children, young people and adults, including people with disabilities, to play various instruments from different regions such as: congas, djembe, dun dun, left-handed, keys, bells, among others. In our city he was part of different events, such as TedX, Rosario under the stars, Carnival at the Humberto de Nito Amphitheater, Inauguration of the Patio Market, among other great events. It should be noted that in 2020/21 he composed his first solo album, which he titled 'Fluir', being recorded and mastered at Penny Lane studios in the city of Rosario. The project, presented by Fernanda Gigliani, Popular Initiative, was unanimously approved by the rest of the councilors of the legislative body. The President of the Municipal Council, María Eugenia Schmuck, addressed the venue: “It is a pleasure that the venue is filled with art, we are very proud of this distinction since we have a city that is a breeding ground for great musicians, artists and educators. Not just anyone, no matter how good they are in their discipline, can teach, only those who can transform knowledge into empathy can do so, generating a construction space where everyone grows, which is why the feat that we are distinguishing today is admirable and exemplary."
       }
     },
+    "concerts": {
+      "title": "Concerts"
+    },
     "courses": {
       "ensemble": {
         "title": "Ensemble practice",
@@ -74,6 +77,10 @@
       "subtitleFirst": "We are a community of educators and students",
       "subtitleSecond": "Music and it's rhythm bring us together being",
       "subtitleThird": "a bond we celebrate with regular concerts"
+    },
+    "concertsList": {
+      "ticketsLink": "tickets",
+      "venueLink": "venue"
     },
     "courses": {
       "titleAndDescription": {
