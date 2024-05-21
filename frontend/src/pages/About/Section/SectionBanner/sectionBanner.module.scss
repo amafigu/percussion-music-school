@@ -131,6 +131,7 @@
     font-style: normal;
     color: theme.$font-color-secondary;
     opacity: 0.9;
+
     @include typography-semi-medium-normal;
   }
 }
