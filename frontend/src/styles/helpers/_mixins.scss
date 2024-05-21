@@ -105,6 +105,21 @@
   }
 }
 
+@mixin concert-list-button {
+  flex: 0.5;
+  padding: 10px;
+  margin: 0 5px;
+  color: theme.$font-color-primary;
+  cursor: pointer;
+  background-color: theme.$branding-color-primary;
+  border: none;
+  border-radius: 10px;
+
+  @include media.mobile {
+    width: 50%;
+  }
+}
+
 @mixin z-index($key) {
   z-index: functions.z-index($key);
 }
