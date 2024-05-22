@@ -19,6 +19,7 @@
 
     width: 80%;
     background-color: theme.$primary-background-color;
+
     @include flex-column;
 
     .columnsContainer {
@@ -142,6 +143,7 @@
 
     .copyright {
       @include flex-column-justify-center;
+
       width: 100%;
       height: auto;
       padding: 0 24px;

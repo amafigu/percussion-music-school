@@ -17,3 +17,9 @@ export const camelCaseToTitleCase = (str) => {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(" ");
 };
+
+export const checkHttp = (url) => {
+  return url.startsWith("http://") || url.startsWith("https://")
+    ? url
+    : `http://${url}`;
+};

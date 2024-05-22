@@ -21,6 +21,9 @@
         "descriptionSecond": "En el año 2016 fundó el proyecto «Tierra y Aire percusión», un espacio de aprendizaje musical que enseña a niños, jóvenes y adultos, incluyendo a personas con discapacidad a tocar varios instrumentos de distintas regiones tales como: congas, djembe, dun dun, zurdos, claves, campanas, entre otros. En nuestra ciudad formó parte de distintos eventos, tales como TedX, Rosario bajo las estrellas, Carnaval en el Anfiteatro Humberto de Nito, Inauguración del Mercado del Patio, entre otros grandes eventos. Cabe destacar que en el año 2020/21 compone su primer disco solista al cual titula 'Fluir', siendo grabado y masterizado en estudios Penny Lane de la ciudad de Rosario. El proyecto, presentado por Fernanda Gigliani, Iniciativa Popular, fue aprobado por unanimidad por el resto de concejales y concejalas del cuerpo legislativo. La Presidenta del Concejo Municipal, María Eugenia Schmuck se dirigió al recinto: “Es un placer que el recinto se llene de arte, estamos muy orgullosos de esta distinción ya que tenemos una ciudad que es semillero de grandes músicos, artistas y educadores. No cualquier persona por más buena que sea en su disciplina puede enseñar, sólo pueden hacerlo quienes pueden transformar el conocimiento en empatía, generando un espacio de construcción donde todos crecen, por eso es admirable y ejemplar la hazaña que estamos distinguiendo hoy”."
       }
     },
+    "concerts": {
+      "title": "Conciertos"
+    },
     "courses": {
       "ensemble": {
         "title": "Práctica de ensamble",
@@ -75,7 +78,10 @@
       "subtitleSecond": "Nos une la música y sus ritmos, la cual compartimos",
       "subtitleThird": "a través de conciertos frecuentes"
     },
-
+    "concertsList": {
+      "ticketsLink": "entradas",
+      "venueLink": "local"
+    },
     "courses": {
       "titleAndDescription": {
         "ensemble": {

@@ -3,6 +3,7 @@ import { Navbar } from "#components/Navbar";
 import { WhatsAppButton } from "#components/ui/WhatsAppButton";
 import { ROUTES } from "#constants/routes";
 import { About } from "#pages/About";
+import { Concerts } from "#pages/Concerts";
 import { EnsembleCompositionCourses } from "#pages/EnsembleCompositionCourses";
 import { EnsembleCourses } from "#pages/EnsembleCourses";
 import { HandTechniqueCourses } from "#pages/HandTechniqueCourses";
@@ -46,6 +47,7 @@ export const AppRoutes = () => {
             path={ROUTES.COURSES.ENSEMBLE_COMPOSITION}
             element={<EnsembleCompositionCourses />}
           />
+          <Route path={ROUTES.CONCERTS} element={<Concerts />} />
           <Route path='*' element={<PageNotFound />} />
         </Routes>
       </div>

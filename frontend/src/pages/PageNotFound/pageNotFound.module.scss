@@ -5,6 +5,7 @@
 .pageNotFoundWrapper {
   min-height: theme.$min-vh-page-wrapper;
   background-color: theme.$secondary-background-color;
+
   @include flex-justify-center;
 
   .pageNotFound {
@@ -60,6 +61,7 @@
     font-style: normal;
     color: theme.$font-color-secondary;
     text-align: center;
+
     @include typography-semi-medium-normal;
   }
 
