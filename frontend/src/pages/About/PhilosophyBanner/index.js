@@ -7,7 +7,10 @@ export const PhilosophyBanner = () => {
   const text = translate.pages.about;
 
   return (
-    <div className={styles.philosophyBanner}>
+    <section
+      className={styles.philosophyBanner}
+      aria-label='philosophy section'
+    >
       <div
         className={styles.background}
         style={philosophySectionBackgroundImage}
@@ -24,6 +27,6 @@ export const PhilosophyBanner = () => {
           <p>{text.ourPhilosophySecond}</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

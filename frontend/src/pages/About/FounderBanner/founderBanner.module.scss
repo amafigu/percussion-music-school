@@ -5,7 +5,7 @@
 .founderBanner {
   gap: 20px;
   width: 90%;
-  padding: 40px 0;
+  padding: theme.$spacing-extra-large 0;
   margin: auto;
 
   @include media.widescreen-down {
@@ -35,10 +35,10 @@
       width: 100%;
       max-width: 612px;
       height: auto;
-      border-radius: 14px;
+      border-radius: theme.$border-radius-regular;
 
       @include media.widescreen {
-        width: 80%;
+        width: theme.$desktop-default-page-width;
       }
 
       @include media.mobile {
@@ -86,27 +86,24 @@
     }
 
     p {
-      @include media.tablet-wide {
-        width: 100%;
-      }
+      width: 100%;
 
       @include standard-page-content;
-
-      width: 100%;
     }
 
     .position {
-      margin-bottom: 40px;
+      margin-bottom: theme.$spacing-large;
       color: theme.$font-color-secondary;
+
       @include typography-semi-medium-normal;
     }
 
     .socialIcons {
-      @include flex-justify-center;
-
       flex-direction: column;
       width: 100%;
       margin-top: 40px;
+
+      @include flex-justify-center;
 
       .text {
         margin-bottom: 24px;

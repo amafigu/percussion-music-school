@@ -3,6 +3,8 @@
 @import "#styles/helpers/mixins";
 
 .logoAndTextContainer {
+  width: 80%;
+
   @include media.widescreen {
     width: 70%;
   }
@@ -11,11 +13,14 @@
     flex-direction: column;
     width: 100%;
     height: auto;
+    margin-bottom: theme.$spacing-large;
+  }
+
+  @include media.mobile {
+    margin-bottom: theme.$spacing-regular;
   }
 
   @include flex-align-center;
-
-  width: 80%;
 
   .logoAboveText {
     @include media.tablet-wide {
@@ -23,10 +28,10 @@
       margin: auto;
     }
 
-    display: flex;
-    flex-direction: column;
     width: 90%;
     padding-right: 2%;
+
+    @include flex-column;
 
     .logo {
       width: 82px;
@@ -44,20 +49,18 @@
   }
 
   .paragraphsContainer {
+    width: 66%;
+    padding-right: theme.$spacing-large;
+    padding-left: theme.$spacing-large;
+
     @include media.desktop {
       width: theme.$mobile-default-page-width;
       padding-right: 0;
+      padding-left: 0;
       margin-top: 40px;
     }
 
-    width: 66%;
-    padding-right: 120px;
-
     .paragraphs {
-      @include media.mobile {
-        margin-bottom: 20px;
-      }
-
       @include standard-page-content;
     }
   }

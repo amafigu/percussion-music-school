@@ -3,12 +3,11 @@
 @import "#styles/helpers/mixins";
 
 .educationSection {
-  width: 80%;
-  margin: 60px auto;
+  margin: 60px;
   background-color: theme.$secondary-background-color;
 
   @include media.tablet-wide {
-    margin: 0 auto;
+    margin: 0;
   }
 
   @include flex-column-align-center;

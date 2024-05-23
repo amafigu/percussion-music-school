@@ -45,11 +45,7 @@ export const MobileMenu = ({ setMenu }) => {
             <div className={styles.listDropdownLinkContent}>
               <div className={styles.itemsContainer}>
                 <div className={styles.item}>
-                  <FontAwesomeIcon
-                    icon={faGlobe}
-                    className={styles.languageIcon}
-                    size='lg'
-                  />
+                  <FontAwesomeIcon icon={faGlobe} size='lg' />
                 </div>
                 {!isLanguageDropdownOpen && (
                   <FontAwesomeIcon icon={faChevronDown} />
