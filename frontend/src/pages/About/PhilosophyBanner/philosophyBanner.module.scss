@@ -3,6 +3,10 @@
 @import "#styles/helpers/mixins";
 
 .philosophyBanner {
+  min-height: 700px;
+
+  @include flex-align-center;
+
   @include media.mobile {
     @include flex-justify-center;
   }
