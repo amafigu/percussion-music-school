@@ -174,8 +174,8 @@
 @mixin responsive-image {
   width: 100%;
   height: 100%;
-  background-repeat: no-repeat;
   object-fit: contain;
+  background-repeat: no-repeat;
 }
 
 @mixin user-select-none {
@@ -191,6 +191,18 @@
 
 @mixin typography-semi-medium-normal {
   font-size: theme.$font-size-semi-medium;
+  font-weight: theme.$font-weight-normal;
+  line-height: theme.$line-height-primary;
+}
+
+@mixin typography-small-medium {
+  font-size: theme.$font-size-small;
+  font-weight: theme.$font-weight-medium;
+  line-height: theme.$line-height-primary;
+}
+
+@mixin typography-semi-large-normal {
+  font-size: theme.$font-size-semi-large;
   font-weight: theme.$font-weight-normal;
   line-height: theme.$line-height-primary;
 }
