@@ -17,7 +17,7 @@
   .courseCard {
     width: 320px;
     height: auto;
-    background-color: #20232d;
+    background-color: theme.$tertiary-background-color;
     border-radius: 24px;
   }
 
@@ -31,7 +31,7 @@
   .infoColumn {
     height: 252px;
     color: theme.$font-color-primary;
-    background-color: #20232d;
+    background-color: theme.$tertiary-background-color;
     border-radius: 10px;
   }
 
