@@ -7,7 +7,7 @@ $border-or-background-color-dark: #3b3e4b;
 $branding-color-primary: #ed068a;
 $primary-background-color: #202027;
 $secondary-background-color: #12141d;
-$option-row-background-color: #20232d;
+$tertiary-background-color: #20232d;
 $main-font-family: arial, sans-serif;
 $main-box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
   0 1px 5px 0 rgb(0 0 0 / 12%);
@@ -22,19 +22,19 @@ $font-size-semi-large: 1.5rem;
 $font-size-medium: 1.25rem;
 $font-size-semi-medium: 1.125rem;
 $font-size-small: 1rem;
+$font-size-smallest: 0.75rem;
 $font-weight-normal: 400;
 $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 $font-weight-extra-bold: 800;
-
-// SPACING
-
 $spacing-huge: 5rem;
 $spacing-extra-large: 4rem;
 $spacing-large: 2.5rem;
 $spacing-regular: 1.5rem;
-$border-radius-regular: 12px;
+$spacing-small: 1rem;
+$border-radius-large: 12px;
+$border-radius-regular: 8px;
 $border-radius-small: 4px;
 $min-vh-page-wrapper: 65vh;
 $desktop-default-page-width: 80%;
