@@ -16,7 +16,7 @@ export const Home = () => {
         <HomeBanner />
         <section className={styles.cardsSection}>
           <div className={styles.presentation}>
-            <p className={styles.title}>Tierra y Aire </p>
+            <p className={styles.title}>Tierra y Aire</p>
             <p className={styles.subtitle}>{text.title}</p>
             <p className={styles.missionText}>{text.subtitle}</p>
           </div>
