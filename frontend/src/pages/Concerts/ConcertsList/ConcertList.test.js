@@ -3,7 +3,7 @@ import { translate } from "#__mocks__/translate";
 import { getConcerts } from "#api/getConcerts";
 import { useTranslate } from "#hooks/useTranslate";
 import { ConcertsList } from "#pages/Concerts/ConcertsList";
-import { titleCase } from "#utils/utils"; // Ensure this import is correct
+import { titleCase } from "#utils/utils";
 import { render, screen, waitFor } from "@testing-library/react";
 import React from "react";
 
