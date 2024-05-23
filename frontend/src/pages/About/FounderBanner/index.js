@@ -6,7 +6,7 @@ export const FounderBanner = () => {
   const text = translate.pages.about;
 
   return (
-    <div className={styles.founderBanner}>
+    <section className={styles.founderBanner} aria-label='founder bio'>
       <div className={styles.imageContainer}>
         <img
           alt='founder'
@@ -56,6 +56,6 @@ export const FounderBanner = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
