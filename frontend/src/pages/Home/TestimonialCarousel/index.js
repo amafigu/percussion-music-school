@@ -20,7 +20,10 @@ export const TestimonialCarousel = () => {
   };
 
   return (
-    <section className={styles.testimonialCarousel}>
+    <section
+      className={styles.testimonialCarousel}
+      aria-label='Testemonia section'
+    >
       <div className={styles.title}>
         <h2>{camelCaseToTitleCase(text.title)}</h2>
       </div>
@@ -30,10 +33,7 @@ export const TestimonialCarousel = () => {
             <div className={styles.testimonial}>
               <div className={styles.textColumn}>
                 <div className={styles.iconContainer}>
-                  <FontAwesomeIcon
-                    icon={faQuoteLeft}
-                    className={styles.customIcon}
-                  />
+                  <FontAwesomeIcon icon={faQuoteLeft} />
                 </div>
                 <div className={styles.text}>
                   <p>{text[testimonial.person]}</p>

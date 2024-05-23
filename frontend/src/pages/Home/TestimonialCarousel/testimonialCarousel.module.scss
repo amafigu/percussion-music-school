@@ -133,14 +133,16 @@
 
   .iconContainer {
     width: 100%;
+
     @include typography-huge-extra-bold;
+
     color: theme.$font-color-primary;
 
     @include flex-start;
-  }
 
-  .customIcon {
-    color: theme.$branding-color-primary;
+    svg {
+      color: theme.$branding-color-primary;
+    }
   }
 
   .itemsSelectorContainer {
