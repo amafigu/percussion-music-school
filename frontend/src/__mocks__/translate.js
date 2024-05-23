@@ -58,6 +58,12 @@ export const translate = {
         description:
           "In this course we will work on musical notation and its values, that is, we will learn to read and write music, emphasizing rhythm.",
       },
+      musicalDirection: {
+        title: "Musical direction",
+        subtitle: "The expression in your hands",
+        description:
+          "This course has the objective of training musical directors. The necessary tools for the development of musical sign language will be provided. (Only those who are taking the 'Ensemble Practice' course can register for this course).",
+      },
     },
   },
 };
