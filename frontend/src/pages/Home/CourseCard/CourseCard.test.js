@@ -34,7 +34,7 @@ describe("CourseCard", () => {
     expect(linkElement).toBeInTheDocument();
   });
 
-  test("has correct children and 'to' property", () => {
+  test("has correct path in 'to' property", () => {
     render(
       <Router>
         <Link to='/courses/musical-language'>See More</Link>
