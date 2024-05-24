@@ -1,23 +1,12 @@
-export const aboutPageUpperSectionBackground = {
-  backgroundImage: `url(${process.env.PUBLIC_URL}/assets/banner_about.png)`,
-};
+export const musicalLanguageBackground = "/assets/banner_about.png";
 
-export const philosophySectionBackgroundImage = {
-  backgroundImage: `url(${process.env.PUBLIC_URL}/assets/about_page_philosophy_desktop.png)`,
-};
+export const philosophyBackground = "/assets/philosophyBackground.png";
 
-export const educationBanner = {
-  backgroundImage: `url(${process.env.PUBLIC_URL}/assets/about_page_school.png)`,
-};
+export const educationBanner = "/assets/educationBanner.png";
 
-export const ensembleCoursesPageUpperSectionBackground = {
-  backgroundImage: `url(${process.env.PUBLIC_URL}/assets/regular_courses_page_upper_section_background.png)`,
-};
+export const ensembleBackground = "/assets/ensembleBackground.png";
 
-export const musicalLanguageCoursesPageUpperSectionBackground = {
-  backgroundImage: `url(${process.env.PUBLIC_URL}/assets/short_courses_page_upper_section_background.png)`,
-};
+export const musicalDirectionAndHandTechniqueBackground =
+  "/assets/musicalDirectionAndHandTechniqueBackground.png";
 
-export const stickTechniqueCoursesPageUpperSectionBackground = {
-  backgroundImage: `url(${process.env.PUBLIC_URL}/assets/corporate_courses_page_upper_section_background.png)`,
-};
+export const stickTechniqueBackground = "/assets/stickTechniqueBackground.png";

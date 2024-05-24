@@ -1,3 +1,4 @@
+import { educationBanner } from "#constants/backgroundImages.js";
 import { useTranslate } from "#hooks/useTranslate";
 import React, { useState } from "react";
 import styles from "./homeBanner.module.scss";
@@ -8,7 +9,7 @@ export const HomeBanner = () => {
   const t = translate.components.homeBanner;
 
   return (
-    <section className={styles.homeBanner} aria-label='welcome section'>
+    <section className={styles.homeBanner} aria-label='Home page banner'>
       <div className={styles.container}>
         {imageLoaded && (
           <div
@@ -27,8 +28,8 @@ export const HomeBanner = () => {
 
         <img
           className={styles.image}
-          src={`${process.env.PUBLIC_URL}/assets/about_page_school.png`}
-          alt='Group'
+          src={`${process.env.PUBLIC_URL}${educationBanner}`}
+          alt='Home page background'
           onLoad={() => setImageLoaded(true)}
         />
       </div>

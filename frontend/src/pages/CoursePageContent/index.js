@@ -36,7 +36,6 @@ export const CoursePageContent = ({
         <CourseBanner
           imageUrl={courseBannerImgPath}
           name={text[pageTranslationObj].subtitle}
-          subtitle=''
           text={text[pageTranslationObj].description}
           invert={invertLayout}
         />

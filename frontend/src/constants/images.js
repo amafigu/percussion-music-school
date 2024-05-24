@@ -9,3 +9,4 @@ export const handTechniqueCoursePageSecondImage = `${process.env.PUBLIC_URL}/ass
 export const musicalLanguageCoursePageImage = `${process.env.PUBLIC_URL}/assets/short_courses_page_intro_drumming.png`;
 
 export const stickTechniqueCoursePageOfferImage = `${process.env.PUBLIC_URL}/assets/corporate_courses_offer.png`;
+export const founder = "/assets/founder.png";

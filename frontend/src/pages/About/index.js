@@ -1,6 +1,7 @@
 import { NavigationMenu } from "#components/ui/NavigationMenu";
 import { UpperBanner } from "#components/ui/UpperBanner";
-import { aboutPageUpperSectionBackground } from "#constants/backgroundImages";
+import { musicalLanguageBackground } from "#constants/backgroundImages";
+import { educationBanner } from "#constants/backgroundImages.js";
 import { STYLES } from "#constants/styles";
 import { useScrollToRef } from "#hooks/useScrollToRef";
 import { useTranslate } from "#hooks/useTranslate";
@@ -8,9 +9,9 @@ import { scrollToTop } from "#utils/utils";
 import { useRef } from "react";
 import { EducationBanner } from "./EducationBanner";
 import { FounderBanner } from "./FounderBanner";
+import { InspirationBanner } from "./InspirationBanner";
 import { PhilosophyBanner } from "./PhilosophyBanner";
 import { Section } from "./Section";
-import { SectionBanner } from "./Section/SectionBanner";
 import styles from "./about.module.scss";
 
 export const About = () => {
@@ -33,10 +34,10 @@ export const About = () => {
   scrollToTop();
 
   return (
-    <main className={styles.aboutPageWrapper}>
+    <main className={styles.aboutPageWrapper} aria-label='about page'>
       <div className={styles.aboutPage}>
         <UpperBanner
-          backgroundUrl={aboutPageUpperSectionBackground}
+          backgroundUrl={musicalLanguageBackground}
           title={text.aboutPageUpperSectionTitle}
           text={text.aboutPageUpperSectionText}
         />
@@ -45,10 +46,10 @@ export const About = () => {
           items={navigationItems}
         />
         <Section className={EDUCATION.CONTAINER} ref={schoolSectionRef}>
-          <SectionBanner
+          <InspirationBanner
             parentClass={EDUCATION.BANNER.PARENT}
-            imageSrc={`${process.env.PUBLIC_URL}/assets/about_page_school.png`}
-            imageAlt={"inspiration"}
+            imageSrc={`${process.env.PUBLIC_URL}${educationBanner}`}
+            imageAlt={"inspiration section"}
             imageClass={EDUCATION.BANNER.IMAGE}
             content={text.firstImageCard}
             textLayerClass={EDUCATION.BANNER.TEXT_LAYER}

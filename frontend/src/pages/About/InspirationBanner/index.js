@@ -1,6 +1,6 @@
-import styles from "./sectionBanner.module.scss";
+import styles from "./inspirationBanner.module.scss";
 
-export const SectionBanner = ({
+export const InspirationBanner = ({
   parentClass,
   imageSrc,
   imageAlt,

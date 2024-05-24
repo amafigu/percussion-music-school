@@ -1,56 +1,60 @@
+import { founder } from "#constants/images";
+import { facebookUrl, instagramUrl, youtubeUrl } from "#constants/midia";
 import { useTranslate } from "#hooks/useTranslate";
+import {
+  faFacebookF,
+  faInstagram,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./founderBanner.module.scss";
 
 export const FounderBanner = () => {
   const translate = useTranslate();
-  const text = translate.pages.about;
+  const text = translate.components.founderBanner;
 
   return (
     <section className={styles.founderBanner} aria-label='founder bio'>
-      <div className={styles.imageContainer}>
-        <img
-          alt='founder'
-          className={styles.founderImage}
-          src={`${process.env.PUBLIC_URL}/assets/card3.png`}
-        />
-      </div>
-      <div className={styles.textAndIconsContainer}>
-        <div className={styles.textAndIcons}>
-          <div className={styles.name}>Rolo Veron</div>
-          <div className={styles.position}>{text.artist.role}</div>
-          <p>{text.artist.descriptionFirst}</p>
-          <br />
-          <p>{text.artist.descriptionSecond}</p>
+      <div className={styles.container}>
+        <div className={styles.imageContainer}>
+          <img
+            alt='founder drumming'
+            className={styles.founderImage}
+            src={`${process.env.PUBLIC_URL}${founder}`}
+          />
+        </div>
+        <div>
+          <h2 className={styles.name}>Rolo Veron</h2>
+          <div className={styles.position}>{text.role}</div>
+          <p>{text.descriptionFirst}</p>
+          <p>{text.descriptionSecond}</p>
           <div className={styles.socialIcons}>
             <div className={styles.text}>
-              {text.artist.follow} Rolo Veron {text.artist.followAt}
+              <span>
+                {text.follow} Rolo Veron {text.followAt}
+              </span>
             </div>
             <div className={styles.row}>
               <div className={styles.icons}>
-                <a
-                  href='https://www.instagram.com/rolo.veron/'
-                  target='_blanck'
+                <Link
+                  to={instagramUrl}
+                  target='_blank'
+                  rel='noopener noreferrer'
                 >
-                  <i
-                    className={`fab fa-instagram fa-2x ${styles.customIcon}`}
-                  ></i>
-                </a>
-                <a
-                  href='https://www.facebook.com/rolo.veron.3'
-                  target='_blanck'
+                  <FontAwesomeIcon icon={faInstagram} size='2x' />
+                </Link>
+                <Link
+                  to={facebookUrl}
+                  target='_blank'
+                  rel='noopener noreferrer'
                 >
-                  <i
-                    className={`fab fa-facebook-f fa-2x ${styles.customIcon}`}
-                  ></i>
-                </a>
-                <a
-                  href='https://www.youtube.com/channel/UCAHUUHVEh7ov0qv8FIE11ZQ'
-                  target='_blanck'
-                >
-                  <i
-                    className={`fab fa-youtube fa-2x ${styles.customIcon}`}
-                  ></i>
-                </a>
+                  <FontAwesomeIcon icon={faFacebookF} size='2x' />
+                </Link>
+                <Link to={youtubeUrl} target='_blank' rel='noopener noreferrer'>
+                  <FontAwesomeIcon icon={faYoutube} size='2x' />
+                </Link>
               </div>
             </div>
           </div>

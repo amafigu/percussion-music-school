@@ -1,4 +1,4 @@
-import { philosophySectionBackgroundImage } from "#constants/backgroundImages";
+import { philosophyBackground } from "#constants/backgroundImages";
 import { useTranslate } from "#hooks/useTranslate";
 import styles from "./philosophyBanner.module.scss";
 
@@ -13,7 +13,9 @@ export const PhilosophyBanner = () => {
     >
       <div
         className={styles.background}
-        style={philosophySectionBackgroundImage}
+        style={{
+          backgroundImage: `url(${process.env.PUBLIC_URL}${philosophyBackground})`,
+        }}
       ></div>
       <div className={styles.text}>
         <div className={styles.title}>
