@@ -8,122 +8,84 @@
   padding: theme.$spacing-extra-large 0;
   margin: auto;
 
-  @include media.widescreen-down {
-    flex-direction: column;
+  @include flex-justify-center;
+}
+
+.imageContainer {
+  align-items: flex-start;
+  float: left;
+  width: 40%;
+  margin-right: theme.$spacing-regular;
+
+  @include media.desktop {
+    width: 50%;
   }
 
-  @include flex-all-center;
+  @include media.mobile {
+    width: 100%;
+    margin-bottom: theme.$spacing-regular;
+  }
 
-  .imageContainer {
-    width: 50%;
+  .founderImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: theme.$border-radius-regular;
+
+    @include media.mobile {
+      margin: auto;
+    }
+  }
+}
+
+.container {
+  float: none;
+
+  @include media.mobile {
+    width: 100%;
+  }
+
+  .name {
+    @include standard-page-title;
+  }
+
+  p {
+    width: 100%;
+
+    @include standard-page-content;
+  }
+
+  .position {
+    margin-bottom: theme.$spacing-regular;
+    color: theme.$font-color-secondary;
+
+    @include typography-semi-medium-normal;
+  }
+
+  .socialIcons {
+    flex-direction: column;
+    width: 100%;
 
     @include flex-justify-center;
 
-    @include media.desktop-up {
+    .text {
+      margin: 24px 0;
+      color: theme.$branding-color-primary;
+    }
+
+    .row {
+      display: flex;
+      gap: 28px;
       width: 100%;
     }
 
-    @include media.desktop {
-      width: 68% !important;
-    }
+    .icons {
+      display: flex;
+      gap: 20px;
+      justify-content: space-around;
 
-    @include media.mobile {
-      width: 100% !important;
-    }
-
-    .founderImage {
-      width: 100%;
-      max-width: 612px;
-      height: auto;
-      border-radius: theme.$border-radius-regular;
-
-      @include media.widescreen {
-        width: theme.$desktop-default-page-width;
-      }
-
-      @include media.mobile {
-        width: 100%;
-        margin: auto;
-      }
-    }
-  }
-
-  .textAndIconsContainer {
-    width: 50%;
-
-    @include media.desktop-up {
-      width: 88%;
-    }
-
-    @include media.tablet-wide {
-      width: 68% !important;
-      margin-top: 20px;
-      margin-left: 0 !important;
-    }
-
-    @include media.mobile {
-      width: 100% !important;
-    }
-
-    .textAndIcons {
-      @include media.desktop-only {
-        width: 80%;
-        margin-top: 20px;
-        margin-left: 40px;
-      }
-
-      @include media.desktop {
-        width: 100%;
-        margin-top: 20px;
-        margin-left: 0 !important;
-      }
-
-      width: 90%;
-    }
-
-    .name {
-      @include standard-page-title;
-    }
-
-    p {
-      width: 100%;
-
-      @include standard-page-content;
-    }
-
-    .position {
-      margin-bottom: theme.$spacing-large;
-      color: theme.$font-color-secondary;
-
-      @include typography-semi-medium-normal;
-    }
-
-    .socialIcons {
-      flex-direction: column;
-      width: 100%;
-      margin-top: 40px;
-
-      @include flex-justify-center;
-
-      .text {
-        margin-bottom: 24px;
+      svg {
         color: theme.$branding-color-primary;
-      }
-
-      .customIcon {
-        color: theme.$branding-color-primary;
-      }
-
-      .icons {
-        display: flex;
-        gap: 20px;
-        justify-content: space-around;
-      }
-
-      .row {
-        display: flex;
-        gap: 28px;
-        width: 100%;
       }
     }
   }
