@@ -17,7 +17,7 @@ export const FounderBanner = () => {
 
   return (
     <section className={styles.founderBanner} aria-label='founder bio'>
-      <div className={styles.textAndIconsContainer}>
+      <div className={styles.container}>
         <div className={styles.imageContainer}>
           <img
             alt='founder drumming'
@@ -43,29 +43,17 @@ export const FounderBanner = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  <FontAwesomeIcon
-                    icon={faInstagram}
-                    size='2x'
-                    className={styles.customIcon}
-                  />
+                  <FontAwesomeIcon icon={faInstagram} size='2x' />
                 </Link>
                 <Link
                   to={facebookUrl}
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  <FontAwesomeIcon
-                    icon={faFacebookF}
-                    size='2x'
-                    className={styles.customIcon}
-                  />
+                  <FontAwesomeIcon icon={faFacebookF} size='2x' />
                 </Link>
                 <Link to={youtubeUrl} target='_blank' rel='noopener noreferrer'>
-                  <FontAwesomeIcon
-                    icon={faYoutube}
-                    size='2x'
-                    className={styles.customIcon}
-                  />
+                  <FontAwesomeIcon icon={faYoutube} size='2x' />
                 </Link>
               </div>
             </div>
