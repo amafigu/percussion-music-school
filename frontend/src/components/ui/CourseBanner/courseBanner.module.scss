@@ -6,119 +6,115 @@
   display: flex;
   width: 100%;
   background-color: theme.$primary-background-color;
+}
 
-  .presentation {
+.presentation {
+  @include media.tablet-wide {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  width: 90%;
+  margin: auto;
+  margin-top: theme.$spacing-extra-large;
+
+  @include flex-all-center;
+}
+
+.imageContaier {
+  @include media.tablet-wide {
+    order: 1 !important;
+    width: 68% !important;
+  }
+
+  @include media.mobile {
+    width: 100% !important;
+  }
+
+  display: flex;
+  justify-content: center;
+  width: 50%;
+
+  .image {
+    @include media.widescreen {
+      width: 80%;
+    }
+
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+  }
+}
+
+.textAndIconsContainer {
+  display: flex;
+  justify-content: center;
+
+  @include media.tablet-wide {
+    width: 68% !important;
+    margin-top: 20px;
+    margin-left: 0 !important;
+  }
+
+  @include media.mobile {
+    width: 100% !important;
+  }
+
+  width: 50%;
+
+  .textAndIcons {
+    @include media.desktop {
+      width: 100%;
+      margin-top: 20px;
+      margin-left: 0 !important;
+    }
+
+    width: 80%;
+    max-width: 780px;
+  }
+
+  .name {
+    margin-bottom: theme.$spacing-regular;
+
+    @include standard-page-subtitle;
+  }
+
+  p {
     @include media.tablet-wide {
-      flex-direction: column;
+      width: 100%;
+    }
+
+    @include standard-page-content;
+
+    width: 100%;
+  }
+
+  .socialIcons {
+    @include flex-justify-center;
+
+    flex-direction: column;
+    width: 100%;
+    margin-top: 40px;
+
+    .text {
+      margin-bottom: 24px;
+      color: theme.$branding-color-primary;
+    }
+
+    .customIcon {
+      color: theme.$branding-color-primary;
+    }
+
+    .icons {
+      display: flex;
+      gap: 20px;
+      justify-content: space-around;
+    }
+
+    .row {
+      display: flex;
       gap: 28px;
-    }
-
-    @include flex-all-center;
-
-    width: 90%;
-    margin: auto;
-    margin-top: theme.$spacing-extra-large;
-
-    .imageContaier {
-      @include media.tablet-wide {
-        order: 1 !important;
-        width: 68% !important;
-      }
-
-      @include media.mobile {
-        width: 100% !important;
-      }
-
-      display: flex;
-      justify-content: center;
-      width: 50%;
-
-      .image {
-        @include media.widescreen {
-          width: 80%;
-        }
-
-        width: 100%;
-        height: auto;
-        border-radius: 14px;
-      }
-    }
-
-    .textAndIconsContainer {
-      display: flex;
-      justify-content: center;
-
-      @include media.tablet-wide {
-        width: 68% !important;
-        margin-top: 20px;
-        margin-left: 0 !important;
-      }
-
-      @include media.mobile {
-        width: 100% !important;
-      }
-
-      width: 50%;
-
-      .textAndIcons {
-        @include media.desktop {
-          width: 100%;
-          margin-top: 20px;
-          margin-left: 0 !important;
-        }
-
-        width: 80%;
-        max-width: 780px;
-      }
-
-      .name {
-        @include standard-page-subtitle;
-      }
-
-      p {
-        @include media.tablet-wide {
-          width: 100%;
-        }
-
-        @include standard-page-content;
-
-        width: 100%;
-      }
-
-      .position {
-        margin-bottom: 40px;
-        color: theme.$font-color-secondary;
-        @include typography-semi-medium-normal;
-      }
-
-      .socialIcons {
-        @include flex-justify-center;
-
-        flex-direction: column;
-        width: 100%;
-        margin-top: 40px;
-
-        .text {
-          margin-bottom: 24px;
-          color: theme.$branding-color-primary;
-        }
-
-        .customIcon {
-          color: theme.$branding-color-primary;
-        }
-
-        .icons {
-          display: flex;
-          gap: 20px;
-          justify-content: space-around;
-        }
-
-        .row {
-          display: flex;
-          gap: 28px;
-          width: 100%;
-        }
-      }
+      width: 100%;
     }
   }
 }
