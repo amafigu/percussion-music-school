@@ -1,5 +1,5 @@
 import { musicalLanguageBackground } from "#constants/backgroundImages";
-import { handTechniqueCoursePageSecondImage } from "#constants/linkImages";
+import { handTechniqueCoursePageSecondImage } from "#constants/images";
 import { CoursePageContent } from "#pages/CoursePageContent";
 import React from "react";
 
