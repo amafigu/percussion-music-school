@@ -1,5 +1,5 @@
 import { musicalDirectionAndHandTechniqueBackground } from "#constants/backgroundImages";
-import { ensembleCoursesPageIntermediateBannerImage } from "#constants/images";
+import { handTechniqueCourses } from "#constants/images";
 import { CoursePageContent } from "#pages/CoursePageContent";
 import React from "react";
 
@@ -7,7 +7,7 @@ export const HandTechniqueCourses = () => {
   return (
     <CoursePageContent
       upperBannerImgPath={musicalDirectionAndHandTechniqueBackground}
-      courseBannerImgPath={ensembleCoursesPageIntermediateBannerImage}
+      courseBannerImgPath={handTechniqueCourses}
       pageTranslationObj={"handTechnique"}
       invertLayout={true}
     />

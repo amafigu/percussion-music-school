@@ -1,6 +1,6 @@
 import { ROUTES } from "./routes";
 
-export const coursesPagesNavigationItems = [
+export const navigationMenuItems = [
   { name: "ensemble", ref: ROUTES.COURSES.ENSEMBLE },
   { name: "handTechnique", ref: ROUTES.COURSES.HAND_TECHNIQUE },
   { name: "stickTechnique", ref: ROUTES.COURSES.STICK_TECHNIQUE },

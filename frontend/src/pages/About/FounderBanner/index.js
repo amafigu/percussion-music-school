@@ -11,12 +11,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./founderBanner.module.scss";
 
-export const FounderBanner = () => {
+export const FounderBanner = React.forwardRef(({ props }, ref) => {
   const translate = useTranslate();
   const text = translate.components.founderBanner;
 
   return (
-    <section className={styles.founderBanner} aria-label='founder bio'>
+    <section
+      ref={ref}
+      className={styles.founderBanner}
+      aria-label='founder bio'
+    >
       <div className={styles.container}>
         <div className={styles.imageContainer}>
           <img
@@ -62,4 +66,4 @@ export const FounderBanner = () => {
       </div>
     </section>
   );
-};
+});

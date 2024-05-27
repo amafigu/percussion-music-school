@@ -10,7 +10,11 @@ export const CourseBanner = ({ imageUrl, name, text, invert }) => {
           className={styles.imageContaier}
           style={invert ? { order: 2 } : { order: 1 }}
         >
-          <img alt='course banner' className={styles.image} src={imageUrl} />
+          <img
+            alt='course banner'
+            className={styles.image}
+            src={`${process.env.PUBLIC_URL}${imageUrl}`}
+          />
         </div>
         <div
           className={styles.textAndIconsContainer}

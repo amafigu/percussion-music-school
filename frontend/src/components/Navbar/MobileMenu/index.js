@@ -1,6 +1,5 @@
 import { LanguagesDropdown } from "#components/ui/LanguagesDropdown";
 import { ROUTES } from "#constants/routes";
-import { useNavigateToPage } from "#hooks/useNavigateToPage";
 import { useTranslate } from "#hooks/useTranslate";
 import {
   faChevronDown,
@@ -10,6 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { React, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { DropdownMenu } from "../DropdownMenu";
 import styles from "./mobileMenu.module.scss";
 
@@ -17,11 +17,13 @@ export const MobileMenu = ({ setMenu }) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isLanguageDropdownOpen, setLanguageDropdownOpen] = useState(false);
 
-  const navigateToPage = useNavigateToPage();
-  const navigateAndCloseMenu = (route) => {
+  const navigate = useNavigate();
+
+  const onNavigate = (route) => {
     setMenu(false);
-    navigateToPage(route);
+    navigate(route);
   };
+
   const translate = useTranslate();
   const text = translate.components.navbar;
 
@@ -63,7 +65,7 @@ export const MobileMenu = ({ setMenu }) => {
           </li>
           <li
             className={styles.listItem}
-            onClick={() => navigateAndCloseMenu(ROUTES.ABOUT)}
+            onClick={() => onNavigate(ROUTES.ABOUT)}
           >
             <span className={styles.linkContent}>{text.links.about}</span>
           </li>

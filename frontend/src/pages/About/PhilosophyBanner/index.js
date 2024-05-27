@@ -1,14 +1,16 @@
 import { philosophyBackground } from "#constants/backgroundImages";
 import { useTranslate } from "#hooks/useTranslate";
+import React from "react";
 import styles from "./philosophyBanner.module.scss";
 
-export const PhilosophyBanner = () => {
+export const PhilosophyBanner = React.forwardRef(({ props }, ref) => {
   const translate = useTranslate();
   const text = translate.pages.about;
 
   return (
     <section
-      className={styles.philosophyBanner}
+      ref={ref}
+      className={`${styles.philosophyBanner} ${styles.philosophySection}`}
       aria-label='philosophy section'
     >
       <div
@@ -31,4 +33,4 @@ export const PhilosophyBanner = () => {
       </div>
     </section>
   );
-};
+});

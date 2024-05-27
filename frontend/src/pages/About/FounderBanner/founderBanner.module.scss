@@ -14,8 +14,12 @@
 .imageContainer {
   align-items: flex-start;
   float: left;
-  width: 40%;
+  width: 32%;
   margin-right: theme.$spacing-regular;
+
+  @include media.widescreen-down {
+    width: 40%;
+  }
 
   @include media.desktop {
     width: 50%;
@@ -28,7 +32,6 @@
 
   .founderImage {
     width: 100%;
-    height: auto;
     object-fit: cover;
     border-radius: theme.$border-radius-regular;
 

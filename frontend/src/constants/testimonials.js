@@ -1,43 +1,43 @@
 export const TESTIMONIALS = [
   {
-    person: "mikeTiseyra",
-    image: "mikeTiseyra.jpg",
+    name: "mikeTiseyra",
+    image: "testmonial_1.jpg",
   },
   {
-    person: "silvinaRaquel",
-    image: "silvinaRaquel.jpg",
+    name: "silvinaRaquel",
+    image: "testmonial_2.jpg",
   },
   {
-    person: "luisa",
-    image: "luisa.jpg",
+    name: "luisa",
+    image: "testmonial_3.jpg",
   },
   {
-    person: "mumi",
-    image: "mumi.jpg",
+    name: "mumi",
+    image: "testmonial_4.jpg",
   },
   {
-    person: "marito",
-    image: "marito.jpg",
+    name: "marito",
+    image: "testmonial_5.jpg",
   },
   {
-    person: "carlitos",
-    image: "carlitos.jpg",
+    name: "carlitos",
+    image: "testmonial_6.jpg",
   },
   {
-    person: "cheliCastellano",
-    image: "cheliCastellano.jpg",
+    name: "cheliCastellano",
+    image: "testmonial_7.jpg",
   },
   {
-    person: "silvinaPesaresi",
-    image: "silvinaPesaresi.jpg",
+    name: "silvinaPesaresi",
+    image: "testmonial_8.jpg",
   },
   {
-    person: "flavia",
-    image: "flavia.jpg",
+    name: "flavia",
+    image: "testmonial_9.jpg",
   },
 
   {
-    person: "lilianaMartinez",
-    image: "lilianaMartinez.jpg",
+    name: "lilianaMartinez",
+    image: "testmonial_10.jpg",
   },
 ];

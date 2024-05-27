@@ -1,6 +1,15 @@
-import { coursesPagesNavigationItems } from "#constants/coursesPagesNavigationItems";
+import { logo } from "#constants/images";
+import { facebookUrl, instagramUrl, youtubeUrl } from "#constants/midia";
+import { navigationMenuItems } from "#constants/navigationMenuItems";
+import { ROUTES } from "#constants/routes";
 import { useTranslate } from "#hooks/useTranslate";
 import { camelCaseToTitleCase } from "#utils/utils";
+import {
+  faFacebookF,
+  faInstagram,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./footer.module.scss";
@@ -8,6 +17,7 @@ import styles from "./footer.module.scss";
 export const Footer = () => {
   const translate = useTranslate();
   const text = translate.components.footer;
+
   return (
     <footer className={styles.footerWrapper}>
       <div className={styles.footer}>
@@ -16,7 +26,7 @@ export const Footer = () => {
             <div className={styles.logoContainer}>
               <img
                 className={styles.logo}
-                src={`${process.env.PUBLIC_URL}/assets/logo.png`}
+                src={`${process.env.PUBLIC_URL}${logo}`}
                 alt='logo'
               />
               <div className={styles.text}>
@@ -24,14 +34,13 @@ export const Footer = () => {
                 <div className={styles.word}>Y AIRE</div>
               </div>
             </div>
-
             <div className={styles.teaserText}>{text.teaserText}</div>
           </div>
           <div className={styles.column}>
             <h3 className={styles.title}>
               {camelCaseToTitleCase(text.linksColumn.title)}
             </h3>
-            <Link className={styles.link} to='/about'>
+            <Link className={styles.link} to={ROUTES.ABOUT}>
               <span className={styles.content}>
                 {camelCaseToTitleCase(text.linksColumn.about)}
               </span>
@@ -41,7 +50,7 @@ export const Footer = () => {
             <h3 className={styles.title}>
               {camelCaseToTitleCase(text.coursesColumn.title)}
             </h3>
-            {coursesPagesNavigationItems.map((item) => (
+            {navigationMenuItems.map((item) => (
               <Link className={styles.link} to={item.ref} key={item.name}>
                 <span className={styles.content}>
                   {camelCaseToTitleCase(text.coursesColumn[item.name])}
@@ -54,28 +63,15 @@ export const Footer = () => {
               {camelCaseToTitleCase(text.socialMediaLinksColumn.title)}
             </h3>
             <div className={styles.icons}>
-              <a
-                href='https://www.instagram.com/tierrayairepercusion/'
-                target='_blanck'
-              >
-                <i
-                  className={`fab fa-instagram fa-2x ${styles.customIcon}`}
-                ></i>
-              </a>
-              <a
-                href='https://www.facebook.com/profile.php?id=100051507198313'
-                target='_blanck'
-              >
-                <i
-                  className={`fab fa-facebook-f fa-2x ${styles.customIcon}`}
-                ></i>
-              </a>
-              <a
-                href='https://www.youtube.com/channel/UCsiOSd5aX8udIbNF5LST8ag'
-                target='_blanck'
-              >
-                <i className={`fab fa-youtube fa-2x ${styles.customIcon}`}></i>
-              </a>
+              <Link to={instagramUrl} target='_blank' rel='noopener noreferrer'>
+                <FontAwesomeIcon icon={faInstagram} size='2x' />
+              </Link>
+              <Link to={facebookUrl} target='_blank' rel='noopener noreferrer'>
+                <FontAwesomeIcon icon={faFacebookF} size='2x' />
+              </Link>
+              <Link to={youtubeUrl} target='_blank' rel='noopener noreferrer'>
+                <FontAwesomeIcon icon={faYoutube} size='2x' />
+              </Link>
             </div>
           </div>
         </div>

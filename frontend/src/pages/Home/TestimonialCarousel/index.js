@@ -36,10 +36,10 @@ export const TestimonialCarousel = () => {
                   <FontAwesomeIcon icon={faQuoteLeft} />
                 </div>
                 <div className={styles.text}>
-                  <p>{text[testimonial.person]}</p>
+                  <p>{text[testimonial.name]}</p>
                 </div>
                 <div className={styles.testimonialPerson}>
-                  <p>{camelCaseToTitleCase(testimonial.person)}</p>
+                  <p>{camelCaseToTitleCase(testimonial.name)}</p>
                 </div>
               </div>
               <div className={styles.rightColumn}>

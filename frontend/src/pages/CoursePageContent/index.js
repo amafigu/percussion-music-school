@@ -1,8 +1,7 @@
 import { CourseBanner } from "#components/ui/CourseBanner";
 import { NavigationMenu } from "#components/ui/NavigationMenu";
 import { UpperBanner } from "#components/ui/UpperBanner";
-import { coursesPagesNavigationItems } from "#constants/coursesPagesNavigationItems";
-import { useNavigateToPage } from "#hooks/useNavigateToPage";
+import { navigationMenuItems } from "#constants/navigationMenuItems";
 import { useTranslate } from "#hooks/useTranslate";
 import { scrollToTop } from "#utils/utils";
 import React from "react";
@@ -14,7 +13,6 @@ export const CoursePageContent = ({
   pageTranslationObj,
   invertLayout,
 }) => {
-  const navigateToPage = useNavigateToPage();
   const translate = useTranslate();
   const text = translate.pages.courses;
   scrollToTop();
@@ -28,10 +26,7 @@ export const CoursePageContent = ({
           text={""}
         />
         <div className={styles.hiddeMobile}>
-          <NavigationMenu
-            navigationFunction={navigateToPage}
-            items={coursesPagesNavigationItems}
-          />
+          <NavigationMenu isScroll={false} items={navigationMenuItems} />
         </div>
         <CourseBanner
           imageUrl={courseBannerImgPath}
