@@ -1,5 +1,6 @@
 import { translate } from "#__mocks__/translate";
 import { musicalLanguageBackground } from "#constants/backgroundImages";
+import { musicalLanguageCourses } from "#constants/images";
 import { useTranslate } from "#hooks/useTranslate";
 import "@testing-library/react";
 import { render, screen } from "@testing-library/react";
@@ -44,7 +45,7 @@ describe("Musical language courses page does", () => {
     );
     expect(sectionImage).toHaveProperty(
       "src",
-      "http://localhost/undefined/assets/musicalLanguageCourses.png",
+      `http://localhost/undefined${musicalLanguageCourses}`,
     );
   });
 });
