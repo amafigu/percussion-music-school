@@ -44,7 +44,7 @@ describe("Musical language courses page does", () => {
     );
     expect(sectionImage).toHaveProperty(
       "src",
-      "http://localhost/undefined/assets/short_courses_page_holiday.png",
+      "http://localhost/undefined/assets/musicalLanguageCourses.png",
     );
   });
 });
