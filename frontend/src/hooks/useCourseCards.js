@@ -45,5 +45,5 @@ export const useCourseCards = () => {
     },
   ];
 
-  return courseCards;
+  return { courseCards };
 };
