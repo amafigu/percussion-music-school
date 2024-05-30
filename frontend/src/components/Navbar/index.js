@@ -52,7 +52,10 @@ export const Navbar = () => {
             <span className={styles.linkContent}>{text.links.about}</span>
           </Link>
           <div className={styles.option}>
-            <span className={`${styles.linkContent} ${styles.linkCourses}`}>
+            <span
+              className={`${styles.linkContent} ${styles.linkCourses}`}
+              onClick={() => setShowCourses((prevState) => !prevState)}
+            >
               {text.links.courses}
             </span>
             <ChevronToggler show={showCourses} setShow={setShowCourses} />
@@ -77,7 +80,7 @@ export const Navbar = () => {
               </div>
             )}
           </div>
-          <div className={styles.hideForMobile}>
+          <div className={styles.option}>
             <MailButton />
           </div>
         </div>

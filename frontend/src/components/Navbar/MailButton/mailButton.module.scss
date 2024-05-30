@@ -14,7 +14,8 @@
   @include typography-semi-medium-normal;
 
   &:hover {
-    background-color: theme.$font-color-primary;
+    color: theme.$color-branding-primary;
+    background-color: theme.$background-color-button-primary;
   }
 
   @include media.tablet-narrow {
@@ -26,7 +27,8 @@
     @include unset-button;
 
     &:hover {
-      background-color: theme.$font-color-primary;
+      color: theme.$color-branding-primary;
+      background-color: theme.$background-color-button-primary;
     }
   }
 }
