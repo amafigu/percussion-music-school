@@ -15,7 +15,7 @@
   .mobileMenu {
     display: none;
 
-    @include media.tablet-narrow {
+    @include media.desktop {
       display: flex;
     }
   }
@@ -53,7 +53,7 @@
     .logoColumn {
       display: none;
 
-      @include media.tablet-narrow {
+      @include media.desktop {
         flex-grow: 1 !important;
         justify-content: space-between;
         margin: 0 theme.$spacing-semi-regular 0 theme.$spacing-smallest;
@@ -63,19 +63,15 @@
     .menuIcon {
       display: none;
 
-      @include media.tablet-narrow {
+      @include media.desktop {
         display: block;
         cursor: pointer;
       }
     }
 
     .linksColumn {
-      @include media.mobile {
+      @include media.desktop {
         display: none;
-      }
-
-      @include media.tablet-narrow {
-        display: none !important;
       }
     }
 
@@ -126,7 +122,7 @@
         min-width: fit-content;
         cursor: pointer;
 
-        @include media.mobile {
+        @include media.desktop {
           display: none;
         }
 
