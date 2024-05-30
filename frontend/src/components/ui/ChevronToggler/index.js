@@ -7,17 +7,13 @@ export const ChevronToggler = ({ show, setShow }) => {
       {!show && (
         <FontAwesomeIcon
           icon={faChevronDown}
-          onClick={
-            setShow ? () => setShow(true) : () => console.log("no setter")
-          }
+          onClick={() => setShow && setShow(true)}
         />
       )}
       {show && (
         <FontAwesomeIcon
           icon={faChevronUp}
-          onClick={
-            setShow ? () => setShow(false) : () => console.log("no setter")
-          }
+          onClick={() => setShow && setShow(false)}
         />
       )}
     </>
