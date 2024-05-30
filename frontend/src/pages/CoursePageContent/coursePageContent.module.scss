@@ -1,0 +1,18 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.wrapper {
+  .hiddeOnMobile {
+    @include media.tablet-narrow {
+      display: none;
+    }
+  }
+
+  .container {
+    width: 100%;
+    min-height: theme.$min-height-page;
+    background-color: theme.$background-color-secondary;
+    scroll-behavior: smooth;
+  }
+}

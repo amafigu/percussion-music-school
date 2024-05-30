@@ -1,0 +1,106 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.founderBanner {
+  gap: 20px;
+  width: 90%;
+  padding: theme.$spacing-extra-large 0;
+  margin: auto;
+
+  @include flex-justify-center;
+}
+
+.imageContainer {
+  align-items: flex-start;
+  float: left;
+  width: 32%;
+  margin-right: theme.$spacing-regular;
+
+  @include media.widescreen-down {
+    width: 40%;
+  }
+
+  @include media.desktop {
+    width: 50%;
+  }
+
+  @include media.mobile {
+    width: 100%;
+    margin-bottom: theme.$spacing-regular;
+  }
+
+  .founderImage {
+    width: 100%;
+    object-fit: cover;
+    border-radius: theme.$border-radius-regular;
+
+    @include media.mobile {
+      margin: auto;
+    }
+  }
+}
+
+.container {
+  float: none;
+
+  @include media.mobile {
+    width: 100%;
+  }
+
+  .name {
+    @include typography-huge-extra-bold;
+
+    @include media.tablet-wide {
+      font-size: theme.$font-size-large;
+    }
+  }
+
+  p {
+    width: 100%;
+
+    @include typography-semi-medium-normal;
+
+    color: theme.$font-color-secondary;
+    opacity: 0.8;
+
+    @include media.tablet-wide {
+      font-size: theme.$font-size-small;
+    }
+  }
+
+  .position {
+    margin-bottom: theme.$spacing-regular;
+    color: theme.$font-color-secondary;
+
+    @include typography-semi-medium-normal;
+  }
+
+  .socialIcons {
+    flex-direction: column;
+    width: 100%;
+
+    @include flex-justify-center;
+
+    .text {
+      margin: 24px 0;
+      color: theme.$color-branding-primary;
+    }
+
+    .row {
+      display: flex;
+      gap: 28px;
+      width: 100%;
+    }
+
+    .icons {
+      display: flex;
+      gap: 20px;
+      justify-content: space-around;
+
+      svg {
+        color: theme.$color-branding-primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,161 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.wrapper {
+  background-color: theme.$background-color-primary;
+
+  @include flex-all-center;
+
+  @include media.mobile {
+    display: block;
+    width: 100%;
+  }
+
+  .mobileMenu {
+    display: none;
+
+    @include media.tablet-narrow {
+      display: flex;
+    }
+  }
+
+  .languages {
+    width: 60px;
+    height: 60px;
+
+    @include flex-align-center;
+  }
+
+  .container {
+    justify-content: space-between;
+    width: 70%;
+    height: 100px;
+    background-color: theme.$background-color-primary;
+
+    @include flex-align-center;
+
+    @include media.mobile {
+      width: 100%;
+      height: 90px;
+    }
+
+    @include media.tablet-wide {
+      width: 94%;
+      height: 90px;
+    }
+
+    @include media.desktop-only {
+      width: 84%;
+      height: 90px;
+    }
+
+    .logoColumn {
+      display: none;
+
+      @include media.tablet-narrow {
+        flex-grow: 1 !important;
+        justify-content: space-between;
+        margin: 0 theme.$spacing-semi-regular 0 theme.$spacing-smallest;
+      }
+    }
+
+    .menuIcon {
+      display: none;
+
+      @include media.tablet-narrow {
+        display: block;
+        cursor: pointer;
+      }
+    }
+
+    .linksColumn {
+      @include media.mobile {
+        display: none;
+      }
+
+      @include media.tablet-narrow {
+        display: none !important;
+      }
+    }
+
+    .column {
+      gap: theme.$spacing-large;
+
+      @include flex-align-center;
+
+      .logoLink {
+        margin-right: theme.$spacing-semi-regular;
+
+        @include flex-align-center;
+
+        @include media.mobile {
+          margin-right: theme.$spacing-semi-small;
+        }
+      }
+
+      .logoContainer {
+        @include flex-align-center;
+
+        .name {
+          margin-right: theme.$spacing-semi-large;
+          opacity: theme.$opacity-secondary;
+
+          @include typography-semi-medium-bold;
+
+          span {
+            display: block;
+          }
+        }
+      }
+
+      .logo {
+        width: 72px;
+        height: 72px;
+        cursor: pointer;
+        border-radius: 50%;
+
+        @include media.mobile {
+          width: 64px;
+          height: 64px;
+        }
+      }
+
+      .option {
+        position: relative;
+        min-width: fit-content;
+        cursor: pointer;
+
+        @include media.mobile {
+          display: none;
+        }
+
+        .linkContent {
+          text-transform: uppercase;
+
+          @include typography-small-semibold;
+
+          &:hover {
+            color: theme.$color-branding-primary;
+          }
+        }
+
+        .linkCourses {
+          margin-right: theme.$spacing-smallest;
+        }
+      }
+    }
+  }
+
+  .list {
+    position: absolute;
+    margin-top: theme.$spacing-regular;
+    border-radius: theme.$border-radius-regular;
+
+    @include flex-column;
+  }
+
+  .icon {
+    margin-right: theme.$spacing-smallest;
+  }
+}

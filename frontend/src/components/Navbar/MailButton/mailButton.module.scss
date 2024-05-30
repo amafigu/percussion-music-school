@@ -1,0 +1,32 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.link {
+  width: fit-content;
+  height: 52px;
+  padding: theme.$spacing-small theme.$spacing-semi-large;
+  color: theme.$background-color-primary;
+  background-color: theme.$color-branding-primary;
+  border-radius: theme.$border-radius-regular;
+
+  @include flex-justify-center;
+  @include typography-semi-medium-normal;
+
+  &:hover {
+    background-color: theme.$font-color-primary;
+  }
+
+  @include media.tablet-narrow {
+    width: 100%;
+    height: theme.$spacing-extra-large;
+  }
+
+  button {
+    @include unset-button;
+
+    &:hover {
+      background-color: theme.$font-color-primary;
+    }
+  }
+}

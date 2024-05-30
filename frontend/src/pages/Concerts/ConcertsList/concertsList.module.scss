@@ -1,0 +1,36 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.list {
+  background-color: theme.$background-color-secondary;
+
+  @include flex-column;
+}
+
+.listItem {
+  justify-content: space-between;
+  padding: theme.$spacing-regular;
+  background-color: theme.$background-color-secondary;
+  border-bottom: 1px solid #ccc;
+
+  @include flex-align-center;
+
+  @include media.mobile {
+    flex-direction: column;
+    gap: theme.$spacing-regular;
+  }
+}
+
+.data {
+  flex: 1;
+  margin: 0 theme.$spacing-regular;
+}
+
+.link {
+  @include concert-list-button;
+
+  button {
+    @include unset-button;
+  }
+}

@@ -1,0 +1,38 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.wrapper {
+  width: 100%;
+
+  @include flex-column-align-center;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    max-width: 1400px;
+    height: fit-content;
+    background-color: theme.$background-color-primary;
+
+    @include flex-align-center;
+
+    > div {
+      flex: 0 1 calc(33.333% - 10px);
+    }
+  }
+}
+
+@include media.widescreen-down {
+  .wrapper .container > div {
+    flex-basis: calc(50% - 10px);
+  }
+}
+
+@include media.tablet-narrow {
+  .wrapper .container > div {
+    flex-basis: 100%;
+  }
+}

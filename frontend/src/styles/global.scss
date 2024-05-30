@@ -1,0 +1,60 @@
+/* stylelint-disable selector-class-pattern */
+@use "./media" as media;
+@use "./theme.scss" as theme;
+@import "#styles/helpers/mixins";
+
+// react-slick needs !important for customization
+
+.slick-next,
+.slick-prev {
+  display: none !important;
+}
+
+.slick-dots li button::before {
+  display: inline-block;
+  width: 8px !important;
+  height: 8px !important ;
+  color: white !important;
+  content: "" !important;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 1 !important;
+}
+
+.slick-dots li button:hover::before,
+.slick-dots li button:focus::before {
+  color: #ed068a !important;
+  background-color: #ed068a !important;
+  opacity: 0.75 !important;
+}
+
+.slick-dots li.slick-active button::before {
+  color: #ed068a !important;
+  background-color: #ed068a !important;
+  opacity: 1 !important;
+}
+
+.slick-slider {
+  margin-bottom: theme.$spacing-extra-large !important;
+}
+
+.slick-track {
+  justify-content: center !important;
+  margin-bottom: 8px !important;
+
+  img {
+    max-width: 460px !important;
+    max-height: 460px !important;
+
+    @include media.mobile {
+      max-width: 100% !important;
+      max-height: 360px !important;
+    }
+  }
+}
+
+.slick-list {
+  @include media.mobile {
+    margin: 0 0 120px !important;
+  }
+}

@@ -1,0 +1,29 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.container {
+  min-height: 80vh;
+  background-color: theme.$background-color-secondary;
+
+  @include flex-column-align-center;
+}
+
+.content {
+  width: theme.$width-desktop-page;
+
+  @include media.mobile {
+    width: theme.$width-mobile-page;
+  }
+}
+
+.title {
+  margin: theme.$spacing-regular 0;
+  background-color: theme.$background-color-secondary;
+
+  @include typography-huge-extra-bold;
+
+  @include media.tablet-wide {
+    font-size: theme.$font-size-large;
+  }
+}

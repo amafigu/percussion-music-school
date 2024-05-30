@@ -1,0 +1,66 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.wrapper {
+  @include flex-all-center;
+
+  .container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: theme.$z-index-mobile-menu;
+    width: theme.$width-mobile-page;
+    min-height: fit-content;
+    max-height: 100%;
+    overflow-y: auto;
+    background-color: theme.$background-color-tertiary;
+    border-bottom-left-radius: theme.$border-radius-small;
+
+    @include flex-column-all-center;
+  }
+
+  .list {
+    width: theme.$width-mobile-page;
+    margin-bottom: theme.$spacing-regular;
+    overflow-y: auto;
+
+    .closeIcon {
+      color: theme.$color-branding-primary;
+      text-align: right;
+      border-bottom: none !important;
+
+      @include mobile-menu-item;
+    }
+
+    .listItem {
+      height: theme.$spacing-extra-large;
+      cursor: pointer;
+
+      @include mobile-menu-item;
+    }
+
+    .itemContainer {
+      height: auto;
+      padding: 20px;
+
+      @include mobile-menu-item;
+    }
+
+    .selector {
+      @include flex-column;
+    }
+  }
+
+  .courses {
+    margin-bottom: 12px;
+
+    span {
+      margin-right: theme.$spacing-smallest;
+    }
+  }
+
+  .mailButton {
+    width: 100%;
+  }
+}

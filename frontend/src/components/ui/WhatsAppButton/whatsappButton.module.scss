@@ -1,0 +1,34 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.link {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: theme.$z-index-whatsapp-button;
+  transform: rotate(90deg) translateY(-156%);
+
+  @include main-button;
+
+  @include media.tablet-wide {
+    position: fixed;
+    top: unset;
+    bottom: 0;
+    width: 100%;
+    transform: none;
+  }
+
+  @include media.tablet-wide {
+    width: 100%;
+    border-radius: 2px;
+  }
+
+  .content {
+    @include flex-all-center;
+  }
+
+  .text {
+    margin-left: theme.$spacing-smallest;
+  }
+}

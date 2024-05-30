@@ -1,0 +1,86 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+
+  @include flex-align-center;
+
+  @include media.mobile {
+    @include flex-justify-center;
+  }
+}
+
+.background {
+  @include background-image;
+}
+
+.text {
+  z-index: theme.$z-index-text-banner;
+  width: theme.$width-desktop-page;
+  padding: theme.$spacing-semi-regular theme.$spacing-large;
+
+  @include media.tablet-wide {
+    width: 84%;
+
+    @include flex-column;
+  }
+
+  @include media.mobile {
+    width: theme.$width-mobile-page;
+    padding: 0;
+  }
+}
+
+.title {
+  opacity: theme.$opacity-primary;
+
+  @include typography-huge-extra-bold;
+
+  @include media.tablet-wide {
+    font-size: 32px !important;
+  }
+
+  @include media.mobile {
+    width: 100%;
+  }
+
+  @include media.tablet-wide {
+    font-size: theme.$font-size-large;
+  }
+}
+
+.subtitle {
+  margin: theme.$spacing-semi-large 0;
+  color: theme.$font-color-secondary;
+
+  @include typography-semi-large-normal;
+
+  @include media.tablet-wide {
+    @include typography-semi-medium-normal;
+  }
+}
+
+.content {
+  width: theme.$width-desktop-page;
+  margin-bottom: theme.$spacing-semi-regular;
+  color: theme.$font-color-secondary;
+  opacity: theme.$opacity-primary;
+
+  @include typography-semi-medium-normal;
+
+  @include media.widescreen {
+    width: 50%;
+  }
+
+  @include media.tablet-narrow {
+    width: 100%;
+  }
+
+  @include media.tablet-wide {
+    font-size: theme.$font-size-small;
+  }
+}

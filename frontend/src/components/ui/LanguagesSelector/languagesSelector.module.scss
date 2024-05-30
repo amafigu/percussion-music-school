@@ -1,0 +1,31 @@
+@use "#styles/media" as media;
+@use "#styles/theme" as theme;
+@import "#styles/helpers/mixins";
+
+.list {
+  @include options-list;
+
+  @include media.mobile {
+    border: none;
+  }
+
+  @include media.tablet-narrow {
+    background-color: theme.$border-color-dark-secondary;
+  }
+
+  .listItem {
+    @include options-item;
+  }
+
+  .listItem:last-child {
+    border-bottom: none;
+  }
+
+  .active {
+    color: theme.$color-branding-primary;
+  }
+
+  .language {
+    cursor: pointer;
+  }
+}

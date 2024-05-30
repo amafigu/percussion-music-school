@@ -1,0 +1,69 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.wrapper {
+  flex-wrap: wrap;
+  width: theme.$width-card;
+  margin: theme.$spacing-large 0;
+
+  @include flex-justify-center;
+
+  @include media.mobile {
+    width: theme.$width-mobile-page;
+    height: auto;
+  }
+
+  .container {
+    width: theme.$width-card;
+    height: auto;
+    background-color: theme.$background-color-tertiary;
+    border-radius: theme.$border-radius-large;
+  }
+
+  .image {
+    width: 100%;
+    height: 268px;
+    border-top-left-radius: theme.$border-radius-regular;
+    border-top-right-radius: theme.$border-radius-regular;
+  }
+
+  .contentWrapper {
+    height: 252px;
+    color: theme.$font-color-primary;
+    background-color: theme.$background-color-tertiary;
+    border-radius: theme.$border-radius-regular;
+  }
+
+  .content {
+    padding: theme.$spacing-semi-regular theme.$spacing-extra-regular
+      theme.$spacing-semi-small;
+  }
+
+  .category {
+    margin-bottom: theme.$spacing-semi-large;
+
+    @include typography-medium-semibold;
+  }
+
+  .description {
+    height: theme.$spacing-extra-large;
+    margin-bottom: theme.$spacing-semi-large;
+    overflow: hidden;
+
+    @include typography-small-medium;
+  }
+
+  .link {
+    height: theme.$spacing-extra-large;
+    border: theme.$font-color-primary solid 1px;
+    border-radius: theme.$border-radius-regular;
+
+    @include flex-all-center;
+
+    &:hover {
+      color: theme.$color-branding-primary;
+      border: theme.$color-branding-primary solid 1px;
+    }
+  }
+}

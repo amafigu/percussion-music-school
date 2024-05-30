@@ -1,0 +1,89 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.wrapper {
+  margin: 60px;
+  background-color: theme.$background-color-secondary;
+
+  @include media.tablet-wide {
+    margin: 0;
+  }
+
+  @include flex-column-align-center;
+}
+
+.container {
+  position: relative;
+  width: 80%;
+  margin-bottom: 80px;
+
+  @include flex-justify-center;
+
+  @include media.tablet-wide {
+    flex-direction: column;
+    width: theme.$width-mobile-page;
+    margin: theme.$spacing-large;
+  }
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: theme.$border-radius-regular;
+  opacity: 0.8;
+
+  @include media.mobile {
+    height: 300px;
+    object-position: left;
+  }
+}
+
+.textContainer {
+  @include flex-all-center;
+
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  width: 620px;
+  height: auto;
+  background: theme.$background-color-tertiary;
+  border-radius: 10px;
+
+  @include media.widescreen {
+    width: 50%;
+    padding: 32px 0;
+    margin-top: 40px;
+    font-size: theme.$font-size-small;
+  }
+
+  @include media.tablet-wide {
+    width: 76%;
+    padding: theme.$spacing-small 0;
+    margin-top: 20px;
+    font-size: theme.$font-size-small;
+  }
+
+  @include media.mobile {
+    position: static;
+    right: unset;
+    bottom: unset;
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .text {
+    width: 100%;
+    margin: theme.$spacing-regular;
+    color: theme.$font-color-secondary;
+    opacity: 0.9;
+
+    @include typography-semi-medium-normal;
+
+    @include media.tablet-narrow {
+      margin: theme.$spacing-small;
+
+      @include typography-small-medium;
+    }
+  }
+}

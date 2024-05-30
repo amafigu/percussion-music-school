@@ -1,0 +1,74 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.wrapper {
+  min-height: theme.$min-height-page;
+  background-color: theme.$background-color-secondary;
+
+  @include flex-justify-center;
+
+  .container {
+    @include media.mobile {
+      margin-top: theme.$spacing-extra-large;
+    }
+
+    @include media.desktop {
+      margin: 120px 0;
+    }
+
+    @include media.widescreen {
+      margin: 12% 0;
+    }
+
+    @include flex-column-all-center;
+  }
+
+  .number {
+    font-size: 100px;
+    font-weight: theme.$font-weight-bold;
+    text-align: center;
+
+    @include media.mobile {
+      font-size: 86px;
+      font-weight: theme.$font-weight-bold;
+    }
+  }
+
+  .title {
+    margin-bottom: theme.$spacing-extra-large;
+    text-align: center;
+
+    @include typography-extra-large-semibold;
+
+    @include media.mobile {
+      font-size: theme.$font-size-semi-large;
+      font-weight: theme.$font-weight-bold;
+    }
+  }
+
+  .description {
+    width: 60%;
+    margin-bottom: theme.$spacing-large;
+    color: theme.$font-color-secondary;
+    text-align: center;
+
+    @include typography-semi-medium-normal;
+
+    @include media.mobile {
+      width: 80%;
+    }
+  }
+
+  .link {
+    font-weight: theme.$font-weight-normal;
+
+    @include main-button;
+
+    @include media.mobile {
+      width: 80%;
+      margin-bottom: 128px;
+      border-radius: theme.$border-radius-regular;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.wrapper {
+  width: 100%;
+  background-color: theme.$background-color-secondary;
+  scroll-behavior: smooth;
+
+  .container {
+    position: relative;
+    width: 100%;
+    min-height: 40vh;
+
+    @include flex-all-center;
+
+    @include media.short {
+      min-height: 320px;
+    }
+
+    .backgroundImage {
+      @include background-image;
+    }
+
+    .content {
+      z-index: theme.$z-index-upper-banner;
+      width: 80%;
+      margin: 160px 0;
+
+      @include media.widescreen {
+        margin: 220px 0;
+      }
+
+      @include media.tablet-wide {
+        width: 84%;
+        padding: theme.$spacing-semi-large 0;
+        margin: 140px 0;
+
+        @include flex-column;
+      }
+
+      .title {
+        margin-bottom: theme.$spacing-large;
+        opacity: theme.$opacity-primary;
+
+        @include typography-huge-extra-bold;
+
+        @include media.tablet-wide {
+          font-size: theme.$font-size-extra-large;
+        }
+
+        @include media.mobile {
+          width: 100%;
+          margin-bottom: theme.$spacing-extra-large;
+        }
+      }
+
+      .text {
+        width: 80%;
+        max-width: 600px;
+        color: theme.$font-color-secondary;
+        opacity: theme.$opacity-primary;
+
+        @include typography-semi-medium-normal;
+
+        @include media.mobile {
+          width: 100%;
+        }
+
+        @include media.widescreen {
+          width: 50%;
+        }
+
+        @include typography-semi-medium-normal;
+
+        @include media.tablet-wide {
+          font-size: theme.$font-size-small;
+        }
+      }
+    }
+  }
+}

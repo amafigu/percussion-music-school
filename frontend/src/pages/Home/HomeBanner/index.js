@@ -1,0 +1,38 @@
+import { educationBanner } from "#constants/backgroundImages";
+import { useTranslate } from "#hooks/useTranslate";
+import React, { useState } from "react";
+import styles from "./homeBanner.module.scss";
+
+export const HomeBanner = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const translate = useTranslate();
+  const text = translate.components.homeBanner;
+
+  return (
+    <section className={styles.wrapper} aria-label='Home page banner'>
+      <div className={styles.container}>
+        {imageLoaded && (
+          <div
+            className={styles.textBanner}
+            style={{ visibility: imageLoaded ? "visible" : "hidden" }}
+          >
+            <p className={styles.title}>{text.titleFirst}</p>
+            <p className={styles.title}>{text.titleSecond}</p>
+            <div className={styles.subtitles}>
+              <p className={styles.subtitle}>{text.subtitleFirst}</p>
+              <p className={styles.subtitle}>{text.subtitleSecond}</p>
+              <p className={styles.subtitle}>{text.subtitleThird}</p>
+            </div>
+          </div>
+        )}
+
+        <img
+          className={styles.image}
+          src={`${process.env.PUBLIC_URL}${educationBanner}`}
+          alt='Home page background'
+          onLoad={() => setImageLoaded(true)}
+        />
+      </div>
+    </section>
+  );
+};

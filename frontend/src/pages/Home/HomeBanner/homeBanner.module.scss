@@ -1,0 +1,74 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.wrapper {
+  min-height: 600px;
+  background-color: theme.$background-color-primary;
+
+  @include flex-all-center;
+
+  @include media.tablet-wide {
+    min-height: 400px;
+  }
+
+  @include media.mobile {
+    min-height: 240px;
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+
+  @include flex-all-center;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.textBanner {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  z-index: theme.$z-index-text-banner;
+
+  .title {
+    @include typography-huge-extra-bold;
+
+    @include media.tablet-wide {
+      font-size: theme.$font-size-large;
+    }
+  }
+
+  .subtitle {
+    color: theme.$font-color-secondary;
+    opacity: theme.$opacity-primary;
+
+    @include typography-semi-medium-normal;
+
+    @include media.tablet-wide {
+      font-size: theme.$font-size-small;
+    }
+  }
+
+  .subtitles {
+    margin-top: theme.$spacing-regular;
+  }
+
+  @include media.mobile {
+    display: none;
+  }
+}
+
+.image {
+  z-index: theme.$z-index-image-banner;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: theme.$border-radius-small;
+  opacity: theme.$opacity-tertiary;
+}

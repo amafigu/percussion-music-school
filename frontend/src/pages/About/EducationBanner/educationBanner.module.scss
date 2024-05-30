@@ -1,0 +1,90 @@
+@use "#styles/theme" as theme;
+@use "#styles/media" as media;
+@import "#styles/helpers/mixins";
+
+.wrapper {
+  margin: 60px;
+  background-color: theme.$background-color-secondary;
+
+  @include media.tablet-wide {
+    margin: 0;
+  }
+
+  @include flex-column-align-center;
+}
+
+.container {
+  width: theme.$width-desktop-page;
+
+  @include flex-align-center;
+
+  @include media.widescreen {
+    width: 70%;
+  }
+
+  @include media.desktop {
+    width: 100%;
+    height: auto;
+    margin-bottom: theme.$spacing-large;
+
+    @include flex-column;
+  }
+
+  @include media.mobile {
+    margin-bottom: theme.$spacing-regular;
+  }
+
+  .logoAndTitle {
+    width: 90%;
+    padding-right: 2%;
+
+    @include flex-column;
+
+    @include media.tablet-wide {
+      width: theme.$width-mobile-page;
+      margin: auto;
+    }
+
+    .logo {
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+    }
+
+    .title {
+      @include typography-huge-extra-bold;
+
+      @include media.mobile {
+        margin-top: theme.$spacing-semi-regular;
+      }
+
+      @include media.tablet-wide {
+        font-size: theme.$font-size-large;
+      }
+    }
+  }
+
+  .paragraphsContainer {
+    width: 66%;
+    padding-right: theme.$spacing-large;
+    padding-left: theme.$spacing-large;
+
+    @include media.desktop {
+      width: theme.$width-mobile-page;
+      padding-right: 0;
+      padding-left: 0;
+      margin-top: theme.$spacing-large;
+    }
+
+    .paragraphs {
+      @include typography-semi-medium-normal;
+
+      color: theme.$font-color-secondary;
+      opacity: theme.$opacity-primary;
+
+      @include media.tablet-wide {
+        font-size: theme.$font-size-small;
+      }
+    }
+  }
+}
