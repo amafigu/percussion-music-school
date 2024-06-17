@@ -5,6 +5,8 @@ Website for the "Tierra y Aire Percusion" music school in Argentina.
 ## 🛠️ Technologies Stack
 
 - **Frontend**: React / JavaScript / SASS
+- **Backend**: WIP under https://github.com/amafigu/percussion-music-school-backend
+- **Database**: Postgres
 - **Tests**: Jest / React Testing Library
 
 ## 🌟 Functionalities
@@ -24,23 +26,23 @@ The application is designed to be fully responsive and works seamlessly across v
 
 ### Homepage Top
 
-![Homepage](public/assets/readmeHomepageTop.png)
+![Homepage](frontend/public/assets/readmeHomepageTop.png)
 
 ### Homepage Button
 
-![Homepage](public/assets/readmeHomepageBottom.png)
+![Homepage](frontend/public/assets/readmeHomepageBottom.png)
 
 ### Course pages Top
 
-![Course pages](public/assets/readmeCoursePageTop.png)
+![Course pages](frontend/public/assets/readmeCoursePageTop.png)
 
 ### Course pages Bottom
 
-![Course pages](public/assets/readmeCoursePageBottom.png)
+![Course pages](frontend/public/assets/readmeCoursePageBottom.png)
 
 ### Navigation Menu
 
-![Navigation Menu](public/assets/readmeOptions.png)
+![Navigation Menu](frontend/public/assets/readmeOptions.png)
 
 ## 📦 Setup and Installation
 
@@ -48,3 +50,15 @@ The application is designed to be fully responsive and works seamlessly across v
    ```sh
    git clone https://github.com/amafigu/percussion-music-school.git
    ```
+2. Navigate to the project directory:
+
+```sh
+  cd recipe-portfolio-app
+```
+
+3. Install frontend dependencies:
+
+```sh
+cd frontend
+npm install
+```
