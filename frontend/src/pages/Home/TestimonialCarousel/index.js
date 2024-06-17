@@ -21,9 +21,7 @@ export const TestimonialCarousel = () => {
 
   return (
     <section className={styles.wrapper} aria-label='Testemonia section'>
-      <div className={styles.title}>
-        <h2>{camelCaseToTitleCase(text.title)}</h2>
-      </div>
+      <div className={styles.title}></div>
       <Slider {...sliderSettings}>
         {TESTIMONIALS.map((testimonial, index) => (
           <article className={styles.container} key={index}>
